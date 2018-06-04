@@ -4,3 +4,10 @@
 This repository is still fully experimental.
 Documentation *will* appear **soon**.
 
+
+.. toctree::
+  :maxdepth: 1
+
+  Command Interface <command interface>
+  Something Completely Different <different>
+
