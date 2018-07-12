@@ -185,6 +185,7 @@ Return / Space  For string fields: bring up a text entry box
                 For enumerated fields: bring up a context menu with the available options
 
 Run-stop [#]_   *Leaves* the configuration menu and saves the new values.
+=============   ========
 
 Note that some values will only take effect after reset or a power cycle
 of your C=64. However, the main menu provides a way to restart the 1541
@@ -431,5 +432,5 @@ Other issues can be found (and reported) here:
 
 http://1541ultimate.net/content/index.php?option=com_issueform&Itemid=24
 
-.. [1]
+.. [#]
    On VT-100, use backspace instead of RUN STOP
