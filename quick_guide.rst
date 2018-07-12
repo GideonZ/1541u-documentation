@@ -9,10 +9,10 @@ this quick guide shows you the basic functions.
 
 **Installation**
 
-1) Unpack the USB stick, and use a PC or Mac to transfer your favorite
+1) Take a USB stick, and use a PC or Mac to transfer your favorite
    floppy disk images (.D64 or .G64 files), tape archives (.T64 files),
    tape images (.TAP files), Amiga MOD files, SID music (.SID files), or
-   separate programs (.PRG files) to your USB stick.
+   separate programs (.PRG files) to this USB stick.
 
 2) Insert the USB stick into one of the available USB slots on the
    Ultimate-II+.
@@ -26,9 +26,15 @@ this quick guide shows you the basic functions.
 
 **Ports and buttons**
 
-|C:\Users\Gideon\Dropbox\Proj\UltimateIIPlus\white.jpg|
-
-|C:\Users\Gideon\Dropbox\Proj\UltimateIIPlus\red.jpg|
+.. image:: media/image1.jpeg
+    :width: 300px
+    :align: center
+    :alt: white
+    
+.. image:: media/image2.jpeg
+    :width: 300px
+    :align: center
+    :alt: red
 
 **Concept of operation**
 
@@ -315,8 +321,6 @@ no longer boot. However, even when the C64 gives a black screen, you can
 still enter the configuration menu in order to disable the Kernal
 replacement option.
 
-**
-**
 
 **Software IEC**
 
@@ -387,11 +391,10 @@ The RTC is powered by a CR2032 battery, which is located inside of the
 unit. Calculations show that the lifetime of this battery is several
 years.
 
-**Website**
+**Social Media**
 
-Consult the website http://www.1541ultimate.net for more information, or
-for questions regarding your device, or you may join the Facebook group
-“1541 Ultimate”.
+For quick answers to many questions regarding your device, you may be
+interested to join the the Facebook group “1541 Ultimate”.
 
 **Firmware Updates**
 
@@ -424,7 +427,7 @@ storage solution for your 8-bit Commodore computer.
 
 **Known issues:**
 
--  The processing speed of the Ultimate-II+ is currently (V3.1) still
+-  The processing speed of the Ultimate-II+ is currently (V3.2) still
    quite a bit lower than the Ultimate-II. This is because the
    Ultimate-II+ platform does not have instruction/data caches still on
    its embedded processor. The lower speed may cause some situations in
@@ -442,10 +445,3 @@ http://1541ultimate.net/content/index.php?option=com_issueform&Itemid=24
 
 .. [1]
    On VT-100, use backspace instead of RUN STOP
-
-.. |C:\Users\Gideon\Dropbox\Proj\UltimateIIPlus\white.jpg| image:: ./media/image1.jpeg
-   :width: 7.38889in
-   :height: 4.19444in
-.. |C:\Users\Gideon\Dropbox\Proj\UltimateIIPlus\red.jpg| image:: ./media/image2.jpeg
-   :width: 7.38889in
-   :height: 5.21319in
