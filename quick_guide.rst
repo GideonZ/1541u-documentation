@@ -1,3 +1,4 @@
+
 Quick guide to the Ultimate-II+
 _______________________________
 
@@ -7,7 +8,8 @@ storage solution for your Commodore 64 computer. Although the
 installation and use of the Ultimate-II+ are designed to be intuitive,
 this quick guide shows you the basic functions.
 
-**Installation**
+Installation
+============
 
 1) Take a USB stick, and use a PC or Mac to transfer your favorite
    floppy disk images (.D64 or .G64 files), tape archives (.T64 files),
@@ -24,7 +26,8 @@ this quick guide shows you the basic functions.
    drive first and then use the feed through of the drive to attach the
    Ultimate-II+ as the last device in the chain.
 
-**Ports and buttons**
+Ports and buttons
+=================
 
 .. image:: media/image1.jpeg
     :width: 300px
@@ -36,7 +39,8 @@ this quick guide shows you the basic functions.
     :align: center
     :alt: red
 
-**Concept of operation**
+Concept of operation
+====================
 
 The main feature of the Ultimate-II+ is a cycle accurate implementation
 of the Commodore 1541 Floppy Disk Drive. This part of the Ultimate-II+
@@ -52,7 +56,8 @@ mounting (which will take a few seconds to complete), the 1541 can
 access the image file as if it was a real floppy. All standard commands
 that you are familiar with while using a real CBM1541 then apply.
 
-**The Menu**
+The Menu
+========
 
 The Ultimate-II+ provides a user friendly menu driven interface, which
 can be accessed by pressing the middle button on the back of the
@@ -71,38 +76,27 @@ current selection.
 
 Use the keyboard as follows:
 
-*CRSR up/down* Move the cursor (highlighted line) up/down
+============= ========
+Key           Function
+============= ========
+CRSR up/down  Move the cursor (highlighted line) up/down
+CRSR left     Go one level up (leave directory or disk)
+CRSR right    Go one level down (enter directory or disk)
+Return        Bring up a context menu with actions to be performed on the selected item.
+F1            Page up
+F7            Page down
+F5            Bring up a menu with actions to be performed.
+F2            Enter the setup menu
+F3            Shows the HELP-text
+Space         Select / deselect entries in the file browser for copying.
+C=C / C=V     Can be used to copy files between locations, just like in Windows.
+              Be aware that file copy is a lot slower than on a modern PC.
+RUN/STOP      Leave the menu.
+*Quick seek:* Use the keyboard to type the name to search for. You can use ‘?’ as a wildcard.
+============= ========
 
-*CRSR left* Go one level up (leave directory or disk)
-
-*CRSR right* Go one level down (enter directory or disk)
-
-*Return* Bring up a context menu with actions to be performed on the
-selected item.
-
-*F1* Page up
-
-*F7* Page down
-
-*F5* Bring up a menu with actions to be performed.
-
-*F2* Enter the setup menu
-
-*F3* Shows the HELP-text
-
-*Quick seek:* Use the keyboard to type the name to search for. You can
-use ‘?’ as a wildcard.
-
-*Space* Select / deselect entries in the file browser for copying.
-
-*C=C / C=V* Control-C / Control-V can be used to copy files between
-locations, just like in Windows. Be aware that file copy is a lot slower
-than on a modern PC.
-
-*RUN/STOP* Leave the menu.
-
-**More about mounting disks**
-
+More about mounting disks
+=========================
 Remember that ‘mounting’ a disk means creating a link between the 1541
 part of your ultimate cartridge, and a file on a storage device. This
 means, that when the link has been established, “writes” that the 1541
@@ -118,8 +112,8 @@ removed, the 1541 drive automatically switches to unlinked mode. Be
 aware that writes to the disk will then be lost when you turn off the
 machine.
 
-**LEDs**
-
+LEDs
+====
 The Ultimate-II+ has four LEDs that are visible on the outside of the
 plastic case:
 
@@ -141,8 +135,8 @@ The drive power LED has four states:
 
 -  Bright: Powered, disk mounted and motor running.
 
-**Cartridge Emulation**
-
+Cartridge Emulation
+===================
 Because the Ultimate-II+ will occupy your cartridge slot, a list of
 popular expansions available for the C=64 are integrated into the
 Ultimate-II+. These expansions include cartridges such as the Action
@@ -157,8 +151,8 @@ default, the left button is the freezer button, and the button on the
 right is the reset-button. Through the configuration menu, the buttons
 can be swapped if desired.
 
-**Configuration**
-
+Configuration
+=============
 As mentioned above, you can enter the configuration menu by pressing
 ‘F2’ while you are in the menu structure. This will bring up a screen
 with the following items:
@@ -181,30 +175,24 @@ Use the UP/DOWN cursor keys to navigate and RIGHT to enter the desired
 configuration screen. Once inside a settings screen, the behavior of the
 keyboard is slightly different:
 
-*CRSR up/down* Move the cursor (highlighted line) up/down
+=============   ========
+Key             Function
+=============   ========
+CRSR up/down    Move the cursor (highlighted line) up/down
+CRSR left/right Increase or decrease a setting, cycling through the available options.
+DEL             Go one level up
+Return / Space  For string fields: bring up a text entry box
+                For enumerated fields: bring up a context menu with the available options
 
-*CRSR left/right* Increase or decrease a setting, cycling through the
-available options.
-
-*DEL* Go one level up
-
-*Return / Space* For string fields: bring up a text entry box
-
-For enumerated fields: bring up a context menu with the available
-options
-
-*Run-stop*\  [1]_ *Leaves* the configuration menu and saves the new
-values.
+Run-stop [#]_   *Leaves* the configuration menu and saves the new values.
 
 Note that some values will only take effect after reset or a power cycle
 of your C=64. However, the main menu provides a way to restart the 1541
 and the C=64 with the new settings.
 
-**
-**
 
-**Ethernet**
-
+Ethernet
+========
 Some of you may be familiar with the RR-net solution that brings
 Ethernet to the C-64. Currently, the built-in Ethernet port does *not*
 provide RR-net compatibility. However:
@@ -216,8 +204,8 @@ program on the Telnet port (port 23). This gives the possibility to
 control the machine remotely, and swap disks without actually
 interrupting the program running on the C-64.
 
-**USB support**
-
+USB support
+===========
 The Ultimate-II+ supports most USB sticks and Flash card readers out of
 the box. It also supports USB 2.0 Hubs. It is recommended to use powered
 USB hubs only (with an external power supply). USB 1.1 Hubs are *not*
@@ -232,15 +220,15 @@ attempt to attach a USB 3.0 device to the blue USB connector on the
 Ultimate-II+.** You may safely use a USB 3.0 device on the *right* side
 of the cartridge.
 
-**File Systems**
-
+File Systems
+============
 Currently, the Ultimate-II+ supports the FAT16/FAT32 file system on any
 storage device, and the ISO9660/Joliet on CD/DVD ROM drives, or ISO
 files. It is able to read D64 files, as well as D71 and D81 files (no
 partitions), T64 files.
 
-**DMA loads**
-
+DMA loads
+=========
 The Ultimate-II+ is capable of loading files directly through the
 cartridge port into the memory of your C=64. This is called DMA load.
 The menu supports loading files of the .PRG type only. It doesn’t matter
@@ -250,7 +238,7 @@ inside a .D64 file require that the rest of the disk is mounted in the
 drive. For those programs, use the ‘Mount & Run’ command.
 
 Tape Support
-
+============
 The Ultimate-II+ is capable of emulating a cassette tape deck
 (CBM1530/1531). To use this function, a special adapter set connects the
 Ultimate-II+ to the tape port of your C=64 computer. This tape adaptor
@@ -265,8 +253,8 @@ menu (F5) to pause/resume playback. It is also possible to write the
 The Ultimate-II+ can also capture tape signals into a .TAP file. The
 ‘F5’ menu will show you the available options.
 
-**Audio**
-
+Audio
+=====
 The green audio connector on the left side of your device provides a
 stereo line-out signal. In the configuration menu, it can be selected
 what is routed to the output channels. Available options include:
@@ -290,7 +278,7 @@ and pops, or even notes.
 The blue line-in connector is not yet used at this point.
 
 Ultimate Audio module
-
+---------------------
 The Ultimate Audio module provides 8 simultaneous sampling voices. This
 module is utilized as part of the Ultimate-II+ firmware for playing
 Amiga MOD files. This option is available in the context menu in the
@@ -303,8 +291,8 @@ be downloaded from the official website:
 
 http://1541ultimate.net/content/download/ultimate_audio_v0.2.pdf
 
-**Alternate ROMs**
-
+Alternate ROMs
+==============
 The Ultimate-II+ allows you to use other ROMs for both the emulated 1541
 drive, as well as the built-in Kernal ROM of your machine. These ROMs
 are resident (remembered) by the Ultimate-II+ once they are loaded from
@@ -322,8 +310,8 @@ still enter the configuration menu in order to disable the Kernal
 replacement option.
 
 
-**Software IEC**
-
+Software IEC
+==============
 The Software-IEC module is a serial bus service that can be enabled in
 the configuration menu. This module provides two additional devices on
 the Commodore serial bus; the IEC bus:
@@ -334,7 +322,7 @@ the Commodore serial bus; the IEC bus:
 -  A virtual printer
 
 Printer
-
+-------
 The virtual printer is a valuable contribution created by René Garcia.
 It takes printer commands from the Commodore 64, and creates a black and
 white image of the printed graphics and text. This image is then saved
@@ -344,7 +332,7 @@ and all of its capabilities and options is available here:
 http://1541ultimate.net/content/download/mps_printer_emulation.pdf
 
 Virtual drive
-
+-------------
 The virtual drive can only be used to access files of the file system,
 through the OPEN/CLOSE commands on the IEC bus. By default, the path of
 the IEC drive is ‘/Usb0’, which is the top most USB connector on the
@@ -362,8 +350,8 @@ OPEN 15,10,15,"CD:/USB1/MYPROGRAMS":CLOSE 15
 
 At this point, the virtual drive is not JiffyDOS compliant.
 
-**Ultimate Command Interface**
-
+Ultimate Command Interface
+==========================
 Since some time, it has become possible to control the Ultimate-II+
 programmatically through the I/O port of the C64, thus from a program
 that runs on the machine. This is useful for many things; for example it
@@ -381,8 +369,8 @@ documented here:
 
 http://1541ultimate.net/content/download/ultimate_dos_v1.0.pdf
 
-**Real Time Clock**
-
+Real Time Clock
+===============
 For getting correct time stamps on the files that are created on the USB
 pen drives, the Ultimate-II+ offers a real time clock (RTC) function.
 This RTC can be set through the configuration menu.
@@ -391,13 +379,13 @@ The RTC is powered by a CR2032 battery, which is located inside of the
 unit. Calculations show that the lifetime of this battery is several
 years.
 
-**Social Media**
-
+Social Media
+============
 For quick answers to many questions regarding your device, you may be
 interested to join the the Facebook group “1541 Ultimate”.
 
-**Firmware Updates**
-
+Firmware Updates
+================
 In order to update the firmware, you will need a file with the “.U2P”
 extension. Such a file can be found in the ‘.zip’ archives found in the
 download section of the http://1541ultimate.net website, after logging
@@ -414,8 +402,8 @@ chip; you can start the “Recovery Mode”, by holding the middle button
 while powering on the unit. In the recovery mode, not all features are
 available, but the “Run Update” feature should work.
 
-**Disclaimer:**
-
+Disclaimer
+==========
 The ‘firmware’ on your Ultimate-II+ board consists of a rather large
 number of functional parts that all work together. Although an insane
 number of hours have been put into testing and improving the firmware
@@ -425,8 +413,8 @@ passes. Check the download section at the website for the newest
 firmware version. We believe in the end this will sure be the ‘ultimate’
 storage solution for your 8-bit Commodore computer.
 
-**Known issues:**
-
+Known issues
+============
 -  The processing speed of the Ultimate-II+ is currently (V3.2) still
    quite a bit lower than the Ultimate-II. This is because the
    Ultimate-II+ platform does not have instruction/data caches still on
