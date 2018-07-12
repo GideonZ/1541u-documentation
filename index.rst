@@ -9,4 +9,5 @@ Documentation *will* appear **soon**.
 
   Quick Guide to the Ultimate <quick_guide>
   Command Interface <command interface>
+  Printer <ultimate_printer>
   Something Completely Different <different>
