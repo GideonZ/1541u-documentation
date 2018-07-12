@@ -2,9 +2,7 @@ Ultimate-II Virtual Printer
 ___________________________
 
 By René Garcia
-+---------------------------------------+
-| Version , February 18\ :sup:`th` 2018 |
-+---------------------------------------+
+Version: February 18\ :sup:`th` 2018
 All rights reserved.
 
 Introduction
@@ -5741,384 +5739,384 @@ Document Revisions
 .. [20]
    Ignored in the Ultimate-II Virtual Printer
 
-.. |image0| image:: media/printer/image1.tiff
+.. |image0| image:: media/printer/image1.png
    :height: 0.11312in
-.. |image1| image:: media/printer/image2.tiff
+.. |image1| image:: media/printer/image2.png
    :height: 0.1086in
-.. |image2| image:: media/printer/image3.tiff
+.. |image2| image:: media/printer/image3.png
    :height: 0.12217in
-.. |image3| image:: media/printer/image4.tiff
+.. |image3| image:: media/printer/image4.png
    :width: 0.52083in
    :height: 0.61111in
-.. |image4| image:: media/printer/image5.tiff
+.. |image4| image:: media/printer/image5.png
    :width: 1.04861in
    :height: 0.92361in
-.. |image5| image:: media/printer/image6.tiff
+.. |image5| image:: media/printer/image6.png
    :width: 1.17361in
    :height: 1.15972in
-.. |image6| image:: media/printer/image7.tiff
+.. |image6| image:: media/printer/image7.png
    :width: 1.73303in
    :height: 0.13122in
-.. |image7| image:: media/printer/image8.tiff
+.. |image7| image:: media/printer/image8.png
    :width: 1.70136in
    :height: 0.11765in
-.. |image8| image:: media/printer/image9.tiff
+.. |image8| image:: media/printer/image9.png
    :width: 1.71041in
    :height: 0.12217in
-.. |image9| image:: media/printer/image10.tiff
+.. |image9| image:: media/printer/image10.png
    :width: 1.71493in
    :height: 0.13122in
-.. |image10| image:: media/printer/image11.tiff
+.. |image10| image:: media/printer/image11.png
    :width: 1.71946in
    :height: 0.13122in
-.. |image11| image:: media/printer/image12.tiff
+.. |image11| image:: media/printer/image12.png
    :width: 1.72398in
    :height: 0.14027in
-.. |image12| image:: media/printer/image13.tiff
+.. |image12| image:: media/printer/image13.png
    :width: 0.76018in
    :height: 0.1267in
-.. |image13| image:: media/printer/image14.tiff
+.. |image13| image:: media/printer/image14.png
    :width: 0.76018in
    :height: 0.13575in
-.. |image14| image:: media/printer/image15.tiff
+.. |image14| image:: media/printer/image15.png
    :width: 0.76471in
    :height: 0.13122in
-.. |image15| image:: media/printer/image16.tiff
+.. |image15| image:: media/printer/image16.png
    :width: 0.78281in
    :height: 0.15385in
-.. |image16| image:: media/printer/image17.tiff
+.. |image16| image:: media/printer/image17.png
    :width: 0.79185in
    :height: 0.14027in
-.. |image17| image:: media/printer/image18.tiff
+.. |image17| image:: media/printer/image18.png
    :width: 0.80091in
    :height: 0.14932in
-.. |image18| image:: media/printer/image19.tiff
+.. |image18| image:: media/printer/image19.png
    :width: 1.35294in
    :height: 0.32127in
-.. |image19| image:: media/printer/image20.tiff
+.. |image19| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image20| image:: media/printer/image21.tiff
+.. |image20| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image21| image:: media/printer/image22.tiff
+.. |image21| image:: media/printer/image22.png
    :width: 0.8371in
    :height: 0.15837in
-.. |image22| image:: media/printer/image23.tiff
+.. |image22| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image23| image:: media/printer/image24.tiff
+.. |image23| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image24| image:: media/printer/image25.tiff
+.. |image24| image:: media/printer/image25.png
    :width: 0.65611in
    :height: 0.12217in
-.. |image25| image:: media/printer/image26.tiff
+.. |image25| image:: media/printer/image26.png
    :width: 3.63348in
    :height: 1.15837in
-.. |image26| image:: media/printer/image27.tiff
+.. |image26| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image27| image:: media/printer/image28.tiff
+.. |image27| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image28| image:: media/printer/image29.tiff
+.. |image28| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image29| image:: media/printer/image20.tiff
+.. |image29| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image30| image:: media/printer/image21.tiff
+.. |image30| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image31| image:: media/printer/image22.tiff
+.. |image31| image:: media/printer/image22.png
    :width: 0.8371in
    :height: 0.15837in
-.. |image32| image:: media/printer/image23.tiff
+.. |image32| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image33| image:: media/printer/image24.tiff
+.. |image33| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image34| image:: media/printer/image25.tiff
+.. |image34| image:: media/printer/image25.png
    :width: 0.65611in
    :height: 0.12217in
-.. |image35| image:: media/printer/image26.tiff
+.. |image35| image:: media/printer/image26.png
    :width: 3.63348in
    :height: 1.15837in
-.. |image36| image:: media/printer/image27.tiff
+.. |image36| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image37| image:: media/printer/image28.tiff
+.. |image37| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image38| image:: media/printer/image29.tiff
+.. |image38| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image39| image:: media/printer/image30.tiff
+.. |image39| image:: media/printer/image30.png
    :width: 0.38009in
    :height: 0.34389in
-.. |image40| image:: media/printer/image31.tiff
+.. |image40| image:: media/printer/image31.png
    :width: 2.14027in
    :height: 0.34389in
-.. |image41| image:: media/printer/image30.tiff
+.. |image41| image:: media/printer/image30.png
    :width: 0.38009in
    :height: 0.34389in
-.. |image42| image:: media/printer/image31.tiff
+.. |image42| image:: media/printer/image31.png
    :width: 2.14027in
    :height: 0.34389in
-.. |image43| image:: media/printer/image29.tiff
+.. |image43| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image44| image:: media/printer/image29.tiff
+.. |image44| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image45| image:: media/printer/image20.tiff
+.. |image45| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image46| image:: media/printer/image21.tiff
+.. |image46| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image47| image:: media/printer/image23.tiff
+.. |image47| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image48| image:: media/printer/image24.tiff
+.. |image48| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image49| image:: media/printer/image25.tiff
+.. |image49| image:: media/printer/image25.png
    :width: 0.65611in
    :height: 0.12217in
-.. |image50| image:: media/printer/image27.tiff
+.. |image50| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image51| image:: media/printer/image28.tiff
+.. |image51| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image52| image:: media/printer/image29.tiff
+.. |image52| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image53| image:: media/printer/image20.tiff
+.. |image53| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image54| image:: media/printer/image21.tiff
+.. |image54| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image55| image:: media/printer/image23.tiff
+.. |image55| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image56| image:: media/printer/image24.tiff
+.. |image56| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image57| image:: media/printer/image25.tiff
+.. |image57| image:: media/printer/image25.png
    :width: 0.65611in
    :height: 0.12217in
-.. |image58| image:: media/printer/image27.tiff
+.. |image58| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image59| image:: media/printer/image28.tiff
+.. |image59| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image60| image:: media/printer/image29.tiff
+.. |image60| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image61| image:: media/printer/image32.tiff
+.. |image61| image:: media/printer/image32.png
    :width: 1.20815in
    :height: 0.37557in
-.. |image62| image:: media/printer/image33.tiff
+.. |image62| image:: media/printer/image33.png
    :width: 0.63348in
    :height: 0.37557in
-.. |image63| image:: media/printer/image34.tiff
+.. |image63| image:: media/printer/image34.png
    :width: 0.35294in
    :height: 0.37557in
-.. |image64| image:: media/printer/image32.tiff
+.. |image64| image:: media/printer/image32.png
    :width: 1.20815in
    :height: 0.37557in
-.. |image65| image:: media/printer/image33.tiff
+.. |image65| image:: media/printer/image33.png
    :width: 0.63348in
    :height: 0.37557in
-.. |image66| image:: media/printer/image34.tiff
+.. |image66| image:: media/printer/image34.png
    :width: 0.35294in
    :height: 0.37557in
-.. |image67| image:: media/printer/image20.tiff
+.. |image67| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image68| image:: media/printer/image21.tiff
+.. |image68| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image69| image:: media/printer/image23.tiff
+.. |image69| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image70| image:: media/printer/image24.tiff
+.. |image70| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image71| image:: media/printer/image25.tiff
+.. |image71| image:: media/printer/image25.png
    :width: 0.65611in
    :height: 0.12217in
-.. |image72| image:: media/printer/image26.tiff
+.. |image72| image:: media/printer/image26.png
    :width: 3.63348in
    :height: 1.15837in
-.. |image73| image:: media/printer/image27.tiff
+.. |image73| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image74| image:: media/printer/image28.tiff
+.. |image74| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image75| image:: media/printer/image29.tiff
+.. |image75| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image76| image:: media/printer/image20.tiff
+.. |image76| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image77| image:: media/printer/image21.tiff
+.. |image77| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image78| image:: media/printer/image23.tiff
+.. |image78| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image79| image:: media/printer/image24.tiff
+.. |image79| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image80| image:: media/printer/image25.tiff
+.. |image80| image:: media/printer/image25.png
    :width: 0.65611in
    :height: 0.12217in
-.. |image81| image:: media/printer/image26.tiff
+.. |image81| image:: media/printer/image26.png
    :width: 3.63348in
    :height: 1.15837in
-.. |image82| image:: media/printer/image27.tiff
+.. |image82| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image83| image:: media/printer/image28.tiff
+.. |image83| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image84| image:: media/printer/image29.tiff
+.. |image84| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image85| image:: media/printer/image29.tiff
+.. |image85| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image86| image:: media/printer/image29.tiff
+.. |image86| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image87| image:: media/printer/image20.tiff
+.. |image87| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image88| image:: media/printer/image21.tiff
+.. |image88| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image89| image:: media/printer/image23.tiff
+.. |image89| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image90| image:: media/printer/image24.tiff
+.. |image90| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image91| image:: media/printer/image27.tiff
+.. |image91| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image92| image:: media/printer/image28.tiff
+.. |image92| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image93| image:: media/printer/image35.tiff
+.. |image93| image:: media/printer/image35.png
    :width: 0.9095in
    :height: 0.13575in
-.. |image94| image:: media/printer/image20.tiff
+.. |image94| image:: media/printer/image20.png
    :width: 1.47964in
    :height: 0.16742in
-.. |image95| image:: media/printer/image21.tiff
+.. |image95| image:: media/printer/image21.png
    :width: 2.68326in
    :height: 0.17647in
-.. |image96| image:: media/printer/image23.tiff
+.. |image96| image:: media/printer/image23.png
    :width: 1.0362in
    :height: 0.1629in
-.. |image97| image:: media/printer/image24.tiff
+.. |image97| image:: media/printer/image24.png
    :width: 0.47964in
    :height: 0.14027in
-.. |image98| image:: media/printer/image27.tiff
+.. |image98| image:: media/printer/image27.png
    :width: 1.89593in
    :height: 0.13575in
-.. |image99| image:: media/printer/image28.tiff
+.. |image99| image:: media/printer/image28.png
    :width: 1.66516in
    :height: 0.14027in
-.. |image100| image:: media/printer/image35.tiff
+.. |image100| image:: media/printer/image35.png
    :width: 0.9095in
    :height: 0.13575in
-.. |image101| image:: media/printer/image29.tiff
+.. |image101| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image102| image:: media/printer/image29.tiff
+.. |image102| image:: media/printer/image29.png
    :width: 2.11765in
    :height: 0.32127in
-.. |image103| image:: media/printer/image36.tiff
+.. |image103| image:: media/printer/image36.png
    :width: 3.95023in
    :height: 3.10407in
-.. |image104| image:: media/printer/image37.tiff
+.. |image104| image:: media/printer/image37.png
    :width: 3.97285in
    :height: 3.11312in
-.. |image105| image:: media/printer/image38.tiff
+.. |image105| image:: media/printer/image38.png
    :width: 3.9095in
    :height: 3.04072in
-.. |image106| image:: media/printer/image39.tiff
+.. |image106| image:: media/printer/image39.png
    :width: 3.93213in
    :height: 3.06335in
-.. |image107| image:: media/printer/image40.tiff
+.. |image107| image:: media/printer/image40.png
    :width: 3.90045in
    :height: 3.04072in
-.. |image108| image:: media/printer/image41.tiff
+.. |image108| image:: media/printer/image41.png
    :width: 3.89593in
    :height: 3.04072in
-.. |image109| image:: media/printer/image42.tiff
+.. |image109| image:: media/printer/image42.png
    :width: 3.95023in
    :height: 3.03167in
-.. |image110| image:: media/printer/image43.tiff
+.. |image110| image:: media/printer/image43.png
    :width: 3.90498in
    :height: 3.08145in
-.. |image111| image:: media/printer/image44.tiff
+.. |image111| image:: media/printer/image44.png
    :width: 3.9276in
    :height: 3.05882in
-.. |image112| image:: media/printer/image45.tiff
+.. |image112| image:: media/printer/image45.png
    :width: 3.95023in
    :height: 3.06335in
-.. |image113| image:: media/printer/image46.tiff
+.. |image113| image:: media/printer/image46.png
    :width: 3.91855in
    :height: 3.04072in
-.. |image114| image:: media/printer/image47.tiff
+.. |image114| image:: media/printer/image47.png
    :width: 3.94118in
    :height: 3.0362in
-.. |image115| image:: media/printer/image48.tiff
+.. |image115| image:: media/printer/image48.png
    :width: 3.91855in
    :height: 3.04525in
-.. |image116| image:: media/printer/image49.tiff
+.. |image116| image:: media/printer/image49.png
    :width: 3.91403in
    :height: 3.07692in
-.. |image117| image:: media/printer/image50.tiff
+.. |image117| image:: media/printer/image50.png
    :width: 3.88235in
    :height: 3.01358in
-.. |image118| image:: media/printer/image51.tiff
+.. |image118| image:: media/printer/image51.png
    :width: 3.88688in
    :height: 3.00453in
-.. |image119| image:: media/printer/image52.tiff
+.. |image119| image:: media/printer/image52.png
    :width: 5.17717in
    :height: 1.91732in
-.. |image120| image:: media/printer/image53.tiff
+.. |image120| image:: media/printer/image53.png
    :width: 3.49213in
    :height: 2.72441in
-.. |image121| image:: media/printer/image54.tiff
+.. |image121| image:: media/printer/image54.png
    :width: 3.47638in
    :height: 2.68898in
-.. |image122| image:: media/printer/image55.tiff
+.. |image122| image:: media/printer/image55.png
    :width: 3.46063in
    :height: 2.71654in
-.. |image123| image:: media/printer/image56.tiff
+.. |image123| image:: media/printer/image56.png
    :width: 3.47638in
    :height: 2.70866in
-.. |image124| image:: media/printer/image57.tiff
+.. |image124| image:: media/printer/image57.png
    :width: 3.49213in
    :height: 2.70472in
-.. |image125| image:: media/printer/image58.tiff
+.. |image125| image:: media/printer/image58.png
    :width: 3.47638in
    :height: 2.69685in
-.. |image126| image:: media/printer/image59.tiff
+.. |image126| image:: media/printer/image59.png
    :width: 3.47638in
    :height: 2.72047in
-.. |image127| image:: media/printer/image60.tiff
+.. |image127| image:: media/printer/image60.png
    :width: 6.69375in
    :height: 7.925in
