@@ -175,22 +175,23 @@ Use the UP/DOWN cursor keys to navigate and RIGHT to enter the desired
 configuration screen. Once inside a settings screen, the behavior of the
 keyboard is slightly different:
 
-=============   ========
-Key             Function
-=============   ========
-CRSR up/down    Move the cursor (highlighted line) up/down
-CRSR left/right Increase or decrease a setting, cycling through the available options.
-DEL             Go one level up
-Return / Space  For string fields: bring up a text entry box
-                For enumerated fields: bring up a context menu with the available options
-
-Run-stop [#]_   *Leaves* the configuration menu and saves the new values.
-=============   ========
+===============   ========
+Key               Function
+===============   ========
+CRSR up/down      Move the cursor (highlighted line) up/down
+CRSR left/right   Increase or decrease a setting, cycling through the available options.
+DEL               Go one level up
+Return / Space    For string fields: bring up a text entry box
+                  For enumerated fields: bring up a context menu with the available options
+Run-stop [#1]_    *Leaves* the configuration menu and saves the new values.
+===============   ========
 
 Note that some values will only take effect after reset or a power cycle
 of your C=64. However, the main menu provides a way to restart the 1541
 and the C=64 with the new settings.
 
+.. rubric:: Footnotes
+.. [#1] On VT-100, use backspace instead of RUN STOP
 
 Ethernet
 ========
@@ -432,5 +433,3 @@ Other issues can be found (and reported) here:
 
 http://1541ultimate.net/content/index.php?option=com_issueform&Itemid=24
 
-.. [#]
-   On VT-100, use backspace instead of RUN STOP
