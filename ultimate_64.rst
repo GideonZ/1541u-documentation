@@ -82,20 +82,7 @@ or out of the Ultimate-II+ menu
 
 ### Loading games/demos
 
-Explain how
-
-```
-Give examples
-```
-
-### Other stuff
-
-Explain
-
-```
-Give  example
-```
-
+### Other
 
 ## Links
 
@@ -115,23 +102,3 @@ Either of these will do:
 * Open an issue at github.  
 * Send contributions to Muppoman via Facebook (link below), The contributions should be well formatted for easy pasting, markdown preferred.
 
-
-## Authors
-
-The WideSc(r)eeners
-
-* **DrZingo** - *Initial work* - [Facebook](https://www.facebook.com/markus.borgelin)
-* **hedning/GP** - *Contributor, bug tester* - [Facebook](https://www.facebook.com/hedning.gp)
-* **Dj_hasse** - *Contributor, bug tester* - [Facebook](https://www.facebook.com/daniel.tornqvist.52)
-
-See also the list of [contributors](https://github.com/DrZingo/Ultimate64-manual-unofficial/graphs/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-## Acknowledgments
-
-* Gideon Zweijtzer - creator of Ultimate 64, 1541 Ultimate.
-* All people in the Commodore 64 Scene
-* Everybody who have contributed to the retro computer community in one way or another
