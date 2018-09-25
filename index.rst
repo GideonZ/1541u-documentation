@@ -8,7 +8,5 @@ Documentation *will* appear **soon**.
   :maxdepth: 1
 
   Quick Guide to the Ultimate <quick_guide>
-  Command Interface <command interface>
-  Printer Emulation <ultimate_printer>
   Ultimate 64 Specific <ultimate_64>
-  Something Completely Different <different>
+  Command Interface <command interface>
