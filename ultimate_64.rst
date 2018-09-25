@@ -1,3 +1,6 @@
+Ultimate 64
+-----------
+
 # Ultimate 64 User Manual (unofficial)
 
 This is an unofficial documentation for the Ultimate 64. Info about the hardware 
