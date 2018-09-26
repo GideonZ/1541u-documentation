@@ -1,7 +1,7 @@
-RetroMagazine – July 2018
--------------------------
+Interview RetroMagazine
+-----------------------
 
-*Interview with Gideon Zweijtzer, creator of the 1541 Ultimate series of expansion cartridges and the Commodore 64 FPGA-based motherboard Ultimate64.*
+*Interview with Gideon Zweijtzer, creator of the 1541 Ultimate series of expansion cartridges and the Commodore 64 FPGA-based motherboard Ultimate64 - July 2018*
 
 
 Hi, Gideon and thank you so much for accepting my invitation for an interview. All the readers and the editorial staff of RetroMagazine are very excited to have the opportunity to ask you some questions about your experience in designing one of the most (if not the most) famous cartridge/expansion for the C64: the 1541 Ultimate. During 2017, according to your web site, the final steps of the Ultimate64 design have been completed, so the long-awaited board has finally got into production and the first batches have been shipped to the final users earlier this year.
