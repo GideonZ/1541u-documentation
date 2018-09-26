@@ -1,5 +1,3 @@
-.. _header-n0:
-
 Guide to the Ultimate-64
 ========================
 
@@ -50,6 +48,7 @@ functions.
 |                                   | menu.                             |
 +-----------------------------------+-----------------------------------+
 
+
 Menus
 -----
 
@@ -65,8 +64,6 @@ The main two functions of the menu are:
 2. Configuration of the Ultimate 64
 
 3. Tool menu
-
-.. _header-n48:
 
 File selection menu
 ~~~~~~~~~~~~~~~~~~~
