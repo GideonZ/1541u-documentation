@@ -129,3 +129,5 @@ Website - http://www.retromagazine.net
 
 *Interview made in May-June, 2018
 © 2018 David La Monaca, Gideon Zweijtzer and RetroMagazine*
+
+Download the interview in PDF format (off-print from issue 8 of RetroMagazine) here: __ http://bit.ly/2NJXsEe
