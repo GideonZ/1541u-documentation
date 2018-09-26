@@ -866,7 +866,7 @@ menu.
 SID Chips
 ---------
 
-.. figure:: ../../../../../../Projects%20&%20Resources/Computer%20related/C64/U64/documentation/MD/u64-v105-33.assets/1536832941336.png
+.. figure:: ultimate64-manual.assets/1536832941336.png
    :alt: 1536832941336
 
    1536832941336
