@@ -31,14 +31,14 @@ on the original position of the power button.
 This button is called the MultiButton, because it handles several
 functions.
 
-========  =====================================================================
-Function  Description
-========  =====================================================================
-Power on  When the machine is off, press the button briefly to switch it on 
-Power off Press the button for 4 seconds to switch off the machine.
-Reset     Press the button for about 1 second to reset the machine.
-Menu      Press the button briefly to enter the File Selection (Ultimate) menu.
-========  =====================================================================
+=========  =====================================================================
+Function   Description
+=========  =====================================================================
+Power on   When the machine is off, press the button briefly to switch it on 
+Power off  Press the button for 4 seconds to switch off the machine.
+Reset      Press the button for about 1 second to reset the machine.
+Menu       Press the button briefly to enter the File Selection (Ultimate) menu.
+=========  =====================================================================
 
 Menus
 =====
