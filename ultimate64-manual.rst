@@ -1,5 +1,5 @@
 Guide to the Ultimate-64
-~~~~~~~~~~~~~~~~~~~~~~~~
+________________________
 
 .. figure:: ultimate64-manual.assets/1536833702202.png
    :alt: 1536833702202
@@ -17,7 +17,7 @@ Using a USB keyboard, I managed to type on this "thing" and load some
 demos from the 'Ultimate' drive. Many demos and games seemed to work
 flawlessly. From there, I decided I should first create the hardware
 platform with all the required I/O, such that I could do better tests.
-The result of this is shown in the 3D model above.
+The result of this is shown in the first prototype, as shown in the picture above.
 
 Basic operation
 ===============
@@ -31,21 +31,13 @@ on the original position of the power button.
 This button is called the MultiButton, because it handles several
 functions.
 
-\ **Power on button**\ 
-
-Press the button briefly to switch on the machine,
-
-**Power off button**
-
-Press the button for 3-5 seconds to switch off the machine.
-
-**Reset button**
-
-Press the button for 1-2 seconds to reset the machine.
-
-**Menu button**
-
-Press the button briefly to enter the File Selection menu.
+========      ===========
+Function      Description
+========      ===========
+**Power on**  When the machine is off, press the button briefly to switch it on 
+**Power off** Press the button for 4 seconds to switch off the machine.
+**Reset**     Press the button for about 1 second to reset the machine.
+**Menu**      Press the button briefly to enter the File Selection (Ultimate) menu.
 
 Menus
 =====
