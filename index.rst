@@ -7,6 +7,7 @@ Documentation *will* appear **soon**.
 .. toctree::
   :maxdepth: 1
 
-  Quick Guide to the Ultimate <quick_guide>
+  Quick Guide to the Ultimate II+ <quick_guide>
   Ultimate 64 Specific <ultimate_64>
   Command Interface <command interface>
+  Interview By Retro Magazine <interview>
