@@ -1,5 +1,5 @@
 Guide to the Ultimate-64
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: ultimate64-manual.assets/1536833702202.png
    :alt: 1536833702202
