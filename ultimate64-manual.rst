@@ -31,14 +31,14 @@ on the original position of the power button.
 This button is called the MultiButton, because it handles several
 functions.
 
-========      ===========
-Function      Description
-========      ===========
-**Power on**  When the machine is off, press the button briefly to switch it on 
-**Power off** Press the button for 4 seconds to switch off the machine.
-**Reset**     Press the button for about 1 second to reset the machine.
-**Menu**      Press the button briefly to enter the File Selection (Ultimate) menu.
-========      ===========
+========  =====================================================================
+Function  Description
+========  =====================================================================
+Power on  When the machine is off, press the button briefly to switch it on 
+Power off Press the button for 4 seconds to switch off the machine.
+Reset     Press the button for about 1 second to reset the machine.
+Menu      Press the button briefly to enter the File Selection (Ultimate) menu.
+========  =====================================================================
 
 Menus
 =====
@@ -178,41 +178,25 @@ Yes
 SID Socket 1 & 2 Address
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-:math:`D400-`\ D7FF
-
-:math:`D400-`\ D5FF
-
-:math:`D600-`\ D7FF
-
-:math:`D400-`\ D4FF
-
-:math:`D500-`\ D5FF
-
-:math:`D600-`\ D6FF
-
-:math:`D700-`\ D7FF
-
+$D400-$D7FF
+$D400-$D5FF
+$D600-$D7FF
+$D400-$D4FF
+$D500-$D5FF
+$D600-$D6FF
+$D700-$D7FF
 $D400
-
 $D420
-
 $D440
-
 $D480
-
 $D500
-
 $D600
-
 $D700
-
 $DE00
-
 $DE20
-
 $DE40
-
 $DE60
+...
 
 Paddle Override
 ^^^^^^^^^^^^^^^
@@ -232,41 +216,25 @@ A8
 UltiSID 1 & 2 Address
 ^^^^^^^^^^^^^^^^^^^^^
 
-:math:`D400-`\ D7FF
-
-:math:`D400-`\ D5FF
-
-:math:`D600-`\ D7FF
-
-:math:`D400-`\ D4FF
-
-:math:`D500-`\ D5FF
-
-:math:`D600-`\ D6FF
-
-:math:`D700-`\ D7FF
-
+$D400-$D7FF
+$D400-$D5FF
+$D600-$D7FF
+$D400-$D4FF
+$D500-$D5FF
+$D600-$D6FF
+$D700-$D7FF
 $D400
-
 $D420
-
 $D440
-
 $D480
-
 $D500
-
 $D600
-
 $D700
-
 $DE00
-
 $DE20
-
 $DE40
-
 $DE60
+...
 
 Adjust Color Clock
 ^^^^^^^^^^^^^^^^^^
