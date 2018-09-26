@@ -38,6 +38,7 @@ Function      Description
 **Power off** Press the button for 4 seconds to switch off the machine.
 **Reset**     Press the button for about 1 second to reset the machine.
 **Menu**      Press the button briefly to enter the File Selection (Ultimate) menu.
+========      ===========
 
 Menus
 =====
