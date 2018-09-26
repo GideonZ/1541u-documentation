@@ -1,4 +1,4 @@
-.. _header-n619:
+.. _header-n0:
 
 Guide to the Ultimate-64
 ========================
@@ -17,14 +17,15 @@ Using a USB keyboard, I managed to type on this "thing" and load some
 demos from the 'Ultimate' drive. Many demos and games seemed to work
 flawlessly. From there, I decided I should first create the hardware
 platform with all the required I/O, such that I could do better tests.
-The result of this is shown in the 3D model above.
+The result of this is shown in the first prototype, as shown in the
+picture above.
 
-.. _header-n628:
+.. _header-n9:
 
 Basic operation
 ---------------
 
-.. _header-n629:
+.. _header-n10:
 
 MultiButton
 ~~~~~~~~~~~
@@ -34,6 +35,24 @@ on the original position of the power button.
 
 This button is called the MultiButton, because it handles several
 functions.
+
++-----------------------------------+-----------------------------------+
+| Function                          | Description                       |
++===================================+===================================+
+| Power on                          | When the machine is off, press    |
+|                                   | the button briefly to switch it   |
+|                                   | on                                |
++-----------------------------------+-----------------------------------+
+| Power off                         | Press the button for 4 seconds to |
+|                                   | switch off the machine.           |
++-----------------------------------+-----------------------------------+
+| Reset                             | Press the button for about 1      |
+|                                   | second to reset the machine.      |
++-----------------------------------+-----------------------------------+
+| Menu                              | Press the button briefly to enter |
+|                                   | the File Selection (Ultimate)     |
+|                                   | menu.                             |
++-----------------------------------+-----------------------------------+
 
 \ **Power on button**\ 
 
@@ -51,7 +70,7 @@ Press the button for 1-2 seconds to reset the machine.
 
 Press the button briefly to enter the File Selection menu.
 
-.. _header-n641:
+.. _header-n38:
 
 Menus
 -----
@@ -69,7 +88,7 @@ The main two functions of the menu are:
 
 3. Tool menu
 
-.. _header-n651:
+.. _header-n48:
 
 File selection menu
 ~~~~~~~~~~~~~~~~~~~
@@ -90,7 +109,7 @@ Use the cursor keys to navigate through the file system and select your
 file (disk image) to mount. The highlighted line shows the current
 selection.
 
-.. _header-n659:
+.. _header-n56:
 
 F2 - configuration menu
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,12 +146,12 @@ Note that some values will only take effect after reset or a power cycle
 of your C=64. However, the main menu provides a way to restart the 1541
 and the C=64 with the new settings.
 
-.. _header-n685:
+.. _header-n82:
 
 U64 Specific Settings
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. _header-n686:
+.. _header-n83:
 
 HDMI Scan lines
 '''''''''''''''
@@ -154,7 +173,7 @@ CRT (old) display.
 
 -  Enabled
 
-.. _header-n701:
+.. _header-n98:
 
 Digital Video Mode
 ''''''''''''''''''
@@ -163,7 +182,7 @@ DVI
 
 HDMI
 
-.. _header-n705:
+.. _header-n102:
 
 SpeedDOS Parallel Cable
 '''''''''''''''''''''''
@@ -174,7 +193,7 @@ SpeedDOS Parallel Cable
 
 -  Enabled
 
-.. _header-n713:
+.. _header-n110:
 
 SID in Socket 1 & 2
 '''''''''''''''''''
@@ -189,7 +208,7 @@ SIdFX
 
 fpgaSID
 
-.. _header-n720:
+.. _header-n117:
 
 SID Player Autoconfig
 '''''''''''''''''''''
@@ -200,7 +219,7 @@ SID Player Autoconfig
 
 -  Enabled
 
-.. _header-n729:
+.. _header-n126:
 
 Allow Autoconfig uses EmuSid
 ''''''''''''''''''''''''''''
@@ -209,48 +228,15 @@ No
 
 Yes
 
-.. _header-n733:
+.. _header-n130:
 
 SID Socket 1 & 2 Address
 ''''''''''''''''''''''''
 
-$D400-$D7FF
-
-$D400-$D5FF
-
-$D600-$D7FF
-
-$D400-$D4FF
-
-$D500-$D5FF
-
-$D600-$D6FF
-
+$D400-$D7FF $D400-$D5FF $D600-$D7FF $D400-$D4FF $D500-$D5FF $D600-$D6FF
 $D700-$D7FF
 
-$D400
-
-$D420
-
-$D440
-
-$D480
-
-$D500
-
-$D600
-
-$D700
-
-$DE00
-
-$DE20
-
-$DE40
-
-$DE60
-
-.. _header-n753:
+.. _header-n132:
 
 Paddle Override
 '''''''''''''''
@@ -261,7 +247,7 @@ Paddle Override
 
 -  Enabled
 
-.. _header-n761:
+.. _header-n140:
 
 Ext StereoSID addrline
 ''''''''''''''''''''''
@@ -270,48 +256,15 @@ A5
 
 A8
 
-.. _header-n765:
+.. _header-n144:
 
 UltiSID 1 & 2 Address
 ^^^^^^^^^^^^^^^^^^^^^
 
-$D400-$D7FF
-
-$D400-$D5FF
-
-$D600-$D7FF
-
-$D400-$D4FF
-
-$D500-$D5FF
-
-$D600-$D6FF
-
+$D400-$D7FF $D400-$D5FF $D600-$D7FF $D400-$D4FF $D500-$D5FF $D600-$D6FF
 $D700-$D7FF
 
-$D400
-
-$D420
-
-$D440
-
-$D480
-
-$D500
-
-$D600
-
-$D700
-
-$DE00
-
-$DE20
-
-$DE40
-
-$DE60
-
-.. _header-n785:
+.. _header-n147:
 
 Adjust Color Clock
 ''''''''''''''''''
@@ -322,7 +275,7 @@ Value range:*\* between -100 ~ +100 ppm
 
 **Default value: 0**
 
-.. _header-n792:
+.. _header-n154:
 
 Analog Video
 ''''''''''''
@@ -340,7 +293,7 @@ The analog video output ( DIN plug ) can be set to 2 different modes:
 
 **Default value: CVBS + SVideo**
 
-.. _header-n803:
+.. _header-n165:
 
 Chroma Delay
 ''''''''''''
@@ -352,7 +305,7 @@ Value range:*\* between -3 & +3
 
 **Default value: 0**
 
-.. _header-n809:
+.. _header-n171:
 
 Volume settings
 '''''''''''''''
@@ -390,7 +343,7 @@ and +6dB**, or it can turned **off**.
 -  Vol Tape Write *Output volume for "Tape" drive , this is the sound
    you hear when loading data to the drive*
 
-.. _header-n837:
+.. _header-n199:
 
 Panning settings
 ''''''''''''''''
@@ -436,7 +389,7 @@ Left1 ~ Right5.
 -  Pan Tape Write *Panning for "Tape" drive , this is the sound you hear
    when loading data to the drive*
 
-.. _header-n873:
+.. _header-n235:
 
 Clock Settings
 ^^^^^^^^^^^^^^
@@ -460,7 +413,7 @@ With this setting the following values can be changed:
 
 -  Correction *This corrects the deviation of the internal clock (RTC)*
 
-.. _header-n895:
+.. _header-n257:
 
 Software IEC Settings
 ^^^^^^^^^^^^^^^^^^^^^
@@ -487,7 +440,7 @@ Printer Epson charset
 
 Printer IBM table 2
 
-.. _header-n908:
+.. _header-n270:
 
 C64 and cartridge settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -522,7 +475,7 @@ Command Interface
 
 UltiDOS: Allow SetDate
 
-.. _header-n925:
+.. _header-n287:
 
 User Interface Settings
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -543,14 +496,14 @@ Home Directory
 
 Enter Home on Startup
 
-.. _header-n935:
+.. _header-n297:
 
 Tape Settings
 ^^^^^^^^^^^^^
 
 Tape playback Rate
 
-.. _header-n938:
+.. _header-n300:
 
 1541 Drive A & B Settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -569,7 +522,7 @@ Tape playback Rate
 
 GCR Save Align Tracks
 
-.. _header-n948:
+.. _header-n310:
 
 Network settings
 ^^^^^^^^^^^^^^^^
@@ -584,7 +537,7 @@ Static Gateway
 
 Host Name
 
-.. _header-n955:
+.. _header-n317:
 
 F5 - Tool menu
 ~~~~~~~~~~~~~~
@@ -592,12 +545,12 @@ F5 - Tool menu
 .. figure:: ultimate64-manual.assets/1536790603560.png
    :alt: 
 
-.. _header-n957:
+.. _header-n319:
 
 Ultimate64 features
 -------------------
 
-.. _header-n959:
+.. _header-n321:
 
 More about mounting disks
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -617,7 +570,7 @@ More about mounting disks
    unlinked mode. Be aware that writes to the disk will then be lost
    when you turn off the machine.
 
-.. _header-n964:
+.. _header-n326:
 
 HDMI port
 ~~~~~~~~~
@@ -662,7 +615,7 @@ port.
 
    -  Interface Type ( overlay mode )
 
-.. _header-n992:
+.. _header-n354:
 
 Ethernet port
 ~~~~~~~~~~~~~
@@ -687,7 +640,7 @@ setting regarding this port.
    possibility to control the machine remotely, and swap disks without
    actually interrupting the program running on the C-64.
 
-.. _header-n1004:
+.. _header-n366:
 
 USB support
 ~~~~~~~~~~~
@@ -711,7 +664,7 @@ and one on the "internal" side of the board/case.
    Ultimate-II+.** You may safely use a USB 3.0 device on the *right*
    side of the cartridge.
 
-.. _header-n1015:
+.. _header-n377:
 
 File Systems
 ~~~~~~~~~~~~
@@ -721,7 +674,7 @@ File Systems
    ISO files. It is able to read D64 files, as well as D71 and D81 files
    (no partitions), T64 files.
 
-.. _header-n1019:
+.. _header-n381:
 
 Supported file-types
 ~~~~~~~~~~~~~~~~~~~~
@@ -732,7 +685,7 @@ The Ultimate-64 can open / mount several file-types:
 
 -  D64
 
-.. _header-n1027:
+.. _header-n389:
 
 DMA loads
 ~~~~~~~~~
@@ -746,7 +699,7 @@ DMA loads
    is mounted in the drive. For those programs, use the ‘Mount & Run’
    command.
 
-.. _header-n1032:
+.. _header-n394:
 
 Tape Support
 ~~~~~~~~~~~~
@@ -764,7 +717,7 @@ Tape Support
    The Ultimate-64 can also capture tape signals into a .TAP file. The
    ‘F5’ menu will show you the available options.
 
-.. _header-n1039:
+.. _header-n401:
 
 Joystick ports
 ~~~~~~~~~~~~~~
@@ -777,17 +730,17 @@ Paddles
 
 Light(pen/gun)
 
-.. _header-n1046:
+.. _header-n408:
 
 Cartridge support
 ~~~~~~~~~~~~~~~~~
 
-.. _header-n1048:
+.. _header-n410:
 
 Cartridge slot
 ^^^^^^^^^^^^^^
 
-.. _header-n1050:
+.. _header-n412:
 
 Cartridge Emulation
 ^^^^^^^^^^^^^^^^^^^
@@ -830,7 +783,7 @@ Cartridge Emulation
          features of the Ultimate-II+, the cartridge port is free to
          use.
 
-.. _header-n1074:
+.. _header-n436:
 
 Ultimate Audio module
 ~~~~~~~~~~~~~~~~~~~~~
@@ -847,7 +800,7 @@ Ultimate Audio module
 
    http://1541ultimate.net/content/download/ultimate_audio_v0.2.pdf
 
-.. _header-n1081:
+.. _header-n443:
 
 Alternate ROMs
 ~~~~~~~~~~~~~~
@@ -863,7 +816,7 @@ no longer boot. However, even when the C64 gives a black screen, you can
 still enter the configuration menu in order to disable the Kernal
 replacement option.
 
-.. _header-n1088:
+.. _header-n450:
 
 Software IEC
 ~~~~~~~~~~~~
@@ -877,7 +830,7 @@ Software IEC
 
    -  A virtual printer
 
-.. _header-n1097:
+.. _header-n459:
 
 Printer
 ~~~~~~~
@@ -891,7 +844,7 @@ Printer
 
    http://1541ultimate.net/content/download/mps_printer_emulation.pdf
 
-.. _header-n1102:
+.. _header-n464:
 
 Virtual drive
 ~~~~~~~~~~~~~
@@ -914,7 +867,7 @@ Virtual drive
 
    At this point, the virtual drive is not JiffyDOS compliant.
 
-.. _header-n1112:
+.. _header-n474:
 
 Ultimate Command Interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -936,7 +889,7 @@ Ultimate Command Interface
 
    http://1541ultimate.net/content/download/ultimate_dos_v1.0.pdf
 
-.. _header-n1122:
+.. _header-n484:
 
 Tape Support
 ~~~~~~~~~~~~
@@ -954,7 +907,7 @@ Tape Support
    The Ultimate-64 can also capture tape signals into a .TAP file. The
    ‘F5’ menu will show you the available options.
 
-.. _header-n1129:
+.. _header-n491:
 
 Real Time Clock
 ~~~~~~~~~~~~~~~
@@ -970,7 +923,7 @@ The RTC is powered by a CR2032 battery, which is located inside of the
 unit. Calculations show that the lifetime of this battery is several
 years.
 
-.. _header-n1136:
+.. _header-n498:
 
 Video connector
 ~~~~~~~~~~~~~~~
@@ -1003,17 +956,7 @@ menu.
 
       -  Yes.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
    -  How do I connect the Ultimate-II+ tape adapter then?
-=======
-.. figure:: ultimate64-manual.assets/1536832941336.png
-   :alt: 
->>>>>>> parent of 064f948... Reference to SID file changed
-=======
-.. figure:: ../../../../../../Projects%20&%20Resources/Computer%20related/C64/U64/documentation/MD/u64-v105-33.assets/1536832941336.png
-   :alt: 1536832941336
->>>>>>> parent of 064f948... Reference to SID file changed
 
       -  You don't need to. The emulated tape drive automatically
          'connects' to the tape pins when playing TAP files.
@@ -1054,12 +997,12 @@ menu.
          key. You can turn off the machine from a menu option, or hold
          the button for 4 seconds..
 
-.. _header-n1197:
+.. _header-n559:
 
 SID Chips
 ~~~~~~~~~
 
-.. figure:: assets\1537992647546.png
+.. figure:: ultimate64-manual.assets/1537992647546.png
    :alt: 
 
 The Ultimate-64 does have support for 2 REAL SID chips that can be
@@ -1087,29 +1030,29 @@ The Ultimate-64 has an internal SID FPGA SID emulation onboard which can
 generate the audio signal, so it works fine without REAL SID chips. So
 if you do not have REAL SID chips, you stil have audio.
 
-.. _header-n1214:
+.. _header-n576:
 
 User port
 ~~~~~~~~~
 
-.. _header-n1217:
+.. _header-n579:
 
 Installation
 ------------
 
-.. _header-n1218:
+.. _header-n580:
 
 U64 mainboard
 ~~~~~~~~~~~~~
 
-.. _header-n1220:
+.. _header-n582:
 
 Firmware Updates
 ----------------
 
 Supported files types
 
-.. _header-n1223:
+.. _header-n585:
 
 Disclaimer
 ----------
@@ -1123,7 +1066,7 @@ passes. Check the download section at the website for the newest
 firmware version. We believe in the end this will sure be the ‘ultimate’
 replacement for your 8-bit Commodore 64 computer.
 
-.. _header-n1226:
+.. _header-n588:
 
 Social Media
 ~~~~~~~~~~~~
@@ -1131,7 +1074,7 @@ Social Media
 For quick answers to many questions regarding your device, you may be
 interested to join the the Facebook group “1541 Ultimate”.
 
-.. _header-n1229:
+.. _header-n591:
 
 Known issues
 ------------
