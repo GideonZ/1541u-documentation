@@ -1003,7 +1003,12 @@ menu.
 
       -  Yes.
 
+<<<<<<< HEAD
    -  How do I connect the Ultimate-II+ tape adapter then?
+=======
+.. figure:: ../../../../../../Projects%20&%20Resources/Computer%20related/C64/U64/documentation/MD/u64-v105-33.assets/1536832941336.png
+   :alt: 1536832941336
+>>>>>>> parent of 064f948... Reference to SID file changed
 
       -  You don't need to. The emulated tape drive automatically
          'connects' to the tape pins when playing TAP files.
