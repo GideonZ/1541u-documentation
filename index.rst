@@ -8,6 +8,7 @@ Documentation *will* appear **soon**.
   :maxdepth: 1
 
   Quick Guide to the Ultimate II+ <quick_guide>
+  Ultimate 64 by TSB <ultimate64-manual>
   Ultimate 64 Specific <ultimate_64>
   Command Interface <command interface>
   Interview By Retro Magazine <interview>
