@@ -3,7 +3,7 @@
 Guide to the Ultimate-64
 ========================
 
-.. figure:: .\ultimate64-manual.assets\1536833702202.png
+.. figure:: ultimate64-manual.assets\1536833702202.png
    :alt: 
 
 **The project**
@@ -74,7 +74,7 @@ The main two functions of the menu are:
 File selection menu
 ~~~~~~~~~~~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536790041641.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536790041641.png
    :alt: 
 
 The menu starts with showing the available network interfaces, and the
@@ -83,7 +83,7 @@ only show the built-in Ethernet port. When USB-sticks are inserted, one
 or more items will appear in this list. This screen is the ‘root’ of the
 file system.
 
-.. figure:: .\ultimate64-manual.assets\1536790123244.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536790123244.png
    :alt: 
 
 Use the cursor keys to navigate through the file system and select your
@@ -95,7 +95,7 @@ selection.
 F2 - configuration menu
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536790555692.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536790555692.png
    :alt: 
 
 Use the UP/DOWN cursor keys to navigate and RIGHT to enter the desired
@@ -589,7 +589,7 @@ Host Name
 F5 - Tool menu
 ~~~~~~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536790603560.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536790603560.png
    :alt: 
 
 .. _header-n957:
@@ -622,7 +622,7 @@ More about mounting disks
 HDMI port
 ~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536831620353.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536831620353.png
    :alt: 
 
 The HDMI port can be connected to a modern display ( eg. television ),
@@ -667,7 +667,7 @@ port.
 Ethernet port
 ~~~~~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536831652781.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536831652781.png
    :alt: 
 
 The ethernet port can be connected to a switch ( or hub ) to communicate
@@ -692,7 +692,7 @@ setting regarding this port.
 USB support
 ~~~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536831561900.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536831561900.png
    :alt: 
 
 The Ultimate-64 supports most USB sticks and Flash card readers out of
@@ -959,7 +959,7 @@ Tape Support
 Real Time Clock
 ~~~~~~~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536831734242.png
+.. figure:: N:\Martijn\Projects & Resources\Computer related\C64\U64\documentation\MD\ultimate64-manual.assets\1536831734242.png
    :alt: 
 
 For getting correct time stamps on the files that are created on the USB
@@ -1049,7 +1049,7 @@ menu.
 SID Chips
 ~~~~~~~~~
 
-.. figure:: .\ultimate64-manual.assets\1536832941336.png
+.. figure:: N:\Martijn\Projects%20&%20Resources\Computer%20related\C64\U64\documentation\MD\u64-v105-33.assets\1536832941336.png
    :alt: 
 
 The Ultimate-64 does have support for 2 REAL SID chips that can be
