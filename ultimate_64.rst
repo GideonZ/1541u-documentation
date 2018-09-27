@@ -16,6 +16,7 @@ Prerequisites
 - Ultimate 64 motherboard
 - Power adapter 12V DC (included)
 - A case to put your Ultimate 64 in.
+- A C64 keyboard
 - HDMI cable or standard C64 video cable
 - USB Pen drive
 - Kernal ROM (extract from your Commodore 64 or download online)
@@ -31,12 +32,57 @@ Optional
 Installing
 ----------
 
+Mounting the Ultimate 64 in a Case
+..................................
+
+If you have a spare Commodore 64C case, or bought a new case (which is 
+the C64C model as well), you will need keyboard risers. Some of these have
+loose metal keyboard risers already in them, others have them mounted with pop
+rivets to a metal shield. If you have the latter, it is recommended to drill
+the pop rivets to get the risers loose, otherwise they will interfere with
+the keyboard connector on the Ultimate 64.
+
+A few C64C have the keyboard clipped onto the top of the case. For those you
+don't need keyboard risers.
+
+*If you buy a new case online, be aware that you will need a keyboard as well.*
+
+If you have an older case (the breadbin model), the keyboard is mounted in the
+top of the case, and therefore you don't need keyboard risers.
+
+#. Mount the risers to your keyboard. The left can be farthest to the edge, but
+   the right riser you have to mount a bit to the left of the right edge, so it 
+   won't interfere with the keyboard connector.
+#. There are some places online where you can find risers that are supposed to
+   fit perfectly with the Ultimate 64. Here is one model that should work: 
+   https://www.thingiverse.com/thing:3051450 You can 3D-print them yourself or
+   ask someone to do it for you. These can be screwed directly onto the bottom
+   of the case as well.
+#. Set the keyboard aside for now.
+#. Now gently slide the Ultimate 64 board in your case, and fit it to the right
+   side of the case first. The joystick connectors should slide in easy.
+#. Push it gently against the back of the case, and let the connectors on the back
+   of the board fit through the holes.
+#. Adjust the board so you can see the mounting holes on the bottom of the case
+   through the Ultimate 64 board mounting holes.
+#. Fasten the board with suitable screws. Don't tighten too much.
+#. Put the keyboard in the case, and connect it to the connector to the right.
+   It will only fit one way, as there are a key pin on the connector.
+#. Attach the top of the case.
+
+
+Connecting your Ultimate 64
+...........................
+
 Connect your Ultimate 64 to the wall and your TV/monitor. If you start with
-HDMI your TV/monitor have to be DVI capable over HDMI. You can change this to
+HDMI, your TV/monitor have to be DVI capable over HDMI. You can change this to
 HDMI later.
 
-First you have to flash your Kernal and Basic ROM to the Ultimate 64. Power on
-and wait for picture, where it explains how to do.
+Flashing ROM
+............
+
+Before you can use your Ultimate 64, you have to flash your Kernal and Basic ROM 
+to the Ultimate 64. Power on and wait for picture, where it explains how to do.
 
 Basically you stick your USB drive in the back of the Ultimate 64 and push shortly on the power button
 to bring up the Menu.
