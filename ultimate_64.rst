@@ -71,6 +71,18 @@ top of the case, and therefore you don't need keyboard risers.
 #. Attach the top of the case.
 
 
+Accessories
+...........
+
+If you have a 3D printer, or you know someone who has, you can find many nice
+accessories at thingiverse. Here are a few of them:
+
+- `Ultimate64 Keyboard Mounting Brackets <https://www.thingiverse.com/thing:3051450>`_
+- `Ultimate64 & C64 Reloaded power connector cover <https://www.thingiverse.com/thing:2882271>`_
+- `Ultimate64 Multi-Button (Power Button) cap <https://www.thingiverse.com/thing:2881034>`_
+- `Ultimate64 board support clips <https://www.thingiverse.com/thing:2882274>`_
+
+
 Connecting your Ultimate 64
 ...........................
 
