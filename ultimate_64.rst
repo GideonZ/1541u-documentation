@@ -69,33 +69,48 @@ fpgaSID.
 
 Now you have to set your SID types in the Ultimate-II+ menu:
 
-| ``Short press on power button ->``
-| ``F2 ->``
-| ``U64 specific settings ->``
+| ``Short press on power button``
+| ``F2``
+| ``U64 specific settings``
 | Set your types at
 | ``SID in socket 1``
 | and
 | ``SID in socket 2``
 
 
+
+Power Button
+------------
+
++----------------------------------+----------------------------------+
+| Button Action                    | Function                         |
++==================================+==================================+
+| Short push                       | Brings up the Ultimate-II\+ menu |
++----------------------------------+----------------------------------+
+| 1s - 4s push                     | C64 Reset                        |
++----------------------------------+----------------------------------+
+| > 4s push                        | C64 Power off                    |
++----------------------------------+----------------------------------+
+| Holding ``RESTORE`` + Short push | Cartridge Freeze menu            |
++----------------------------------+----------------------------------+
+
+
 Menu Settings
 -------------
 
-To enter the Ultimate-II+ menu:
-
-``Short push on the power button``
+While in the Ultimate-II+ Menu:
 
 For Ultimate 64, Cartridge, SID, Drive settings etc:
 
-``F2`` when you are in the Ultimate-II+ menu
-
-For reset, power off, reboot etc:
-
-``F5`` brings up options
+``F2`` brings up the Settings menu
 
 For navigation help:
 
-``F3`` will show navigation keys
+``F3`` will show menu navigation keys
+
+For Reset, Power off, Reboot etc:
+
+``F5`` brings up options
 
 ``run/stop`` takes you back to the browser from sub-menus
 or out of the Ultimate-II+ menu
