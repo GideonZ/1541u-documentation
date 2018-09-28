@@ -9,6 +9,7 @@ Documentation *will* appear **soon**.
 
   Quick Guide to the Ultimate II+ <quick_guide>
   Ultimate 64 by TSB <ultimate64-manual>
+  Getting Started <u64/getting_started>
   Ultimate 64 Specific <ultimate_64>
   Command Interface <command interface>
   Interview By Retro Magazine <interview>
