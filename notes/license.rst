@@ -11,7 +11,7 @@ License
     A copy of the license is included in the section entitled "GNU
     Free Documentation License".
 
-For further information read GFDLv3: https://www.gnu.org/licenses/fdl-1.3.en.html
+For further information read GFDL v1.3: https://www.gnu.org/licenses/fdl-1.3.en.html
 
 
 Authors
