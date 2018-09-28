@@ -99,7 +99,7 @@ State machine
 The following diagram shows the state machine:
 
 .. image:: media/command_interface/command_interface_figuur_1.png
-   :alt: Diagram showing tate machine
+   :alt: Diagram showing state machine
    :align: left
 
 Figure 1: Basic Protocol State Machine
