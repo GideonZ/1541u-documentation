@@ -16,23 +16,16 @@ Context
 -------
 
 The ‘Ultimate-II command interface’ feature is a new feature for the
-1541 Ultimate-II module. It implements a way to communicate to the 1541
-Ultimate-II programmatically from the Commodore 64, through the
-cartridge port I/O registers.
+1541 Ultimate-II module. It implements a way to communicate to the 1541 Ultimate-II programmatically from the Commodore 64, through the cartridge port I/O registers.
 
-The ‘Ultimate-II command interface’ is the communication layer between
-the C64 on one side and functional modules of the 1541 Ultimate-II on
-the other side. Such a functional module takes a command, and returns
-data and status back to the user program on the C64.
+The ‘Ultimate-II command interface’ is the communication layer between the C64 on one side and functional modules of the 1541 Ultimate-II on the other side. Such a functional module takes a command, and returns data and status back to the user program on the C64.
 
-Initially, there is one functional module, named “Ultimate DOS”, which
-is described in a separate document.
+Initially, there is one functional module, named “Ultimate DOS”, which is described in a separate document.
 
 Purpose of this document
 ------------------------
 
-The ‘Ultimate-II command interface’ feature is accessible from the
-cartridge I/O range. In this manual, the programming API is described.
+The ‘Ultimate-II command interface’ feature is accessible from the cartridge I/O range. In this manual, the programming API is described.
 
 Transport Layer
 ===============
@@ -40,10 +33,7 @@ Transport Layer
 Overview
 --------
 
-The transport layer of the Ultimate-II Command Interface makes use of a
-register interface which is accessible through the cartridge port of the
-C64. The registers are mapped into I/O space, at the address $DF1C up to
-$DF1F, masking the last four registers of the RAM Expansion Unit (REU).
+The transport layer of the Ultimate-II Command Interface makes use of a register interface which is accessible through the cartridge port of the C64. The registers are mapped into I/O space, at the address $DF1C up to $DF1F, masking the last four registers of the RAM Expansion Unit (REU).
 Mapping this small 4-byte block into the I/O space is optional, and
 needs to be turned on in the ‘Command Interface’ configuration menu.
 
@@ -81,55 +71,40 @@ The communication protocol is based on a state machine with four states:
 
 -  Data More (more data pending)
 
-The transition through these states takes place in an interaction
-between the C64 user software and the software running on the
-Ultimate-II. The state that the communication protocol is in can be read
-from the Status register at $DF1C.
+The transition through these states takes place in an interaction between the C64 user software and the software running on the Ultimate-II. The state that the communication protocol is in can be read from the Status register at $DF1C.
 
 Transfer command
 ~~~~~~~~~~~~~~~~
 
-When the protocol is in idle state (see paragraph 2.4.2 for the state
-encoding), the Ultimate-II is ready to receive a new command. This is
-done by writing the command byte by byte into the command data register
-at $DF1D. Then, the command is pushed into the Ultimate-II by writing a
-‘1’ to the control bit ‘PUSH\_CMD’, in the control register. This will
-cause a state transition to “Command Busy”.
+When the protocol is in idle state (see paragraph 2.4.2 for the state encoding), the Ultimate-II is ready to receive a new command. This is done by writing the command byte by byte into the command data register at $DF1D. Then, the command is pushed into the Ultimate-II by writing a ‘1’ to the control bit ‘PUSH\_CMD’, in the control register. This will cause a state transition to “Command Busy”.
 
 Ultimate-II processes command
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As soon as the Ultimate-II has decided how to respond to this command,
-it will prepare the data and status reply, and cause the state machine
-to move to one of the two data states: ‘Data Last’, or ‘Data More’.
+As soon as the Ultimate-II has decided how to respond to this command, it will prepare the data and status reply, and cause the state machine to move to one of the two data states: ‘Data Last’, or ‘Data More’.
 
 Reading the reply
 ~~~~~~~~~~~~~~~~~
 
-The user software can now read both data and status from the respective
-registers $DF1E and $DF1F. Whether there is data or status available can
-be seen from the upper two bits of the status register. These bits will
-be ‘1’ when there is still more data to be read, and ‘0’ otherwise.
+The user software can now read both data and status from the respective registers $DF1E and $DF1F. Whether there is data or status available can be seen from the upper two bits of the status register. These bits will be ‘1’ when there is still more data to be read, and ‘0’ otherwise.
 
 Release: Accept data
 ~~~~~~~~~~~~~~~~~~~~
 
-As soon as the software has read all the data (or decides not to do so),
-the C64 should write a ‘1’ to the register bit ‘DATA\_ACC’, to indicate
-that all data was accepted. If this was the last data block, this causes
-the state machine to go back to the idle state, or else, the state
-returns to “Command Busy”.
+As soon as the software has read all the data (or decides not to do so), the C64 should write a ‘1’ to the register bit ‘DATA\_ACC’, to indicate that all data was accepted. If this was the last data block, this causes the state machine to go back to the idle state, or else, the state returns to “Command Busy”.
 
 State machine
 ~~~~~~~~~~~~~
 
 The following diagram shows the state machine:
 
+.. image::media/command_interface/command_interface_figuur_1.png
+   :alt: Diagram showing tate machine
+   :align: left
+
 Figure 1: Basic Protocol State Machine
 
-Note: Setting the ‘ABORT’ bit, does not directly influence the state
-machine. It is handled by the Ultimate-II software, which will in turn
-reset the state machine to idle eventually.
+Note: Setting the ‘ABORT’ bit, does not directly influence the state machine. It is handled by the Ultimate-II software, which will in turn reset the state machine to idle eventually.
 
 Register Details
 ================
@@ -145,25 +120,13 @@ The control register contains the following bits:
 | ***reserved***                                        | CLR\_ERR    | ABORT   | DATA\_ACC| PUSH\_CMD|
 +------------------+------------+---------+-------------+-------------+---------+----------+----------+
 
-PUSH\_CMD: Writing a ‘1’ to this register bit causes the command that
-was written to the command data register to be pushed into the software
-of the Ultimate-II.
+PUSH\_CMD: Writing a ‘1’ to this register bit causes the command that was written to the command data register to be pushed into the software of the Ultimate-II.
 
-DATA\_ACC: Writing a ‘1’ to this register bit tells the communication
-layer that all data from the Ultimate-II was accepted. This is
-automatically ignored when the communication controller is not in one of
-the two data states. Writing to this bit also causes the transfer of the
-data/status queues to be aborted and reset. Thus, the data response and
-status response queues will be empty after writing this bit.
+DATA\_ACC: Writing a ‘1’ to this register bit tells the communication layer that all data from the Ultimate-II was accepted. This is automatically ignored when the communication controller is not in one of the two data states. Writing to this bit also causes the transfer of the data/status queues to be aborted and reset. Thus, the data response and status response queues will be empty after writing this bit.
 
-ABORT: Writing a ‘1’ to this register sets the ‘abort’ flag in the
-communication controller. This bit is polled by the Ultimate-II
-software. When it finds this bit set, the current communication is
-aborted, and the state machine is forced back to the idle state.
+ABORT: Writing a ‘1’ to this register sets the ‘abort’ flag in the communication controller. This bit is polled by the Ultimate-II software. When it finds this bit set, the current communication is aborted, and the state machine is forced back to the idle state.
 
-CLR\_ERR: Pushing a command to the Ultimate-II when the communication
-layer is not in idle mode, causes a state error flag to be set. See
-status register. Write a ‘1’ to CLR\_ERR to clear this error condition.
+CLR\_ERR: Pushing a command to the Ultimate-II when the communication layer is not in idle mode, causes a state error flag to be set. See status register. Write a ‘1’ to CLR\_ERR to clear this error condition.
 
 Status register
 ~~~~~~~~~~~~~~~
@@ -176,17 +139,13 @@ The status register contains the following bits:
 | DATA\_AV   | STAT\_AV   | *STATE*             | ERROR      | ABORT\_P    | DATA\_ACC   | CMD\_BUSY |  
 +------------+------------+-----------+---------+------------+-------------+-------------+-----------+
 
-CMD\_BUSY: This bit indicates that there is a pending command in the
-command memory.
+CMD\_BUSY: This bit indicates that there is a pending command in the command memory.
 
-DATA\_ACC: This bit reflects the condition that the user has told the
-Ultimate-II that it accepted the data.
+DATA\_ACC: This bit reflects the condition that the user has told the Ultimate-II that it accepted the data.
 
-ABORT\_P: This bit reflects the state of the internal abort flag. When
-this bit is ‘1’, the Ultimate-II still has to handle the abort request.
+ABORT\_P: This bit reflects the state of the internal abort flag. When this bit is ‘1’, the Ultimate-II still has to handle the abort request.
 
-ERROR: When this bit is ‘1’, the user tried to send a command to the
-Ultimate-II while it was not in idle state.
+ERROR: When this bit is ‘1’, the user tried to send a command to the Ultimate-II while it was not in idle state.
 
 STATE: These two bits encode the protocol state:
 
@@ -198,17 +157,14 @@ STATE: These two bits encode the protocol state:
 
 11: Data More
 
-STAT\_AV: When this bit is ‘1’, there is status data available from the
-status queue, accessible through the status data register ($DF1F).
+STAT\_AV: When this bit is ‘1’, there is status data available from the status queue, accessible through the status data register ($DF1F).
 
-DATA\_AV: When this bit is ‘1’, there is response data available from
-the data queue, accessible through the response data register ($DF1E).
+DATA\_AV: When this bit is ‘1’, there is response data available from the data queue, accessible through the response data register ($DF1E).
 
 Queues
 ------
 
-As previously described, there are three byte-queues that the
-Ultimate-II Command Interface uses:
+As previously described, there are three byte-queues that the Ultimate-II Command Interface uses:
 
 -  Command queue
 
@@ -216,20 +172,11 @@ Ultimate-II Command Interface uses:
 
 -  Status queue
 
-The sizes of these queues are important to note, since they define the
-maximum transfer size per command. The command queue size is 896 bytes
-($380), the response data queue is also 896 bytes ($380), and the status
-queue is 256 bytes ($100).
+The sizes of these queues are important to note, since they define the maximum transfer size per command. The command queue size is 896 bytes ($380), the response data queue is also 896 bytes ($380), and the status queue is 256 bytes ($100).
 
 Dispatch Layer 
 ===============
 
-On top of the transport layer, there is light weight dispatcher. This
-dispatcher sends the command from the user software to a functional
-module in the 1541 Ultimate-II. The first byte of the command is
-determines the destination. Such a destination is called a ‘target’.
+On top of the transport layer, there is light weight dispatcher. This dispatcher sends the command from the user software to a functional module in the 1541 Ultimate-II. The first byte of the command is determines the destination. Such a destination is called a ‘target’.
 
-Initially, in version 2.6 of the Ultimate-II firmware, there is only one
-functional target: “Ultimate-DOS”. Two instances of this DOS are located
-at targets 1 and 2. See the documentation of this target to obtain more
-information on the commands this target implements.
+Initially, in version 2.6 of the Ultimate-II firmware, there is only one functional target: “Ultimate-DOS”. Two instances of this DOS are located at targets 1 and 2. See the documentation of this target to obtain more information on the commands this target implements.
