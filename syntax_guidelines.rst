@@ -1,39 +1,42 @@
 Syntax guidelines
 =================
 
-Heading 1 
-==========
+Title
+=====
 only for top headings, for the separate manuals. i.e. Ultimate 64
 
 .. code::
 
-    Heading 1
-    =========
+    Title
+    =====
 
 ----
 
-Heading 2. 
------------
+Subtitle
+--------
 Almost all your first headers will be this
 
 .. code::
 
-    Heading 2
-    ---------
+    Subtitle
+    --------
 
 ----
 
-Heading 3.
-~~~~~~~~~~
+Sub subtitle
+............
 You should not need more than 3 type of headings.
 If you do, try to reformat.
 
 .. code::
 
-    Heading 3
-    ~~~~~~~~~
+    Sub subtitle
+    ............
 
 ----
+
+Tables
+......
 
 +-------+-------+--------+
 | Table | with  | header |
@@ -52,3 +55,32 @@ If you do, try to reformat.
     +-------+-------+--------+
     | and   | here  | too    |
     +-------+-------+--------+
+
+----
+
+Bullet lists
+............
+
+Auto numbered numbered lists
+
+#. Nubered lists
+#. Nubered lists
+
+.. code::
+
+    #. Numbered lists
+    #. Numbered lists
+
+
+Plain bullet lists
+
+- Bullet list
+- Bullet list
+
+.. code::
+
+    - Bullet list
+    - Bullet list
+
+
+
