@@ -1,0 +1,7 @@
+# local utils and files
+local/*
+build/*
+
+# temp files
+*.tmp
+
