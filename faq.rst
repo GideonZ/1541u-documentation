@@ -242,9 +242,8 @@ functions, settings etc. of the Ultimate cartridges.
 
 For both the `Ultimate II
 <https://github.com/GideonZ/1541ultimate/blob/master/doc/Quick%20guide%20to%2
-0the%201541%20Ultimate%20II.docx>`_ and `Ultimate II+
-<https://github.com/GideonZ/1541ultimate/blob/master/doc/Quick%20guide%20Ult
-imate%20II%2B.pdf>`_ a quick start guide exists.
+0the%201541%20Ultimate%20II.docx>`_ and `Ultimate II+ <quick_guide.rst>`_ a
+quick start guide exists.
 
 A resource for some documentation can be found here:
 `http://rr.c64.org/wiki/1541_Ultimate#Documentation
