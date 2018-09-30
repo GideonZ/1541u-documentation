@@ -1,15 +1,12 @@
 1541 Ultimate-II(+) and Ultimate-64 Documentation
 =================================================
 
-This repository is still fully experimental.
-Documentation *will* appear **soon**.
-
 .. toctree::
   :maxdepth: 1
 
   Quick Guide to the Ultimate II+ <quick_guide>
-  Ultimate 64 by TSB <ultimate64-manual>
-  Getting Started <u64/getting_started>
-  Ultimate 64 Specific <ultimate_64>
+  Ultimate 64 <ultimate64>
+  FAQ by Grrrolf <faq>
   Command Interface <command interface>
+  Virtual Printer <ultimate_printer>
   Interview By Retro Magazine <interview>

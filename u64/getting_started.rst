@@ -1,26 +1,26 @@
 
 Getting Started
----------------
+===============
 
-What do I need to get started
+What do I need to get started?
 
 Prerequisites
-.............
+-------------
 
 - Ultimate 64 motherboard
 - Power adapter 12V DC (included)
-- A case to put your Ultimate 64 in.
+- A case to put your Ultimate 64 in
 - A C64 keyboard
 - HDMI cable or standard C64 video cable
 - USB Pen drive
 - Kernal ROM (extract from your Commodore 64 or download online)
 - Basic ROM (extract from your Commodore 64 or download online)
+- Char ROM (extract from your Commodore 64 or download online)
 
 Optional
 ........
-- One or two SID chip
-- Keyboard risers (for the C64C model case, you want this)
-- Char ROM (the Ultimate 64 comes with a default char ROM)
+- One or two SID chips
+- Keyboard risers (for the C64C model case)
 
 
 Installing
@@ -93,10 +93,12 @@ to the Ultimate 64. Power on and wait for picture, where it explains how to do.
 Basically you stick your USB drive in the back of the Ultimate 64 and push shortly on the power button
 to bring up the Menu.
 
-#. Browse to your Kernal image and press Enter.
+#. Browse to your Kernal ROM image and press Enter.
 #. Choose ``Flash as Orig. Kernal ROM``.
-#. Browse to your Basic image and press Enter.
+#. Browse to your Basic ROM image and press Enter.
 #. Choose ``Flash as Orig. Basic ROM``.
+#. Browse to your Character ROM image and press Enter.
+#. Choose ``Flash as Orig. Character ROM``.
 #. Push ``F5`` and choose ``Reboot C64``.
 
 Real SID
@@ -104,7 +106,7 @@ Real SID
 
 If you're installing real SID chips, you have to set the jumpers accordingly.
 If you don't have or don't want to install SID chips you can use the built in
-fpgaSID.
+'EmuSID'.
 
 ::
 
@@ -129,20 +131,7 @@ Now you have to set your SID types in the Ultimate-II+ menu:
 | and
 | ``SID in socket 2``
 
-
-
-Power Button
-------------
-
-+----------------------------------+----------------------------------+
-| Button Action                    | Function                         |
-+==================================+==================================+
-| Short push                       | Brings up the Ultimate-II\+ menu |
-+----------------------------------+----------------------------------+
-| 1s - 4s push                     | C64 Reset                        |
-+----------------------------------+----------------------------------+
-| > 4s push                        | C64 Power off                    |
-+----------------------------------+----------------------------------+
-| Holding ``RESTORE`` + Short push | Cartridge Freeze menu            |
-+----------------------------------+----------------------------------+
+Setting the SID type in the configuration enables the bus access to the chip,
+and also allows the auto-configurator to choose the right chip when playing
+a SID tune with the provided player from Wilfred Bos.
 
