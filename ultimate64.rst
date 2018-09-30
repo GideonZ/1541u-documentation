@@ -6,5 +6,6 @@ Ultimate-64 Documentation
 
   Getting Started <u64/getting_started>
   Power Button <u64/multi_button>
+  User Interface <u64/user_interface>
   Audio/Video Connector Pinout <hardware/av_plug>
   SID-TAP Header Pinout <hardware/sid_tap>
