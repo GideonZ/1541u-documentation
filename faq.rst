@@ -31,7 +31,7 @@ Where can I find the latest firmware?
 -------------------------------------
 You can find an overview of almost all firmware releases on this page: `firmware
 overview
-<https://ammo.home.xs4all.nl/Ultimate_Carts/firmware_ultimate_carts.html.html>`_ 
+<https://ammo.home.xs4all.nl/Ultimate_Carts/firmware_ultimate_carts.html>`_ 
 (including the latest).
 
 
