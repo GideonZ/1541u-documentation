@@ -149,7 +149,7 @@ There are several ways to play SID tunes using the ethernet interface:
 
 This SID player has the ability to play SID tunes over the netwerk on the
 Ultimate devices. It is built to run on the Microsoft Windows Operating System.
-When using `Wine <https://www.winehq.org/>`_ Acid 64 Player Pro will also run on macOS and Linux.
+When using `Wine <https://www.winehq.org/>`_, Acid 64 Player Pro will also run on macOS and Linux.
 
 * Use `Ultimate1541 Sid Remote 1.1 <https://csdb.dk/release/?id=157085>`_ by
   `L.A. Style of Genesis Project <http://csdb.dk/scener/?id=673>`_. This
