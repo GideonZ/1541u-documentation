@@ -48,9 +48,10 @@ To revert to version 2.6k, use the revert.u2u that's included in the 3.0 beta 7
 archive.
 
 You can find the `3.0 beta 7 on 1541ultimate.net.
-<http://www.1541ultimate.net/content/download/1541u2_3.0beta7.zip>`_ and the
-latest firmware is available in the pinned post at the top of the 1541 Ultimate
-facebook group or `on this page
+<http://www.1541ultimate.net/content/index.php?option=com_content&view=article&i
+d=67:1541u-ii-update-30b7&catid=4&Itemid=19>`_ and the latest firmware is
+available in the pinned post at the top of the 1541 Ultimate facebook group or
+`on this page
 <https://ammo.home.xs4all.nl/Ultimate_Carts/firmware_ultimate_carts.html>`_.
 
 
@@ -148,11 +149,11 @@ There are several ways to play SID tunes using the ethernet interface:
 
 This SID player has the ability to play SID tunes over the netwerk on the
 Ultimate devices. It is built to run on the Microsoft Windows Operating System.
-When using Wine Acid 64 Player Pro will also run on macOS and Linux.
+When using `Wine <https://www.winehq.org/>`_ Acid 64 Player Pro will also run on macOS and Linux.
 
-* Use `Ultimate1541 Sid Remote 1.1 <http://csdb.dk/scener/?id=673>`_ by L.A.
-  Style of Genesis Project. This software runs on Microsoft Windows Operating
-  system.
+* Use `Ultimate1541 Sid Remote 1.1 <https://csdb.dk/release/?id=157085>`_ by
+  `L.A. Style of Genesis Project <http://csdb.dk/scener/?id=673>`_. This
+  software runs on Microsoft Windows Operating system.
 
 
 How do I use T64 files?
