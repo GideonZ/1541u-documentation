@@ -6,7 +6,7 @@ Clock settings / RTC
    :alt: RTC on board
    :align: left
 
-The U64 has a internal clock that is powered with a battery to keep track of the date & time.
+The U64 has an internal clock that is powered with a battery to keep track of the date & time.
 
 At this config screen date & time can be changed with the following options:
 

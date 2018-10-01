@@ -8,34 +8,34 @@ Software IEC Settings
 
 
 IEC Drive and printer
----------------------
+.....................
 
 Soft Drive Bus ID
------------------
+.................
 
 Default Path
-------------
+............
 
 Printer Bus ID
---------------
+..............
 
 Printer output file
--------------------
+...................
 
 Printer output type
--------------------
+...................
 
 Printer ink density
--------------------
+...................
 
 Printer Emulation
------------------
+.................
 
 Printer Commodore charset
--------------------------
+.........................
 
 Printer Epson charset
----------------------
+.....................
 
 Printer IBM table 2
--------------------
+...................
