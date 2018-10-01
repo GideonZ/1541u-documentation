@@ -321,6 +321,6 @@ even recognises roman numbers.
    =====  =====
    row1   row 2
    =====  =====
-   False  Truth is somethign intersting don't you think so? But will it also wrap or not! I hope it does, but don't think it will. But it seems that it actuall does wrap? What's going on here!
+   False  | Truth is somethign intersting don't you think so? But will it also wrap or not! I hope it does, but don't think it will. But it seems that it actuall does wrap? What's going on here!
    True   False
    =====  =====
