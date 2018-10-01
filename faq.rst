@@ -306,3 +306,10 @@ even recognises roman numbers.
 | | Item 2 |          |          |
 +----------+----------+----------+
 
++----------+----------+-----------------------------------+
+| Header 1 | Header 2 | Header 3                          |
++==========+==========+===================================+
+| | Item 1 |          | | This is another test with a long|
+| | Item 2 |          | | line that does not wrap automat-|
+|          |          | | ically. Manually works?         |
++----------+----------+-----------------------------------+
