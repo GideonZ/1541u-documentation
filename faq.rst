@@ -310,6 +310,6 @@ even recognises roman numbers.
 | Header 1 | Header 2 | Header 3                          |
 +==========+==========+===================================+
 | | Item 1 |          | | This is another test with a long|
-| | Item 2 |          | | line that does not wrap automat-|
-|          |          | | ically. Manually works?         |
+| | Item 2 |          | | line that does not wrap automa-|
+|          |          | | tically. Manually works?         |
 +----------+----------+-----------------------------------+
