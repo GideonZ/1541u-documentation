@@ -313,3 +313,14 @@ even recognises roman numbers.
 | | Item 2 |          | | line that does not wrap automa- |
 |          |          | | tically. Manually works?        |
 +----------+----------+-----------------------------------+
+
+.. table:: **Test table for autowrap**
+   :widths: auto
+   :align: left
+
+   =====  =====
+   row1   row 2
+   =====  =====
+   False  Truth is somethign intersting don't you think so? But will it also wrap or not! I hope it does, but don't think it will. But it seems that it actuall does wrap? What's going on here!
+   True   False
+   =====  =====
