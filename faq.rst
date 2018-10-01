@@ -299,3 +299,10 @@ belong together E.g. "special game disk 1.d64" and "special game disk 2.d64" or
 "special game S2.d64". or "image 1.d64" and "image 2.d64", etc. etc. etc. It
 even recognises roman numbers.
 
++----------+----------+----------+
+| Header 1 | Header 2 | Header 3 |
++==========+==========+==========+
+| | Item 1 |          |          |
+| | Item 2 |          |          |
++----------+----------+----------+
+
