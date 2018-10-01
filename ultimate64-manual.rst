@@ -53,42 +53,25 @@ Menus
 -----
 
 The Ultimate-64 provides a user friendly menu driven interface, which
-can be accessed by pressing the multi button (power) briefly. Pressing
+can be accessed by pressing the ``multi button`` (power) briefly. Pressing
 this button will interrupt the currently running program on the C=64 and
 show the menu. Leaving the menu will resume the C=64 gracefully.
 
-The main two functions of the menu are:
+The main three functions of the menu are:
 
-1. File selection
+1. File selection (normal mode)
 
-2. Configuration of the Ultimate 64
+2. ``F2`` brings up the Settings of the Ultimate 64
 
-3. Tool menu
+3. ``F5`` brings up the Tools menu
 
-File selection menu
-~~~~~~~~~~~~~~~~~~~
+Navigation
+~~~~~~~~~~
 
-.. figure:: ultimate64-manual.assets/1536790041641.png
-   :alt: 
+``run/stop`` takes you back to the file browser from sub-menus
+or out of the Ultimate-II+ menu when in file browser.
 
-The menu starts with showing the available network interfaces, and the
-storage devices that are attached to the cartridge. By default, it will
-only show the built-in Ethernet port. When USB-sticks are inserted, one
-or more items will appear in this list. This screen is the ‘root’ of the
-file system.
-
-.. figure:: ultimate64-manual.assets/1536790123244.png
-   :alt: 
-
-Use the cursor keys to navigate through the file system and select your
-file (disk image) to mount. The highlighted line shows the current
-selection.
-
-F2 - configuration menu
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. figure:: ultimate64-manual.assets/1536790555692.png
-   :alt: 
+``F3`` will show menu navigation keys.
 
 Use the UP/DOWN cursor keys to navigate and RIGHT to enter the desired
 configuration screen. Once inside a settings screen, the behavior of the
@@ -119,216 +102,144 @@ Note that some values will only take effect after reset or a power cycle
 of your C=64. However, the main menu provides a way to restart the 1541
 and the C=64 with the new settings.
 
+File selection menu
+~~~~~~~~~~~~~~~~~~~
+
+.. figure:: ultimate64-manual.assets/1536790041641.png
+   :alt: 
+
+The menu starts with showing the available network interfaces, and the
+storage devices that are attached to the cartridge. By default, it will
+only show the built-in Ethernet port. When USB-sticks are inserted, one
+or more items will appear in this list. This screen is the ‘root’ of the
+file system.
+
+.. figure:: ultimate64-manual.assets/1536790123244.png
+   :alt: 
+
+Use the cursor keys to navigate through the file system and select your
+file (disk image) to mount. The highlighted line shows the current
+selection.
+
+F2 - Settings menu
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: ultimate64-manual.assets/1536790555692.png
+   :alt: 
+
+
+
+**U64 Specific Settings**
+
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Menu name                    | Explanation                                                                    | Options           |
+|                              |                                                                                | (bold default)    |
++==============================+================================================================================+===================+
+| HDMI Scan Lines              | This setting emulates the well know scanlines of that where visible on CRT     | **Disabled**      |
+|                              | (old) display.  Every line is drawn twice. The second line that the Ultimate64 | Enabled           |
+|                              | outputs is either a dimmer version of the previous line, or a full             |                   |
+|                              | brightness line. The dim line gives an awesome CRT effect, while the           |                   |
+|                              | exact copy of the previous line gives a crisp solid image.                     |                   |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Digital Video Mode           | HDMI or DVI output via HDMI cable                                              | **DVI**           |
+|                              |                                                                                | HDMI              |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| SpeedDOS Parallell Cable     | Enable this when using a parallell Kernal and Drive ROM                        | **Disabled**      |
+|                              |                                                                                | Enabled           |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| SID in Socket 1/2            | Choose what type of SID you have in Socket 1/2.                                | None              |
+|                              | fpgaSID emulates a SID chip.                                                   | 6581              |
+|                              | sidFX is a hardware addon.                                                     | 8580              |
+|                              |                                                                                | sidFX             |
+|                              |                                                                                | **fpgaSID**       |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| SID Player Autoconfig        | ??                                                                             | **Disabled**      |
+|                              |                                                                                | Enabled           |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Allow Autoconfig uses EmuSid | ??                                                                             | **Yes**           |
+|                              |                                                                                | No                |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| SID Socket 1/2 Address       | ??                                                                             | **$D400-$D7FF**   |
+|                              |                                                                                | $D400-$D5FF       |
+|                              |                                                                                | $D600-$D7FF       |
+|                              |                                                                                | $D400-$D4FF       |
+|                              |                                                                                | $D500-$D5FF       |
+|                              |                                                                                | $D600-$D6FF       |
+|                              |                                                                                | $D700-$D7FF       |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Paddle Override              | When paddle override is on, the U64 will always read the                       | **Disabled**      |
+|                              | internal paddle registers, regardless of the address                           | Enabled           |
+|                              | settings and which SID is mapped where.                                        |                   |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Ext StereoSID addrline       | ??                                                                             | **A5**            |
+|                              |                                                                                | A8                |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| UltiSID 1/2 Address          | ??                                                                             | **$D400-$D7FF**   |
+|                              |                                                                                | $D400-$D5FF       |
+|                              |                                                                                | $D600-$D7FF       |
+|                              |                                                                                | $D400-$D4FF       |
+|                              |                                                                                | $D500-$D5FF       |
+|                              |                                                                                | $D600-$D6FF       |
+|                              |                                                                                | $D700-$D7FF       |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Adjust Color Clock           | With this settings the color clock pulses can be controlled.                   | **0**             |
+|                              | Value range: between -100 ~ +100 ppm                                           | -100 to +100      |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Analog Video                 | Choose type of output over Legacy Video port (DIN Plug).                       | **CVBS + SVideo** |
+|                              | The analog video output can be set to 2 different modes                        | RGB               |
+|                              | CVBS + SVideo *This is the same output that the original Commodore 64 uses.*   |                   |
+|                              | RGB This is a U64 setting which outputs the video in separate signals.         |                   |
+|                              | These signals are Red,Green and Blue, these can be used                        |                   |
+|                              | to make a video cable to scart.                                                |                   |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Chroma Delay                 | Amount of time for the Chroma signal to delay.                                 | **0**             |
+|                              | With this settings the Chroma (color) data can be delayed.                     | -3 to +3          |
+|                              | This can be helpful if there is some bleach in the color output.               |                   |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Vol EmuSid1/2                | Volume for emulated SID chip 1/2                                               | **0dB**           |
+|                              |                                                                                | -42dB to +6dB     |
+|                              |                                                                                | Off               |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Vol Socket 1/2               | Volume for SID chip in socket 1/2                                              | **0dB**           |
+|                              |                                                                                | -42dB to +6dB     |
+|                              |                                                                                | Off               |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Vol Sampler L/R              | Left / Right output volume of the DA converter (soundcard),                    | **0dB**           |
+|                              | for example the mod files player.                                              | -42dB to +6dB     |
+|                              |                                                                                | Off               |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Vol Drive 1/2                | Output volume for Ultimate 1541 drive 1 and 2,                                 | **0dB**           |
+|                              | this is the mechanic sound you hear when loading or saving data on the drive,  | -42dB to +6dB     |
+|                              | and will be mixed in to the output.                                            | Off               |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Vol Tape Read / Write        | Output volume of emulated Tape Read / Write sound mixed into Sound output.     | **0dB**           |
+|                              | This will also send the sound from an external Tape deck (1531) through your   | -42dB to +6dB     |
+|                              | speakers.                                                                      | Off               |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Pan EmuSid1/2                | Panning for emulated SID chip 1/2                                              | Left 1-5          |
+|                              |                                                                                | Right 1-5         |
+|                              |                                                                                | **Center**        |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Pan Socket 1/2               | Panning for SID chip in socket 1/2                                             | Left 1-5          |
+|                              |                                                                                | Right 1-5         |
+|                              |                                                                                | **Center**        |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Pan Sampler L/R              | Panning for Sampler Left / Right                                               | Left 1-5          |
+|                              |                                                                                | Right 1-5         |
+|                              |                                                                                | **Center**        |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Pan Drive 1 / 2              | Panning of the Ultimate 1541 Drive sound mixed into Sound output               | Left 1-5          |
+|                              |                                                                                | Right 1-5         |
+|                              |                                                                                | **Center**        |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+| Pan Tape Read / Write        | Panning of the emulated Tape Read / Write sound mixed into Sound output        | Left 1-5          |
+|                              |                                                                                | Right 1-5         |
+|                              |                                                                                | **Center**        |
++------------------------------+--------------------------------------------------------------------------------+-------------------+
+
+
 U64 Specific Settings
 ^^^^^^^^^^^^^^^^^^^^^
-
-HDMI Scan lines
-'''''''''''''''
-
-This setting emulates the well know scanlines of that where visible on
-CRT (old) display.
-
-   You mentioned 576p... that seems like about twice the number of lines
-   needed. What do you do with the other lines?
-
-   Every line is drawn twice. The second line that the Ultimate64
-   outputs is either a dimmer version of the previous line, or a full
-   brightness line. The dim line gives an awesome CRT effect, while the
-   exact copy of the previous line gives a crisp solid image.
-
-**Values:**
-
--  **Disabled ( default )**
--  Enabled
-
-Digital Video Mode
-''''''''''''''''''
-
-- DVI
-- HDMI
-
-
-
-SpeedDOS Parallel Cable
-'''''''''''''''''''''''
-
-**Values:**
-
--  **Disabled ( default )**
--  Enabled
-
-SID in Socket 1 & 2
-'''''''''''''''''''
-
-- None
-- 6581
-- 8580
-- SIdFX
-- fpgaSID
-
-SID Player Autoconfig
-'''''''''''''''''''''
-
-**Values:**
-
--  **Disabled ( default )**
--  Enabled
-
-Allow Autoconfig uses EmuSid
-''''''''''''''''''''''''''''
-
-- No
-- Yes
-
-SID Socket 1 & 2 Address
-''''''''''''''''''''''''
-- $D400-$D7FF
-- $D400-$D5FF 
-- $D600-$D7FF 
-- $D400-$D4FF 
-- $D500-$D5FF 
-- $D600-$D6FF
-- $D700-$D7FF
-
-Paddle Override
-'''''''''''''''
-
-**Values:**
-
--  **Disabled ( default )**
--  Enabled
-
-
-Ext StereoSID addrline
-''''''''''''''''''''''
-
-- A5
-- A8
-
-UltiSID 1 & 2 Address
-^^^^^^^^^^^^^^^^^^^^^
-
-- $D400-$D7FF
-- $D400-$D5FF 
-- $D600-$D7FF 
-- $D400-$D4FF 
-- $D500-$D5FF 
-- $D600-$D6FF
-- $D700-$D7FF
-
-Adjust Color Clock
-''''''''''''''''''
-
-With this settings the color clock pulses can be controlled.
-
-Value range: between -100 ~ +100 ppm
-
-**Default value: 0**
-
-Analog Video
-''''''''''''
-
-The analog video output ( DIN plug ) can be set to 2 different modes:
-
--  CVBS + SVideo *This is the same output that the original Commodore 64
-   uses.*
-
--  RGB This is a U64 setting which outputs the video in separate
-   signals. These signals are Red,Green and Blue, these can be used to
-   make a video cable to scart.
-
-**Default value: CVBS + SVideo**
-
-Chroma Delay
-''''''''''''
-
-With this settings the Chroma ( color ) data can be delayed. This can be
-helpfull if there is some bleach in the color output.
-
-Value range:* between -3 & +3
-
-**Default value: 0**
-
-Volume settings
-'''''''''''''''
-
-The volume for each audio output can be set to a value between **-42dB
-and +6dB**, or it can turned **off**.
-
-**Default value: 0dB**
-
-\ **This can be applied to the following settings:**\ 
-
--  Vol EmuSid1 *Volume of EmuSid1*
-
--  Vol EmuSid2 *Volume of EmuSid2*
-
--  Vol Socket 1 *Volume of SID in socket 1*
-
--  Vol Socket 2 *Volume of SID in socket 2*
-
--  Vol Sampler L *Left output volume of the DA converter ( soundcard ),
-   for example the mod files player*
-
--  Vol Sampler R *Right output volume of the DA converter ( soundcard ),
-   for example the mod files player*
-
--  Vol Drive 1 *Output volume for "1541" drive 1, this is the sound you
-   hear when loading or saving data on the drive*
-
--  Vol Drive 2 *Output volume for "1541" drive 2, this is the sound you
-   hear when loading or saving data on the drive*
-
--  Vol Tape Read *Output volume for "Tape" drive , this is the sound you
-   hear when loading data from the drive*
-
--  Vol Tape Write *Output volume for "Tape" drive , this is the sound
-   you hear when loading data to the drive*
-
-
-Panning settings
-''''''''''''''''
-
-The panning for each audio output can be set to a value in the range
-Left1 ~ Right5.
-
-**Values:**
-
--  Left range: 1~5
-
--  Centre
-
--  Right range: 1~5
-
-**Default value: Centre**
-
-\ **This can be applied to the following settings**\ 
-
--  Pan EmuSid1 *Panning of EmuSid1*
-
--  Pan EmuSid2 *Panning of EmuSid2*
-
--  Pan Socket 1 *Panning of SID in socket 1*
-
--  Pan Socket 2 *Panning of SID in socket 2*
-
--  Pan Sampler L *Left Panning of the DA converter ( soundcard ), for
-   example the mod files player*
-
--  Pan Sampler R *Right Panning of the DA converter ( soundcard ), for
-   example the mod files player*
-
--  Pan Drive 1 *Panning for "1541" drive 1, this is the sound you hear
-   when loading or saving data on the drive*
-
--  Pan Drive 2 *Panning for "1541" drive 2, this is the sound you hear
-   when loading or saving data on the drive*
-
--  Pan Tape Read *Panning for "Tape" drive , this is the sound you hear
-   when loading data from the drive*
-
--  Pan Tape Write *Panning for "Tape" drive , this is the sound you hear
-   when loading data to the drive*
 
 Clock Settings
 ^^^^^^^^^^^^^^
