@@ -299,28 +299,3 @@ belong together E.g. "special game disk 1.d64" and "special game disk 2.d64" or
 "special game S2.d64". or "image 1.d64" and "image 2.d64", etc. etc. etc. It
 even recognises roman numbers.
 
-+----------+----------+----------+
-| Header 1 | Header 2 | Header 3 |
-+==========+==========+==========+
-| | Item 1 |          |          |
-| | Item 2 |          |          |
-+----------+----------+----------+
-
-+----------+----------+-----------------------------------+
-| Header 1 | Header 2 | Header 3                          |
-+==========+==========+===================================+
-| | Item 1 |          | | This is another test with a long|
-| | Item 2 |          | | line that does not wrap automa- |
-|          |          | | tically. Manually works?        |
-+----------+----------+-----------------------------------+
-
-.. table:: **Test table for autowrap**
-   :widths: auto
-   :align: left
-
-   =====  =====
-   row1   row 2
-   =====  =====
-   False  | Truth is somethign intersting don't you think so? But will it also wrap or not! I hope it does, but don't think it will. But it seems that it actuall does wrap? What's going on here!
-   True   False
-   =====  =====
