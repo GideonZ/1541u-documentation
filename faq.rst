@@ -130,7 +130,7 @@ key          description
 |left arrow| fast forward
 1 - 0        sub tune selection for tune 1 - 10
 \+           play next sub tune
-\ -          play previous sub tune
+\ –          play previous sub tune
 run/stop     go to Ultimate menu
 ============ ===========
 
