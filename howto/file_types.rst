@@ -8,5 +8,6 @@ The following files can be used for mounting/loading software.
 - D64
 - G64
 - T64
+- TXT, can be viewed with the built-in text viewer
 
 *Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64*
