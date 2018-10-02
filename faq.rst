@@ -124,15 +124,15 @@ How do I use the built-in SID player
 The new Sidplayer in firmware 3.2 has now keyboard support for the following
 keys:
 
-========  ===========
-key       description
-========  ===========
-??        fast forward
-1 - 0     sub tune selection for tune 1 - 10
-\+        play next sub tune
-\ -       play previous sub tune
-run/stop  go to Ultimate menu
-========  ===========
+============ ===========
+key          description
+============ ===========
+|left arrow| fast forward
+1 - 0        sub tune selection for tune 1 - 10
+\+           play next sub tune
+\ -          play previous sub tune
+run/stop     go to Ultimate menu
+============ ===========
 
 Keyboard support only works for PSID tunes and for RSID tunes that don't run in
 a loop and when there is enough memory for the player. If the keyboard doesn't
@@ -299,3 +299,4 @@ belong together E.g. "special game disk 1.d64" and "special game disk 2.d64" or
 "special game S2.d64". or "image 1.d64" and "image 2.d64", etc. etc. etc. It
 even recognises roman numbers.
 
+.. |left arrow| unicode:: U+2B05 U+FE0E .. LEFTWARDS BLACK ARROW
