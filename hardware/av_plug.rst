@@ -5,6 +5,7 @@ Audio/Video Connector
    :alt: 8-pin DIN plug drawing
    
    
+   
 The 8-pin DIN ( audio/video ) connector can output several different video signals, for each type you need a special assembled cable.   
 
 **Output signals**
