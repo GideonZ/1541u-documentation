@@ -60,3 +60,5 @@ This image is then saved to the USB flash drive.
 The full documentation of the printer emulation and all of its capabilities and options is available here:
 
 http://1541ultimate.net/content/download/mps_printer_emulation.pdf
+
+*Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64*
