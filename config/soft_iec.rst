@@ -56,6 +56,7 @@ At this point, the virtual drive is not JiffyDOS compliant.
 The virtual printer is a valuable contribution created by René Garcia. 
 It takes printer commands from the Commodore 64, and creates a black and white image of the printed graphics and text. 
 This image is then saved to the USB flash drive. 
+
 The full documentation of the printer emulation and all of its capabilities and options is available here:
 
 http://1541ultimate.net/content/download/mps_printer_emulation.pdf
