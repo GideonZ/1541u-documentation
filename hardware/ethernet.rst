@@ -15,11 +15,13 @@ The Ultimate 1541-II+ and Ultimate 64 have an integrated ethernet port.
    :alt: Ethernet Port settings
    :align: left
 
-The Ultimate 1541-II you need a compatible USB Ethernet adaptor that is connected to the USB port of the Ultimate 1541-II.
+The Ultimate 1541-II needs a compatible USB Ethernet adaptor that is connected to the USB port of the Ultimate 1541-II.
 
 .. image:: ../media/hardware/hardware_ethernet_04.png
    :alt: Ethernet Port
    :align: left
+   :scale: 75 %
+*Picture: Ultimate 1541-II and compatible usb ethernet adaptor*
    
 If your Ultimate product has an ethernet port, you can see this when entering the Ultimate menu.
 The picture above shows a **Net0** port, this indicates ethernet is accessible.
