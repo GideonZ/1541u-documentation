@@ -30,7 +30,7 @@ The picture above shows a **Net0** port, this indicates ethernet is accessible.
 Network settings
 ................
 
-Within the network settings menu the ethernet port can be configured as needed, so it can communicate with your local network.
+Within the network settings menu the ethernet port can be configured as needed, so it matches with your local network settings.
 
 *The Network settings menu is only visible if a ethernet port is available.*
 
@@ -57,13 +57,6 @@ Within the network settings menu the ethernet port can be configured as needed, 
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
    
    
-Ultimate 1541-II - Ethernet settings
-....................................
-
-
-On the Ultimate 1541-II the settings menu is only visible if a compatible USB Ethernet adaptor is connected to the USB port.
-
-
 RR-net compatibility
 ....................
 
