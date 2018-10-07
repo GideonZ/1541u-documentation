@@ -34,21 +34,19 @@ Within the network settings menu the ethernet port can be configured as needed, 
 | Hostname                     | Set unique network hostname to identify your Ultimate product.                 | Inputbox          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
    
+   
 
-Ethernet settings Ultimate 1541-II
-..................................
+Ultimate 1541-II - Ethernet settings
+....................................
 
 .. image:: ../media/hardware/hardware_ethernet_03.png
    :alt: Ethernet Port settings
    :align: left
 
-On the Ultimate 1541-II the settings menu is only visible if a compatible USB Ethernet adaptor is connected to the Ultimate 1541-II.
+On the Ultimate 1541-II the settings menu is only visible if a compatible USB Ethernet adaptor is connected to the USB port.
 
- 
-................   
 
-   
-   
+
 RR-net compatibility
 ....................
 
