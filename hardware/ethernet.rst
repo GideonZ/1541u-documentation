@@ -31,8 +31,22 @@ Within the network settings menu the ethernet port can be configured as needed, 
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Static Gateway               | Set custom Gateway, DHCP has to be disabled.                                   | Inputbox          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
-| Hostname                     | Set unique network hostname to identify your Ultimate product.                  | Inputbox          |
+| Hostname                     | Set unique network hostname to identify your Ultimate product.                 | Inputbox          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
+   
+
+Ethernet settings Ultimate 1541-II
+..................................
+
+.. image:: ../media/hardware/hardware_ethernet_03.png
+   :alt: Ethernet Port settings
+   :align: left
+
+On the Ultimate 1541-II the settings menu is only visible if a compatible USB Ethernet adaptor is connected to the Ultimate 1541-II.
+
+ 
+................   
+
    
    
 RR-net compatibility
@@ -47,3 +61,5 @@ The Ethernet port is used natively by the firmware
 There is some primitive support for file-transfer using FTP (needs improvement), and it is possible to connect to the Ultimate-II+ using a VT-100 terminal 
 program on the Telnet port (port 23). This gives the possibility to control the machine remotely, and swap disks without actually interrupting the program 
 running on the C-64.
+
+*Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64*
