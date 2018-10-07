@@ -2,7 +2,7 @@
 User Interface Settings
 =======================
 
-.. image:: ../media/hardware/hardware_ethernet_01.png
+.. image:: ../media/config/user_interface_01.png
    :alt: User Interface Settings
    :align: left
 
@@ -39,7 +39,7 @@ Interface Type
 
 **Interface Type: Freeze**
 
-.. image:: ../media/hardware/hardware_ethernet_02.png
+.. image:: ../media/config/user_interface_02.png
    :alt: Interface Type Freeze
    :align: left
 
@@ -48,6 +48,6 @@ Interface Type
 
 This interface is **ONLY** visible on HDMI output.
 
-.. image:: ../media/hardware/hardware_ethernet_03.png
+.. image:: ../media/config/user_interface_03.png
    :alt: Interface Type Overlay on HMDI
    :align: left
