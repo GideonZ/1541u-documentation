@@ -23,8 +23,8 @@ Within the network settings menu the ethernet port can be configured as needed, 
 |                              |                                                                                | (bold default)    |
 +==============================+================================================================================+===================+
 | Use DHCP                     | Get IP settings from local DHCP Server on your network.                        | Disabled          |
-|                              | Most home routers provide settings. If this is not the case please consult     | **Enabled**       |                  |
-|                              | your internet/network provider.                                                |                   |
+|                              | Most home routers provide these settings by DHCP.                              | **Enabled**       |
+|                              | If this is not the case please consult your internet/network provider.         |                   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Static IP                    | Set custom IP settings, DHCP has to be disabled.                               | Inputbox          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
@@ -36,7 +36,6 @@ Within the network settings menu the ethernet port can be configured as needed, 
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
    
    
-
 Ultimate 1541-II - Ethernet settings
 ....................................
 
@@ -45,7 +44,6 @@ Ultimate 1541-II - Ethernet settings
    :align: left
 
 On the Ultimate 1541-II the settings menu is only visible if a compatible USB Ethernet adaptor is connected to the USB port.
-
 
 
 RR-net compatibility
