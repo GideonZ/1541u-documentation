@@ -31,7 +31,7 @@ Within the network settings menu the ethernet port can be configured as needed, 
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Static Gateway               | Set custom Gateway, DHCP has to be disabled.                                   | Inputbox          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
-| Hostname                     | Set unique network hostname to identify you Ultimate product.                  | Inputbox          |
+| Hostname                     | Set unique network hostname to identify your Ultimate product.                  | Inputbox          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
    
    
