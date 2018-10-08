@@ -10,7 +10,7 @@ User Interface Settings
 | Menu name                    | Explanation                                                                    | Options           |
 |                              |                                                                                | (bold default)    |
 +==============================+================================================================================+===================+
-| Interface Type               | Set interface type, see images below.                                          | **Freeze**        |
+| Interface Type (¹)           | Set interface type, see images below.                                          | **Freeze**        |
 |                              |                                                                                | Overlay on HDMI   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Background color             | Set background color of the user interface.                                    | **Black**         |
@@ -25,7 +25,7 @@ User Interface Settings
 | Selected item color          | Set foreground color of the user interface.                                    | **White**         |
 |                              |                                                                                | Various colors    |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
-| Selected Backgr (Overlay)    | Set selected background color for overlay screen.                              | **Blue**          |
+| Selected Backgr (Overlay) (¹)| Set selected background color for overlay screen.                              | **Blue**          |
 |                              |                                                                                | Various colors    |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Home Directory               |                                                                                | Inputbox          |
@@ -44,10 +44,15 @@ Interface Type
    :align: left
 
    
-**Interface Type: Overlay on HDMI**
+**Interface Type: Overlay on HDMI** (¹)
 
-This interface is **ONLY** visible on HDMI output.
+This interface is **ONLY** visible on HDMI output. 
 
 .. image:: ../media/config/config_user_interface_02.png
    :alt: Interface Type Overlay on HMDI
    :align: left
+
+
+Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64
+
+*¹) Setting is only available on the Ultimate 64, firmware >= 1.06*
