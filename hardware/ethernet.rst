@@ -48,13 +48,13 @@ Within the network settings menu the ethernet port can be configured as needed, 
 |                              | If this is not the case please consult your internet/network provider.         |                   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Static IP                    | Set custom IP settings, DHCP has to be disabled.                               | Inputbox          |
-|                              | *This field can be left empty if DHCP is enabled*                              |                   |
+|                              | *This field can be left empty if DHCP is enabled*.                             |                   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Static Networkmask           | Set custom networkmask, DHCP has to be disabled.                               | Inputbox          |
-|                              | *This field can be left empty if DHCP is enabled*                              |                   |
+|                              | *This field can be left empty if DHCP is enabled*.                             |                   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Static Gateway               | Set custom Gateway, DHCP has to be disabled.                                   | Inputbox          |
-|                              | *This field can be left empty if DHCP is enabled*                              |                   |
+|                              | *This field can be left empty if DHCP is enabled*.                             |                   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Hostname                     | Set unique network hostname to identify your Ultimate product.                 | Inputbox          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
