@@ -10,7 +10,7 @@ User Interface Settings
 | Menu name                    | Explanation                                                                    | Options           |
 |                              |                                                                                | (bold default)    |
 +==============================+================================================================================+===================+
-| Interface Type (¹)           | Set interface type, see images below.                                          | **Freeze**        |
+| Interface Type**             | Set interface type, see images below.                                          | **Freeze**        |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              |                                                                                | Overlay on HDMI   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
@@ -30,14 +30,12 @@ User Interface Settings
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              |                                                                                | Various colors    |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
-| Selected Backgr (Overlay) (¹)| Set selected background color for overlay screen.                              | **Blue**          |
+| Selected Backgr (Overlay)**  | Set selected background color for overlay screen.                              | **Blue**          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              |                                                                                | Various colors    |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Home Directory               | For example use path like: **/Usb1/games**                                     | Inputbox          |
-+------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              | Each USB port on the Ultimate has his own number, so the home directory        |                   |
-+------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              | assignment will only work if the USB stick is in the same port.                |                   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Enter Home on Startup        | Enable this option to open the Home Directory directly on startup.             | **Disabled**      |
@@ -66,4 +64,4 @@ This interface is **ONLY** visible on HDMI output.
 
 Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64
 
-*¹) Setting is only available on the Ultimate 64, firmware >= 1.06*
+**) Setting is only available on the Ultimate 64, firmware >= 1.06*
