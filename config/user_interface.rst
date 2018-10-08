@@ -10,7 +10,7 @@ User Interface Settings
 | Menu name                    | Explanation                                                                    | Options           |
 |                              |                                                                                | (bold default)    |
 +==============================+================================================================================+===================+
-| Interface Type**             | Set interface type, see images below.                                          | **Freeze**        |
+| Interface Type \*            | Set interface type, see images below.                                          | **Freeze**        |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              |                                                                                | Overlay on HDMI   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
@@ -30,7 +30,7 @@ User Interface Settings
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              |                                                                                | Various colors    |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
-| Selected Backgr (Overlay)**  | Set selected background color for overlay screen.                              | **Blue**          |
+| Selected Backgr (Overlay)\*  | Set selected background color for overlay screen.                              | **Blue**          |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 |                              |                                                                                | Various colors    |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
@@ -64,4 +64,4 @@ This interface is **ONLY** visible on HDMI output.
 
 Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64
 
-**) Setting is only available on the Ultimate 64, firmware >= 1.06*
+\*) Setting is only available on the Ultimate 64, firmware >= 1.06*
