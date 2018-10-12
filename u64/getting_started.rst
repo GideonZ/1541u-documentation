@@ -93,6 +93,8 @@ to the Ultimate 64. Power on and wait for picture, where it explains how to do.
 Basically you stick your USB drive in the back of the Ultimate 64 and push shortly on the power button
 to bring up the Menu.
 
+The ROMs has to have the suffix ``.bin`` or ``.rom``, as in mykernal.bin, mybasic.bin, mychar.bin.
+
 #. Browse to your Kernal ROM image and press Enter.
 #. Choose ``Flash as Orig. Kernal ROM``.
 #. Browse to your Basic ROM image and press Enter.
