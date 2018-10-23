@@ -1,6 +1,10 @@
 SID-TAP header
 ==============
 
+.. figure:: ../media/hardware/hardware_sidtap_01.png
+   :alt: 8-pin Header location
+
+
 .. figure:: ../media/header-8.png
    :alt: 8-pin Header drawing
 
