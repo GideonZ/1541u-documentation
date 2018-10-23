@@ -1,6 +1,10 @@
 Audio/Video Connector
 =====================
 
+.. figure:: ../media/hardware/hardware_av_plug_01.png
+   :alt: 8-pin DIN plug location
+
+
 .. figure:: ../media/din-8.png
    :alt: 8-pin DIN plug drawing
    
