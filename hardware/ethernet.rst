@@ -7,7 +7,7 @@ Ethernet port
    :align: left
 
    
-The ethernet port can be connected to a switch ( or hub ) to communicate with your Ultimate over your own local network.
+The ethernet port can be connected to a switch to communicate with your Ultimate over your own local network.
 
 The Ultimate 1541-II+ and Ultimate 64 have an integrated ethernet port.
 
