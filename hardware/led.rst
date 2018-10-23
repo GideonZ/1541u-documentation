@@ -7,9 +7,9 @@ Pinout
 ===  ============
 Pin  Description
 ===  ============
-1    Drive Activity
+1    Power
 2    Ground
-3    Idle/Power
+3    Drive Activity
 ===  ============
 
 
