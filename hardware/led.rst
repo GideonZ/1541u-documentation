@@ -20,18 +20,20 @@ Pin  Description
 Technical information
 ---------------------
 
-*Power LED*
+**Power LED**
 
 The power pin is provided with a 260KHz PWM signal, the PWM signal makes the LED less bright.
 The U64 has an onboard resistor to lower the current.
 
-*Drive activity LED*
+**Drive activity LED**
 
-=====  ==========================================
-State  Description
-=====  ==========================================
-Off    Drive Off
-1/3    Drive On
-2/3    Drive On + Floppy Mounted
-3/3	   Drive On + Floppy Mounted + Motor running	
-=====  ==========================================
+===  ==========================================
+PWM  Description
+===  ==========================================
+Off  Drive Off
+1/3  Drive On
+2/3  Drive On + Floppy Mounted
+3/3  Drive On + Floppy Mounted + Motor running	
+===  ==========================================
+*PWM = pulse width of the pwm signal.
+
