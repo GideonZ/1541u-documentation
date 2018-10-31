@@ -110,11 +110,11 @@ If you're installing real SID chips, you have to set the jumpers accordingly.
 If you don't have or don't want to install SID chips you can use the built in
 'EmuSID'.
 
+.. image:: ../media/hardware/hardware_sid_jumpers01.png
+   :alt: Ultimate 64 sid jumpers
+   :align: left
+   
 ::
-
-.. figure:: ../media/hardware/hardware_sid_jumpers01.png
-   :alt: 
-
     Voltage Jumpers:
     P1: SID 1 Voltage
     P2: SID 2 Voltage
