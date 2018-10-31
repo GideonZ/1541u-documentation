@@ -112,6 +112,9 @@ If you don't have or don't want to install SID chips you can use the built in
 
 ::
 
+.. figure:: ../media/hardware/hardware_sid_jumpers01.png
+   :alt: 
+
     Voltage Jumpers:
     P1: SID 1 Voltage
     P2: SID 2 Voltage
