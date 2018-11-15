@@ -159,13 +159,13 @@ F2 - Settings menu
 | Allow Autoconfig uses EmuSid | ??                                                                             | **Yes**           |
 |                              |                                                                                | No                |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
-| SID Socket 1/2 Address       | ??                                                                             | **$D400-$D7FF**   |
-|                              |                                                                                | $D400-$D5FF       |
-|                              |                                                                                | $D600-$D7FF       |
-|                              |                                                                                | $D400-$D4FF       |
-|                              |                                                                                | $D500-$D5FF       |
-|                              |                                                                                | $D600-$D6FF       |
-|                              |                                                                                | $D700-$D7FF       |
+| SID Socket 1/2 Address       | This sets the address the SID chip responds to. The addresses with ranges      | **$D400-$D7FF**   |
+|                              | (ie: $D400-D7FF) will respond to commands at any address in that range,        | $D400-$D5FF       |
+|                              | repeating every 32 bytes.                                                      | $D600-$D7FF       |
+|                              | The standard Commodore 64 SID starts at $D400, and many stereo SID programs    | $D400-$D4FF       |
+|                              | expect the second SID to be at $D420 or $D500. You can configure  the start    | $D500-$D5FF       |
+|                              | address of the two SID sockets and the two emulated SIDs separately, for up    | $D600-$D6FF       |
+|                              | to 4 SIDs and 12 voices.                                                       | $D700-$D7FF       |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Paddle Override              | When paddle override is on, the U64 will always read the                       | **Disabled**      |
 |                              | internal paddle registers, regardless of the address                           | Enabled           |
@@ -174,9 +174,9 @@ F2 - Settings menu
 | Ext StereoSID addrline       | ??                                                                             | **A5**            |
 |                              |                                                                                | A8                |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
-| UltiSID 1/2 Address          | ??                                                                             | **$D400-$D7FF**   |
-|                              |                                                                                | $D400-$D5FF       |
-|                              |                                                                                | $D600-$D7FF       |
+| UltiSID 1/2 Address          | This sets the address of the emulated SID. Use $D400 (not $D400-XXXX) to       | **$D400-$D7FF**   |
+|                              | emulate the standard C64 SID, or set an alternate start address to use the     | $D400-$D5FF       |
+|                              | emulated SID as a second SID for stereo SID players.                           | $D600-$D7FF       |
 |                              |                                                                                | $D400-$D4FF       |
 |                              |                                                                                | $D500-$D5FF       |
 |                              |                                                                                | $D600-$D6FF       |
@@ -197,11 +197,11 @@ F2 - Settings menu
 |                              | This can be helpful if there is some bleach in the color output.               |                   |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Vol EmuSid1/2                | Volume for emulated SID chip 1/2                                               | **0dB**           |
-|                              |                                                                                | -42dB to +6dB     |
+|                              | The analog SID audio is passed through to the HDMI and DIN video jacks.        | -42dB to +6dB     |
 |                              |                                                                                | Off               |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Vol Socket 1/2               | Volume for SID chip in socket 1/2                                              | **0dB**           |
-|                              |                                                                                | -42dB to +6dB     |
+|                              | Emulated SID audio is passed through to the HDMI and DIN video jacks.          | -42dB to +6dB     |
 |                              |                                                                                | Off               |
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Vol Sampler L/R              | Left / Right output volume of the DA converter (soundcard),                    | **0dB**           |
@@ -414,6 +414,9 @@ More about mounting disks
    storage device is removed, the 1541 drive automatically switches to
    unlinked mode. Be aware that writes to the disk will then be lost
    when you turn off the machine.
+   
+   You can write the current unlinked floppy image back to your USB
+   device at any time from the F5 menu. 
 
 .. _header-n326:
 
@@ -438,9 +441,10 @@ that do not accept the generated HDMI signal.
 Frame delays of the digital HDMI port
 
 None. There is no frame buffer, so there is no need to worry. Some
-screens, tho, especially non-gaming screens may introduce some latency.
+screens, especially non-gaming screens, may introduce some latency.
 I observed this with a 4K screen that actually resampled the output to
-just 30Hz. I am pretty sure displays do not have this problem.
+just 30Hz. Computer monitors should have less latency, and with "game 
+mode" turned on, latency can be reduced to one frame (20ms) or less.
 
 Because there is no frame buffer, scrollers and such are perfectly
 smooth. If the TV renders the image at the speed it is sent over the
@@ -460,6 +464,18 @@ port.
 
    -  Interface Type ( overlay mode )
 
+Overlay mode causes the Ultimate menu to be displayed in the bottom-right corner of the 
+screen and only on the HDMI or DVI display. If you unplug the HDMI cable and press the
+Ultimate button, the Ultimate menu will revert to being displayed full screen on the 
+analog output. 
+
+If you need to disable the overlay view but can't (or don't want to) unplug the HDMI
+cable, you can use turn overlay off with: 
+
+  * Ultimate Button
+  * Down 4x
+  * Right 2x
+  * RUN STOP 2x
 
 
 Ethernet port
