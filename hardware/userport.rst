@@ -23,7 +23,6 @@ Pin	Name	Description
  10	+9V AC  +9 VAC (+ phase) (100 mA max)
  11	+9V AC  +9 VAC (- phase) (100 mA max)
  12	GND     Ground 
-=== ======= =====================================================================
   A	GND     Ground (RS232: GND)
   B	/FLAG2  Flag 2 (RS232: RxD=Both B+C) 
   C	PB0     Data 0 (RS232: RxD=Both B+C)
