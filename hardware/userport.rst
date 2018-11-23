@@ -12,7 +12,7 @@ USER PORT
 Pin Name    Description
 === ======= =====================================================================
   1 GND     Ground
-  2 +5V     +5 VDC (100 mA max)
+  2 +5V     +5 VDC (200 mA max)
   3 /RESET  Reset, will force a Cold Start. Also a reset output for devices.
   4 CNT1    Counter 1, from CIA #1
   5 SP1     Serial Port 1, from CIA #1
@@ -20,8 +20,8 @@ Pin Name    Description
   7 SP2     Serial Port 2, from CIA #2
   8 /PC2    Handshaking line, from CIA #2
   9 ATN     Serial Attention In
- 10 12VDC   12VDC
- 11 12VDC   12VDC
+ 10 12VDC   12VDC ( Max 500mA )
+ 11 12VDC   12VDC ( Max 500mA )
  12 GND     Ground 
   A GND     Ground (RS232: GND)
   B /FLAG2  Flag 2 (RS232: RxD=Both B+C) 
