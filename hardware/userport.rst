@@ -20,8 +20,8 @@ Pin Name    Description
   7 SP2     Serial Port 2, from CIA #2
   8 /PC2    Handshaking line, from CIA #2
   9 ATN     Serial Attention In
- 10 +9V AC  +9 VAC (+ phase) (100 mA max)
- 11 +9V AC  +9 VAC (- phase) (100 mA max)
+ 10 12VDC   12VDC
+ 11 12VDC   12VDC
  12 GND     Ground 
   A GND     Ground (RS232: GND)
   B /FLAG2  Flag 2 (RS232: RxD=Both B+C) 
