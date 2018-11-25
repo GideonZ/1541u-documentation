@@ -9,6 +9,9 @@ To connect via FTP, you can use any FTP client availble for your operating syste
 To make a connection, enter the IP address that was assigned via DHCP, or that you manualy set in the network client and use any username and password.
 
 As a special feature, you can display *.64 files as directorys via FTP:
+
 - every chosen FTP username enables this feature (*.d64 are shown as directory AND as *.d64 files)
+
 - the username "d64" deactivates the listing of *.d64 files (*.d64 are only shown as directory)
+
 - the username "d642" disables this feature completely, (*.d64 are only shown as files)
