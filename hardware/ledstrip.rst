@@ -21,7 +21,7 @@ These wires can be obtained anywhere, and are sold -for example- as Raspberry PI
 The following connections need to be made:
 
 === ========= ======================== ===============
-Pin Name      Description                User Port
+Pin Name      Description              User Port
 === ========= ======================== ===============
   1 VCC (+5V) Red wire                 Pin 2
   2 CLKI      White wire, Clock input  Pin 13
