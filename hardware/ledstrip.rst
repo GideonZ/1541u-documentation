@@ -29,5 +29,7 @@ Pin Name      Description                User Port
   4 GND (0V)  Black wire               Pin 1, 12, or M
 === ======= ========================== ===============
 	
-Please refer to the drawing of the user port header, in order to see where to connect your wire leads.
+Note, the wire colors are just suggestions. Obviously it will work with other colors as well. But for the sake of not making mistakes, please at least use black and red for ground and +5V respectively.
+
+Please refer to the drawing of the user port header, in order to see where to connect your wire leads. You can find it here! <hardware/userport>
 
