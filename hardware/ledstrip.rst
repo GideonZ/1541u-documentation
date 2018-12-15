@@ -28,7 +28,7 @@ Pin Name      Description              User Port
   1 VCC (+5V) Red wire                 Pin 2
   2 CLKI      White wire, Clock input  Pin 13
   3 SDI       Yellow wire, Data input  Pin P
-  4 GND (0V)  Black wire               Pin 1, 12, or M
+  4 GND (0V)  Black wire               Pin 1, 12, or N
 === ========= ======================== ===============
 	
 Note, the wire colors are just suggestions. Obviously it will work with other colors as well. But for the sake of not making mistakes, please at least use black and red for ground and +5V respectively.
