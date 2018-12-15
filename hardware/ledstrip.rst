@@ -31,4 +31,4 @@ Pin Name      Description              User Port
 	
 Note, the wire colors are just suggestions. Obviously it will work with other colors as well. But for the sake of not making mistakes, please at least use black and red for ground and +5V respectively.
 
-Please refer to the drawing of the user port header, in order to see where to connect your wire leads. :doc:`UserPort Page <hardware/userport>` 
+Please refer to the drawing of the user port header, in order to see where to connect your wire leads. :ref:`userport_pinout`. 

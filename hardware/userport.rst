@@ -1,3 +1,4 @@
+.. _userport_pinout:
 
 USER PORT
 ---------
