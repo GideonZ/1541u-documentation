@@ -1,0 +1,33 @@
+
+LED Strip
+---------
+
+**Attaching a LED Strip**
+
+With a special version of the firmware, it is possible to attach a programmable LED strip to your Ultimate 64 board.
+The supported LED type is APA102C, with is a 5V only device with built-in PWM controller for each color, red, green and blue.
+
+.. image:: ../media/ledstrip/apa102.jpg
+   :alt: Single Piece of LED strip, with APA102C (5050) chip
+   :align: left
+
+For an easy connection of the LED strip, it is recommended to connect four wires / leads to it, with a single pin socket, like the ones shown below.
+These wires can be obtained anywhere, and are sold -for example- as Raspberry PI jumper cables.
+
+.. image:: ../media/ledstrip/wire_leads1.jpg
+   :alt: Example of wire leads
+   :align: left
+
+The following connections need to be made:
+
+=== ========= ======================== ===============
+Pin Name      Description                User Port
+=== ========= ======================== ===============
+  1 VCC (+5V) Red wire                 Pin 2
+  2 CLKI      White wire, Clock input  Pin 13
+  3 SDI       Yellow wire, Data input  Pin P
+  4 GND (0V)  Black wire               Pin 1, 12, or M
+=== ======= ========================== ===============
+	
+Please refer to the drawing of the user port header, in order to see where to connect your wire leads.
+
