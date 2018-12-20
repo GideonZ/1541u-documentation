@@ -108,7 +108,7 @@ Real SID
 
 If you're installing real SID chips, you have to set the jumpers accordingly.
 If you don't have or don't want to install SID chips you can use the built in
-'EmuSID'.
+'UltiSID'.
 
 .. image:: ../media/hardware/hardware_sid_jumpers01.png
    :alt: Ultimate 64 sid jumpers
