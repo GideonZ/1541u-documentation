@@ -94,8 +94,9 @@ to the EF cartridge image:
 
 Technology Preview: EAPI Support for Easyflash, incl. but not limited to
 writing support. Please note that the changed crt file is NOT saved
-autmatically. You can save it by "F5", "Save Easyflash crt" in the filebrowser
-(and optionally renaming the saved file).
+autmatically. You can save it by "F5", "Save Easyflash crt" in the filebrowser. 
+The file will be saved with the filel name "module.crt". Optionally rename the 
+saved file to a more recognizable name.
 
 
 Which USB2LAN adapters are supported by the 1541Utlimate 2?
@@ -260,6 +261,30 @@ The wiki `rr.c64.org <http://rr.c64.org/wiki/Main_Page>`_ is also a great place
 to find some manuals.
 
 
+Flip/swap disk (mount the next disk without using the Ultimate menu)
+--------------------------------------------------------------------
+Since firmware 3.0e there is this nice feature implemented by Markus C64:
+"seamless disk swap by pressing middle button at least 1 sec"
+
+This allows you to mount the next disk when a game or a demo asks for it
+without entering the Ultimate menu.
+
+It only works on disk images for which it is obviously that those disk images
+belong together E.g. "special game disk 1.d64" and "special game disk 2.d64" or
+"special game A.d64" and "special games B.d64" or "special game S1.d64" and
+"special game S2.d64". or "image 1.d64" and "image 2.d64", etc. etc. etc. It
+even recognises roman numbers.
+
+
+How about the C128(DCR). Does the Ultimate cartridge work on these machines?
+----------------------------------------------------------------------------
+Yes, the Ultimate cartridges work on the C128, C128D(CR) but with some 
+limitations. Bart was so kind to write down his findings and advice on how to 
+get the most out of your C128 combined with the U2+:
+`https://www.bartsplace.net/content/publications/1541ultimate128.shtml 
+<https://www.bartsplace.net/content/publications/1541ultimate128.shtml>`_
+
+
 Disabling the internal C128D drive
 ----------------------------------
 source: `1541ultimate.net
@@ -284,19 +309,5 @@ internal drive by software:
 This did work on my C128D. It did not work on my SX64. However it might be of
 interest for C128D users.
 
-
-Flip/swap disk (mount the next disk without entering the Ultimate menu)
------------------------------------------------------------------------
-Since firmware 3.0e there is this nice feature implemented by Markus C64:
-"seamless disk swap by pressing middle button at least 1 sec"
-
-This allows you to mount the next disk when a game or a demo asks for it
-without entering the Ultimate menu.
-
-It only works on disk images for which it is obviously that those disk images
-belong together E.g. "special game disk 1.d64" and "special game disk 2.d64" or
-"special game A.d64" and "special games B.d64" or "special game S1.d64" and
-"special game S2.d64". or "image 1.d64" and "image 2.d64", etc. etc. etc. It
-even recognises roman numbers.
 
 .. |left arrow| unicode:: U+2B05 U+FE0E .. LEFTWARDS BLACK ARROW
