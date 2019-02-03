@@ -276,8 +276,8 @@ belong together E.g. "special game disk 1.d64" and "special game disk 2.d64" or
 even recognises roman numbers.
 
 
-How about the C128(DCR). Does the Ultimate cartridge work on these machines?
-----------------------------------------------------------------------------
+How about the C128 and C128D(CR). Does the Ultimate cartridge work on these machines?
+-------------------------------------------------------------------------------------
 Yes, the Ultimate cartridges work on the C128, C128D(CR) but with some 
 limitations. Bart was so kind to write down his findings and advice on how to 
 get the most out of your C128 combined with the U2+:
