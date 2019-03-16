@@ -4,7 +4,7 @@ LED Strip
 
 **Attaching a LED Strip**
 
-With a special version of the firmware, it is possible to attach a programmable LED strip to your Ultimate 64 board.
+Using `firmware version 1.10 and later <https://ultimate64.com/Firmware>`_, it is possible to attach a programmable LED strip to your Ultimate 64 board.
 The supported LED type is APA102C, with is a 5V only device with built-in PWM controller for each color, red, green and blue.
 At the time of writing, the firmware supports up to 64 LEDs, of which 24 are currently used. On a strip with 60 LEDs per meter, this corresponds to 40 cm of length, which is roughly the width of the machine.
 
