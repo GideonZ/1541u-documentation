@@ -133,6 +133,7 @@ key          description
 \+           play next sub tune
 \ –          play previous sub tune
 run/stop     go to Ultimate menu
+space bar    pause / resume tune
 ============ ===========
 
 Keyboard support only works for PSID tunes and for RSID tunes that don't run in
