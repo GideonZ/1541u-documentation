@@ -27,7 +27,7 @@ LED options
 
 .. csv-table:: LED Options
    :header: "Option", "Description"
-   :widths: 30, 30
+   :widths: 30, auto
 
    "On", "LED always ON"
    "Off", "LED always OFF"
@@ -35,7 +35,7 @@ LED options
    "DrvAPwr + DrvBPwr", "Power indicator of drive A and drive B combined"
    "Drive A Act", "LED ON when there is activity on drive A"
    "DrvAAct + DrvBAct", "LED ON, on activity of drive A and B combined"
-   "DrvAPwr ^ DrvAAct", "Drive power LED XOR drive activity. "
+   "DrvAPwr ^ DrvAAct", "Drive power LED XOR drive activity. This results in an inverse drive activity, with similar dimming as the power LED has."
    "USB Activity", "LED ON, on USB activity"
    "Any Activity", "LED ON, on any activity (exluding tape)"
    "!(DrvAAct)", "Inverse of drive A activity, so the LED will turn OFF on drive activity instead of ON"
