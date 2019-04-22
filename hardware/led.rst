@@ -25,7 +25,9 @@ LED options
    :alt: LED setting options
 
 With the introduction of firmware 1.18 the behaviour of the LED can be changed.
-
+.. table:: Option table
+    :widths: 30 70
+	
 ====================== ========================================================================================
 Option                 Description
 ====================== ========================================================================================
