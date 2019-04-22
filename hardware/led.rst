@@ -26,9 +26,8 @@ LED options
 
 
 .. csv-table:: LED Options
-   :width: 70
    :header: "Option", "Description"
-   :widths: 70,30
+   :widths: auto
 
    "On", "LED always ON"
    "Off", "LED always OFF"
