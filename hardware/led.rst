@@ -29,23 +29,23 @@ With the introduction of firmware 1.18 the behaviour of the LED can be changed.
 
 .. csv-table:: LED Options
    :header: "Option", "Description"
-   :widths: 50, 50
+   :widths: 15, 30
 
-   "On","LED always ON"
-   "Off","LED always OFF"
-   "Drive A Pwr","Power indicator of drive A"
-   "DrvAPwr + DrvBPwr","Power indicator of drive A and drive B combined"
-   "Drive A Act","LED ON when there is activity on drive A"
-   "DrvAAct + DrvBAct","LED ON, on activity of drive A and B combined"
-   "DrvAPwr ^ DrvAAct","Drive power LED XOR drive activity. This results in an "inverse" drive activity, with similar dimming as the power LED has."
-   "USB Activity","LED ON, on USB activity"
-   "Any Activity","LED ON, on any activity (exluding tape)"
-   "!(DrvAAct)","Inverse of drive A activity, so the LED will turn OFF on drive activity instead of ON"
-   "!(DrvAAct+DrvBAct)","Inverse of drive A and B combined, so LED will turn OFF on activity instead of ON"
-   "!(USB Act)","Inverse of USB Activity, so the LED will turn OFF on USB activity instead of ON"
-   "!(Any Act)","Inverse of Any Activity, so the LED will turn OFF on any activity instead of ON"
-   "IRQ Line","LED is ON when IRQ line is high (inactive)"
-   "!(IRQ Line)","Inverse of IRQ Line, so the LED is ON when IRQ line is low (active)"
+   "On", "LED always ON"
+   "Off", "LED always OFF"
+   "Drive A Pwr", "Power indicator of drive A"
+   "DrvAPwr + DrvBPwr", "Power indicator of drive A and drive B combined"
+   "Drive A Act", "LED ON when there is activity on drive A"
+   "DrvAAct + DrvBAct", "LED ON, on activity of drive A and B combined"
+   "DrvAPwr ^ DrvAAct", "Drive power LED XOR drive activity. This results in an "inverse" drive activity, with similar dimming as the power LED has."
+   "USB Activity", "LED ON, on USB activity"
+   "Any Activity", "LED ON, on any activity (exluding tape)"
+   "!(DrvAAct)", "Inverse of drive A activity, so the LED will turn OFF on drive activity instead of ON"
+   "!(DrvAAct+DrvBAct)", "Inverse of drive A and B combined, so LED will turn OFF on activity instead of ON"
+   "!(USB Act)", "Inverse of USB Activity, so the LED will turn OFF on USB activity instead of ON"
+   "!(Any Act)", "Inverse of Any Activity, so the LED will turn OFF on any activity instead of ON"
+   "IRQ Line", "LED is ON when IRQ line is high (inactive)"
+   "!(IRQ Line)", "Inverse of IRQ Line, so the LED is ON when IRQ line is low (active)"
 
 What does !(option) mean?
 -------------------------
