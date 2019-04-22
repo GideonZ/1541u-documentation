@@ -24,11 +24,22 @@ LED options
 .. figure:: ../media/hardware/hardware_led_02.png
    :alt: LED setting options
 
+
+.. csv-table:: Frozen Delights!
+   :header: "Treat", "Quantity", "Description"
+   :widths: 15, 10, 30
+
+   "Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+   crunchy, now would it?"
+   "Gannet Ripple", 1.99, "On a stick!"
+
+   
 With the introduction of firmware 1.18 the behaviour of the LED can be changed.
 
 +---------------------+---------------------------------------------------------------------------------------+
 |Option               |Description                                                                            |
-+---------------------+---------------------------------------------------------------------------------------+
++=====================+=======================================================================================+
 |On                   |LED always ON                                                                          |
 +---------------------+---------------------------------------------------------------------------------------+
 |Off                  |LED always OFF                                                                         |
