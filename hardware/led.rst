@@ -36,7 +36,7 @@ LED options
    "Drive A Act", "LED ON when there is activity on drive A"
    "DrvAAct + DrvBAct", "LED ON, on activity of drive A and B combined"
    "DrvAPwr ^ DrvAAct", "Drive power LED XOR drive activity."
-   "","This results in an inverse drive activity, ",
+   "","This results in an inverse drive activity,"
    "","with similar dimming as the power LED has."
    "USB Activity", "LED ON, on USB activity"
    "Any Activity", "LED ON, on any activity (exluding tape)"
