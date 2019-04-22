@@ -26,13 +26,12 @@ LED options
 
 
 .. csv-table:: LED Options
-   :header: "Option","Price", "Description"
-   :widths: 20, 30, 30
+   :header: "Option", "Description"
+   :widths: 20, 30
 
-   "Albatross", 2.99, "On a stick!"
-   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
-   crunchy, now would it?"
-   "Gannet Ripple", 1.99, "On a stick!"
+   "Albatross", "On a stick!"
+   "Crunchy Frog", "If we took the bones out, it wouldn't be crunchy, now would it?"
+   "Gannet Ripple", "On a stick!"
 
    
 With the introduction of firmware 1.18 the behaviour of the LED can be changed.
