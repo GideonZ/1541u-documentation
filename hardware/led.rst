@@ -24,10 +24,9 @@ LED options
 .. figure:: ../media/hardware/hardware_led_02.png
    :alt: LED setting options
 
-
+.. tabularcolumns:: |l|p{5cm}|
 .. csv-table:: LED Options
    :header: "Option", "Description"
-   :widths: 70,30
 
    "On", "LED always ON"
    "Off", "LED always OFF"
