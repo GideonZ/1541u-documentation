@@ -26,7 +26,7 @@ LED options
 
 .. csv-table:: LED Options
    :header: "Option", "Description"
-   :widths: |l|p{5cm}|
+   :widths: 30,10
 
    "On", "LED always ON"
    "Off", "LED always OFF"
@@ -39,7 +39,7 @@ LED options
    "USB Activity", "LED ON, on USB activity"
    "Any Activity", "LED ON, on any activity (exluding tape)"
    "!(DrvAAct)", "Inverse of drive A activity, so the LED will turn OFF on drive activity instead of ON"
-   "!(DrvAAct+DrvBAct)", "Inverse of drive A and B combined, so LED will turn OFF on activity instead of ON"
+   "::!(DrvAAct+DrvBAct)", "Inverse of drive A and B combined, so LED will turn OFF on activity instead of ON"
    "!(USB Act)", "Inverse of USB Activity, so the LED will turn OFF on USB activity instead of ON"
    "!(Any Act)", "Inverse of Any Activity, so the LED will turn OFF on any activity instead of ON"
    "IRQ Line", "LED is ON when IRQ line is high (inactive)"
