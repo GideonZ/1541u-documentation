@@ -75,9 +75,8 @@ Because there are two separate LED's we want that the power is always ON, and th
 
 So we use the following setting:
 
-::
-Power 'LED Select Top: **On**'
-Drive 'LED Select Bottom: **DrvAAct+DrvBAct**'
+* Power => LED Select Top: **On**
+* Drive => LED Select Bottom: **DrvAAct+DrvBAct**
 
 To swap the color assignment, just swap the settings between Top and Bottom.
 
@@ -95,9 +94,8 @@ Because there is only "one" LED package we want that power will turn OFF when th
 
 So we use the following setting:
 
-Power => LED Select Top: **!(DrvAAct+DrvBAct)**
-
-Drive => LED Select Bottom: **DrvAAct+DrvBAct**
+* Power => LED Select Top: **!(DrvAAct+DrvBAct)**
+* Drive => LED Select Bottom: **DrvAAct+DrvBAct**
 
 To swap the color assignment, just swap the settings between Top and Bottom.
 
