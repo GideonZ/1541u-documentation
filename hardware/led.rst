@@ -107,7 +107,7 @@ Technical information
 **Power LED**
 
 The power pin is provided with a 260KHz PWM signal, the PWM signal makes the LED less bright.
-The U64 has an on-board resistor to lower the current.
+The U64 has an on-board 220 ohms series resistor to lower the current, the supplied voltage 3.3V.
 
 **Drive activity LED**
 
