@@ -81,11 +81,11 @@ So we use the following setting:
 To swap the color assignment, just swap the settings between Top and Bottom.
 
 
-Example with duo led
+Example with duo LED
 --------------------
-We are using a duo that has red and green combined in one package, red will be the power LED (power) and green will be drive activity (drive).
+We are using a duo LED that has red and green combined in one package, red will be the power LED (power) and green will be drive activity (drive).
 The power wire to the red led is connected to the Top pin (1) and the green led is connected to the Bottom pin (3), 
-and of course the ground of both LED's is connected to the ground pin (2).
+and of course the ground of the LED is connected to the ground pin (2).
 
 Because there is only "one" LED package we want that power will turn OFF when there is drive activity, or else the two colors will be mixed to yellow (red+green).
 
