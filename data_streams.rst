@@ -182,6 +182,13 @@ Each UDP datagram contains a header and pixel data. The header is as follows:
 - Bits per pixel (8 bit), always 4
 - Encoding type (16 bit), always 0 for now. May be '1' later for RLE encoded data.
 
+*Example packet:*
+
+The following packet contains data of the third frame, line 100 - 103:
+
+``A1 00 02 00 64 00 80 01 04 04 00 00 [66 66 66 66 66 66 66 ...]``
+``seq # frm # line# width lp bp -enc- [data....................]``
+
 
 So in total, the pixel data is preceded with 12 bytes of header data. The
 header is followed by pixel data, coded in 4-bit VIC colors, little endian,
