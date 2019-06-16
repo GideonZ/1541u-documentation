@@ -10,13 +10,13 @@ Audio/Video Connector
    
    
    
-The 8-pin DIN ( audio/video ) connector can output several different video signals, for each type you need a special assembled cable.   
+The 8-pin DIN (audio/video) connector can output several different video signals, for each type you need a special assembled cable.   
 
 **Output signals**
 
-- Composite ( CVBS ) ( PAL )
-- S-Video ( PAL )
-- RGB ( PAL )
+- Composite (CVBS) (PAL)
+- S-Video (PAL)
+- RGB (PAL)
 
 *The Composite and S-Video cables are the same as you use for the original Commodore 64.*
 

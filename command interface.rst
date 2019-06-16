@@ -15,12 +15,17 @@ Introduction
 Context
 -------
 
-The ‘Ultimate-II command interface’ feature is a new feature for the
-1541 Ultimate-II module. It implements a way to communicate to the 1541 Ultimate-II programmatically from the Commodore 64, through the cartridge port I/O registers.
+The ‘Ultimate-II command interface’ feature is a feature for the
+1541 Ultimate-II module. It implements a way to communicate to the 1541 Ultimate-II programmatically from the Commodore 64, through the cartridge port I/O registers. This 'Ultimate-II command Interface' is also abveviated as 'UCI'. It is also implemented on the Ultimate-II+ and Ultimate-64 products.
 
-The ‘Ultimate-II command interface’ is the communication layer between the C64 on one side and functional modules of the 1541 Ultimate-II on the other side. Such a functional module takes a command, and returns data and status back to the user program on the C64.
+The ‘Ultimate-II command interface’ is the communication layer between the C64 on one side and functional modules of the 1541 Ultimate-II / Ultimate-II+ / Ultimate 64 on the other side. Such a functional module takes a command, and returns data and status back to the user program on the C64.
 
-Initially, there is one functional module, named “Ultimate DOS”, which is described in a separate document.
+There are a few functional modules, which are described in their own separate documents:
+
+* "Ultimate DOS"; meant to open, read and write files and directories
+* "Control Interface"; a collection of useful routines and calls to access U2/U2+/U64 features
+* "Network Target"; an interface to directly access the TCP/IP network stack.
+
 
 Purpose of this document
 ------------------------
