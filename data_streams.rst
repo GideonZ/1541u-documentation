@@ -218,7 +218,26 @@ was enabled. This allows for detection of missing packets.
 
 The sequence number is followed by 192 stereo samples in 16-bit signed, little endian format; left
 and right interleaved, starting with the left channel. Thus, the total UDP packet size is 770 bytes:
-2 header bytes, and 192 times 4 bytes per sample. 
+2 header bytes, and 192 times 4 bytes per sample::
+
+  00 00 fe ff 02 00 ff ff 03 00 fd ff 00 00 ...
+  -seq- left--right-left--right-left--right-... 
+
+  01 00 ff ff 03 00 fd ff 00 00 03 00 ff ff ...
+  -seq- left--right-left--right-left--right-... 
+
+  02 00 fd ff 03 00 fd ff 00 00 fe ff 02 00 ...
+  -seq- left--right-left--right-left--right-... 
+
+The sample rate of the stream is close to 48000 Hz. It depends on the video mode. The actual sample
+rate for PAL is: 
+
+(Fc * 16/9 * 15 / 77 / 32) = 47983 Hz  (Fc = 4433618.75 Hz)  (48kHz: -356 ppm)
+
+For NTSC, the audio clock is derived as follows:
+
+(Fc * 16/7 * 15 / 80 / 32) = 47940 Hz  (Fc = 3579545.45 Hz)  (48kHz: -1243 ppm) 
+
 
 
 Viewing and recording
