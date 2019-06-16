@@ -97,7 +97,6 @@ stop a stream; it is only the place where the last entered data is kept for late
 
 .. image:: media/streams/stream_start.png
    :alt: Starting a stream from the menu
-   :align: left
 
 
 The format of the destination is either an IP address, or a valid DNS name. The port number can be
@@ -105,7 +104,6 @@ given as well, by adding it after a colon (:).
 
 .. image:: media/streams/stream_start2.png
    :alt: Starting a stream from the menu
-   :align: left
 
 Examples:
 
@@ -214,4 +212,21 @@ was enabled. This allows for detection of missing packets.
 The sequence number is followed by 192 stereo samples in 16-bit signed, little endian format; left
 and right interleaved, starting with the left channel. Thus, the total UDP packet size is 770 bytes:
 2 header bytes, and 192 times 4 bytes per sample. 
+
+
+Viewing and recording
+=====================
+
+Thanks to Martijn Wieland (TSB), there is a viewer for the stream for Windows. This tool can be
+obtained here:  `TSB U64 Streamer`_
+
+.. _TSB U64 Streamer: https://www.tsb.space/projects/u64-streamer
+
+
+Also there is an example script in the 'python' directory of the ultimate repository to show how
+grabbing of video data is done. This example script can be seen here: `grab.py`_
+
+.. _grab.py: https://github.com/GideonZ/1541ultimate/blob/master/python/grab.py
+
+
 
