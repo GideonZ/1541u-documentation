@@ -8,5 +8,6 @@
   Ultimate 64 <ultimate64>
   FAQ by Grrrolf <faq>
   Command Interface <command interface>
+  Data Streams <data_streams>
   Virtual Printer <ultimate_printer>
   Interview By Retro Magazine <interview>
