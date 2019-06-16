@@ -184,10 +184,10 @@ Each UDP datagram contains a header and pixel data. The header is as follows:
 
 *Example packet:*
 
-The following packet contains data of the third frame, line 100 - 103:
+The following packet contains data of the third frame, line 100 - 103, starting with dark blue::
 
-``A1 00 02 00 64 00 80 01 04 04 00 00 [66 66 66 66 66 66 66 ...]``
-``seq # frm # line# width lp bp -enc- [data....................]``
+  A1 00 02 00 64 00 80 01 04 04 00 00 66 66 66 66 66 66 66 ...
+  seq #|frm #|line#|width|lp|bp|-enc-|data....................
 
 
 So in total, the pixel data is preceded with 12 bytes of header data. The
