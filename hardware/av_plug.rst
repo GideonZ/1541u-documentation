@@ -8,7 +8,7 @@ Audio/Video Connector
 .. figure:: ../media/din-8.png
    :alt: 8-pin DIN plug drawing
    
-   
+*Note:* The connector used is a full size 8-pin 262° DIN. A 270° DIN does *NOT* fit without violence.
    
 The 8-pin DIN (audio/video) connector can output several different video signals, for each type you need a special assembled cable.   
 
