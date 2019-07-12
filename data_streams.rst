@@ -246,21 +246,21 @@ Viewing and recording
 Windows
 -------
 Thanks to Martijn Wieland (TSB), there is a viewer for the stream for Windows. This tool can be
-obtained here:  `TSB U64 Streamer`_
-
-.. _TSB U64 Streamer: https://www.tsb.space/projects/u64-streamer
-
-Linux/Mac
----------
-Jimmy (DusteDdk) made a Linux viewer, more info check: `u64view`_
-
-.. _u64view: https://github.com/DusteDdk/u64view
-
-See |location_link|.
+obtained here:  |location_link|.
 
 .. |location_link| raw:: html
 
-   <a href="https://github.com/DusteDdk/u64view" target="_blank">u64view</a>
+   <a href="https://www.tsb.space/projects/u64-streamer" target="_blank">TSB U64 Streamer</a>
+
+
+Linux/Mac
+---------
+
+Jimmy (DusteDdk) made a Linux viewer, |location_link|.
+
+.. |location_link| raw:: html
+
+   <a href="https://github.com/DusteDdk/u64view" target="_blank">more info check u64view</a>
    
 
 This version can also be compiled on Mac OS.
