@@ -2,7 +2,7 @@ Hardware
 ========
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   Audio & Video Connector Pinout <av_plug>
   SID-TAP Header Pinout <sid_tap>
