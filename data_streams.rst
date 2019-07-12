@@ -243,10 +243,21 @@ For NTSC, the audio clock is derived as follows:
 Viewing and recording
 =====================
 
+Windows
+-------
 Thanks to Martijn Wieland (TSB), there is a viewer for the stream for Windows. This tool can be
 obtained here:  `TSB U64 Streamer`_
 
 .. _TSB U64 Streamer: https://www.tsb.space/projects/u64-streamer
+
+Linux/Mac
+---------
+Jimmy (DusteDdk) made a Linux viewer, more info check: `u64view`_
+
+.. _u64view: https://github.com/DusteDdk/u64view
+
+This version can also be compiled on Mac OS.
+
 
 
 Also there is an example script in the 'python' directory of the ultimate repository to show how
