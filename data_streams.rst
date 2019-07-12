@@ -259,7 +259,8 @@ Jimmy (DusteDdk) made a Linux viewer, more info check: `u64view`_
 This version can also be compiled on Mac OS.
 
 
-
+Python script
+-------------
 Also there is an example script in the 'python' directory of the ultimate repository to show how
 grabbing of video data is done. This example script can be seen here: `grab.py`_
 
