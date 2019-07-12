@@ -256,6 +256,13 @@ Jimmy (DusteDdk) made a Linux viewer, more info check: `u64view`_
 
 .. _u64view: https://github.com/DusteDdk/u64view
 
+See |location_link|.
+
+.. |location_link| raw:: html
+
+   <a href="https://github.com/DusteDdk/u64view" target="_blank">u64view</a>
+   
+
 This version can also be compiled on Mac OS.
 
 
