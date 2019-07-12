@@ -9,3 +9,4 @@ Ultimate-64 Documentation
   User Interface <u64/user_interface>
   Configuration <config/index>
   Hardware documentation<hardware/index>
+  Data Streams <data_streams>
