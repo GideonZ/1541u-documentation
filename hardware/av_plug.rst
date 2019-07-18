@@ -59,11 +59,16 @@ In RGB mode, there is *no* sync information in either R, G or B; i.e. no 'sync-o
 Build your own RGB Scart cable
 ------------------------------
 
+.. figure:: ../media/hardware/hardware_av_plug_01.jpg
+   :alt: av_plug
+
+
 Pinout U64 & SCART
 
 .. figure:: ../media/hardware/hardware_av_plug_rgb_scart01.png
    :alt: Pinout U64 & SCART
 
+   
 ===  =============================  ===  =============================  
 Pin    U64 video port               Pin  SCART
 ===  =============================  ===  =============================
@@ -76,3 +81,6 @@ Pin    U64 video port               Pin  SCART
 7    Csync                          20   Composite video input
 8    Fast switching                 16   RGB Selection, 1-3V = RGB
 ===  =============================  ===  =============================
+
+.. figure:: ../media/hardware/hardware_av_plug_rgb_scart01.png
+   :alt: Pinout U64 & SCART
