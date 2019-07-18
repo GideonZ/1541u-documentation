@@ -71,4 +71,4 @@ U64 video port pin             SCART pin
 6 - Blue                        7 - RGB Blue
 7 - Csync                      20 - Composite video input
 8 -Fast switching              16 - RGB Selection, 1-3V = RGB
-
+=============================  =============================
