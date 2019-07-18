@@ -65,11 +65,7 @@ Pinout U64 & SCART
 Pin    U64 video port               Pin  SCART
 ===  =============================  ===  =============================
 1    Green                          11   RGB Green
-2    Ground	                        4
-                                    5
-                                    9
-                                    13
-                                    21   (shell)
+2    Ground	                        4    and pin 5,9,13, 21(Shell)
 3    Audio Out Left                 6    Audio Input Left
 4    Red                            15   RGB Red
 5    Audio Out Right                2    Audio Input Right
