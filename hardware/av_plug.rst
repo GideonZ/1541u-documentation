@@ -24,6 +24,10 @@ The 8-pin DIN (audio/video) connector can output several different video signals
 Pinout  
 ------
 
+.. figure:: ../media/din-8.png
+   :alt: 8-pin DIN plug
+
+
 ===  ===============  ========
 Pin  Modulated Color  RGB Mode
 ===  ===============  ========
