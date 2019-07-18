@@ -61,7 +61,7 @@ Build your own RGB Scart cable
 
 Pinout U64 & SCART
 
-.. figure:: ../media/hardware_av_plug_rgb_scart01.png
+.. figure:: ../media/hardware/hardware_av_plug_rgb_scart01.png
    :alt: Pinout U64 & SCART
 
 ===  =============================  ===  =============================  
