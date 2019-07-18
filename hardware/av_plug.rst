@@ -5,7 +5,7 @@ Audio/Video Connector
    :alt: 8-pin DIN plug location
 
 
-.. figure:: ../media/hardware_av_plug_02.jpg
+.. figure:: ../media/hardware/hardware_av_plug_02.jpg
    :alt: 8-pin DIN plug
    
 *Note:* The connector used is a full size 8-pin 262° DIN, also known as the 'horse-shoe' type.
