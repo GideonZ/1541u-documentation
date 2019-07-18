@@ -54,3 +54,21 @@ The PAL output is non-interlaced, with a field rate of 50.2 Hz, and line rate of
 The Fast Switching output is a 1.5V fixed 'high' output signal (when terminated with 75 Ohms), that is used on SCART to enable RGB mode.
 The CSYNC output is a sync-only output that is needed on the SCART signal as a replacement of the composite video or luma signal.
 In RGB mode, there is *no* sync information in either R, G or B; i.e. no 'sync-on-green'.
+
+
+Build your own RGB Scart cable
+------------------------------
+
+Pinout U64 & SCART
+=============================  =============================  
+U64 video port pin             SCART pin
+=============================  =============================  
+1 - Green                      11 - RGB Green
+2 - Ground	                   4, 5, 9, 13, 21 (shell)
+3 - Audio Out Left              6 - Audio Input Left
+4 - Red                        15 - RGB Red
+5 - Audio Out Right             2 - Audio Input Right
+6 - Blue                        7 - RGB Blue
+7 - Csync                      20 - Composite video input
+8 -Fast switching              16 - RGB Selection, 1-3V = RGB
+
