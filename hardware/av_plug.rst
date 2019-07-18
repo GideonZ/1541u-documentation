@@ -60,7 +60,7 @@ Build your own RGB Scart cable
 ------------------------------
 
 .. figure:: ../media/hardware/hardware_av_plug_01.jpg
-   :scale: 33 %
+   :scale: 33%
    :alt: av_plug
 
 
