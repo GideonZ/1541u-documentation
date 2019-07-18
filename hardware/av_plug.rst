@@ -82,6 +82,3 @@ Pin    U64 video port               Pin  SCART
 7    Csync                          20   Composite video input
 8    Fast switching                 16   RGB Selection, 1-3V = RGB
 ===  =============================  ===  =============================
-
-.. figure:: ../media/hardware/hardware_av_plug_rgb_scart01.png
-   :alt: Pinout U64 & SCART
