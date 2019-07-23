@@ -12,3 +12,7 @@ It also supports USB 2.0 Hubs. It is recommended to use powered USB hubs only (w
 USB 1.1 Hubs are not supported.
 
 There are three USB 2.0 (**no USB 3!!**) ports available on the board; two on the back and one on the "internal" side of the board/case.
+
+Usb0 = External USB (next to NIC)
+Usb1 = External USB (edge of PCB)
+Usb2 = Internal USB
