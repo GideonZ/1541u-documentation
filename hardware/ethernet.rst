@@ -81,6 +81,6 @@ Ultimate-related BBS and IRC clients
 ..................................................
 
 Since RR-net compatibility is not yet provided, some specific Ultimate software has been developed for accessing BBS and IRC networks.
-<a target="_blank" href="https://github.com/xlar54/ultimateii-dos-lib">Ulimate Lib</a> is a full TCP/IP stack implementation written by **Scott Hutter**, which comes along with two sample applications: <a target="_blank" href="https://csdb.dk/release/?id=181558">Ultimate Chat</a> and <a target="_blank" href="https://csdb.dk/release/?id=181558">Ultimate Term</a>, this one co-developed with **Francesco Sblendorio**.
+`Ulimate Lib <https://github.com/xlar54/ultimateii-dos-lib>`_ is a full TCP/IP stack implementation written by **Scott Hutter**, which comes along with two sample applications: `Ulimate Chat <https://csdb.dk/release/?id=181558>`_ and `Ulimate Term <https://csdb.dk/release/?id=181558>`_, this one co-developed with **Francesco Sblendorio**.
 
 *Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64*
