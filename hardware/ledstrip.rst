@@ -55,4 +55,4 @@ Pin:    1   2   3   4
 W A R N I N G ! Please always use extreme caution! 
 
 Please be extremly careful not to shorten the 5V to ground! It will burn a ferrite bead on your board! 
-Also shorting 5V to pin 3 or any other FPGA pin will likely damage the complete FPGA!
+Also shorting 5V to pin 3 or any other FPGA pin will likely damage the FPGA!
