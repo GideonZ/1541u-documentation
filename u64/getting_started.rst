@@ -115,8 +115,8 @@ The ROMs has to have the suffix ``.bin`` or ``.rom``, as in mykernal.bin, mybasi
 #. Choose ``Flash as Orig. Character ROM``.
 #. Push ``F5`` and choose ``Reboot C64``.
 
-Real SID
-........
+Real SID on Board revisions 1.1, 1.2 and 1.2a
+.............................................
 
 If you're installing real SID chips, you have to set the jumpers accordingly.
 If you don't have or don't want to install SID chips you can use the built in
@@ -139,7 +139,7 @@ If you don't have or don't want to install SID chips you can use the built in
     Off/Open: 6581
 
 
-Now you have to set your SID types in the Ultimate-II+ menu:
+In Firmware revisions before V1.22, it is required to set your SID types in the Ultimate-II+ menu:
 
 | ``Short press on power button``
 | ``F2``
@@ -152,4 +152,26 @@ Now you have to set your SID types in the Ultimate-II+ menu:
 Setting the SID type in the configuration enables the bus access to the chip,
 and also allows the auto-configurator to choose the right chip when playing
 a SID tune with the provided player from Wilfred Bos.
+
+Real SID on Board revisions 1.3 (U64 Elite) and 1.4
+...................................................
+
+The newer board revisions are jumperless. This means that both the voltage as well as the filter caps are selected automatically, based on the inserted SID type. For this, firmware V1.22 or later is *required*. *Do not downgrade to earlier versions on jumperless boards!*
+
+In order to make sure that 8580 chips are never given a higher voltage than they can handle, the socket gets disabled automatically whenever an 6581 chip (which needs 12V) is detected for the first time. When the popup appears "SID changed", enter the configuration menu, and enable the socket in which the 6581 resides:
+
+| ``Short press on power button``
+| ``F2``
+| ``SID Sockets Configuration``
+| Enable the sockets with options:
+| ``SID in socket 1``
+| and
+| ``SID in socket 2``
+
+Once the chip in the socket is recognized as 6581 AND the socket is enabled, the 12V is applied. 
+
+Pull Down Resistor
+__________________
+
+Note that in the original schematics of the C64, a so called "pull-down" resistor of 1 kΩ is placed from the audio output pin to ground. This resistor is present on the 6581-based boards, but absent on the 8580-based boards. On the jumperless U64 boards this resistor is also enabled and disabled automatically. However, you may override this in the same configuration menu. The influence is limited.
 
