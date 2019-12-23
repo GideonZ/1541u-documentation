@@ -42,7 +42,7 @@ Within the network settings menu the ethernet port can be configured as needed, 
    :alt: Ethernet Port settings
    :align: left
    
-   
+
 +------------------------------+--------------------------------------------------------------------------------+-------------------+
 | Menu name                    | Explanation                                                                    | Options           |
 |                              |                                                                                | (bold default)    |
@@ -81,6 +81,6 @@ Ultimate-related BBS and IRC clients
 ....................................
 
 Since RR-net compatibility is not yet provided, some specific Ultimate software has been developed for accessing BBS and IRC networks.
-`Ulimate Lib <https://github.com/xlar54/ultimateii-dos-lib>`_ is a full TCP/IP stack implementation written by **Scott Hutter**, which comes along with two sample applications: `Ulimate Chat <https://csdb.dk/release/?id=181558>`_ and `Ulimate Term <https://csdb.dk/release/?id=181558>`_, this one co-developed with **Francesco Sblendorio**.
+`Ulimate Lib <https://github.com/xlar54/ultimateii-dos-lib>`_ is a library (written by **Scott Hutter**) that gives easy access to the full TCP/IP stack that the Ultimate provides. This library comes along with two sample applications: `Ulimate Chat <https://csdb.dk/release/?id=181558>`_ and `Ulimate Term <https://csdb.dk/release/?id=181558>`_, this one co-developed with **Francesco Sblendorio**.
 
 *Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64*
