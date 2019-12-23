@@ -49,7 +49,8 @@ Pin:    1   2   3   4
       GND DAT CLK  5V
       
 .. image:: ../media/p8.png
-
+   :alt: description of assignment
+   :align: left
 
 W A R N I N G ! Please always use extreme caution! 
 
