@@ -39,7 +39,7 @@ Please refer to the drawing of the user port header, in order to see where to co
 **LED pinheader P8**
 
 
-Beginning with hardware revision 1.4 you'll find the new LED pinheader P8 to the left under the User Port. This can be used to attach an APA102C LED strip and simultaneously use the User Port for other purposes. 
+Beginning with hardware revision 1.4 you'll find the new LEDstrip pin header P8 to the left under the User Port. This can be used to attach an APA102C LED strip and simultaneously use the User Port for other purposes. 
 
 The pin header is defined as follows:
 
