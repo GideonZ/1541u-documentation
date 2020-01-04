@@ -5,6 +5,7 @@ This page explains how to use the visual SID address editor to set the UltiSID i
 you four or even eight SIDs.
 
 In the following example, it is assumed that the settings are as follows:
+
 * SID Socket 1 Address: Unmapped
 * SID Socket 2 Address: Unmapped
 * UltiSID 1 Address: $D400
