@@ -1,0 +1,11 @@
+Ultimate SID player configuration
+_________________________________
+
+If the auto-config feature is enabled, it searches for the right SID type too. 
+This means that it will look for a 6581 if the SID header indicates this. 
+This may lead to confusing results if the SID type installed is 8580. 
+
+If the SID types are correct, it will set the address(es) correctly, as well as the panning.
+Single SID tunes will pan to center. Stereo SID will pan to L3/R3. 
+3-SIDs will pan to L4/Center/R4. So it is a best-effort algorithm that works best for single 
+SID tunes and you have one 6581 and one 8580 installed.
