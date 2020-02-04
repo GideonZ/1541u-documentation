@@ -10,3 +10,5 @@ Ultimate-64 Documentation
   Configuration <config/index>
   Hardware documentation<hardware/index>
   Data Streams <data_streams>
+  Ultimate SID player documentation<sidplayer/index>
+  
