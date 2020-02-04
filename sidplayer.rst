@@ -1,4 +1,4 @@
-Ultimate SID player configuration
+Ultimate SID player auto configuration
 _________________________________
 
 What this does, is to select the correct socket when the internal player is started. 
