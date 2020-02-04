@@ -78,15 +78,22 @@ accessories at thingiverse. Here are a few of them:
 
 Commercially available kits
 ...........................
-If you do not have a 3D printer yourself, you may also want to take a look at the *excellent* kits that
-are available from Corei64, created by Thomas Christoph. These professional kits make mounting of the U64
-increadibly easy and perfect. Corei64 has put a special page together, just for the U64, where the items are listed:
+If you do not have a 3D printer yourself, you may also want to take a look at these kits that
+are available from Corei64 by Thomas Christoph, or the Pixelwizard Retro Shop from Thomas Koch. Both offer professional kits that make mounting of the U64
+easy. Both shops have put special pages together, just for the U64, where the items are listed:
 
 - `All Ultimate64 accessories from Corei64 <https://corei64.com/shop/index.php?route=product/search&search=ultimate%2064>`_
-- `Installation kit for 64C <https://corei64.com/shop/index.php?route=product/product&path=65_92&product_id=195>`_
-- `Installation kit for breadbin <https://corei64.com/shop/index.php?route=product/product&path=65_92&product_id=202>`_
+- `All Ultimate64 accessories from Pixelwizard <https://shop.pixelwizard.eu/en/commodore-c64/ultimate-64/>`_
 
-Other installation accessories are available at https://www.corei64.com/shop/
+- `Installation kit for 64C Corei64 <https://corei64.com/shop/index.php?route=product/product&path=65_92&product_id=195>`_
+- `Installation kit for 64C Pixelwizard <https://shop.pixelwizard.eu/en/3d-printed-replacement-parts/55/ultimate-64-keyboard-mount-set-for-c64c-case?c=35>`_
+
+- `Installation kit for breadbin Corei64 <https://corei64.com/shop/index.php?route=product/product&path=65_92&product_id=202>`_
+
+- `New C64C cases in different colors Pixelwizard <https://shop.pixelwizard.eu/en/commodore-c64/cases/>`_
+
+Other installation accessories, stickers and batches are available at https://www.corei64.com/shop/ or at https://shop.pixelwizard.eu/en
+
 
 
 Connecting your Ultimate 64
