@@ -24,7 +24,6 @@ An example configuration could be:
 
 .. image:: ../media/acia/acia_config.png
    :alt: ACIA and Modem Configuration
-   :align: left
 
 **Please observe I/O range conflicts, this is *not* enforced by the Ultimate application.**
 
@@ -32,7 +31,6 @@ Once the ACIA chip is enabled in the I/O space, a terminal program can be starte
 
 .. image:: ../media/acia/ccgms.png
    :alt: ACIA and Modem Configuration
-   :align: left
 
 Note that CCGMS uses the NMI line, and the SwiftLink is configured at $DE00. This corresponds to the setting made in the Ultimate configuration menu.
 
