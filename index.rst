@@ -6,7 +6,9 @@
 
   Quick Guide to the Ultimate II+ <quick_guide>
   Ultimate 64 <ultimate64>
-  FAQ by Grrrolf <faq>
+  Modem Emulation Layer <howto/modem>
   Command Interface <command interface>
   Virtual Printer <ultimate_printer>
   Interview By Retro Magazine <interview>
+  FAQ by Grrrolf <faq>
+  
