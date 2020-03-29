@@ -264,6 +264,13 @@ distinction whether a cycle is a CPU or a VIC cycle is made based on AEC and PHI
 
 The 1541 CPU cycle also occupies one 32-bit word, but the data format is slightly different. The 1541 stream also contains the state of the signals ATN, CLOCK and DATA from the IEC bus, such that the data flow over this cable can be seen as well.
 
+The first 32-bit word consists of a 16-bit sequence number and a reserved 16-bit word. Following this first 32-bit word, 360 data entries follow, each 32-bit. Hence, the payload size of the datagrams is 1444 bytes::
+
+  05 16 00 00 xx xx xx xx yy yy yy yy ...
+  -seq- resvd |- entry 0 -|- entry 1 -|
+
+The format of the data entries are as follows:
+
 .. list-table:: Debug Stream Format
  :header-rows: 1
 
