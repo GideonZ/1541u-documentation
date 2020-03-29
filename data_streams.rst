@@ -13,6 +13,7 @@ there are two different types of streams that the machine can output:
 
 * VIC Video Stream
 * Audio Stream
+* Debug Stream
 
 This page describes these features in more detail.
  
@@ -239,6 +240,73 @@ For NTSC, the audio clock is derived as follows:
 (Fc * 16/7 * 15 / 80 / 32) = 47940 Hz  (Fc = 3579545.45 Hz)  (48kHz: -1243 ppm) 
 
 
+Debug Stream (ID 2)
+-------------------
+**This is an advanced feature**
+
+The Debug stream is new in version 3.7 of the firmware (V1.28 and higher). It streams the CPU, VIC or 1541 CPU accesses directly to the network. What does this mean? It means that the program flow and memory accesses can be traced *real time* from the machine. This essentially opens up the possiblity to trace program flow and timing, down to clock cycle accuracy. In addition, by adding the CPU access of 1541 Drive A to the possible output streams, interaction between the host machine and the drive can be analyzed.
+
+Due to the bandwidth limitation of the 100 Mbps network port, it cannot be used in combination with the
+Video Stream (ID 0), nor can all three stream sources be used at the same time. Each stream occupies roughly 32 Mbps! 
+
+The following modes are supported:
+
+- 6510 Only
+- VIC Only
+- 6510 & VIC
+- 1541 Only
+- 6510 & 1541
+
+Each cycle / memory access occupies one 32-bit word in the output stream. The format of the 6510 and VIC
+streams are equal, with the exception of bit 31, which literally indicates the state of the PHI2 signal
+during the access. Because VIC accesses can also occur when PHI2 = 1 (Bad lines, for instance), the
+distinction whether a cycle is a CPU or a VIC cycle is made based on AEC and PHI2.
+
+The 1541 CPU cycle also occupies one 32-bit word, but the data format is slightly different. The 1541 stream also contains the state of the signals ATN, CLOCK and DATA from the IEC bus, such that the data flow over this cable can be seen as well.
+
+.. list-table:: Debug Stream Format
+ :header-rows: 1
+
+ * - **bit**
+   - 31
+   - 30
+   - 29
+   - 28
+   - 27
+   - 26
+   - 25
+   - 24
+   - 23..16
+   - 15..0
+ * - **6510 / VIC**
+   - PHI2
+   - GAME#
+   - EXROM#
+   - BA
+   - IRQ#
+   - ROM#
+   - NMI#
+   - R/W#
+   - Data
+   - Address
+ * - **1541**
+   - '0'
+   - ATN
+   - DATA
+   - CLOCK
+   - SYNC
+   - BYTE_READY
+   - IRQ#
+   - R/W#
+   - Data
+   - Address
+
+One way to visualize this stream, is to capture it to a file using a python script, such as found in the repository:  `grab_debug.py`_
+
+.. _grab_debug.py: https://github.com/GideonZ/1541ultimate/blob/master/python/grab_debug.py
+
+There is a preliminary tool to 'decode' the binary file that is captured. In the tools directory there is a 'dump_bus_trace.c', which is compiled by running 'make' in that directory. Dump_bus_trace converts the captured stream to a *vcd* file, or value change dump file, which can be viewed with GtkWave or any other software tool that can visualize it. This is all very preliminary. A lot of work needs to be done to find and visualize exactly that what you're looking for, since the files are very large. E.g. a disassembly of the captured CPU bus may come in very handy. It would be better to rewrite the messy 'C' tool as a set of Python scripts.
+
 
 Viewing and recording
 =====================
@@ -266,12 +334,12 @@ Jimmy (DusteDdk) made a Linux viewer, more info check: |u64view_link|
 This version can also be compiled on Mac OS.
 
 
-Python script
--------------
-Also there is an example script in the 'python' directory of the ultimate repository to show how
-grabbing of video data is done. This example script can be seen here: `grab.py`_
+Python scripts
+--------------
+Also there are example scripts in the 'python' directory of the ultimate repository to show how
+grabbing of video data and audio data is done. This example scripts can be seen here: `grab.py`_ and `grab_audio.py`_
 
 .. _grab.py: https://github.com/GideonZ/1541ultimate/blob/master/python/grab.py
-
+.. _grab_audio.py: https://github.com/GideonZ/1541ultimate/blob/master/python/grab_audio.py
 
 
