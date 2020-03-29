@@ -50,7 +50,7 @@ any slower than a real floppy disk drive.
 Just like a real 1541 disk drive, the Ultimate-II+ needs “floppy disks”.
 On the Ultimate-II+, these floppy disks are *virtual*. These virtual
 disks exist in the form of a .D64 or .G64 file on a storage device, such
-as the supplied USB stick. When the user selects such a file, it is
+as a USB stick. When the user selects such a file, it is
 linked to the emulated drive. This process is called *‘mounting’*. After
 mounting (which will take a few seconds to complete), the 1541 can
 access the image file as if it was a real floppy. All standard commands
@@ -206,6 +206,25 @@ program on the Telnet port (port 23). This gives the possibility to
 control the machine remotely, and swap disks without actually
 interrupting the program running on the C-64.
 
+Modem support
+=============
+Starting from version 3.7, a lightweight modem emulation layer is provided
+in the firmware of the Ultimate. This modem layer is accessible through an
+emulated MOS 6551 ACIA chip. This chip was found in the SwiftLink
+cartridge, as well as some other ACIA based RS-232 cartridges of the time.
+
+The modem emulation layer bridges the ACIA chip and the LAN port. The modem
+connects to a server (e.g. one that is running a bulletin board system) through the internet. 
+In order to use this, the modem needs to be enabled in the configration menu
+of the Ultimate application, as well as in the terminal program, e.g. CCGMS.
+The modem will respond to commands such as "ATDT", which is followed by the
+domain name, followed by a colon and the port numer. For example:
+
+ATDTAFTERLIFE.DYNU.COM:6400
+
+Incoming connections are also supported. This enables you to run a simple
+server on your C64, or maybe even a BBS!
+
 USB support
 ===========
 The Ultimate-II+ supports most USB sticks and Flash card readers out of
@@ -291,7 +310,7 @@ enable this module in configuration menu. It then appears in the I/O
 region. The programming interface is fully documented. Documentation can
 be downloaded from the official website:
 
-http://1541ultimate.net/content/download/ultimate_audio_v0.2.pdf
+https://github.com/GideonZ/1541ultimate/blob/master/doc/ultimate_audio_v0.2.pdf
 
 Alternate ROMs
 ==============
@@ -331,7 +350,7 @@ white image of the printed graphics and text. This image is then saved
 to the USB flash drive. The full documentation of the printer emulation
 and all of its capabilities and options is available here:
 
-http://1541ultimate.net/content/download/mps_printer_emulation.pdf
+https://github.com/GideonZ/1541ultimate/blob/master/doc/ultimate_printer.pdf
 
 Virtual drive
 -------------
@@ -364,12 +383,12 @@ will provide more and more powerful features.
 
 Documentation of the interface itself is available here:
 
-http://1541ultimate.net/content/download/command_interface_v1.0.pdf
+https://github.com/GideonZ/1541ultimate/blob/master/doc/Command%20Interface%20V1.0.pdf
 
 Accessing the file system is done through the “DOS” target, which is
 documented here:
 
-http://1541ultimate.net/content/download/ultimate_dos_v1.0.pdf
+https://github.com/GideonZ/1541ultimate/blob/master/doc/ultimate_dos-1.2.pdf
 
 Real Time Clock
 ===============
@@ -390,7 +409,7 @@ Firmware Updates
 ================
 In order to update the firmware, you will need a file with the “.U2P”
 extension. Such a file can be found in the ‘.zip’ archives found in the
-download section of the http://1541ultimate.net website, after logging
+download section of the http://ultimate64.com website, after logging
 on to the site.
 
 Procedure: Use the Ultimate-II+ file browser to find the .U2P file.
@@ -417,7 +436,7 @@ storage solution for your 8-bit Commodore computer.
 
 Known issues
 ============
--  The processing speed of the Ultimate-II+ is currently (V3.2) still
+-  The processing speed of the Ultimate-II+ is currently (V3.7) still
    quite a bit lower than the Ultimate-II. This is because the
    Ultimate-II+ platform does not have instruction/data caches still on
    its embedded processor. The lower speed may cause some situations in
@@ -429,7 +448,8 @@ Known issues
    emulation, the conversion from a bitmap image to a PNG file can take
    quite some time. This may be solved in a future software upgrade.
 
-Other issues can be found (and reported) here:
+Other issues are reported and maintained on GitHub:
 
-http://1541ultimate.net/content/index.php?option=com_issueform&Itemid=24
+https://github.com/GideonZ/1541ultimate/issues
+
 
