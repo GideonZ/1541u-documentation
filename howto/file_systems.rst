@@ -11,4 +11,4 @@ Supported file systems are:
 - D81 files (no partitions)
 - T64 files
 
-*Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64*
+*Applies to: 1541 Ultimate-II, Ultimate-II+, Ultimate 64*
