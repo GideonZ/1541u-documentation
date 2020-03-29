@@ -215,10 +215,10 @@ cartridge, as well as some other ACIA based RS-232 cartridges of the time.
 
 The modem emulation layer bridges the ACIA chip and the LAN port. The modem
 connects to a server (e.g. one that is running a bulletin board system) through the internet. 
-In order to use this, the modem needs to be enabled in the configration menu
+In order to use this, the modem needs to be enabled in the configuration menu
 of the Ultimate application, as well as in the terminal program, e.g. CCGMS.
 The modem will respond to commands such as "ATDT", which is followed by the
-domain name, followed by a colon and the port numer. For example:
+domain name, followed by a colon and the port number. For example:
 
 ATDTAFTERLIFE.DYNU.COM:6400
 
@@ -296,7 +296,9 @@ available on the cartridge port. For this reason, when software uses the
 RAM in this area, it is possible that you will hear unintended clicks
 and pops, or even notes.
 
-The blue line-in connector is not yet used at this point.
+The blue line-in connector may be used to mix external audio with the output
+of the Ultimate-II+ cartridge. The separate left and right inputs can be
+found in the Audio Mixer configuration menu.
 
 Ultimate Audio module
 ---------------------
