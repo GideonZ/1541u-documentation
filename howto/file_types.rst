@@ -4,7 +4,7 @@ Supported file types
 
 The Ultimate application supports the following file types:
 
-.. list-table:: Title
+.. list-table::
  :header-rows: 1
 
  * - Extension
