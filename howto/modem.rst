@@ -34,6 +34,8 @@ Once the ACIA chip is enabled in the I/O space, a terminal program can be starte
 
 Note that CCGMS uses the NMI line, and the SwiftLink is configured at $DE00. This corresponds to the setting made in the Ultimate configuration menu.
 
+**Again: Please observe I/O range conflicts, this is *not* enforced by the Ultimate application. If you are getting wrong characters in your terminal program, you likely have an I/O conflict. For instance, Retro Replay has registers at $DE00, and will therefore conflict with the ACIA at $DE00.**
+
 Modem Commands
 --------------
 
