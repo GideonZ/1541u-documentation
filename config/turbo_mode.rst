@@ -7,30 +7,31 @@ Turbo mode settings
    :align: left
 
 
-Interface Type
-.............. 
-
-**Turbo control**
+Turbo control
+............. 
 
 .. image:: ../media/config/config_turbo_02_control.png
    :alt: Turbo control
    :align: left
 
 
-**CPU Speed**
+CPU Speed
+......... 
 
 .. image:: ../media/config/config_turbo_03_cpu_speed.png
    :alt: Turbo cpu speed
    :align: left
 
-**Badline Timing**
+Badline Timing
+..............
 
 .. image:: ../media/config/config_turbo_04_badline_timing.png
    :alt: Turbo badline timing
    :align: left   
    
    
-**SuperCPU Detect ($D0BC)**
+SuperCPU Detect ($D0BC)
+.......................
 
 .. image:: ../media/config/config_user_interface_02.png
    :alt: Interface Type Overlay on HMDI
