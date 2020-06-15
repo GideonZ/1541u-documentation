@@ -2,7 +2,7 @@
 =================================================
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
 
   Quick Guide to the Ultimate II+ <quick_guide>
   Ultimate 64 <ultimate64>
