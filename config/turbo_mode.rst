@@ -33,9 +33,7 @@ Badline Timing
 SuperCPU Detect ($D0BC)
 .......................
 
-.. image:: ../media/config/config_user_interface_02.png
-   :alt: Interface Type Overlay on HMDI
-   :align: left
+
 
 
 Applies to: Ultimate 64
