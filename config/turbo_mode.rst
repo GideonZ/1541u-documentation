@@ -21,12 +21,14 @@ Turbo control
 | U64 Turbo Registers  | Turbo control uses settings from U64.                          |
 |                      |                                                                |
 |                      | Settings **CAN** be controlled with registers programmable.    |
-|                      | *See Turbo Control registers*                                  |
+|                      |                                                                |
+|                      | *See Turbo Control registers.*                                 |
 +----------------------+----------------------------------------------------------------+
 | TurboEnable Bit      | Turbo control uses settings from U64.                          |
 |                      |                                                                |
 |                      | Settings **CAN** be controlled with registers programmable.    |
-|                      | *See Turbo Control registers*                                  |
+|                      |                                                                |
+|                      | *See Turbo Control registers.*                                 |
 +----------------------+----------------------------------------------------------------+
 
 
