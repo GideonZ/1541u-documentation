@@ -5,7 +5,7 @@ Turbo Control registers
 +-------------+----------------------------------------------------------------+
 | Address     | Description                                                    |
 +=============+================================================================+
-| 53297/$D031 |	*U64 Turbo Control*                                            |
+| 53297/$D031 |	**U64 Turbo Control**                                          |
 |             |                                                                |
 |             | This register is only available when the Turbo Mode selector   |
 |             | is set to 'U64 Turbo Registers' or 'Turbo Enable Bit'.         |
@@ -33,7 +33,7 @@ Turbo Control registers
 |             | * 14 = 40 MHz                                                  |
 |             | * 15 = 48 MHz                                                  |
 +-------------+----------------------------------------------------------------+
-| 53296/$D030 |	*Turbo Enable Bit*                                             |
+| 53296/$D030 |	**Turbo Enable Bit**                                           |
 |             |                                                                |
 |             | This register is only available when the Turbo Mode selector   |
 |             | is set to 'Turbo Enable Bit'.                                  |
@@ -51,7 +51,7 @@ Turbo Control registers
 |             |                                                                |
 |             |	  1 = Turbo On                                                 |
 +-------------+----------------------------------------------------------------+
-| 53370/$D07A |	*SuperCPU compatible enable/disable registers*                 |
+| 53370/$D07A |	**SuperCPU compatible enable/disable registers**               |
 |             |                                                                |
 |             | This register is only available when the Turbo Mode selector   |
 |             | is set to 'U64 Turbo Registers' or 'Turbo Enable Bit'.         |
@@ -61,7 +61,7 @@ Turbo Control registers
 |             |	                                                               |
 |             |	see: https://www.c64-wiki.com/wiki/SuperCPU                    |
 +-------------+----------------------------------------------------------------+
-| 53371/$D07B |	*SuperCPU compatible enable/disable registers*                 |
+| 53371/$D07B |	**SuperCPU compatible enable/disable registers**               |
 |             |                                                                |
 |             | This register is only available when the Turbo Mode selector   |
 |             | is set to 'U64 Turbo Registers' or 'Turbo Enable Bit'.         |
@@ -71,7 +71,7 @@ Turbo Control registers
 |             |	                                                               |
 |             |	see: https://www.c64-wiki.com/wiki/SuperCPU                    |
 +-------------+----------------------------------------------------------------+
-| 53424/$D0B0 |	*SuperCPU Detect ($D0BC)*                                      |
+| 53424/$D0B0 |	**SuperCPU Detect ($D0BC)**                                    |
 |             |                                                                |
 |             | * SuperCPU Mode Detect Register                                |
 |             |	                                                               |
