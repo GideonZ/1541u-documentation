@@ -41,10 +41,10 @@ CPU Speed
    :align: left
    
    
-|**Set CPU Speed.**
-|
-|Default C64 speed: 1MHz (1x)
-|Maximum speed: 48MHz (48x)
+| **Set CPU Speed.**
+| 
+| Default C64 speed: 1MHz (1x)
+| Maximum speed: 48MHz (48x)
    
 
 Badline Timing
