@@ -155,4 +155,4 @@ Turbo Control registers
 
 Applies to: Ultimate 64
 
-\*) Setting is only available on the Ultimate 64, firmware >= 1.33*
+\*) Setting are only available on the Ultimate 64, firmware >= 1.33*
