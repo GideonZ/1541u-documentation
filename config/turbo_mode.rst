@@ -60,7 +60,7 @@ Badline Timing
 | *This can be controlled with registers programmable. See Turbo Control registers.*
 
    
-SuperCPU Detect ($D0B0)
+SuperCPU Detect ($D0BC)
 .......................
 
 | **SuperCPU Mode Detect Register**
@@ -140,7 +140,7 @@ Turbo Control registers
 |             |	                                                               |
 |             |	More information: https://www.c64-wiki.com/wiki/SuperCPU       |
 +-------------+----------------------------------------------------------------+
-| 53424/$D0B0 |	**SuperCPU Detect ($D0B0)**                                    |
+| 53436/$D0BC |	**SuperCPU Detect ($D0BC)**                                    |
 |             |                                                                |
 |             | * SuperCPU Mode Detect Register                                |
 |             |	                                                               |
