@@ -21,12 +21,12 @@ Turbo control
 | U64 Turbo Registers  | Turbo control uses settings from U64.                          |
 |                      |                                                                |
 |                      | Settings **CAN** be controlled with registers programmable.    |
-|                      | * See Turbo Control registers_                                 |
+|                      | *See Turbo Control registers*                                  |
 +----------------------+----------------------------------------------------------------+
 | TurboEnable Bit      | Turbo control uses settings from U64.                          |
 |                      |                                                                |
 |                      | Settings **CAN** be controlled with registers programmable.    |
-|                      | * See Turbo Control registers_                                 |
+|                      | *See Turbo Control registers*                                  |
 +----------------------+----------------------------------------------------------------+
 
 
@@ -50,7 +50,7 @@ SuperCPU Detect ($D0BC)
 .......................
 
 
-Turbo Control .. _registers
+Turbo Control registers
 =======================
 
 +-------------+----------------------------------------------------------------+
