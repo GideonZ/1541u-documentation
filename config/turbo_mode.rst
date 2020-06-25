@@ -43,8 +43,8 @@ CPU Speed
    
 | **Set CPU Speed.**
 | 
-| Default C64 speed: 1MHz (1x)
-| Maximum speed: 48MHz (48x)
+| Default C64/U64 speed: **1MHz (1x)**
+| Maximum speed: **48MHz (48x)**
    
 
 Badline Timing
@@ -53,10 +53,19 @@ Badline Timing
 .. image:: ../media/config/config_turbo_04_badline_timing.png
    :alt: Turbo badline timing
    :align: left   
+
+| **Enabled/disable badline timing.**
+| 
+| Turn off badlines to get more CPU cycles.
+| *This can be controlled with registers programmable. See Turbo Control registers.*
+
    
-   
-SuperCPU Detect ($D0BC)
+SuperCPU Detect ($D0B0)
 .......................
+
+| **SuperCPU Mode Detect Register**
+| 
+| More information: https://www.c64-wiki.com/wiki/SuperCPU
 
 
 Turbo Control registers
@@ -119,7 +128,7 @@ Turbo Control registers
 |             |                                                                |
 |             | * Software Speed Select - Normal                               |
 |             |	                                                               |
-|             |	see: https://www.c64-wiki.com/wiki/SuperCPU                    |
+|             |	More information: https://www.c64-wiki.com/wiki/SuperCPU       |
 +-------------+----------------------------------------------------------------+
 | 53371/$D07B |	**SuperCPU compatible enable/disable registers**               |
 |             |                                                                |
@@ -129,16 +138,16 @@ Turbo Control registers
 |             |                                                                |
 |             | * Software Speed Select - Turbo (20 MHz)($079)                 |
 |             |	                                                               |
-|             |	see: https://www.c64-wiki.com/wiki/SuperCPU                    |
+|             |	More information: https://www.c64-wiki.com/wiki/SuperCPU       |
 +-------------+----------------------------------------------------------------+
-| 53424/$D0B0 |	**SuperCPU Detect ($D0BC)**                                    |
+| 53424/$D0B0 |	**SuperCPU Detect ($D0B0)**                                    |
 |             |                                                                |
 |             | * SuperCPU Mode Detect Register                                |
 |             |	                                                               |
 |             | This register is only available when it is separately enabled. |
 |             | This register is **read only**                                 |
 |             |                                                                |
-|             |	see: https://www.c64-wiki.com/wiki/SuperCPU                    |
+|             |	More information: https://www.c64-wiki.com/wiki/SuperCPU       |
 +-------------+----------------------------------------------------------------+
 
 
