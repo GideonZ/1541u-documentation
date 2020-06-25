@@ -39,6 +39,12 @@ CPU Speed
 .. image:: ../media/config/config_turbo_03_cpu_speed.png
    :alt: Turbo cpu speed
    :align: left
+   
+   
+**Set CPU Speed.**
+Default C64 speed: 1MHz (1x)
+Maximum speed: 48MHz (48x)
+   
 
 Badline Timing
 ..............
