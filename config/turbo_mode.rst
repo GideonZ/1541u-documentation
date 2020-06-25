@@ -2,17 +2,33 @@
 Turbo mode settings
 ===================
 
-.. image:: ../media/config/config_turbo_01_main.png
-   :alt: Turbo mode settings
-   :align: left
-
-
 Turbo control
 ............. 
 
 .. image:: ../media/config/config_turbo_02_control.png
    :alt: Turbo control
    :align: left
+   
++----------------------+----------------------------------------------------------------+
+| Option               | Description                                                    |
++======================+================================================================+
+| Off                  | Turbo control is off                                           |
++----------------------+----------------------------------------------------------------+
+| Manual               | Turbo control uses settings from U64.                          |
+|                      |                                                                |
+|                      | Settings **CANNOT** be controlled with registers programmable. |
++----------------------+----------------------------------------------------------------+
+| U64 Turbo Registers  | Turbo control uses settings from U64.                          |
+|                      |                                                                |
+|                      | Settings **CAN** be controlled with registers programmable.    |
+|                      | * See Turbo Control registers_                                 |
++----------------------+----------------------------------------------------------------+
+| TurboEnable Bit      | Turbo control uses settings from U64.                          |
+|                      |                                                                |
+|                      | Settings **CAN** be controlled with registers programmable.    |
+|                      | * See Turbo Control registers_                                 |
++----------------------+----------------------------------------------------------------+
+
 
 
 CPU Speed
@@ -34,8 +50,7 @@ SuperCPU Detect ($D0BC)
 .......................
 
 
-
-Turbo Control registers
+Turbo Control .. _registers
 =======================
 
 +-------------+----------------------------------------------------------------+
