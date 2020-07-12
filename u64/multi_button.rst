@@ -30,3 +30,8 @@ functions.
 |                      | freeze function of the selected   |
 |                      | utility cartridge.                |
 +----------------------+-----------------------------------+
+| Config Reset         | With the machine switched off,    |
+|                      | press the RESTORE key and keep it |
+|                      | pressed. Then turn the U64 on by  |
+|                      | briefly pressing the button.      |
++----------------------+-----------------------------------+
