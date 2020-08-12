@@ -242,8 +242,7 @@ press enter. A contextual menu will pop-up, select 'rename' to rename the file.
 
 Where are the manuals for the Ultimate II and Ultimate II + carts?
 ------------------------------------------------------------------
-Unfortunately there are no manuals in a sense that you can read about all
-functions, settings etc. of the Ultimate cartridges.
+This FAQ is part of the current manual.
 
 For both the `Ultimate II
 <https://github.com/GideonZ/1541ultimate/blob/master/doc/Quick%20guide%20to%2
