@@ -94,9 +94,11 @@ to the EF cartridge image:
 
 Technology Preview: EAPI Support for Easyflash, incl. but not limited to
 writing support. Please note that the changed crt file is NOT saved
-autmatically. You can save it by "F5", "Save Easyflash crt" in the filebrowser. 
-The file will be saved with the filel name "module.crt". Optionally rename the 
+automatically. You can save it by "F5", "Save Easyflash crt" in the file browser. 
+The file will be saved with the filelname "module.crt". Optionally rename the 
 saved file to a more recognizable name.
+
+Tip: turn off Ultimate Audio in the C64 and cartridge settings when usint this feature. 
 
 
 Which USB2LAN adapters are supported by the 1541Utlimate 2?
