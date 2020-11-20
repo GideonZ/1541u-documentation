@@ -7,22 +7,22 @@ Configuration menu
 Within this menu the U64 settings can be customized.
 
 
-Audio Mixer
-SID Sockets Configuration 
-UltiSID Configuration
-SID Addressing
-U64 Specific Settings
-C64 and Cartridge Settings
-Clock Settings
-Software IEC Settings
-LED Strip Settings
-Data Streams
-Modem Settings
-User Interface Settings
-Tape Settings
-1541 Drive A Settings
-1541 Drive B Settings
-Network settings
+- Audio Mixer
+- SID Sockets Configuration 
+- UltiSID Configuration
+- SID Addressing
+- U64 Specific Settings
+- C64 and Cartridge Settings
+- Clock Settings
+- Software IEC Settings
+- LED Strip Settings
+- Data Streams
+- Modem Settings
+- User Interface Settings
+- Tape Settings
+- 1541 Drive A Settings
+- 1541 Drive B Settings
+- Network settings
 
 .. toctree::
   :maxdepth: 2
