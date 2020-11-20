@@ -12,6 +12,11 @@ Within this menu the U64 settings can be customized.
 - UltiSID Configuration
 - SID Addressing
 - U64 Specific Settings
+  - System Mode
+  - Joystick Swapper
+  - Adjust Color Clock
+  - Analog Video Mode
+  - Turbo Control <turbo_mode>
 - C64 and Cartridge Settings
 - Clock Settings
 - Software IEC Settings
@@ -26,7 +31,5 @@ Within this menu the U64 settings can be customized.
 
 .. toctree::
   :maxdepth: 2
-
-  Turbo mode <turbo_mode>
   RealTime Clock (RTC) <rtc>
   Setting up 4 and 8 UltiSIDs <multi_sid>
