@@ -6,6 +6,9 @@ Configuration menu
 
 Within this menu the U64 settings can be customized.
 
+.. toctree::
+  :maxdepth: 2
+
 
 - Audio Mixer
 - SID Sockets Configuration 
@@ -16,7 +19,7 @@ Within this menu the U64 settings can be customized.
 	- Joystick Swapper
 	- Adjust Color Clock
 	- Analog Video Mode
-	- Turbo Control
+	Turbo mode <turbo_mode>
 - C64 and Cartridge Settings
 - Clock Settings
 - Software IEC Settings
@@ -29,9 +32,6 @@ Within this menu the U64 settings can be customized.
 - 1541 Drive B Settings
 - Network settings
 
-.. toctree::
-  :maxdepth: 2
-
-  Turbo mode <turbo_mode>
+  
   RealTime Clock (RTC) <rtc>
   Setting up 4 and 8 UltiSIDs <multi_sid>
