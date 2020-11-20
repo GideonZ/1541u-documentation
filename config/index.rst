@@ -9,7 +9,7 @@ Within this menu the U64 settings can be customized.
 .. toctree::
   :maxdepth: 2
 
-  Audio Mixer
+  Audio Mixer <audio_mixer>
   SID Sockets Configuration 
   UltiSID Configuration
   SID Addressing
