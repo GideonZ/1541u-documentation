@@ -12,11 +12,11 @@ Within this menu the U64 settings can be customized.
 - UltiSID Configuration
 - SID Addressing
 - U64 Specific Settings
-  - System Mode
-  - Joystick Swapper
-  - Adjust Color Clock
-  - Analog Video Mode
-  - Turbo Control <turbo_mode>
+	- System Mode
+	- Joystick Swapper
+	- Adjust Color Clock
+	- Analog Video Mode
+	- Turbo Control <turbo_mode>
 - C64 and Cartridge Settings
 - Clock Settings
 - Software IEC Settings
