@@ -1,9 +1,6 @@
 Configuration menu
 ==================
 
-.. image:: ../media/config/config_menu.png
-   :alt: U64 config menu
-
 Within this menu the U64 settings can be customized.
 
 .. toctree::
