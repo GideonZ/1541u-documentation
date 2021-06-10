@@ -47,12 +47,11 @@ ends with .u2u to upgrade.
 To revert to version 2.6k, use the revert.u2u that's included in the 3.0 beta 7
 archive.
 
-You can find the `3.0 beta 7 on 1541ultimate.net.
-<http://www.1541ultimate.net/content/index.php?option=com_content&view=article&i
-d=67:1541u-ii-update-30b7&catid=4&Itemid=19>`_ and the latest firmware is
+You can find the `3.0 beta 7 firmware
+<https://github.com/GideonZ/ultimate_releases/raw/master/1541u2_3.0beta7.zip>`_ on GitHub. The latest firmware is
 available in the pinned post at the top of the 1541 Ultimate facebook group or
 `on this page
-<https://ammo.home.xs4all.nl/Ultimate_Carts/firmware_ultimate_carts.html>`_.
+<https://github.com/GideonZ/ultimate_releases>`_.
 
 
 How can I use the emulated SID as second SID for 2SID tunes?
