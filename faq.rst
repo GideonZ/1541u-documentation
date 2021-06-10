@@ -29,8 +29,8 @@ shop <https://ultimate64.com/Main_products>`_. You can also buy
 
 Where can I find the latest firmware?
 -------------------------------------
-You can find an overview of almost all firmware releases on this page: `firmware
-overview <https://ultimate64.com/Firmware>`_.
+You can find an overview the firmware releases for the Ultimate products 
+on this page: `firmware overview <https://ultimate64.com/Firmware>`_.
 
 
 I am still running firmware 2.6k or lower on my U2. How can I upgrade?
