@@ -5,6 +5,7 @@
   :maxdepth: 3
 
   Quick Guide to the Ultimate II+ <quick_guide>
+  How To Pages <howto>
   Ultimate 64 <ultimate64>
   Modem Emulation Layer <howto/modem>
   Command Interface <command interface>
