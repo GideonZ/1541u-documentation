@@ -29,10 +29,8 @@ shop <https://ultimate64.com/Main_products>`_. You can also buy
 
 Where can I find the latest firmware?
 -------------------------------------
-You can find an overview of almost all firmware releases on this page: `firmware
-overview
-<https://ammo.home.xs4all.nl/Ultimate_Carts/firmware_ultimate_carts.html>`_ 
-(including the latest).
+You can find an overview the firmware releases for the Ultimate products 
+on this page: `firmware overview <https://ultimate64.com/Firmware>`_.
 
 
 I am still running firmware 2.6k or lower on my U2. How can I upgrade?
@@ -47,12 +45,10 @@ ends with .u2u to upgrade.
 To revert to version 2.6k, use the revert.u2u that's included in the 3.0 beta 7
 archive.
 
-You can find the `3.0 beta 7 on 1541ultimate.net.
-<http://www.1541ultimate.net/content/index.php?option=com_content&view=article&i
-d=67:1541u-ii-update-30b7&catid=4&Itemid=19>`_ and the latest firmware is
+You can find the `3.0 beta 7 firmware <https://github.com/GideonZ/ultimate_releases/raw/master/1541u2_3.0beta7.zip>`_ on 
+`GitHub <https://github.com/GideonZ/ultimate_releases>`_. The latest firmware is 
 available in the pinned post at the top of the 1541 Ultimate facebook group or
-`on this page
-<https://ammo.home.xs4all.nl/Ultimate_Carts/firmware_ultimate_carts.html>`_.
+`on this page <https://github.com/GideonZ/ultimate_releases>`_.
 
 
 How can I use the emulated SID as second SID for 2SID tunes?
@@ -94,9 +90,11 @@ to the EF cartridge image:
 
 Technology Preview: EAPI Support for Easyflash, incl. but not limited to
 writing support. Please note that the changed crt file is NOT saved
-autmatically. You can save it by "F5", "Save Easyflash crt" in the filebrowser. 
-The file will be saved with the filel name "module.crt". Optionally rename the 
+automatically. You can save it by "F5", "Save Easyflash crt" in the file browser. 
+The file will be saved with the filelname "module.crt". Optionally rename the 
 saved file to a more recognizable name.
+
+Tip: turn off Ultimate Audio in the C64 and cartridge settings when usint this feature. 
 
 
 Which USB2LAN adapters are supported by the 1541Utlimate 2?
@@ -240,8 +238,7 @@ press enter. A contextual menu will pop-up, select 'rename' to rename the file.
 
 Where are the manuals for the Ultimate II and Ultimate II + carts?
 ------------------------------------------------------------------
-Unfortunately there are no manuals in a sense that you can read about all
-functions, settings etc. of the Ultimate cartridges.
+This FAQ is part of the current manual.
 
 For both the `Ultimate II
 <https://github.com/GideonZ/1541ultimate/blob/master/doc/Quick%20guide%20to%2

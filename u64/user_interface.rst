@@ -99,3 +99,15 @@ a location were directories can be created.
 
 More information about each of the available options can be found in the description of
 the Ultimate Application itself, with all of its features.
+
+The Joystick switch on Ultimate 64 Elite boards
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Ultimate 64 Elite bords have the additional feature to swap the joystick ports. 
+This feature is useful when playing different games, each one expecting the joystick
+on a different port. If you have only one joystick plugged in, you can use it to change 
+the port at a time.
+To change the port first press the power button. Now the file selection screen will pop up.
+now press the Commodore key and the "J" key on the keyboard. The Ultimate 64 Elite now will
+automatically close the menu and jump back to your C64 screen. Repeat the steps above to 
+again switch the port.
