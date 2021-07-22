@@ -5,8 +5,8 @@
   :maxdepth: 3
 
   Quick Guide to the Ultimate II+ <quick_guide>
-  How To Pages <howto>
   Ultimate 64 <ultimate64>
+  Multi Mode Disk Drive <howto/mm_drive>
   Modem Emulation Layer <howto/modem>
   Command Interface <command interface>
   Virtual Printer <ultimate_printer>
