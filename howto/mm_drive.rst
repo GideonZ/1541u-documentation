@@ -11,7 +11,7 @@ Manual Drive Type Selection
 
 In the configuration menu (F2) you will find two drives, indicated by *Drive A Settings* and *Drive B Settings* respectively. Each drive can be of any of the aforementioned types; 1541, 1571 or 1581. To change the drive type, simply enter the configuration item by pressing CRSR-Right or RETURN. The second line of the configuration shows the selection:
 
-.. image:: media/config/drive_type.png
+.. image:: ../media/config/drive_type.png
 
 Press enter and select the preferred drive type from the drop down list, or cycle through the options with the + and - keys. (Note that CRSR-Right does the same as +.) Once the configuration screen is closed -- either by pressing RUN-STOP to leave the configuration screen entirely, or the CRSR-Left key combination to go up one level --, the drive mode is switched. The appropriate ROM is read into the drive, the sound samples are loaded, and the drive is reset. When the settings are saved in flash memory, this drive type is selected on boot.
 
@@ -27,11 +27,11 @@ When installing the 3.10 firmware, one ROM for each of the drives is installed a
 
 1) Browse to the .bin or .rom file on your USB stick, and open the context menu by pressing RETURN. Then select 'Set as 15x1 ROM'. This will copy the ROM file to **/flash/roms** and automatically set the filename in the configuration of Drive A; the drive likely to be used most often.
 
-.. image:: media/config/drive_rom_set_as.png
+.. image:: ../media/config/drive_rom_set_as.png
 
 2) Copy the .bin or .rom file on your USB stick manually to **/flash/roms**, by selecting it (press SPACE), then CTRL-C, navigate to **/flash/roms**, and then paste it there using CTRL-V. Then, go to the configuration menu (F2), go to Drive A or Drive B Settings, and use the drop-down context menu on the line 'ROM for ...'. It will show you the files that are currently in the **/flash/roms** directory.
 
-.. image:: media/config/drive_rom_selection.png
+.. image:: ../media/config/drive_rom_selection.png
 
 Other Settings
 ==============
