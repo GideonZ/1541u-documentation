@@ -10,22 +10,22 @@ It is important to know that the organization of the data in the Flash chip chan
 What is in the .zip package?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-=========================== =============================== ==== ==== ==== === ======= ===== =========
-Filename                    Purpose                         1541 1571 1581 SID Sampler GMod2 ACIA-6551
-=========================== =============================== ==== ==== ==== === ======= ===== =========
-update_1.41.u64             Firmware for Ultimate 64         ●●   ●●   ●●   ●     ●      ●       ●
-update_3.10.u2p             Firmware for Ultimate-II+        ●●   ●●   ●●   ●     ●      ●       ●
-update_3.10_audio.u2u       Firmware for 1541 Ultimate-II    ●    –    –    ●     ●      –       –
-update_3.10_dual_drive.u2u  Firmware for 1541 Ultimate-II    ●●   –    –    –     –      –       ●
-update_3.10_gmod2.u2u       Firmware for 1541 Ultimate-II    ●●   –    –    –     –      ●       –
-uci_kernal_3.10.bin         Updated Hyperspeed Kernal 
-changes.txt                 Change Summary since 3.9 / 1.37
-=========================== =============================== ==== ==== ==== === ======= ===== =========
+===================== =============================== ==== ==== ==== === ======= ===== =========
+Filename              Purpose                         1541 1571 1581 SID Sampler GMod2 ACIA-6551
+===================== =============================== ==== ==== ==== === ======= ===== =========
+update_1.41.u64       Firmware for Ultimate 64         ●●   ●●   ●●   ●     ●      ●       ●
+update_3.10.u2p       Firmware for Ultimate-II+        ●●   ●●   ●●   ●     ●      ●       ●
+update_3.10_au.u2u    Firmware for 1541 Ultimate-II    ●    –    –    ●     ●      –       –
+update_3.10_dd.u2u    Firmware for 1541 Ultimate-II    ●●   –    –    –     –      –       ●
+update_3.10_gm.u2u    Firmware for 1541 Ultimate-II    ●●   –    –    –     –      ●       –
+uci_kernal_3.10.bin   Updated Hyperspeed Kernal 
+changes.txt           Change Summary since 3.9 / 1.37
+===================== =============================== ==== ==== ==== === ======= ===== =========
 
 Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface can be found here:
 
 * `Multi Mode Disk Drive <mm_drive.html>`_
-* `Updated Cartridge System <cartridge.html>`_
+* `Updated Cartridge System <cartridges.html>`_
 * `Programmable U64 Palette <palette.html>`_
 
 
