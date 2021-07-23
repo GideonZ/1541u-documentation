@@ -15,31 +15,29 @@ When using the second option, "Set as Default", the VPL file will be copied to t
 
 File Format
 ===========
-A VPL file consists of 16 valid lines with color data. Empty lines, or lines that start with '#' are ignored. A valid line has three HEX values, separated by a space. A forth value, the dither value, which is defined in VICE has no effect on the U64. Note that the lines are in the order of the Commodore color codes, 0 being black, 1 being white, 2 red, and so forth. An example of a VPL file is:
+A VPL file consists of 16 valid lines with color data. Empty lines, or lines that start with '#' are ignored. A valid line has three HEX values, separated by a space. A forth value, the dither value, which is defined in VICE has no effect on the U64. Note that the lines are in the order of the Commodore color codes, thus starting with black, then white, red, cyan, and so forth. An example of a VPL file is::
 
-::
-#
-# VICE Palette file
-#
-# Syntax:
-# Red Green Blue (Dither)
-#
-
-00 00 00
-EF EF EF
-8D 2F 34
-6A D4 CD
-98 35 A4
-4C B4 42
-2C 29 B1
-EF EF 5D
-98 4E 20
-5B 38 00
-D1 67 6D
-4A 4A 4A
-7B 7B 7B
-9F EF 93
-6D 6A EF
-B2 B2 B2
-
+  #
+  # VICE Palette file
+  #
+  # Syntax:
+  # Red Green Blue (Dither)
+  #
+  00 00 00 # Black
+  EF EF EF # White
+  8D 2F 34 # Red
+  6A D4 CD # Cyan
+  98 35 A4 # Purple
+  4C B4 42 # Green
+  2C 29 B1 # Blue
+  EF EF 5D # Yellow
+  98 4E 20 # Orange
+  5B 38 00 # Brown
+  D1 67 6D # Pink
+  4A 4A 4A # Dark Grey
+  7B 7B 7B # Medium Grey
+  9F EF 93 # Light Green
+  6D 6A EF # Light Blue
+  B2 B2 B2 # Light Grey
+  
 
