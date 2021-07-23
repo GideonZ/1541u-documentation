@@ -28,81 +28,75 @@ For utility cartridges that need to start when the machine is turned on, the CRT
 Supported Cartridge Types
 =========================
 
-===== ================== ====== === ===
-Type# Description        1541U2 U2+ U64
-===== ================== ====== === ===
-  0   Normal Cartridge     ●     ●   ●
-  1   Action Replay        ●     ●   ●
-===== ================== ====== === ===  
-
-
-
-    {  0, 0xFF, CART_NORMAL,    "Normal cartridge" },
-    {  1, 0xFF, CART_ACTION,    "Action Replay" }, // max 4 banks of 8K
-    {  2, 0xFF, CART_KCS,       "KCS Power Cartridge" },
-    {  3, 0xFF, CART_FINAL3,    "Final Cartridge III" }, // max 16 banks (FC3+)
-    {  4, 0xFF, CART_SBASIC,    "Simons Basic" },
-    {  5, 0xFF, CART_OCEAN_8K,  "Ocean type 1" }, // max 64 banks of 8K, with the exception of the 16K carts, which are limited to 16 banks of 16K
-    {  6, 0xFF, CART_NOT_IMPL,  "Expert Cartridge" },
-    {  7, 0xFF, CART_NOT_IMPL,  "Fun Play" },
-    {  8, 0xFF, CART_SUPERGAMES,"Super Games" },
-    {  9, 0xFF, CART_NORDIC,    "Atomic Power" }, // max 8 banks of 8K
-    { 10, 0xFF, CART_EPYX,      "Epyx Fastload" },
-    { 11, 0xFF, CART_WESTERMANN,"Westermann" },
-    { 12, 0xFF, CART_NOT_IMPL,  "Rex" },
-    { 13, 0xFF, CART_FINAL12,   "Final Cartridge I" },
-    { 14, 0xFF, CART_NOT_IMPL,  "Magic Formel" },
-    { 15, 0xFF, CART_SYSTEM3,   "C64 Game System" },
-    { 16, 0xFF, CART_NOT_IMPL,  "Warpspeed" },
-    { 17, 0xFF, CART_NOT_IMPL,  "Dinamic" },
-    { 18, 0xFF, CART_ZAXXON,    "Zaxxon" },
-    { 19, 0xFF, CART_DOMARK,    "Magic Desk, Domark, HES Australia" }, // max 16 banks of 16K
-    { 20, 0xFF, CART_SUPERSNAP, "Super Snapshot 5" },
-    { 21, 0xFF, CART_COMAL80,   "COMAL 80" },
-    { 32, 0xFF, CART_EASYFLASH, "EasyFlash" }, // max 64 banks
-    { 33, 0xFF, CART_NOT_IMPL,  "EasyFlash X-Bank" },
-    { 34, 0xFF, CART_NOT_IMPL,  "Capture" },
-    { 35, 0xFF, CART_NOT_IMPL,  "Action Replay 3" },
-    { 36, 0xFF, CART_RETRO,     "Retro Replay" }, // max 8 banks of 8K
-    { 37, 0xFF, CART_NOT_IMPL,  "MMC64" },
-    { 38, 0xFF, CART_NOT_IMPL,  "MMC Replay" },
-    { 39, 0xFF, CART_NOT_IMPL,  "IDE64" },
-    { 40, 0xFF, CART_NOT_IMPL,  "Super Snapshot V4" },
-    { 41, 0xFF, CART_NOT_IMPL,  "IEEE 488" },
-    { 42, 0xFF, CART_NOT_IMPL,  "Game Killer" },
-    { 43, 0xFF, CART_NOT_IMPL,  "Prophet 64" },
-    { 44, 0xFF, CART_EXOS,      "EXOS" }, // Currently max 1 bank
-    { 45, 0xFF, CART_NOT_IMPL,  "Freeze Frame" },
-    { 46, 0xFF, CART_NOT_IMPL,  "Freeze Machine" },
-    { 47, 0xFF, CART_NOT_IMPL,  "Snapshot64" },
-    { 48, 0xFF, CART_NOT_IMPL,  "Super Explode V5" },
-    { 49, 0xFF, CART_NOT_IMPL,  "Magic Voice" },
-    { 50, 0xFF, CART_NOT_IMPL,  "Action Replay 2" },
-    { 51, 0xFF, CART_NOT_IMPL,  "MACH 5" },
-    { 52, 0xFF, CART_NOT_IMPL,  "Diashow Maker" },
-    { 53, 0xFF, CART_PAGEFOX,   "Pagefox" },
-    { 54, 0xFF, CART_BBASIC,    "Kingsoft Business Basic" },
-    { 55, 0xFF, CART_NOT_IMPL,  "Silver Rock 128" },
-    { 56, 0xFF, CART_NOT_IMPL,  "Formel 64" },
-    { 57, 0xFF, CART_NOT_IMPL,  "RGCD" },
-    { 58, 0xFF, CART_NOT_IMPL,  "RR-Net MK3" },
-    { 59, 0xFF, CART_NOT_IMPL,  "Easy Calc" },
-    { 60, 0xFF, CART_GMOD2,     "GMod2" },
-    { 61, 0xFF, CART_NOT_IMPL,  "MAX Basic" },
-    { 62, 0xFF, CART_NOT_IMPL,  "GMod3" },
-    { 63, 0xFF, CART_NOT_IMPL,  "ZIPP-CODE 48" },
-    { 64, 0xFF, CART_BLACKBOX8, "Blackbox V8" },
-    { 65, 0xFF, CART_BLACKBOX3, "Blackbox V3" },
-    { 66, 0xFF, CART_BLACKBOX4, "Blackbox V4" },
-    { 67, 0xFF, CART_NOT_IMPL,  "REX RAM-Floppy" },
-    { 68, 0xFF, CART_NOT_IMPL,  "BIS-Plus" },
-    { 69, 0xFF, CART_NOT_IMPL,  "SD-BOX" },
-    { 70, 0xFF, CART_NOT_IMPL,  "MultiMAX" },
-    { 71, 0xFF, CART_NOT_IMPL,  "Blackbox V9" },
-    { 72, 0xFF, CART_NOT_IMPL,  "Lt. Kernal Host Adaptor" },
-    { 73, 0xFF, CART_NOT_IMPL,  "RAMLink" },
-    { 74, 0xFF, CART_NOT_IMPL,  "H.E.R.O." },
-    { 0xFFFF, 0xFF, CART_NOT_IMPL, "" } };
+===== ================================= ====== === ===
+Type# Description                       1541U2 U2+ U64
+===== ================================= ====== === ===
+  0   Normal Cartridge (8K, 16K, UMAX)    ●     ●   ●
+  1   Action Replay                       ●     ●   ●
+  2   KCS Power Cartridge                 ●     ●   ●
+  3   Final Cartridge III                 ●     ●   ●
+  4   Simons Basic                        ●     ●   ●
+  5   Ocean type 1                        ●     ●   ●
+  6   Expert Cartridge                    
+  7   Fun Play                          
+  8   Super Games                         ●     ●   ●
+  9   Atomic Power                        ●     ●   ●
+ 10   Epyx Fastload                       ●     ●   ●
+ 11   Westermann                          ●     ●   ●
+ 12   Rex                               
+ 13   Final Cartridge I                   ●     ●   ●
+ 14   Magic Formel                        ●     ●   ●
+ 15   C64 Game System                     ●     ●   ●
+ 16   Warpspeed                         
+ 17   Dinamic                           
+ 18   Zaxxon                              ●     ●   ●
+ 19   Magic Desk, Domark, HES Australia   ●     ●   ●
+ 20   Super Snapshot 5                    ●     ●   ●
+ 21   COMAL 80                            ●     ●   ●
+ 32   EasyFlash                           ●     ●   ●
+ 33   EasyFlash X-Bank                  
+ 34   Capture                           
+ 35   Action Replay 3                   
+ 36   Retro Replay                        ●     ●   ●
+ 37   MMC64                             
+ 38   MMC Replay                        
+ 39   IDE64                             
+ 40   Super Snapshot V4                 
+ 41   IEEE 488                          
+ 42   Game Killer                       
+ 43   Prophet 64                        
+ 44   EXOS                                ●     ●   ●
+ 45   Freeze Frame                      
+ 46   Freeze Machine                    
+ 47   Snapshot64                        
+ 48   Super Explode V5                  
+ 49   Magic Voice                       
+ 50   Action Replay 2                   
+ 51   MACH 5                            
+ 52   Diashow Maker                     
+ 53   Pagefox                             ●     ●   ●
+ 54   Kingsoft Business Basic             ●     ●   ●
+ 55   Silver Rock 128                   
+ 56   Formel 64                         
+ 57   RGCD                              
+ 58   RR-Net MK3                        
+ 59   Easy Calc                         
+ 60   GMod2                                     ●   ●
+ 61   MAX Basic                         
+ 62   GMod3                             
+ 63   ZIPP-CODE 48                      
+ 64   Blackbox V8                         ●     ●   ●
+ 65   Blackbox V3                         ●     ●   ●
+ 66   Blackbox V4                         ●     ●   ●
+ 67   REX RAM-Floppy                    
+ 68   BIS-Plus                          
+ 69   SD-BOX                            
+ 70   MultiMAX                          
+ 71   Blackbox V9                       
+ 72   Lt. Kernal Host Adaptor           
+ 73   RAMLink                           
+ 74   H.E.R.O.                          
+===== ================================= ====== === ===
 
 
 
