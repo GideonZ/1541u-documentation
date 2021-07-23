@@ -7,6 +7,21 @@ Installing firmware 3.10 works in the same way as previous versions. You simply 
 
 It is important to know that the organization of the data in the Flash chip changes when installing 3.10. Even when the installer runs, previously stored data may be lost. This is especially the case if you have already used the "/flash" drive (e.g. on the U2+ with the factory installed version 3.9a). So once again, please assume that all user data will be lost. Backup this data if it is important to you. For those who have never seen the "/flash" directory in the file browser; this is a relatively new feature whereby the on board flash chip can be accessed as if it were a disk with files. From 3.10 and onward, non-volatile user data is stored as files on the "/flash" drive.
 
+What is in the .zip package?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+=========================== =============================== ==== ==== ==== === ======= ===== =========
+Filename                    Purpose                         1541 1571 1581 SID Sampler GMod2 ACIA-6551
+=========================== =============================== ==== ==== ==== === ======= ===== =========
+update_1.41.u64             Firmware for Ultimate 64         ●●   ●●   ●●   ●     ●      ●       ●
+update_3.10.u2p             Firmware for Ultimate-II+        ●●   ●●   ●●   ●     ●      ●       ●
+update_3.10_audio.u2u       Firmware for 1541 Ultimate-II    ●    –    –    ●     ●      –       –
+update_3.10_dual_drive.u2u  Firmware for 1541 Ultimate-II    ●●   –    –    –     –      –       ●
+update_3.10_gmod2.u2u       Firmware for 1541 Ultimate-II    ●●   –    –    –     –      ●       –
+uci_kernal_3.10.bin         Updated Hyperspeed Kernal 
+changes.txt                 Change Summary since 3.9 / 1.37
+=========================== =============================== ==== ==== ==== === ======= ===== =========
+
 Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface can be found here:
 
 * `Multi Mode Disk Drive <mm_drive.html>`_
