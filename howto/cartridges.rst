@@ -140,3 +140,13 @@ GMod2
 Also GMod2 cartridges have a chip to store data in; an M93C86 EEPROM chip. This chip is fully emulated in the Ultimate [*]_. The GMod2 software can 'see' this EEPROM chip, and use it in the standard way. If the contents are part of the CRT file, modified contents of this EEPROM can also be saved. To do this, follow the same procedure as with EasyFlash. *Note that when the EEPROM data is _not_ part of the original CRT, it will be initialized with 'FF' bytes, and it will _not_ be saved with the Save Cartridge method, even when new data was written to it.*
 
 .. [*] Not on 1541U2.
+
+Compatibility with I/O features
+===============================
+Unfortunately the Commodore 64 was never fully 'plug and play', as there was no configuraiton managment and dynamic allocation of memory and I/O resources like on modern PCs. This means that cartridges may be incompatible with some software, but also that enabling different features on the cartridge port may cause conflicts. In version 3.10 of the firmware, an attempt has been made to automatically 'fix' compatibility issues, by disabling features that conflict with the selected cartridge.
+
+In order to find out what features were automatically disabled (or even enabled in a few cases), you can open up the System Info page with F4. An example is shown here:
+
+.. image:: ../media/config/io_conflicts.png
+
+As can be seen from the image, the EasyFlash cartridge that was loaded is not compatible with the RAM Expansion Unit (REU), nor with the Ultimate Command Interface (UCI) and with the Ultimate Audio Sampler module. All these reside in the $DF00-$DFFF area, which is also used by the EasyFlash cartridge. This means that the priority has been given to a correct functioning of the EF cartridge.
