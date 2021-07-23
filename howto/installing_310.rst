@@ -7,7 +7,7 @@ Installing firmware 3.10 works in the same way as previous versions. You simply 
 
 It is important to know that the organization of the data in the Flash chip changes when installing 3.10. Even when the installer runs, previously stored data may be lost. This is especially the case if you have already used the "/flash" drive (e.g. on the U2+ with the factory installed version 3.9a). So once again, please assume that all user data will be lost. Backup this data if it is important to you. For those who have never seen the "/flash" directory in the file browser; this is a relatively new feature whereby the on board flash chip can be accessed as if it were a disk with files. From 3.10 and onward, non-volatile user data is stored as files on the "/flash" drive.
 
-Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface follow:
+Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface can be found here:
 
 * `Multi Mode Disk Drive <mm_drive>`_
 * `Updated Cartridge System <cartridge>`_
