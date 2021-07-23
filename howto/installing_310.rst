@@ -9,9 +9,9 @@ It is important to know that the organization of the data in the Flash chip chan
 
 Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface can be found here:
 
-* `Multi Mode Disk Drive <mm_drive>`_
-* `Updated Cartridge System <cartridge>`_
-* `Programmable U64 Palette <palette>`_
+* `Multi Mode Disk Drive <mm_drive.html>`_
+* `Updated Cartridge System <cartridge.html>`_
+* `Programmable U64 Palette <palette.html>`_
 
 
 Changes since official release (3.9 / 1.37)
