@@ -81,7 +81,7 @@ Type# Description                       1541U2 U2+ U64
  57   RGCD                              
  58   RR-Net MK3                        
  59   Easy Calc                         
- 60   GMod2                                     ●   ●
+ 60   GMod2                              [*]    ●   ●
  61   MAX Basic                         
  62   GMod3                             
  63   ZIPP-CODE 48                      
@@ -139,7 +139,7 @@ GMod2
 =====
 Also GMod2 cartridges have a chip to store data in; an M93C86 EEPROM chip. This chip is fully emulated in the Ultimate [*]_. The GMod2 software can 'see' this EEPROM chip, and use it in the standard way. If the contents are part of the CRT file, modified contents of this EEPROM can also be saved. To do this, follow the same procedure as with EasyFlash. *Note that when the EEPROM data is _not_ part of the original CRT, it will be initialized with 'FF' bytes, and it will _not_ be saved with the Save Cartridge method, even when new data was written to it.*
 
-.. [*] Not on 1541U2.
+.. [*] There is one special version of the 1541U2 that supports GMod2, at the cost of other features.
 
 Compatibility with I/O features
 ===============================
