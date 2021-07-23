@@ -116,14 +116,27 @@ In one of the latest refinements of the .CRT file format, a field has been defin
 ======= ==== ======================================================
 Type#   Sub  Description                      
 ======= ==== ======================================================
-  3       0  Standard FC-III cart (not compatible with REU)
-  3       1  Patched FC-III ROM, free $DF00-$DF1F area for REU
+C64:3     0  Standard FC-III cart (not compatible with REU)
+C64:3     1  Patched FC-III ROM, free $DF00-$DF1F area for REU
 ------- ---- ------------------------------------------------------
- 32       0  Standard EasyFlash Cart ROM (uses ROM at $DF00-DF1F)
- 32       1  REU-aware EasyFlash Cart ROM ($DF00-$DF1F not used)
+C64:32    0  Standard EasyFlash Cart ROM (uses ROM at $DF00-DF1F)
+C64:32    1  REU-aware EasyFlash Cart ROM ($DF00-$DF1F not used)
 ------- ---- ------------------------------------------------------
 C128:1    0  Standard C128 cartridge with I/O mirror ($DE00-$DFFF)
 C128:1    1  REU-aware C128 cartridge; with UCI preferred
-======= ===========================================================
+======= ==== ======================================================
 
 
+EasyFlash
+=========
+EasyFlash cartridges have a Flash chip that can be written from the C64 side. Games that are released on EasyFlash cartridge use the Flash to save settings and high scores to. The EasyFlash system is conceptually very advanced; as it supplies the 'driver' software to write to the ROM as part of the ROM data. This driver is called "EasyFlash API", or short 'EAPI'. The Ultimate supports these writes to the ROM by patching the EAPI code area with its own driver. This way, all titles that use the EAPI to write data to the flash will use the Ultimate code to do so. This way, the Flash chip itself does not need to be emulated. More background information about the EAPI can be found here: `EasyFlash API <http://skoe.de/easyflash/files/devdocs/EasyFlash-ProgRef.pdf>`_.
+
+It is required to manually save the EasyFlash title back to your storage device after it has been modified. To do so, press F5 inside of a writable directory and select C64 Machine --> Save Cartridge. This command will create a new CRT file with all ROM data.
+
+.. image:: ../media/config/save_crt.png
+
+GMod2
+=====
+Also GMod2 cartridges have a chip to store data in; an M93C86 EEPROM chip. This chip is fully emulated in the Ultimate [*]_. The GMod2 software can 'see' this EEPROM chip, and use it in the standard way. If the contents are part of the CRT file, modified contents of this EEPROM can also be saved. To do this, follow the same procedure as with EasyFlash. *Note that when the EEPROM data is _not_ part of the original CRT, it will be initialized with 'FF' bytes, and it will _not_ be saved with the Save Cartridge method, even when new data was written to it.*
+
+.. [*] Not on 1541U2.
