@@ -25,8 +25,8 @@ For utility cartridges that need to start when the machine is turned on, the CRT
 
 *Note that the size of the internal flash is very limited. On the 1541U2, the usable space is about 700 KiB, on the U2+ the size is roughly 1500 KiB, and on the U64 the usable size of the internal flash is about 3500 KiB. This may limit the use of the flash to utility cartridges, roms and some small configuration data, and maybe a disk image that you may use often.*
 
-Supported Cartridge Types
-=========================
+Supported C64 Cartridge Types
+=============================
 
 ===== ================================= ====== === ===
 Type# Description                       1541U2 U2+ U64
@@ -98,9 +98,32 @@ Type# Description                       1541U2 U2+ U64
  74   H.E.R.O.                          
 ===== ================================= ====== === ===
 
+Supported C128 Cartridge Types
+=============================
+
+===== ================================= ====== === ===
+Type# Description                       1541U2 U2+ U64
+===== ================================= ====== === ===
+  0   C128 Cartridge $8000-$FFFF          ●     ●    
+  1   C128 Cartridge with I/O mirror      ●     ●    
+===== ================================= ====== === ===
 
 
 Hardware Sub-Types
 ==================
-In one of the latest refinements of the .CRT file format, a field has been defined that specifies the "sub type" of a cartridge. The Ultimate uses this field in some cases to know whether the ROM has been made compatible with other I/O functions, such as the RAM Expansion Unit. The following table shows these cases. For other cartridge types, this field has no effect.
+In one of the latest refinements of the .CRT file format, a field has been defined that specifies the "sub type" of a cartridge. The Ultimate uses this field in some cases to know whether the ROM has been made compatible with other I/O functions, such as the RAM Expansion Unit. The following table shows these cases. For other cartridge types, this field has no effect. Note, this field is one byte at CRT header offset 0x1A.
+
+======= ==== ======================================================
+Type#   Sub  Description                      
+======= ==== ======================================================
+  3       0  Standard FC-III cart (not compatible with REU)
+  3       1  Patched FC-III ROM, free $DF00-$DF1F area for REU
+------- ---- ------------------------------------------------------
+ 32       0  Standard EasyFlash Cart ROM (uses ROM at $DF00-DF1F)
+ 32       1  REU-aware EasyFlash Cart ROM ($DF00-$DF1F not used)
+------- ---- ------------------------------------------------------
+C128:1    0  Standard C128 cartridge with I/O mirror ($DE00-$DFFF)
+C128:1    1  REU-aware C128 cartridge; with UCI preferred
+======= ===========================================================
+
 
