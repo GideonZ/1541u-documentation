@@ -81,7 +81,7 @@ Type# Description                       1541U2 U2+ U64
  57   RGCD                              
  58   RR-Net MK3                        
  59   Easy Calc                         
- 60   GMod2                              [*]_   ●   ●
+ 60   GMod2                               †     ●   ●
  61   MAX Basic                         
  62   GMod3                             
  63   ZIPP-CODE 48                      
