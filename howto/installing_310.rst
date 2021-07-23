@@ -19,7 +19,7 @@ update_3.10_au.u2u    Firmware for 1541 Ultimate-II    ●    –    –    ● 
 update_3.10_dd.u2u    Firmware for 1541 Ultimate-II    ●●   –    –    –     –      –       ●
 update_3.10_gm.u2u    Firmware for 1541 Ultimate-II    ●●   –    –    –     –      ●       –
 uci_kernal_3.10.bin   Updated Hyperspeed Kernal 
-changes.txt           Change Summary since 3.9 / 1.37
+changes.txt           Change Summary since 3.9/1.37
 ===================== =============================== ==== ==== ==== === ======= ===== =========
 
 Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface can be found here:
