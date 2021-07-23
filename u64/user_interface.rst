@@ -37,7 +37,8 @@ File browser
 
 The menu starts with showing the available network interfaces, and the
 storage devices that are attached to the cartridge. By default, it will
-only show the built-in Ethernet port. When USB-sticks are inserted, one
+only show the built-in Flash drive, a RAM disk for temporary file storage
+and the built-in Ethernet port. When USB-sticks are inserted, one
 or more items will appear in this list. This screen is the 'root' of the
 file system.
 
@@ -64,19 +65,18 @@ keyboard is slightly different:
 | CRSR up/down                      | Move the cursor (highlighted      |
 |                                   | line) up/down                     |
 +-----------------------------------+-----------------------------------+
-| CRSR left/right                   | Increase or decrease a setting,   |
+| + / -                             | Increase or decrease a setting,   |
 |                                   | cycling through the available     |
 |                                   | options.                          |
 +-----------------------------------+-----------------------------------+
-| DEL                               | Go one level up                   |
+| DEL / CRSR left                   | Go one level up                   |
 +-----------------------------------+-----------------------------------+
 | Return / Space                    | For string fields: bring up a     |
 |                                   | text entry box For enumerated     |
 |                                   | fields: bring up a context menu   |
 |                                   | with the available options        |
 +-----------------------------------+-----------------------------------+
-| Run-stop                          | *Leave* the configuration menu    |
-|                                   | and saves the new values.         |
+| Run-stop                          | *Leave* the configuration menu.   |
 +-----------------------------------+-----------------------------------+
 
 Note that some values will only take effect after reset or a power cycle
@@ -92,7 +92,8 @@ F5 - Tool / Command menu
 The purpose of the tool menu is to command the Ultimate application to do something
 that is not related to the selected entry in the file browser menu. For instance, creating
 a new disk image or directory is such an 'action' that can be performed using the
-tool menu. Some options might appear / disappear, depending on the state of the
+tool menu. Some options might appear / disappear, or be greyed out depending on the
+state of the
 application, or based on whether the current file browser directory is writable.
 For instance, ``Create Directory`` is available only when the file browser is in
 a location were directories can be created.
