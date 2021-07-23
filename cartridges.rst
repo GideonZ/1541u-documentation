@@ -28,11 +28,13 @@ For utility cartridges that need to start when the machine is turned on, the CRT
 Supported Cartridge Types
 =========================
 
+===== ================== ====== === ===
 Type# Description        1541U2 U2+ U64
 ===== ================== ====== === ===
   0   Normal Cartridge     ●     ●   ●
   1   Action Replay        ●     ●   ●
 ===== ================== ====== === ===  
+
 
 
     {  0, 0xFF, CART_NORMAL,    "Normal cartridge" },
