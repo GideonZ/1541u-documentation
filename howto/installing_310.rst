@@ -3,16 +3,15 @@ Installing Firmware 3.10 / Core 1.41
 
 Instructions
 ============
-Installing firmware 3.10 works in the same way as previous versions. You simply browse with the file browser in the Ultimate menu to the unzipped firmware file. The extension for 1541 Ultiamte-II is ".u2u", for the Ultimate-II+ the extension is ".u2p", and for the U64 the extension is ".u64". Move to the appropriate file with the cursor keys and press RETURN to bring up the context menu. Select 'Run Update', and the updater program will be loaded and started.
+Installing firmware 3.10 works in the same way as previous versions. You simply browse with the file browser in the Ultimate menu to the unzipped firmware file. The extension for 1541 Ultimate-II is ".u2u", for the Ultimate-II+ the extension is ".u2p", and for the U64 the extension is ".u64". Move to the appropriate file with the cursor keys and press RETURN to bring up the context menu. Select 'Run Update', and the updater program will be loaded and started. Note for 1541U2 users: *You need to have at least 3.x firmware to do this.*
 
-It is important to know that the organization of the data in the Flash chip changes when installing 3.10. Even when the installer runs, previously stored data may be lost. This is especially the case if you have already used the "/flash" drive (e.g. on the U2+ with the factory installed version 3.9a). So once again, please assume that all user data will be lost. Backup this data if it is important to you. For those who have never seen the "/flash" directory in the file browser; this is a relatively new feature whereby the on board flash chip can be accessed as if it were a disk with files. From 3.10 and onward, non-volatile user data is stored as files on the /flash disk.
+It is important to know that the organization of the data in the Flash chip changes when installing 3.10. Even when the installer runs, previously stored data may be lost. This is especially the case if you have already used the "/flash" drive (e.g. on the U2+ with the factory installed version 3.9a). So once again, please assume that all user data will be lost. Backup this data if it is important to you. For those who have never seen the "/flash" directory in the file browser; this is a relatively new feature whereby the on board flash chip can be accessed as if it were a disk with files. From 3.10 and onward, non-volatile user data is stored as files on the "/flash" drive.
 
 Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface follow:
 
-* Multi Mode Disk Drive <mm_drive>_
-* Updated Cartridge System <cartridge>_
-* Programmable U64 Palette <palette>_
-
+* `Multi Mode Disk Drive <mm_drive>`_
+* `Updated Cartridge System <cartridge>`_
+* `Programmable U64 Palette <palette>`_
 
 
 Changes since official release (3.9 / 1.37)
