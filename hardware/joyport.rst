@@ -18,6 +18,8 @@ Pin  Description
 9    POT X
 ===  ============
 
+--> Although the U64 can handle 5V signals on the joystick port, it is *NOT RECOMMENDED* to pull any digital pin (up, down... ) to +5V directly. Be careful with some Sega controllers that do this. It might cause latchup in the Xilinx PLD, or a filter component to break.
+
 Joystick Swap
 --------------
 
@@ -28,6 +30,7 @@ To switch the joystick ports, enter the menu and press C= + J.
 
 Paddle Support
 --------------
+
 The POT-X and POT-Y pins support reading analog values from a controller, like a paddle. The original paddles are simply potentiometers with a knob
 and can function as a simple control for a race game steering wheel or paddle control in Pong.
 
@@ -36,13 +39,16 @@ and POT-Y signals are handled locally on the board itself and are therefore NOT 
 
 How do the paddle sampling work?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 This aforementioned potentiometer (variable resistor) of a paddle controller connects between the +5V and the POT-X or POT-Y input pins.
 This external resistor charges a capacitor. This capacitor is discharged by for 256 machine cycles and is enabled to charge during another 256 cycles.
 Once the voltage on the POT-X pin crosses a certain threshold, the counter value is latched. When this counter reaches 255, the capacitor is again
 discharged for 256 cycles. This delivers a readout value every 512 machine cycles (PHI2) (~2 kSPS).
 
-Because of a large leakage current in the original SID from these pins, the voltage observed on the POT pins raises relatively fast for the first volt or so.
-Above this voltage, the potentiometer becomes dominant in charging the capacitor. The latch-threshold is about 2.25V. 
+Because of a large leakage current in the original SID from these pins, the voltage observed on the POT pins raises relatively fast for the first volt or so. Above this voltage, the potentiometer becomes dominant in charging the capacitor. The latch-threshold is about 2.25V. 
+
+KoalaPad on the U64
+~~~~~~~~~~~~~~~~~~~
 
 On te U64, the charge on the capacitor depends predominantly on the external resistor in the paddle. To get a reasonable match of the readout values,
 a lower threshold was chosen. However, this gives issues with external devices like Koalapad, because Koalapad lets the POT-X and POT-Y pins sit just
@@ -51,4 +57,6 @@ where the drawing pen presses the pad. The result is that the U64 does not read 
 
 In order to fix this, some resistors need to be changed on the U64 board near the keyboard connector, on the very lower right (before serial number ~3000):
 
-
+.. image:: ../media/hardware/koala_patch.png
+   :alt: How to patch for Koalapad compatibility
+   :align: left
