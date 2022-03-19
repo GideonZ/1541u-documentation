@@ -12,3 +12,4 @@ Hardware
   User Port Header Pinout <userport>
   Ethernet port <ethernet>
   USB port <usb>
+  Joystick / Paddle ports <joyport>
