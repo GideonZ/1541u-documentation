@@ -57,7 +57,7 @@ where the drawing pen presses the pad. The result is that the U64 does not read 
 
 In order to fix this, some resistors need to be changed on the U64 board near the keyboard connector, on the very lower right (before serial number ~3000):
 
-.. image:: ../media/hardware/koala_patch.png
+.. image:: koala_patch.png
    :alt: How to patch for Koalapad compatibility
    :align: left
 
