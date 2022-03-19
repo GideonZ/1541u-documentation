@@ -37,13 +37,12 @@ and can function as a simple control for a race game steering wheel or paddle co
 On the original C64, the paddle ports are sampled by the SID chip. Because the Ultimate 64 does not require a real SID chip to operate, the POT-X
 and POT-Y signals are handled locally on the board itself and are therefore NOT connected to the SID sockets.
 
-How do the paddle sampling work?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How does the paddle sampling work?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This aforementioned potentiometer (variable resistor) of a paddle controller connects between the +5V and the POT-X or POT-Y input pins.
-This external resistor charges a capacitor. This capacitor is discharged by for 256 machine cycles and is enabled to charge during another 256 cycles.
-Once the voltage on the POT-X pin crosses a certain threshold, the counter value is latched. When this counter reaches 255, the capacitor is again
-discharged for 256 cycles. This delivers a readout value every 512 machine cycles (PHI2) (~2 kSPS).
+This external resistor charges a capacitor. This capacitor is discharged by the SID for 256 machine cycles and is allowed to charge during another 256 cycles by the external resistor.
+Once the voltage on the POT-X pin crosses a certain threshold, the counter value is latched. Then, at the end of the 256 'charge cycles', the capacitor is again discharged for 256 cycles. This delivers a readout value every 512 machine cycles (PHI2) (~2 kSPS).
 
 Because of a large leakage current in the original SID from these pins, the voltage observed on the POT pins raises relatively fast for the first volt or so. Above this voltage, the potentiometer becomes dominant in charging the capacitor. The latch-threshold is about 2.25V. 
 
@@ -53,7 +52,7 @@ KoalaPad on the U64
 On te U64, the charge on the capacitor depends predominantly on the external resistor in the paddle. To get a reasonable match of the readout values,
 a lower threshold was chosen, a bit less than 1.6V. However, this gives issues with external devices like Koalapad, because it uses the POT pins differently. It does not use a resistor to allow a capacitor to charge, but it makes use of how the conversion works. Koalapad lets the POT-X and POT-Y pins sit just below the threshold (of a SID), and pulls it over the threshold when it 'knows' that the counter in the SID contains the intended value to send, depending on where the drawing pen presses the pad.
 
-Because the threshold in the U64 is much lower, it does not read the Koalapad position but it just reads a low value instead; the comparator trips too early.
+Because the threshold in the U64 is much lower, it does not read the Koalapad position but it just reads a low value instead; the comparator trips too early; way before the Koalapad tries to pull the voltage over the threshold.
 
 In order to fix this, some resistors need to be changed on the U64 board near the keyboard connector, on the very lower right (before serial number ~3000):
 
