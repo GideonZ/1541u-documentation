@@ -51,9 +51,9 @@ KoalaPad on the U64
 ~~~~~~~~~~~~~~~~~~~
 
 On te U64, the charge on the capacitor depends predominantly on the external resistor in the paddle. To get a reasonable match of the readout values,
-a lower threshold was chosen, a bit less than 1.6V. However, this gives issues with external devices like Koalapad, because Koalapad lets the POT-X and POT-Y pins sit just
-below the threshold (of a SID), and pulls it over the threshold at a defined time after it recognizes the discharge of the capacitor, depending on
-where the drawing pen presses the pad. The result is that the U64 does not read the Koalapad position, but just reads a low value, because the comparator trips too early.
+a lower threshold was chosen, a bit less than 1.6V. However, this gives issues with external devices like Koalapad, because it uses the POT pins differently. It does not use a resistor to allow a capacitor to charge, but it makes use of how the conversion works. Koalapad lets the POT-X and POT-Y pins sit just below the threshold (of a SID), and pulls it over the threshold when it 'knows' that the counter in the SID contains the intended value to send, depending on where the drawing pen presses the pad.
+
+Because the threshold in the U64 is much lower, it does not read the Koalapad position but it just reads a low value instead; the comparator trips too early.
 
 In order to fix this, some resistors need to be changed on the U64 board near the keyboard connector, on the very lower right (before serial number ~3000):
 
@@ -63,4 +63,4 @@ In order to fix this, some resistors need to be changed on the U64 board near th
 
 This patch causes a better discharge during the discharge phase (R43, R47, R50, R54), and raises the threshold to almost 1.8V (R56). If Koalapad still doesn't work for you with this patch, you can experiment by increasing R56 to 1.5kΩ even, setting the threshold at 2.0V. Just be aware that real paddles will have a smaller active range, as the port will read 255 sooner, with lower resistor values.
 
-Newer U64 boards have the threshold set to 1.85V, which provides a safe margin for the Koalapad (R55 = 3.3kΩ, R56 = 5.6kΩ).
+Newer U64 boards have the threshold set to 1.85V, which provides a safe margin for the Koalapad (R55 = 5.6 kΩ, R56 = 3.3 kΩ).
