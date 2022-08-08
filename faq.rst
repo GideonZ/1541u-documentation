@@ -1,6 +1,7 @@
 =======================================================
 FAQ for the Ultimate II and Ultimate II Plus cartridges
 =======================================================
+
 The **Ultimate** cartridge is a storage solution for your Commodore 64 home
 computer and will give you an excellent experience using this great machine.
 Some people even enjoy using the Ultimate cartridge with their Commodore 128
@@ -23,17 +24,22 @@ You can buy Gideon's products in his `web
 shop <https://ultimate64.com/Main_products>`_. You can also buy
 `accessories <https://ultimate64.com/Accessories>`_.
 
+Make sure you have the latest firmware installed
+------------------------------------------------
+Pleaes make sure you have the latest firmware installed. This F.A.Q. only covers subjects relating
+to the latest firmware.
+
 
 Where can I find the latest firmware?
 -------------------------------------
 You can find an overview the firmware releases for the Ultimate products
 on this page: `firmware overview <https://ultimate64.com/Firmware>`_.\
-If for whatever reason ultimate64.com is down, you can also `download the firmware
+If for any reason the ultimate64.com website is down, you can also `download the firmware
 <https://github.com/GideonZ/ultimate_releases>`_ on `github <https://github.com>`_.
 
 
-I am still running firmware 2.6k or lower on my U2. How can I upgrade?
-----------------------------------------------------------------------
+I am still running firmware 2.6k or lower on my 1541U-II/U2. How can I upgrade?
+-------------------------------------------------------------------------------
 Upgrading from 2.6k to 3.x is a bit different from what you're used to. You
 will first need to upgrade to version 1541U-II Update 3.0 beta 7 using the
 update.bin in the root of your microSD card.
@@ -114,13 +120,14 @@ remote interface via telnet, or using the C64 keyboard.
 
 Can I play SID files from the High Voltage Sid Collection?
 ----------------------------------------------------------
-Yes, the **Ultimate** comes with a built-in SID Player called
+Yes, the **Ultimate** comes with a built-in SID Player called **The Ultimate C64 SID Player**.
 
 
-How do I use the built-in SID player
-------------------------------------
-The new Sidplayer in firmware 3.2 has now keyboard support for the following
-keys:
+How do I use the built-in SID The Ultimate C64 SID Player
+---------------------------------------------------------
+As of firmware 3.2 The Ultimate C64 SID Player has keyboard support.\
+
+Use the following keys:
 
 ============ ===========
 key          description
@@ -138,6 +145,10 @@ a loop and when there is enough memory for the player. If the keyboard doesn't
 work for a particular tune, then press the cartridge button (default middle
 button) to go to the Ultimate menu for selecting another SID or sub tune.
 
+**TODO:** 
+
+* **add information about 2SID tunes support and SID model selection support and SID FX support**
+* **check whether the mentioned keys are complete**
 
 Can I play SID tunes using the network interface?
 -------------------------------------------------
@@ -183,13 +194,8 @@ D64' or 'Create G64' from the contextual menu.
 How do I copy a disk image, directory or file to another location
 -----------------------------------------------------------------
 You can copy d64 disk images, directories and even files from inside a disk
-image to the file system. Unfortunately you cannot (yet) copy a file from the
-file system into a disk image. Also, if you copy a file from inside the disk
-image to the file system, make sure to give it an appropriate extension. The U2
-/ U2+ doest not (yet) do this by itself, unless you run `this unofficial
-firmware
-<https://github.com/markusC64/1541ultimate2/releases/tag/3.2a_180411%2B_v1>`_
-by MarkusC64.
+image to the file system. You can also copy files from the file system to 
+a disk image. 
 
 The keys to use are:
 
