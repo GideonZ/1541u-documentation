@@ -75,7 +75,7 @@ all I get is one (the C64 mainboard) Sid. Anyone know where I should look?
 5. Change the address at SID Left Base to the address you saw in the ultimate
    sid player. Probably something like $D420 or so
 6. Go to 'SID Left Combined Waveforms' and choose the model the 2SID tune was
-   composed for. Most likely 8580.
+   composed for. Most likely 8580 since there are not many 6581 2SIDs.
 7. Go to the Left Channel Output and Right Channel Output and select for both
    'Left SID'.
 8. Make sure to plug a mini-jack in the line-out mini-jack port and connect it
@@ -96,7 +96,7 @@ automatically. You can save it by "F5", "Save Easyflash crt" in the file browser
 The file will be saved with the filelname "module.crt". Optionally rename the 
 saved file to a more recognizable name.
 
-Tip: turn off Ultimate Audio in the C64 and cartridge settings when usint this feature. 
+Tip: turn off Ultimate Audio in the C64 and cartridge settings when using this feature.
 
 
 Which USB2LAN adapters are supported by the 1541Utlimate 2?
@@ -153,9 +153,9 @@ There are several ways to play SID tunes using the ethernet interface:
 * Use the remote interface using telnet;
 * Use the `Acid 64 Player Pro <https://acid64.com/>`_ SID player by Wilfred Bos.
 
-This SID player has the ability to play SID tunes over the netwerk on the
+This SID player has the ability to play SID tunes over the netwerk on one or more
 Ultimate devices. It is built to run on the Microsoft Windows Operating System.
-When using `Wine <https://www.winehq.org/>`_, Acid 64 Player Pro will also run on macOS and Linux.
+When using `Wine <https://www.winehq.org/>`_, Acid 64 Player Pro will also run on macOS and Linux. This for version 4.0 and higher it is unknown if it runs using Wine.
 
 * Use `Ultimate1541 Sid Remote 1.1 <https://csdb.dk/release/?id=157085>`_ by
   `L.A. Style of Genesis Project <http://csdb.dk/scener/?id=673>`_. This
@@ -164,13 +164,12 @@ When using `Wine <https://www.winehq.org/>`_, Acid 64 Player Pro will also run o
 
 How do I use T64 files?
 -----------------------
-T64 is a file format, or rather a container, just like D64 disk image.
-Unfortunately the U2 and U2+ does not recognise it as such. This means that you
+T64 is a file format, or rather a container, just like the D64 disk image.
+Unfortunately the U2 and U2+ do not recognise it as such. This means that you
 cannot open this container using the return key and then choose enter.
 
-Instead, you can use the right cursor key to enter the T64 container and then
-press return to have the contextual menu pop up and choose run to run the c64
-programme.
+Use the right cursor key to enter the T64 container and then press return
+for the contextual menu to pop up and then choose run to run the c64 programme.
 
 
 How do I create a create a directory
@@ -270,7 +269,7 @@ source: `1541ultimate.net
 forum <http://www.1541ultimate.net/content/index.php?option=com_kunena&view=topi
 c&catid=11&id=14255&Itemid=147#16653>`_
 
-Most of the games will only run from device #8. Even if you added a device
+Most of the games and demos will only run from device #8. Even if you added a device
 number 8/9-Switch to your internal C128 drive, some games and demos do not like
 if there is a 2nd drive on the bus.
 
