@@ -133,7 +133,7 @@ key          description
 1 - 0        sub tune selection for tune 1 - 10
 \+           play next sub tune
 \ –          play previous sub tune
-run/stop     go to Ultimate menu
+run/stop     go back to Ultimate menu
 space bar    pause / resume tune
 ============ ===========
 
@@ -145,7 +145,6 @@ button) to go to the Ultimate menu for selecting another SID or sub tune.
 **TODO:** 
 
 * **add information about 2SID tunes support and SID model selection support and SID FX support**
-* **check whether the mentioned keys are complete**
 
 Can I play SID tunes using the network interface?
 -------------------------------------------------
