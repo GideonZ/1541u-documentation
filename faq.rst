@@ -1,4 +1,4 @@
-=======================================================
+
 FAQ for the Ultimate II and Ultimate II Plus cartridges
 =======================================================
 
@@ -184,55 +184,35 @@ to create a directory. Press F5 and choose the 'Create Directory' from the
 contextual menu.
 
 
-How do I create a blank disk image
-----------------------------------
-To create a blank d64 or g64 disk image on the file system browse to the
+How do I create a formatted disk image
+--------------------------------------
+To create a formatted d64 or g64 disk image on the file system browse to the
 location you would like to create a directory. Press F5 and choose the 'Create
-D64' or 'Create G64' from the contextual menu.
+D64' or 'Create G64' from the contextual menu. 
 
 
-How do I copy a disk image, directory or file to another location
------------------------------------------------------------------
-You can copy d64 disk images, directories and even files from inside a disk
-image to the file system. You can also copy files from the file system to 
-a disk image. 
+What does insert blank disk do?
+-------------------------------
+Inserting a blank disk in either drive A or B will insert a blank and unformatted
+disk image in the drive. This means you need to format the disk before you can use it.
+Please take note that the disk does not exist on the filesytem (yet). If you saved
+files on the disk, then make sure you save the disk before turning off the computer.
 
-The keys to use are:
+
+How do I copy files using the Ultimate file browser?
+----------------------------------------------------
+**The Ultinate device allows you to:**
+
+* copy files and directories accross the filesystem;
+* copy files and directories accross the microSD card and USB thumb drives.
+* copy files from the filesystem to disk images
+* copy files form the disk images to the filesystem
+
+**Use these keys for copy operations:**
 
 * use space bar to select the file(s) / dir(s) you'd like to copy
 * use cbm + c to copy
 * use cbm + v to paste.
-
-
-Can I copy files from inside a disk image to the file system?
--------------------------------------------------------------
-Yes, you can copy files from inside a disk image to the file system.
-
-1.  Highlight the disk image;
-2.  Press either return and then select 'enter' or use right arrow key to
-    enter the disk image;
-3.  Select one or more files you'd like to copy by pressing the space bar;
-4.  Use cbm + c to copy the file(s);
-5.  Leave the disk image by using the left cursor key;
-6.  Go to the location you'd like to paste the file and use cbm + v to
-    'paste' the file(s).
-
-When using an old firmware, you will need to add the file extension yourself.
-Just press return and choose 'rename' to do this.
-
-
-Can I copy files from the file system to a disk image?
-------------------------------------------------------
-Unfortunately this is not possible. Perhaps in a distant future firmware
-release this will be possible.
-
-
-Can I copy files from a disk image to another disk image?
----------------------------------------------------------
-Unfortunately this is not possible yet. If you try to copy a file either from
-the file system or a disk image and paste it into another disk image, the
-'paste' programme will crash and most likely you will need to reset or reboot
-your C64.
 
 
 How do I rename files and directories on the file system?
@@ -250,7 +230,7 @@ For both the `Ultimate II
 0the%201541%20Ultimate%20II.docx>`_ and `Ultimate II+ <quick_guide.html>`_ a
 quick start guide exists.
 
-A resource for some documentation can be found here:
+Another resource for some (old) documentation can be found here:
 `http://rr.c64.org/wiki/1541_Ultimate#Documentation
 <http://rr.c64.org/wiki/1541_Ultimate#Documentation>`_
 
@@ -261,12 +241,12 @@ You will need to google for that. `Archive.org <https://archive.org>`_ seems to
 have scans of several c64 cartridges.
 
 The wiki `rr.c64.org <http://rr.c64.org/wiki/Main_Page>`_ is also a great place
-to find some manuals.
+to find manuals.
 
 
 Flip/swap disk (mount the next disk without using the Ultimate menu)
 --------------------------------------------------------------------
-Since firmware 3.0e there is this nice feature implemented by Markus C64:
+Since firmware 3.0e there is this nice feature called:
 "seamless disk swap by pressing middle button at least 1 sec"
 
 This allows you to mount the next disk when a game or a demo asks for it
