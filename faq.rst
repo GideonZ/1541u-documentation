@@ -1,6 +1,7 @@
-=======================================================
+
 FAQ for the Ultimate II and Ultimate II Plus cartridges
 =======================================================
+
 The **Ultimate** cartridge is a storage solution for your Commodore 64 home
 computer and will give you an excellent experience using this great machine.
 Some people even enjoy using the Ultimate cartridge with their Commodore 128
@@ -13,28 +14,32 @@ Information and resources for the Ultimate devices
 --------------------------------------------------
 
 Please read `Gideon's story <https://ultimate64.com/AboutUs>`_ about the
-Ultimate products. Read the `specifications of the Ultimate-II Pluscartridges
+Ultimate products. Read the `specifications of the original Ultimate-II Plus cartridges
 <http://www.1541ultimate.net/content/index.php?option=com_content&view=article&i
 d=42&Itemid=20>`_. Read the `announcement of the Ultimate-64 device
-<http://www.1541ultimate.net/content/index.php?option=com_
-content&view=article&id=74&Itemid=127>`_ and the `update
-<http://www.1541ultimate.net/content/index.php?option=com
-_content&view=article&id=75&Itemid=127>`_. Also read the Ultimate-64 `project
-status <https://ultimate64.com/ProjectStatus>`_.
+<https://web.archive.org/web/20180121022242/http://www.1541ultimate.net/content/index.php?option=com_content&view=article&id=74&catid=9&Itemid=127>`_ and the `update
+<https://web.archive.org/web/20180107211536/http://www.1541ultimate.net/content/index.php?option=com_content&view=article&id=75&Itemid=127>`_. Also read the Ultimate-64 `project status <https://ultimate64.com/ProjectStatus>`_.
 
 You can buy Gideon's products in his `web
 shop <https://ultimate64.com/Main_products>`_. You can also buy
 `accessories <https://ultimate64.com/Accessories>`_.
 
+Make sure you have the latest firmware installed
+------------------------------------------------
+Pleaes make sure you have the latest firmware installed. This F.A.Q. only covers subjects relating
+to the latest firmware.
+
 
 Where can I find the latest firmware?
 -------------------------------------
-You can find an overview the firmware releases for the Ultimate products 
-on this page: `firmware overview <https://ultimate64.com/Firmware>`_.
+You can find an overview the firmware releases for the Ultimate products
+on this page: `firmware overview <https://ultimate64.com/Firmware>`_.\
+If for any reason the ultimate64.com website is down, you can also `download the firmware
+<https://github.com/GideonZ/ultimate_releases>`_ on `github <https://github.com>`_.
 
 
-I am still running firmware 2.6k or lower on my U2. How can I upgrade?
-----------------------------------------------------------------------
+I am still running firmware 2.6k or lower on my 1541U-II/U2. How can I upgrade?
+-------------------------------------------------------------------------------
 Upgrading from 2.6k to 3.x is a bit different from what you're used to. You
 will first need to upgrade to version 1541U-II Update 3.0 beta 7 using the
 update.bin in the root of your microSD card.
@@ -46,10 +51,7 @@ To revert to version 2.6k, use the revert.u2u that's included in the 3.0 beta 7
 archive.
 
 You can find the `3.0 beta 7 firmware <https://github.com/GideonZ/ultimate_releases/raw/master/1541u2_3.0beta7.zip>`_ on 
-`GitHub <https://github.com/GideonZ/ultimate_releases>`_. The latest firmware is 
-available in the pinned post at the top of the 1541 Ultimate facebook group or
-`on this page <https://github.com/GideonZ/ultimate_releases>`_.
-
+`GitHub <https://github.com/GideonZ/ultimate_releases>`_.
 
 How can I use the emulated SID as second SID for 2SID tunes?
 ------------------------------------------------------------
@@ -73,7 +75,7 @@ all I get is one (the C64 mainboard) Sid. Anyone know where I should look?
 5. Change the address at SID Left Base to the address you saw in the ultimate
    sid player. Probably something like $D420 or so
 6. Go to 'SID Left Combined Waveforms' and choose the model the 2SID tune was
-   composed for. Most likely 8580.
+   composed for. Most likely 8580 since there are not many 6581 2SIDs.
 7. Go to the Left Channel Output and Right Channel Output and select for both
    'Left SID'.
 8. Make sure to plug a mini-jack in the line-out mini-jack port and connect it
@@ -94,7 +96,7 @@ automatically. You can save it by "F5", "Save Easyflash crt" in the file browser
 The file will be saved with the filelname "module.crt". Optionally rename the 
 saved file to a more recognizable name.
 
-Tip: turn off Ultimate Audio in the C64 and cartridge settings when usint this feature. 
+Tip: turn off Ultimate Audio in the C64 and cartridge settings when using this feature.
 
 
 Which USB2LAN adapters are supported by the 1541Utlimate 2?
@@ -115,13 +117,14 @@ remote interface via telnet, or using the C64 keyboard.
 
 Can I play SID files from the High Voltage Sid Collection?
 ----------------------------------------------------------
-Yes, the **Ultimate** comes with a built-in SID Player called
+Yes, the **Ultimate** comes with a built-in SID Player called **The Ultimate C64 SID Player**.
 
 
-How do I use the built-in SID player
-------------------------------------
-The new Sidplayer in firmware 3.2 has now keyboard support for the following
-keys:
+How do I use the built-in SID The Ultimate C64 SID Player
+---------------------------------------------------------
+As of firmware 3.2 The Ultimate C64 SID Player has keyboard support.\
+
+Use the following keys:
 
 ============ ===========
 key          description
@@ -130,7 +133,7 @@ key          description
 1 - 0        sub tune selection for tune 1 - 10
 \+           play next sub tune
 \ –          play previous sub tune
-run/stop     go to Ultimate menu
+run/stop     go back to Ultimate menu
 space bar    pause / resume tune
 ============ ===========
 
@@ -139,6 +142,9 @@ a loop and when there is enough memory for the player. If the keyboard doesn't
 work for a particular tune, then press the cartridge button (default middle
 button) to go to the Ultimate menu for selecting another SID or sub tune.
 
+**TODO:** 
+
+* **add information about 2SID tunes support and SID model selection support and SID FX support**
 
 Can I play SID tunes using the network interface?
 -------------------------------------------------
@@ -147,9 +153,9 @@ There are several ways to play SID tunes using the ethernet interface:
 * Use the remote interface using telnet;
 * Use the `Acid 64 Player Pro <https://acid64.com/>`_ SID player by Wilfred Bos.
 
-This SID player has the ability to play SID tunes over the netwerk on the
+This SID player has the ability to play SID tunes over the netwerk on one or more
 Ultimate devices. It is built to run on the Microsoft Windows Operating System.
-When using `Wine <https://www.winehq.org/>`_, Acid 64 Player Pro will also run on macOS and Linux.
+When using `Wine <https://www.winehq.org/>`_, Acid 64 Player Pro will also run on macOS and Linux. This for version 4.0 and higher it is unknown if it runs using Wine.
 
 * Use `Ultimate1541 Sid Remote 1.1 <https://csdb.dk/release/?id=157085>`_ by
   `L.A. Style of Genesis Project <http://csdb.dk/scener/?id=673>`_. This
@@ -158,13 +164,12 @@ When using `Wine <https://www.winehq.org/>`_, Acid 64 Player Pro will also run o
 
 How do I use T64 files?
 -----------------------
-T64 is a file format, or rather a container, just like D64 disk image.
-Unfortunately the U2 and U2+ does not recognise it as such. This means that you
+T64 is a file format, or rather a container, just like the D64 disk image.
+Unfortunately the U2 and U2+ do not recognise it as such. This means that you
 cannot open this container using the return key and then choose enter.
 
-Instead, you can use the right cursor key to enter the T64 container and then
-press return to have the contextual menu pop up and choose run to run the c64
-programme.
+Use the right cursor key to enter the T64 container and then press return
+for the contextual menu to pop up and then choose run to run the c64 programme.
 
 
 How do I create a create a directory
@@ -174,60 +179,35 @@ to create a directory. Press F5 and choose the 'Create Directory' from the
 contextual menu.
 
 
-How do I create a blank disk image
-----------------------------------
-To create a blank d64 or g64 disk image on the file system browse to the
+How do I create a formatted disk image
+--------------------------------------
+To create a formatted d64 or g64 disk image on the file system browse to the
 location you would like to create a directory. Press F5 and choose the 'Create
-D64' or 'Create G64' from the contextual menu.
+D64' or 'Create G64' from the contextual menu. 
 
 
-How do I copy a disk image, directory or file to another location
------------------------------------------------------------------
-You can copy d64 disk images, directories and even files from inside a disk
-image to the file system. Unfortunately you cannot (yet) copy a file from the
-file system into a disk image. Also, if you copy a file from inside the disk
-image to the file system, make sure to give it an appropriate extension. The U2
-/ U2+ doest not (yet) do this by itself, unless you run `this unofficial
-firmware
-<https://github.com/markusC64/1541ultimate2/releases/tag/3.2a_180411%2B_v1>`_
-by MarkusC64.
+What does insert blank disk do?
+-------------------------------
+Inserting a blank disk in either drive A or B will insert a blank and unformatted
+disk image in the drive. This means you need to format the disk before you can use it.
+Please take note that the disk does not exist on the filesytem (yet). If you saved
+files on the disk, then make sure you save the disk before turning off the computer.
 
-The keys to use are:
+
+How do I copy files using the Ultimate file browser?
+----------------------------------------------------
+**The Ultinate device allows you to:**
+
+* copy files and directories accross the filesystem;
+* copy files and directories accross the microSD card and USB thumb drives.
+* copy files from the filesystem to disk images
+* copy files form the disk images to the filesystem
+
+**Use these keys for copy operations:**
 
 * use space bar to select the file(s) / dir(s) you'd like to copy
 * use cbm + c to copy
 * use cbm + v to paste.
-
-
-Can I copy files from inside a disk image to the file system?
--------------------------------------------------------------
-Yes, you can copy files from inside a disk image to the file system.
-
-1.  Highlight the disk image;
-2.  Press either return and then select 'enter' or use right arrow key to
-    enter the disk image;
-3.  Select one or more files you'd like to copy by pressing the space bar;
-4.  Use cbm + c to copy the file(s);
-5.  Leave the disk image by using the left cursor key;
-6.  Go to the location you'd like to paste the file and use cbm + v to
-    'paste' the file(s).
-
-When using an old firmware, you will need to add the file extension yourself.
-Just press return and choose 'rename' to do this.
-
-
-Can I copy files from the file system to a disk image?
-------------------------------------------------------
-Unfortunately this is not possible. Perhaps in a distant future firmware
-release this will be possible.
-
-
-Can I copy files from a disk image to another disk image?
----------------------------------------------------------
-Unfortunately this is not possible yet. If you try to copy a file either from
-the file system or a disk image and paste it into another disk image, the
-'paste' programme will crash and most likely you will need to reset or reboot
-your C64.
 
 
 How do I rename files and directories on the file system?
@@ -245,7 +225,7 @@ For both the `Ultimate II
 0the%201541%20Ultimate%20II.docx>`_ and `Ultimate II+ <quick_guide.html>`_ a
 quick start guide exists.
 
-A resource for some documentation can be found here:
+Another resource for some (old) documentation can be found here:
 `http://rr.c64.org/wiki/1541_Ultimate#Documentation
 <http://rr.c64.org/wiki/1541_Ultimate#Documentation>`_
 
@@ -256,12 +236,12 @@ You will need to google for that. `Archive.org <https://archive.org>`_ seems to
 have scans of several c64 cartridges.
 
 The wiki `rr.c64.org <http://rr.c64.org/wiki/Main_Page>`_ is also a great place
-to find some manuals.
+to find manuals.
 
 
 Flip/swap disk (mount the next disk without using the Ultimate menu)
 --------------------------------------------------------------------
-Since firmware 3.0e there is this nice feature implemented by Markus C64:
+Since firmware 3.0e there is this nice feature called:
 "seamless disk swap by pressing middle button at least 1 sec"
 
 This allows you to mount the next disk when a game or a demo asks for it
@@ -289,7 +269,7 @@ source: `1541ultimate.net
 forum <http://www.1541ultimate.net/content/index.php?option=com_kunena&view=topi
 c&catid=11&id=14255&Itemid=147#16653>`_
 
-Most of the games will only run from device #8. Even if you added a device
+Most of the games and demos will only run from device #8. Even if you added a device
 number 8/9-Switch to your internal C128 drive, some games and demos do not like
 if there is a 2nd drive on the bus.
 
