@@ -142,9 +142,6 @@ a loop and when there is enough memory for the player. If the keyboard doesn't
 work for a particular tune, then press the cartridge button (default middle
 button) to go to the Ultimate menu for selecting another SID or sub tune.
 
-**TODO:** 
-
-* **add information about 2SID tunes support and SID model selection support and SID FX support**
 
 Can I play SID tunes using the network interface?
 -------------------------------------------------
