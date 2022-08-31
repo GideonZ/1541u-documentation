@@ -107,7 +107,8 @@ Flashing ROM
 ............
 
 Before you can use your Ultimate 64, you have to flash your Kernal and Basic ROM 
-to the Ultimate 64. Power on and wait for picture, where it explains how to do.
+to the Ultimate 64 (keep in mind that some alternative kernal ROM's removed tape routines).
+Power on and wait for picture, where it explains how to do.
 
 Basically you stick your USB drive in the back of the Ultimate 64 and push shortly on the power button
 to bring up the Menu.
@@ -121,6 +122,8 @@ The ROMs has to have the suffix ``.bin`` or ``.rom``, as in mykernal.bin, mybasi
 #. Browse to your Character ROM image and press Enter.
 #. Choose ``Flash as Orig. Character ROM``.
 #. Push ``F5`` and choose ``Reboot C64``.
+
+
 
 Real SID on Board revisions 1.1, 1.2 and 1.2a
 .............................................
