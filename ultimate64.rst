@@ -15,5 +15,5 @@ If you are unfamiliar to the Ultimate range of products, it is recommended to re
   Hardware documentation<hardware/index>
   Data Streams <data_streams>
   Ultimate SID player documentation<sidplayer>
-  How to <u64/howto/index>
+  How to manuals<u64/howto/index>
   
