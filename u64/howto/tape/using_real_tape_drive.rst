@@ -1,10 +1,11 @@
 
 Using a real Datasette (Tape recorder)
---------------------------------------
+======================================
 
 The Ultimate64 can make use of a real Datasette the same way a real C64 can. Just connect it to the tape port and apply the usual commands like LOAD, LOAD"" or shift-run/stop.
 
-**Wrong kernal**
+Wrong kernal
+------------
 
 Please note that the wrong kernal, or an activated cartridge probably will cause errors.
 

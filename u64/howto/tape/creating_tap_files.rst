@@ -1,5 +1,5 @@
 Creating own .tap files
------------------------
+=======================
 The Ultimate64 is able to make a .tap backup of your original C64 tapes. The U64 will use these .tap files to "emulate" the datasette.
 
 1. Open the file browser and select the folder where you want to save your .tap
@@ -13,6 +13,7 @@ The Ultimate64 is able to make a .tap backup of your original C64 tapes. The U64
 9. Select "Tape"
 10. Select "Finish Rec. to Tap", your tap is complete
 
-**Tip:**
+Tip:
+----
 
 If you use a USB stick with a read/write LED you can see when data from the tape is being written. This helps you to see when the data on your tape starts and when it is finished, the U64 has no kind of indicators for that.
