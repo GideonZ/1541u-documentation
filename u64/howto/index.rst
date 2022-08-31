@@ -2,6 +2,7 @@ How to manuals
 ==============
 
 .. toctree::
-  :maxdepth: 1
+  :hidden:
+  
 
   Tape drive related<tape/tape_drive>
