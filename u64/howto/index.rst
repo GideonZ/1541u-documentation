@@ -2,7 +2,7 @@ How to manuals
 ==============
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
 
   Using a real Datasette <tape/using_real_tape_drive>
   Creating own .tap files <tape/creating_tap_files>
