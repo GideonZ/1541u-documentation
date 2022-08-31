@@ -14,4 +14,4 @@ The Ultimate64 is able to make a .tap backup of your original C64 tapes. The U64
 10. Select "Finish Rec. to Tap", your tap is complete
 
 **Tip:**
-- If you use a USB stick with a read/write LED you can see when data from the tape is being written. This helps you to see when the data on your tape starts and when it is finished, the U64 has no kind of indicators for that.
+If you use a USB stick with a read/write LED you can see when data from the tape is being written. This helps you to see when the data on your tape starts and when it is finished, the U64 has no kind of indicators for that.
