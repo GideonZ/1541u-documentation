@@ -17,11 +17,9 @@ The Ultimate 1541-II+ and Ultimate 64 have an integrated ethernet port.
    :scale: 75 %
 *Ultimate 1541-II and compatible usb ethernet adaptor*
 
-The Ultimate 1541-II needs a compatible USB Ethernet adaptor that is connected to the USB port of the Ultimate 1541-II.
-Any USB2LAN adapter that uses an AX88772/-A/-B chip should work.
-
-**Please note that the compatible USB Ethernet adaptors will ONLY be stable on the Ultimate 1541-II if the firmware < 3.2.**
-**They will work fine on the Ultimate 1541-II+ and Ultimate 64.**
+The Ultimate 1541-II needs a compatible USB2LAN Ethernet adaptor that is connected to the USB port of the Ultimate 1541-II.
+Any USB2LAN adapter that uses an AX88772/-A/-B chip should work. On firmware 3.2 and 3.3 the ethernet adaptor is unstable.
+This has been fixed in firmware 3.4.
 
 .. image:: ../media/hardware/hardware_ethernet_04.png
    :alt: Ethernet Port available
