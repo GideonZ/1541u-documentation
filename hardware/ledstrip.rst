@@ -68,6 +68,8 @@ Pin 4 -> +5V
    :align: left
 
 
+
+
 W A R N I N G ! Please always use extreme caution! 
 
 Please be extremly careful not to shorten the 5V to ground! It will burn a ferrite bead on your board! 
