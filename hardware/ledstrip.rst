@@ -49,14 +49,14 @@ Pin Header P8:
    :alt: Example of P8 on board
    :align: left
 
-Pin:
-1 -> GND
 
-2 -> DAT
+Pin 1 -> GND
 
-3 -> CLK
+Pin 2 -> DAT
 
-4 -> +5V
+Pin 3 -> CLK
+
+Pin 4 -> +5V
       
 .. image:: ../media/p8.png
    :alt: description of assignment
