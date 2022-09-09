@@ -45,7 +45,7 @@ The pin header is defined as follows:
 
 Pin Header P8:
 
-.. image:: ../media/ledstrip/led_strip_p9.jpg
+.. image:: ../media/ledstrip/ledstripp8.jpg
    :alt: Example of P8 on board
    :align: left
 
