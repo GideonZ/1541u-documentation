@@ -29,14 +29,15 @@ These wires can be obtained anywhere, and are sold -for example- as Raspberry PI
 
 The following connections need to be made:
 
-=== ========= ======================== ===============
-Pin Name      Description              User Port
-=== ========= ======================== ===============
-  1 GND (0V)  Black wire               Pin 1, 12, or N
-  2 SDI       Yellow wire, Data input  Pin P
-  3 CLKI      White wire, Clock input  Pin 13
-  4 VCC (+5V) Red wire                 Pin 2
-=== ========= ======================== ===============
+======== ========= ======================== ===============
+LEDstrip 
+Pin      Name      Description              User Port
+======== ========= ======================== ===============
+  1      GND (0V)  Black wire               Pin 1, 12, or N
+  2      SDI       Yellow wire, Data input  Pin P
+  3      CLKI      White wire, Clock input  Pin 13
+  4      VCC (+5V) Red wire                 Pin 2
+======== ========= ======================== ===============
 	
 Note, the wire colors are just suggestions. Obviously it will work with other colors as well. But for the sake of not making mistakes, please at least use black and red for ground and +5V respectively.
 
