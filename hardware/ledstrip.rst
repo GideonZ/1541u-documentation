@@ -43,10 +43,19 @@ Beginning with hardware revision 1.4 you'll find the new LEDstrip pin header P8 
 
 The pin header is defined as follows:
 
-      P8  --------------
-Pin:    1   2   3   4
-         ---------------
-      GND DAT CLK  5V
+Pin Header P8:
+
+.. image:: ../media/ledstrip/led_strip_p8.jpg
+   :alt: Example of P8 on board
+   :align: left
+
+Pin:
+1 -> GND
+2 -> DAT
+3 -> CLK
+4 -> +5V
+
+
       
 .. image:: ../media/p8.png
    :alt: description of assignment
