@@ -25,6 +25,8 @@ These wires can be obtained anywhere, and are sold -for example- as Raspberry PI
    :align: left
 
 
+
+
 The following connections need to be made:
 
 === ========= ======================== ===============
