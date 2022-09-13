@@ -1,5 +1,5 @@
 
-Turbo mode settings
+Audio Mixer settings
 ===================
 
 .. image:: ../media/config/audio_mixer_01.png
