@@ -65,4 +65,4 @@ For example, if you want to make sure that you only hear the SID in socket 1 and
    :alt: Audio Mixer example
    :align: left
 
-In this example the drive and tape sounds are also disabled, panning for both SID sockets is set to Center and the UltiSIDs are panned hard left and right. Of course those panning settings don't matter here because you can only hear the sources where volume is not set to OFF.
+In this example the drive and tape sounds are also disabled, panning for both SID sockets is set to center and the UltiSIDs are panned hard left and right. Of course those panning settings don't matter here because you can only hear the sources where volume is not set to OFF.
