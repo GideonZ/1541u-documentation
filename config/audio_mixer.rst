@@ -1,22 +1,61 @@
 
 Audio Mixer settings
-===================
+====================
 
-.. image:: ../media/config/audio_mixer_01.png
-   :alt: Audio Mixer
+.. image:: ../media/config/audio_mixer_defaults.png
+   :alt: Audio Mixer default settings
    :align: left
 
-Volume & panning for various sources can be configured in this menu.
+Volume and panning for various sources can be configured in this menu.
 
-Volume options: OFF, -42 ~ +6 dB
-Panning options: Left 5~1, Center, Right 1~5
-   
-   
-Vol UltiSid 2
-............. 
-   
-Set Volume for UltiSid 2.
+Note that these settings affect the HDMI and AV outputs only. They have no effect on the levels of the SID-TAP header which takes signals directly from the SID sockets.
 
+The volume level of the optional internal speaker can be adjusted in U64 Specific Settings menu with option Speaker Volume (SpkDat).
 
-:Authors: Ultimate 64
-:Supported Firmware: >= 1.33
+Volume options: OFF, -42 dB - +6 dB (0 dB is normal level, OFF is disabled)
+
+Panning options: Left 5-1, Center, Right 1-5
+   
++----------------+-----------------------------------------------------------------+---------------+
+| Menu name      | Explanation                                                     | Default value |
++================+=================================================================+===============+
+| Vol UltiSid 1  | Set volume for UltiSID 1                                        | 0 dB          |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol UltiSid 2  | Set volume for UltiSID 2                                        | 0 dB          |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Socket 1   | Set volume for SID in socket 1                                  | 0 dB          |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Socket 2   | Set volume for SID in socket 2                                  | 0 dB          |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Sampler L  | Set volume for left channel of Ultimate Audio module            | 0 dB          |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Sampler R  | Set volume for right channel of Ultimate Audio module           | 0 dB          |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Drive 1    | Set volume for drive 1 (A) sounds                               | -4 dB         |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Drive 2    | Set volume for drive 2 (B) sounds                               | -4 dB         |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Tape Read  | Set volume for tape read sounds                                 | -36 dB        |
++----------------+-----------------------------------------------------------------+---------------+
+| Vol Tape Write | Set volume for tape write sounds                                | -36 dB        |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan UltiSID 1  | Set panning for UltiSID 1                                       | Center        |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan UltiSID 2  | Set panning for UltiSID 2                                       | Center        |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Socket 1   | Set panning for SID in socket 1                                 | Left 3        |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Socket 2   | Set panning for SID in socket 2                                 | Right 3       |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Sampler L  | Set panning for left channel of Ultimate Audio module           | Left 3        |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Sampler R  | Set panning for right channel of Ultimate Audio module          | Right 3       |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Drive 1    | Set panning for drive 1 (A) sounds                              | Left 2        |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Drive 2    | Set panning for drive 2 (B) sounds                              | Right 2       |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Tape Read  | Set panning for tape read                                       | Center        |
++----------------+-----------------------------------------------------------------+---------------+
+| Pan Tape Write | Set panning for tape write                                      | Center        |
++----------------+-----------------------------------------------------------------+---------------+
