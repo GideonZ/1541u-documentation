@@ -55,7 +55,15 @@ Panning options: Left 5-1, Center, Right 1-5
 +----------------+-----------------------------------------------------------------+---------------+
 | Pan Drive 2    | Set panning for drive 2 (B) sounds                              | Right 2       |
 +----------------+-----------------------------------------------------------------+---------------+
-| Pan Tape Read  | Set panning for tape read                                       | Center        |
+| Pan Tape Read  | Set panning for tape read sounds                                | Center        |
 +----------------+-----------------------------------------------------------------+---------------+
-| Pan Tape Write | Set panning for tape write                                      | Center        |
+| Pan Tape Write | Set panning for tape write sounds                               | Center        |
 +----------------+-----------------------------------------------------------------+---------------+
+
+For example, if you want to make sure that you only hear the SID in socket 1 and no other real or emulated SIDs, you might adjust the mixer settings like this.
+
+.. image:: ../media/config/audio_mixer_example.png
+   :alt: Audio Mixer example
+   :align: left
+
+In this example the drive and tape sounds are also disabled and panning for both SID sockets is set to Center.
