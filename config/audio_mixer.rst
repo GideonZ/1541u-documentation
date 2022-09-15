@@ -9,7 +9,9 @@ Volume and panning for various sources can be configured in this menu.
 
 Note that these settings affect the HDMI and AV outputs only. They have no effect on the levels of the SID-TAP header which takes signals directly from the SID sockets.
 
-The volume level of the optional internal speaker can be adjusted in U64 Specific Settings menu with option Speaker Volume (SpkDat).
+Also note that if you have enabled the **SID Player Autoconfig** option in **U64 Specific Settings** menu, using the built-in SID player will override the SID settings you have configured in the audio mixer.
+
+The volume level of the optional internal speaker can be adjusted in **U64 Specific Settings** menu with option **Speaker Volume (SpkDat)**.
 
 Volume options: OFF, -42 dB - +6 dB (0 dB is normal level, OFF is disabled)
 
