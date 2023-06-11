@@ -153,7 +153,7 @@ more. In the configuration menu, even the CBM1750/1764 RAM Expansion
 unit can be enabled, with expansion RAM up to 16 MB!
 
 Information on how cartridge emulation is set up can be found in this
-section <howto/cartridge>.
+section :doc:`about cartridges <howto/cartridge>`.
 
 Many of these cartridges have a reset button and a freezer button. This
 is the function of the other two buttons on the Ultimate-II+. By
