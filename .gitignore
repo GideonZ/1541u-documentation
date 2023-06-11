@@ -1,6 +1,7 @@
 # local utils and files
 local/*
 build/*
+_build
 
 # temp files
 *.tmp

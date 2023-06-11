@@ -54,6 +54,33 @@ carts                  Directory with cartridge files
 
 *) Inside of the installer, you can choose which variant of the FPGA will be loaded
 
+Cartridge Timing
+================
+One of the things that often goes wrong is the cartridge timing. With the introduction of the U2+L, the cartridge timing has been revised.
+This is not always an improvement, as has shown by some experiences from different users. Also, some firmware releases had quite strongly
+C128-biased settings, which did not work well for many C64s, especially NTSC ones. This is certainly an aspect that still needs improvement,
+with maybe some automatic calibration.
+
+For best results, for now, choose the following timings. You can find these in the config menu (F2) - under 'C64 and Cartridge settings':
+
+========== ========== ============== ============== 
+Cartridge  Machine    'PHI2'-timing  'PHI1'-timing  
+========== ========== ============== ============== 
+1541U2     C64                100 ns         140 ns
+1541U2     C128               200 ns         200 ns
+U2+        C64                 96 ns         144 ns
+U2+        C128               192 ns         192 ns
+U2+L       C64                100 ns         140 ns
+U2+L       C128               200 ns         200 ns
+========== ========== ============== ============== 
+
+*For kernal replacement, you may need the 80 ns setting for PHI2.*
+
+*Kernal replacement on a C128 may work for PAL models, with the Shadow RAM disabled, and high timing values*
+
+Please help to extend this table to SX-64 and possibly different board revisions.
+
+
 Changes in 3.10i, compared to 3.10
 ==================================
 
