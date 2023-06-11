@@ -34,20 +34,23 @@ Any 3.x          Microblaze  Select '.u2u' file from menu     ultimate_3.10i.zip
 What is in the .zip package?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-===================== =============================== ============ ==== ==== ==== === ======= ===== =========
-Filename              Purpose                         Variant      1541 1571 1581 SID Sampler GMod2 ACIA-6551
-===================== =============================== ============ ==== ==== ==== === ======= ===== =========
-update_1.42.u64       Firmware for Ultimate 64                     ●●   ●●   ●●   ●     ●      ●       ●
-update_3.10i.u2p      Firmware for Ultimate-II+                    ●●   ●●   ●●   ●     ●      ●       ●
-update_3.10i.u2l      Firmware for Ultimate-II+L                   ●●   ●●   ●●   ●     ●      ●       ●
-update_3.10i.u2u (*)  Firmware for 1541 Ultimate-II   Audio        ●    –    –    ●     ●      –       –
-update_3.10i.u2u (*)  Firmware for 1541 Ultimate-II   Dual Drive   ●●   –    –    –     –      ●       ●
-revert_to_mb.u2r (*)  Downgrade package to Microblaze Audio        ●    –    –    ●     ●      –       – 
-revert_to_mb.u2r (*)  Downgrade package to Microblaze Modem        ●●   –    –    –     –      –       ●
-revert_to_mb.u2r (*)  Downgrade package to Microblaze Gmod2        ●●   –    –    –     –      ●       –
-uci_kernal_3.10.bin   Hyperspeed Kernal
-changes.txt           Change Summary since 3.10
-===================== =============================== ============ ==== ==== ==== === ======= ===== =========
+====================== =============================== ============ ==== ==== ==== === ======= ===== =========
+Filename               Purpose                         Variant      1541 1571 1581 SID Sampler GMod2 ACIA-6551
+====================== =============================== ============ ==== ==== ==== === ======= ===== =========
+3.10i/update.u64       Firmware for Ultimate 64                     ●●   ●●   ●●   ●     ●      ●       ●
+3.10i/update.u2p       Firmware for Ultimate-II+                    ●●   ●●   ●●   ●     ●      ●       ●
+3.10i/update.u2l       Firmware for Ultimate-II+L                   ●●   ●●   ●●   ●     ●      ●       ●
+3.10i/update.u2u (*)   Firmware for 1541 Ultimate-II   Audio        ●    –    –    ●     ●      –       –
+3.10i/update.u2u (*)   Firmware for 1541 Ultimate-II   Dual Drive   ●●   –    –    –     –      ●       ●
+3.10i/update.u2r (*)   Firmware for 1541 Ultimate-II   Audio        ●    –    –    ●     ●      –       –
+3.10i/update.u2r (*)   Firmware for 1541 Ultimate-II   Dual Drive   ●●   –    –    –     –      ●       ●
+3.10i/revert_to_mb.u2r Downgrade package to Microblaze Audio        ●    –    –    ●     ●      –       – 
+3.10i/revert_to_mb.u2r Downgrade package to Microblaze Modem        ●●   –    –    –     –      –       ●
+3.10i/revert_to_mb.u2r Downgrade package to Microblaze Gmod2        ●●   –    –    –     –      ●       –
+roms/kernal.bin        Hyperspeed Kernal
+changes.txt            Change Summary / Release notes
+carts                  Directory with cartridge files
+====================== =============================== ============ ==== ==== ==== === ======= ===== =========
 
 *) Inside of the installer, you can choose which variant of the FPGA will be loaded
 
