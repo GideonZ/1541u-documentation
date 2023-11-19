@@ -29,7 +29,7 @@ Any 3.x          Microblaze  Select '.u2u' file from menu     ultimate_3.10i.zip
 3.10i and up     RiscV       Select '.u2r' file from menu     revert_to_mb.u2r     Microblaze / 3.10i(*)
 ================ =========== ================================ ==================== =====================
 
-*) Version only supplied to allow loading older firmware versions.
+(*) Version only supplied to allow loading older firmware versions.
 
 What is in the .zip package?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +52,7 @@ changes.txt            Change Summary / Release notes
 carts                  Directory with cartridge files
 ====================== =============================== ============ ==== ==== ==== === ======= ===== =========
 
-*) Inside of the installer, you can choose which variant of the FPGA will be loaded
+(*) Inside of the installer, you can choose which variant of the FPGA will be loaded
 
 Cartridge Timing
 ================
