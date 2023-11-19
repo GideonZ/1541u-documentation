@@ -284,7 +284,7 @@ Machine
          in hexadecimal format. The maxmimum number of bytes written with this method is 128.
        | Example: ``PUT /v1/machine:writemem?address=D020&data=0504``
        | This results in 05 being written to $D020 and 04 being written to $D021. In other words: the border will be green and the
-       | main screen will turn purple.
+         main screen will turn purple.
    * - ``POST /v1/machine:writemem``
      - *address*
      - | With this command, data can be written to C64 memory. The data, passed as a binary attachment, will be written to
