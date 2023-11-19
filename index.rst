@@ -13,6 +13,7 @@
   Modem Emulation Layer <howto/modem>
   Command Interface <command interface>
   Virtual Printer <ultimate_printer>
+  ReST API Reference <api/api_calls>
   Interview By Retro Magazine <interview>
   FAQ by Grrrolf <faq>
   
