@@ -8,54 +8,92 @@ The format of the URL is as follows:
 
 ``/v1/<route>/<path>:<command>?<arguments>``
 
-The 'verb' depends on the kind od operation. In general:
+The 'verb' depends on the kind of operation. In general:
 
-.. list-table:: Title
-   :widths: 25 25 50
+.. list-table:: URL Verbs
+   :widths: 10 50
    :header-rows: 1
 
-* - Verb
-  - Meaning
-* - GET
-  - Retrieves information without changing state
-* - PUT
-  - Sends information, or performs an action, using the information in the URL or in a file referenced by the URL.
-* - POST
-  - Perform an action using the information that is attached to the request.
+   * - Verb
+     - Meaning
+   * - GET
+     - Retrieves information without changing state
+   * - PUT
+     - Sends information, or performs an action, using the information in the URL or in a file referenced by the URL.
+   * - POST
+     - Perform an action using the information that is attached to the request.
 
+What is returned with the request depends on the command. In most cases the command returns a valid JSON message, using
+the *Content-Type: application/json* string in the header. The JSON contains at least one entry, called *errors*. This is
+a list (array) of strings with things that went wrong during the execution of the command. A complete response could, for
+instance, look like this:
 
-Route 'runners'
----------------
+.. code-block::
 
-
-~~~~~~~~~~~~~~~~~~~
-===================== =========== ================================ =============================================
-URL                   Verb        Arguments                        Action
-===================== =========== ================================ =============================================
-/v1/runners/sidplay   PUT         file: Path to existing file      This command requests the Ultimate to play
-                                  [songnr]: Requested song number  a SID file. It plays the default song,
-                                                                   unless the [songnr] argument is given.
---------------------- ----------- -------------------------------- ---------------------------------------------
-/v1/runners/sidplay   POST        [songnr]: Requested song number  This command requests the Ultimate to play
-                                                                   the SID file that is attached to the request.
-                                                                   It plays the default song, unless the
-                                                                   [songnr] argument is given. An optional
-                                                                   second attachment can be sent with the song
-                                                                   lengths.
-===================== =========== ================================ =============================================
+  HTTP/1.1 200 OK
+  Connection: close
+  Content-Type: application/json
+  Content-Length: 22
+   
+  {
+    "errors": []
+  }
 
 
 
+Routes
+------
+.. list-table:: Runners
+   :widths: 20 40 40
+   :header-rows: 1
+
+   * - URL
+     - Arguments
+     - Action
+   * - ``PUT /v1/runners:sidplay``
+     - | *file*: Path to existing file in the file system of the Ultimate
+       | *[songnr]*: Requested song number
+     - This command requests the Ultimate to play a SID file. It plays the default song, unless the optional *songnr* argument is given.
+   * - ``POST /v1/runners:sidplay``
+     - *[songnr]*: Requested song number
+     - This command requests the Ultimate to play a SID file that is attached as a file to the request. It plays the default song,
+       unless the optional *songnr* argument is given.
+       An optional second attachment can be sent that contains the song lengths.
+   * - ``PUT /v1/runners:modplay``
+     - *file*: Path to existing file in the file system of the Ultimate
+     - This command requests the Ultimate to play an Amiga MOD file.
+   * - ``POST /v1/runners:modplay``
+     -
+     - This command requests the Ultimate to play the Amiga MOD file that is attached as a file to the request.
+   * - ``PUT /v1/runners:load_prg``
+     - *file*: Path to existing file in the file system of the Ultimate
+     - With this command a progam can be loaded into memory. The machine resets, and loads the designated program into memory
+       using DMA. It does not automatically run the program.
+   * - ``POST /v1/runners:load_prg``
+     - 
+     - With this command a progam can be loaded into memory. The machine resets, and loads the attached program into memory
+       using DMA. It does not automatically run the program.
+   * - ``PUT /v1/runners:run_prg``
+     - *file*: Path to existing file in the file system of the Ultimate
+     - With this command a progam can be loaded into memory. The machine resets, and loads the designated program into memory
+       using DMA. Then it automatically runs the program.
+   * - ``POST /v1/runners:run_prg``
+     - 
+     - With this command a progam can be loaded into memory. The machine resets, and loads the attached program into memory
+       using DMA. Then it automatically runs the program.
+   * - ``PUT /v1/runners:run_crt``
+     - *file*: Path to existing file in the file system of the Ultimate
+     - With this command a cartridge file can be started. The 'file' parameter points to an existing file. The machine
+       resets, with the specified cartridge active. It does not alter the configuration of the Ultimate.
+   * - ``POST /v1/runners:run_crt``
+     - 
+     - This command starts a supplied cartridge file. The 'crt' file is attached to the POST request. The machine
+       resets, with the attached cartridge active. It does not alter the configuration of the Ultimate.
 
 
-API_CALL(PUT, runners, sidplay, NULL, ARRAY( { { "file", P_REQUIRED }, { "songnr", P_OPTIONAL } }))
-API_CALL(POST, runners, sidplay, &attachment_writer, ARRAY( { { "songnr", P_OPTIONAL } }))
-API_CALL(PUT, runners, load_prg, NULL, ARRAY( { { "file", P_REQUIRED } }))
-API_CALL(PUT, runners, run_prg, NULL, ARRAY( { { "file", P_REQUIRED } }))
-API_CALL(POST, runners, load_prg, &attachment_writer, ARRAY( { }))
-API_CALL(POST, runners, run_prg, &attachment_writer, ARRAY( { }))
-API_CALL(PUT, runners, run_crt, NULL, ARRAY( { { "file", P_REQUIRED } }))
-API_CALL(POST, runners, run_crt, &attachment_writer, ARRAY( { }))
+
+
+
 API_CALL(PUT, runners, modplay, NULL, ARRAY( { { "file", P_REQUIRED } }))
 API_CALL(POST, runners, modplay, &attachment_reu, ARRAY( { }))
 API_CALL(GET, configs, none, NULL, ARRAY ( { } ))

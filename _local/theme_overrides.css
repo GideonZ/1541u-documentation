@@ -14,4 +14,8 @@
    .wy-nav-content {
       max-width: 1200px !important;
    }
+
+   .line-block {
+      margin-bottom: 0px !important;
+   }
 }
