@@ -5,4 +5,4 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "Ultimate"
 authors = [ ]
-dynamic = [ ]
+dynamic = [ "version", "description"]
