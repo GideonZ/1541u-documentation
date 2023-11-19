@@ -26,7 +26,7 @@ ___
 *How do I use T64 files?*
 
 T64 is a file format, or rather a container, just like D64 disk image. It can contain multiple PRG files.
-You can simply enter the container to see the contents and start the PRG files using the contextual menu pop up, by 
-choosing to run the c64 program.
+You can simply enter the container by pressing CRSR-RIGHT to see the contents and start the PRG files
+using the contextual menu pop up, by choosing to run the c64 program.
 
 *Applies to: Ultimate 1541-II, Ultimate 1541-II+, Ultimate 64*
