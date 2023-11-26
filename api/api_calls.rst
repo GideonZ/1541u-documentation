@@ -296,6 +296,14 @@ Machine
      - This command performs a DMA read action on the cartridge bus and returns the result as a binary attachment.
        The *address* argument specifies the memory location in hexadecimal format. The optional
        argument *length* specifies the number of bytes being read. When not specified, 256 bytes are returned.
+   * - ``GET /v1/machine:debugreg``
+     -
+     - This command reads the debug register ($D7FF) and returns it in the "value" field of the JSON response. The value is in
+       hexadecimal format. *This is currently an U64-only call.*
+   * - ``PUT /v1/machine:debugreg``
+     - *value*
+     - This command writes the value specified by the *value* argument (in hexadecimal) into the debug register ($D7FF), and 
+       then reads the debug register ($D7FF) and returns it in the "value" field of the JSON response. *This is currently an U64-only call.*
     
 Floppy Drives
 ~~~~~~~~~~~~~
