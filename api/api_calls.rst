@@ -413,6 +413,29 @@ Floppy Drives
      - By sending this command, the drive mode is changed. The available values for the *mode* argument are **1541**, **1571** and **1581**.
        Note that this command will also load the drive ROM. A temporary ROM that was loaded with the 'load_rom' command will be lost.
 
+Data Streams (U64 only)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The U64 supports streaming video and audio over its LAN port. The following API commands are available to control these streams.
+
+.. list-table::
+   :widths: 25 10 65
+   :header-rows: 1
+
+   * - URL
+     - Parameters
+     - Action
+   * - ``PUT /v1/streams/<stream name>:start``
+     - | *ip*
+     - Use this command to start one of the available streams. Valid stream names are **video**, **audio** and **debug**.
+       The IP number parameter is required for the U64 to know where to send the stream to. The default port number that the
+       data stream is sent to is 11000 for the video stream, 11001 for the audio stream and 11002 for the debug stream. A
+       custom port number can be added to the IP address, after a colon separator; e.g. *192.168.178.224:6789* .
+       Note that turning on the video stream will automatically turn off the debug stream. 
+   * - ``PUT /v1/streams/<stream name>:stop``
+     - 
+     - With this command a data stream can be turned off. Valid stream names are **video**, **audio** and **debug**.
+
 
 File Manipulation
 ~~~~~~~~~~~~~~~~~
