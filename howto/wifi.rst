@@ -3,7 +3,6 @@ Using WiFi on the Ultimate 64
 
 Instructions
 ============
-
 Before the WiFi module on the U64 can be used, it needs to be programmed with a supplied ".esp" file. This file contains
 the firmware for the ESP32 module. Without this firmware, the Ultimate is not able to 'talk' with the WiFi module, and
 will therefore not detect it, and not be able to set up a network connection.
@@ -14,11 +13,11 @@ use the ultimate application while the module is being programmed. Do not attemp
 After about two minutes or so, a popup appears that informs you that programming the ESP32 is complete. From that moment,
 the WiFi line in the main screen will be operational.
 
-*Note that the ESP32 only supports WiFi on the 2.4 GHz band. Therefore, this band must be enabled in the configuration
-of your accesspoint.*
 
 Setting up a connection
 =======================
+*Note that the ESP32 only supports WiFi on the 2.4 GHz band. Therefore, this band must be enabled in the configuration
+of your accesspoint.*
 
 When the WiFi line in the main screen shows a MAC address, the module has been recognized and is waiting to connect to
 a WiFi access point (AP). Take the following steps to connect:
