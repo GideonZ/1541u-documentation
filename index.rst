@@ -16,6 +16,7 @@
   Command Interface <command interface>
   Virtual Printer <ultimate_printer>
   ReST API Reference <api/api_calls>
+  Assembly64 Integration <howto/assembly>
   Interview By Retro Magazine <interview>
   FAQ by Grrrolf <faq>
   
