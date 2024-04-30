@@ -45,7 +45,7 @@ Type# Description                       1541U2 U2+ U64
  11   Westermann                          ●     ●   ●
  12   Rex                               
  13   Final Cartridge I                   ●     ●   ●
- 14   Magic Formel                        ●     ●   ●
+ 14   Magic Formel                      
  15   C64 Game System                     ●     ●   ●
  16   Warpspeed                         
  17   Dinamic                           
