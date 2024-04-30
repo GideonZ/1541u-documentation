@@ -92,7 +92,7 @@ Type# Description                       1541U2 U2+ U64
  68   BIS-Plus                          
  69   SD-BOX                            
  70   MultiMAX                          
- 71   Blackbox V9                       
+ 71   Blackbox V9                         ●     ●   ●
  72   Lt. Kernal Host Adaptor           
  73   RAMLink                           
  74   H.E.R.O.                          
