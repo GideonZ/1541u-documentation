@@ -45,7 +45,7 @@ Type# Description                       1541U2 U2+ U64
  11   Westermann                          ●     ●   ●
  12   Rex                               
  13   Final Cartridge I                   ●     ●   ●
- 14   Magic Formel                        ●     ●   ●
+ 14   Magic Formel                      
  15   C64 Game System                     ●     ●   ●
  16   Warpspeed                         
  17   Dinamic                           
@@ -92,14 +92,14 @@ Type# Description                       1541U2 U2+ U64
  68   BIS-Plus                          
  69   SD-BOX                            
  70   MultiMAX                          
- 71   Blackbox V9                       
+ 71   Blackbox V9                         ●     ●   ●
  72   Lt. Kernal Host Adaptor           
  73   RAMLink                           
  74   H.E.R.O.                          
 ===== ================================= ====== === ===
 
 Supported C128 Cartridge Types
-=============================
+==============================
 
 ===== ================================= ====== === ===
 Type# Description                       1541U2 U2+ U64

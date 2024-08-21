@@ -56,6 +56,13 @@ mounting (which will take a few seconds to complete), the 1541 can
 access the image file as if it was a real floppy. All standard commands
 that you are familiar with while using a real CBM1541 then apply.
 
+When necessary, the disk drive can be switched into 1571 and 1581 mode
+as well. This will happen automatically when the associated file types
+are selected: Mount a .D71 / .G71 file and the user will be prompted to
+change the mode of operation to 1571. Similarly for .D81 files, the
+drive will switch to 1581 mode.
+
+
 The Menu
 ========
 
@@ -88,6 +95,7 @@ F7            Page down
 F5            Bring up a menu with actions to be performed.
 F2            Enter the setup menu
 F3            Shows the HELP-text
+F4            Shows the current system configuration
 Space         Select / deselect entries in the file browser for copying.
 C=C / C=V     Can be used to copy files between locations, just like in Windows.
               Be aware that file copy is a lot slower than on a modern PC.
@@ -117,9 +125,9 @@ LEDs
 The Ultimate-II+ has four LEDs that are visible on the outside of the
 plastic case:
 
-a. Green: 1541 drive power
+a. Green: Drive power
 
-b. Red: 1541 drive status
+b. Red: Drive status
 
 c. Yellow: Cartridge active
 
@@ -138,12 +146,14 @@ The drive power LED has four states:
 Cartridge Emulation
 ===================
 Because the Ultimate-II+ will occupy your cartridge slot, a list of
-popular expansions available for the C=64 are integrated into the
-Ultimate-II+. These expansions include cartridges such as the Action
-Replay, Retro Replay, The Final Cartridge III, Super Snapshot V5, KCS
-Power Cartridge and the Epyx fastloader. In the configuration menu, even
-the CBM1750/1764 RAM Expansion unit can be enabled, with expansion RAM
-up to 16 MB!
+popular expansions available for the C=64 can be configured. Think of
+extensions like Action Replay, Retro Replay, The Final Cartridge III,
+Super Snapshot V5, KCS Power Cartridge, the Epyx fastloader and many
+more. In the configuration menu, even the CBM1750/1764 RAM Expansion
+unit can be enabled, with expansion RAM up to 16 MB!
+
+Information on how cartridge emulation is set up can be found in this
+section :doc:`about cartridges <howto/cartridges>`.
 
 Many of these cartridges have a reset button and a freezer button. This
 is the function of the other two buttons on the Ultimate-II+. By
@@ -167,7 +177,9 @@ with the following items:
 
 -  User Interface Settings
 
--  1541 Drive Settings
+-  Drive A Settings
+
+-  Drive B Settings
 
 -  Network Settings
 
@@ -179,7 +191,7 @@ keyboard is slightly different:
 Key               Function
 ===============   ========
 CRSR up/down      Move the cursor (highlighted line) up/down
-CRSR left/right   Increase or decrease a setting, cycling through the available options.
++ / -             Increase or decrease a setting, cycling through the available options.
 DEL               Go one level up
 Return / Space    For string fields: bring up a text entry box
                   For enumerated fields: bring up a context menu with the available options
@@ -200,7 +212,7 @@ Ethernet to the C-64. Currently, the built-in Ethernet port does *not*
 provide RR-net compatibility. However:
 
 The Ethernet port is used natively by the firmware. There is some
-primitive support for file-transfer using FTP (needs improvement), and
+primitive support for file-transfer using FTP, and
 it is possible to connect to the Ultimate-II+ using a VT-100 terminal
 program on the Telnet port (port 23). This gives the possibility to
 control the machine remotely, and swap disks without actually
@@ -243,10 +255,10 @@ of the cartridge.
 
 File Systems
 ============
-Currently, the Ultimate-II+ supports the FAT16/FAT32 file system on any
-storage device, and the ISO9660/Joliet on CD/DVD ROM drives, or ISO
-files. It is able to read D64 files, as well as D71 and D81 files (no
-partitions), T64 files.
+Currently, the Ultimate-II+ supports the FAT16/FAT32 and exFAT file
+system on any storage device, and the ISO9660/Joliet on CD/DVD ROM drives,
+or ISO files. It is able to read D64 files, as well as D71, D81 files (no
+partitions) and DNP files, including sub directories, T64 files.
 
 DMA loads
 =========
@@ -257,6 +269,15 @@ if the PRG is located on the FAT/ISO file system, or inside a disk image
 (.D64), or inside a tape archive (.T64). Be aware that a lot of programs
 inside a .D64 file require that the rest of the disk is mounted in the
 drive. For those programs, use the ‘Mount & Run’ command.
+
+Important! Because the DMA load requires a bit of software on the C64,
+a special 'loader cartridge' is enabled to perform the DMA. This
+effectively *disables* the configured cartridge, so you will lose the
+speed loader capabilities. If you do not want this, you can go to
+the basic prompt with your cartridge active, and then select "DMA" on
+the .PRG file in the menu. This will not invoke the cartridge, but
+simply attempts to load the program into memory. This will not work
+for all PRGs, however.
 
 Tape Support
 ============
@@ -410,11 +431,11 @@ interested to join the the Facebook group “1541 Ultimate”.
 Firmware Updates
 ================
 In order to update the firmware, you will need a file with the “.U2P”
-extension. Such a file can be found in the ‘.zip’ archives found in the
-download section of the http://ultimate64.com website, after logging
-on to the site.
+extension, or ".U2L" for the Ultimate-II+L. Such a file can be found
+in the ‘.zip’ archives found in the download section of the
+http://ultimate64.com website, after logging on to the site.
 
-Procedure: Use the Ultimate-II+ file browser to find the .U2P file.
+Procedure: Use the Ultimate-II+ file browser to find the .U2P / .U2L file.
 Press ENTER, and the option “Run Update” will appear. Select this option
 and follow the instructions, if any. After running an update, the unit
 will reset itself completely after about a minute, without any
@@ -423,7 +444,8 @@ notification. This is normal behavior.
 When, for some reason, the update has failed and corrupted the Flash
 chip; you can start the “Recovery Mode”, by holding the middle button
 while powering on the unit. In the recovery mode, not all features are
-available, but the “Run Update” feature should work.
+available, but the “Run Update” feature should work. (Not available on
+U2+L!)
 
 Disclaimer
 ==========
@@ -438,17 +460,14 @@ storage solution for your 8-bit Commodore computer.
 
 Known issues
 ============
--  The processing speed of the Ultimate-II+ is currently (V3.7) still
+-  The processing speed of the Ultimate-II+ is currently (V3.10) still
    quite a bit lower than the Ultimate-II. This is because the
    Ultimate-II+ platform does not have instruction/data caches still on
    its embedded processor. The lower speed may cause some situations in
-   which the unit appears to hang, while it is just busy. For example,
-   when the unit is trying to find a free sector on a large USB stick
-   (and note: even 8 GB is already huge!), it may take up to half a
-   minute or so, before the first file can be written, or the first
-   directory can be created. Similarly, when using the printer
-   emulation, the conversion from a bitmap image to a PNG file can take
-   quite some time. This may be solved in a future software upgrade.
+   which the unit appears to hang, while it is just busy. For example, 
+   when using the printer emulation, the conversion from a bitmap image
+   to a PNG file can take quite some time. This may be solved in a future
+   software upgrade.
 
 Other issues are reported and maintained on GitHub:
 
