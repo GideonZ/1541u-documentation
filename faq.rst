@@ -219,7 +219,7 @@ This FAQ is part of the current manual.
 
 For both the `Ultimate II
 <https://github.com/GideonZ/1541ultimate/blob/master/doc/Quick%20guide%20to%2
-0the%201541%20Ultimate%20II.docx>`_ and `Ultimate II+ <quick_guide.html>`_ a
+0the%201541%20Ultimate%20II.docx>`_ and :doc:`Ultimate II+ <quick_guide>` a
 quick start guide exists.
 
 Another resource for some (old) documentation can be found here:

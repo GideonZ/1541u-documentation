@@ -24,9 +24,9 @@ changes.txt           Change Summary since 3.9/1.37
 
 Below, as a reference, is a list of the most important changes since the previous official release 3.9. Documentation for the most prominent new features or changes in user interface can be found here:
 
-- `Multi Mode Disk Drive <mm_drive.html>`_
-- `Updated Cartridge System <cartridges.html>`_
-- `Programmable U64 Palette <palette.html>`_
+- :doc:`Multi Mode Disk Drive <mm_drive>`
+- :doc:`Updated Cartridge System <cartridges>`
+- :doc:`Programmable U64 Palette <palette>`
 
 
 Changes since official release (3.9 / 1.37)
