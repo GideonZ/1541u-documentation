@@ -4,8 +4,7 @@
 .. toctree::
   :maxdepth: 3
 
-  Firmware 3.10i <howto/installing_310i>
-  Firmware 3.10 <howto/installing_310>
+  Firmware <howto/firmware>
   Quick Guide to the Ultimate II+ <quick_guide>
   Ultimate 64 <ultimate64>
   WiFi on the Ultimate 64 <howto/wifi>
