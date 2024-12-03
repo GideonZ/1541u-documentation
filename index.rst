@@ -13,7 +13,7 @@
   Cartridge Emulation <howto/cartridges>
   Tape Emulation <howto/tape>
   Modem Emulation Layer <howto/modem>
-  Command Interface <command interface>
+  Command Interface <command_interface>
   Virtual Printer <ultimate_printer>
   ReST API Reference <api/api_calls>
   Assembly64 Integration <howto/assembly>
