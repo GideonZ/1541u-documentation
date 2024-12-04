@@ -1,5 +1,5 @@
 Ultimate SID player auto configuration
-_________________________________
+______________________________________
 
 What this does, is to select the correct socket when the internal player is started. 
 The autoconfig selects the socket based on what type of SID is found in the socket and for what type of SID the tune was written.
