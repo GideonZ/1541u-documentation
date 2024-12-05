@@ -15,6 +15,7 @@ The Ultimate 1541-II+ and Ultimate 64 have an integrated ethernet port.
    :alt: Ultimate 1541-II and compatible usb ethernet adaptor
    :align: left
    :scale: 75 %
+
 *Ultimate 1541-II and compatible usb ethernet adaptor*
 
 The Ultimate 1541-II needs a compatible USB2LAN Ethernet adaptor that is connected to the USB port of the Ultimate 1541-II.

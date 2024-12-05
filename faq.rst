@@ -51,7 +51,7 @@ To revert to version 2.6k, use the revert.u2u that's included in the 3.0 beta 7
 archive.
 
 You can find the `3.0 beta 7 firmware <https://github.com/GideonZ/ultimate_releases/raw/master/1541u2_3.0beta7.zip>`_ on 
-`GitHub <https://github.com/GideonZ/ultimate_releases>`_.
+`GitHub <https://github.com/GideonZ/ultimate_releases>`__.
 
 How can I use the emulated SID as second SID for 2SID tunes?
 ------------------------------------------------------------
@@ -219,7 +219,7 @@ This FAQ is part of the current manual.
 
 For both the `Ultimate II
 <https://github.com/GideonZ/1541ultimate/blob/master/doc/Quick%20guide%20to%2
-0the%201541%20Ultimate%20II.docx>`_ and `Ultimate II+ <quick_guide.html>`_ a
+0the%201541%20Ultimate%20II.docx>`_ and :doc:`Ultimate II+ <quick_guide>` a
 quick start guide exists.
 
 Another resource for some (old) documentation can be found here:
