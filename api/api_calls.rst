@@ -37,6 +37,17 @@ instance, look like this::
      "errors": []
    }
 
+Starting from Ultimate firmware version 3.12 it is possible to configure a
+*"Network Password"*. If a non-empty password is set then most network services
+of the Ultimate require the correct password to be supplied in order to be
+allowed access.
+
+For the REST API the password must be sent using an additional custom HTTP
+header: ``X-Password: <your-password>``. The header must be included in all
+requests to all API routes. If the header is missing or has an incorrect
+password then a HTTP status code of ``403 Forbidden`` will be returned and no
+further action taken. Supplying the header when no *"Network Password"* has
+been set is allowed (the header will be ignored).
 
 
 Routes
@@ -59,6 +70,19 @@ About
            "version": "0.1",
            "errors": []
          }
+   * - ``GET /v1/info``
+     -
+     - Returns some basic information about the Ultimate device::
+
+         {
+           "product": "Ultimate 64",
+           "firmware_version": "3.12",
+           "fpga_version": "11F",
+           "core_version": "143",  # Only for Ultimate 64 devices
+           "hostname": "Terakura",
+           "errors": []
+         }
+
 
 Runners
 ~~~~~~~
@@ -273,6 +297,9 @@ Machine
    * - ``PUT /v1/machine:poweroff``
      -
      - This U64-only command causes the machine to power off. Note that it is likely that you won't receive a valid response.
+   * - ``PUT /v1/machine:menu_button``
+     -
+     - This command does the same thing as pressing the Menu button on an 1541 Ultimate cartridge, or briefly pressing the Multi Button on the Ultimate 64. The system will either enter or exit the Ultimate menu system depending on it's current state.
    * - ``PUT /v1/machine:writemem``
      - | *address*
        | *data*
