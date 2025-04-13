@@ -119,5 +119,6 @@ Off  Drive Off
 2/3  Drive On + Floppy Mounted
 3/3  Drive On + Floppy Mounted + Motor running	
 ===  ==========================================
+
 *PWM = pulse width of the pwm signal.*
 

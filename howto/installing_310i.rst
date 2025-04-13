@@ -1,5 +1,5 @@
-Installing Firmware 3.10i / Core 1.42
--------------------------------------
+Firmware 3.10i / Core 1.42
+--------------------------
 
 Instructions
 ============

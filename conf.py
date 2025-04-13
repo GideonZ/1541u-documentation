@@ -61,8 +61,11 @@ html_static_path = ['_local']
 #html_static_path = ['_static']
 
 def setup(app):
-    app.add_css_file('theme_overrides.css')
-    
+    if hasattr(app, 'add_css_file'):
+        app.add_css_file('theme_overrides.css')  # Older sphinx
+    else:
+        app.add_stylesheet('theme_overrides.css')  # Newer sphinx
+
 #html_context = {
 #    'css_files': [
 #        '_static/theme_overrides.css',  # override wide tables in RTD theme

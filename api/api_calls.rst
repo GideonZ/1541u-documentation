@@ -8,9 +8,9 @@ The format of the URL is as follows:
 
 ``/v1/<route>/<path>:<command>?<arguments>``
 
-The 'verb' depends on the kind of operation. In general:
+Which HTTP *verb* to use depends on the kind of operation. In general:
 
-.. list-table:: URL Verbs
+.. list-table::
    :widths: 10 50
    :header-rows: 1
 
@@ -26,19 +26,28 @@ The 'verb' depends on the kind of operation. In general:
 What is returned with the request depends on the command. In most cases the command returns a valid JSON message, using
 the *Content-Type: application/json* string in the header. The JSON contains at least one entry, called *errors*. This is
 a list (array) of strings with things that went wrong during the execution of the command. A complete response could, for
-instance, look like this:
+instance, look like this::
 
-.. code-block::
+   HTTP/1.1 200 OK
+   Connection: close
+   Content-Type: application/json
+   Content-Length: 22
 
-  HTTP/1.1 200 OK
-  Connection: close
-  Content-Type: application/json
-  Content-Length: 22
-   
-  {
-    "errors": []
-  }
+   {
+     "errors": []
+   }
 
+Starting from Ultimate firmware version 3.12 it is possible to configure a
+*"Network Password"*. If a non-empty password is set then most network services
+of the Ultimate require the correct password to be supplied in order to be
+allowed access.
+
+For the REST API the password must be sent using an additional custom HTTP
+header: ``X-Password: <your-password>``. The header must be included in all
+requests to all API routes. If the header is missing or has an incorrect
+password then a HTTP status code of ``403 Forbidden`` will be returned and no
+further action taken. Supplying the header when no *"Network Password"* has
+been set is allowed (the header will be ignored).
 
 
 Routes
@@ -54,13 +63,25 @@ About
      - Parameters
      - Action
    * - ``GET /v1/version``
-     - 
-     - Returns the current version of the ReST API:
-       .. code-block::
-        {
-            "version": "0.1",
-            "errors": []
-        }
+     -
+     - Returns the current version of the ReST API::
+
+         {
+           "version": "0.1",
+           "errors": []
+         }
+   * - ``GET /v1/info``
+     -
+     - Returns some basic information about the Ultimate device::
+
+         {
+           "product": "Ultimate 64",
+           "firmware_version": "3.12",
+           "fpga_version": "11F",
+           "core_version": "143",  # Only for Ultimate 64 devices
+           "hostname": "Terakura",
+           "errors": []
+         }
 
 
 Runners
@@ -94,7 +115,7 @@ Runners
      - With this command a progam can be loaded into memory. The *file* argument points to an existing file in the file system of the Ultimate.
        The machine resets, and loads the designated program into memory using DMA. It does not automatically run the program.
    * - ``POST /v1/runners:load_prg``
-     - 
+     -
      - With this command a progam can be loaded into memory. The machine resets, and loads the attached program into memory
        using DMA. It does not automatically run the program.
    * - ``PUT /v1/runners:run_prg``
@@ -102,7 +123,7 @@ Runners
      - With this command a progam can be loaded into memory. The *file* argument points to an existing file in the file system of the Ultimate.
        The machine resets, and loads the designated program into memory using DMA. Then it automatically runs the program.
    * - ``POST /v1/runners:run_prg``
-     - 
+     -
      - With this command a progam can be loaded into memory. The machine resets, and loads the attached program into memory
        using DMA. Then it automatically runs the program.
    * - ``PUT /v1/runners:run_crt``
@@ -110,7 +131,7 @@ Runners
      - With this command a cartridge file can be started. The *file* argument points to an existing file in the file system of the Ultimate.
        The machine resets, with the specified cartridge active. It does not alter the configuration of the Ultimate.
    * - ``POST /v1/runners:run_crt``
-     - 
+     -
      - This command starts a supplied cartridge file. The 'crt' file is attached to the POST request. The machine
        resets, with the attached cartridge active. It does not alter the configuration of the Ultimate.
 
@@ -125,77 +146,79 @@ Configuration
      - Parameters
      - Action
    * - ``GET /v1/configs``
-     - 
+     -
      - This command obtains a list of all the configuration categories in the Ultimate application. Note that there
-       is no path specified after 'configs'. An example result is:
-       .. code-block::
-          HTTP/1.1 200 OK
-          Connection: close
-          Content-Type: application/json
-          Content-Length: 405
-          
-          {
-            "categories": [
-              "Audio Mixer",
-              "SID Sockets Configuration",
-              "UltiSID Configuration",
-              "SID Addressing",
-              "C64 and Cartridge Settings",
-              "U64 Specific Settings",
-              "Clock Settings",
-              "Network settings",
-              "WiFi settings",
-              "Modem Settings",
-              "LED Strip Settings",
-              "Data Streams",
-              "Software IEC Settings",
-              "User Interface Settings",
-              "Tape Settings",
-              "Drive A Settings",
-              "Drive B Settings"
-            ],
-            "errors": []
-          }        
+       is no path specified after 'configs'. An example result is::
+
+         HTTP/1.1 200 OK
+         Connection: close
+         Content-Type: application/json
+         Content-Length: 405
+
+         {
+           "categories": [
+             "Audio Mixer",
+             "SID Sockets Configuration",
+             "UltiSID Configuration",
+             "SID Addressing",
+             "C64 and Cartridge Settings",
+             "U64 Specific Settings",
+             "Clock Settings",
+             "Network settings",
+             "WiFi settings",
+             "Modem Settings",
+             "LED Strip Settings",
+             "Data Streams",
+             "Software IEC Settings",
+             "User Interface Settings",
+             "Tape Settings",
+             "Drive A Settings",
+             "Drive B Settings"
+           ],
+           "errors": []
+         }
 
    * - ``GET /v1/configs/<category>``
-     - 
+     -
      - This command obtains a list of all the configuration items in the category specified in the URL.
        Wildcards are allowed. Note that the depth of the specified path is 1. It specifies the category.
-       Example: ``GET /v1/configs/drive%20a*`` results in:
-       .. code-block::
-           HTTP/1.1 200 OK
-           Connection: close
-           Content-Type: application/json
-           Content-Length: 414
-           
-           {
-             "Drive A Settings": {
-               "Drive": "Enabled",
-               "Drive Type": "1541",
-               "Drive Bus ID": 8,
-               "ROM for 1541 mode": "1541.rom",
-               "ROM for 1571 mode": "1571.rom",
-               "ROM for 1581 mode": "1581.rom",
-               "Extra RAM": "Disabled",
-               "Disk swap delay": 1,
-               "Resets when C64 resets": "Yes",
-               "Freezes in menu": "Yes",
-               "GCR Save Align Tracks": "Yes",
-               "Leave Menu on Mount": "Yes"
-             },
-             "errors": []
-           }
- 
+
+       Example: ``GET /v1/configs/drive%20a*`` results in::
+
+         HTTP/1.1 200 OK
+         Connection: close
+         Content-Type: application/json
+         Content-Length: 414
+
+         {
+           "Drive A Settings": {
+             "Drive": "Enabled",
+             "Drive Type": "1541",
+             "Drive Bus ID": 8,
+             "ROM for 1541 mode": "1541.rom",
+             "ROM for 1571 mode": "1571.rom",
+             "ROM for 1581 mode": "1581.rom",
+             "Extra RAM": "Disabled",
+             "Disk swap delay": 1,
+             "Resets when C64 resets": "Yes",
+             "Freezes in menu": "Yes",
+             "GCR Save Align Tracks": "Yes",
+             "Leave Menu on Mount": "Yes"
+           },
+           "errors": []
+         }
+
    * - ``GET /v1/configs/<category>/<item>``
-     - 
+     -
      - This command returns information about the specific item(s). Wildcards are allowed. Note that the depth
        of the path is 2. Both the category as well as the item is specified.
-       Example: ``GET /v1/configs/drive%20a*/*bus*`` results in: .. code-block::
+
+       Example: ``GET /v1/configs/drive%20a*/*bus*`` results in::
+
          HTTP/1.1 200 OK
          Connection: close
          Content-Type: application/json
          Content-Length: 154
-         
          {
            "Drive A Settings": {
              "Drive Bus ID": {
@@ -216,15 +239,15 @@ Configuration
        | Example: ``PUT /v1/configs/drive%20a*/*bus*?value=9`` will set the 'Drive Bus ID' of 'Drive A Settings' to 9.
 
    * - ``POST /v1/configs``
-     - 
+     -
      - With this command, many configuration settings can be changed at once. The format of the data that is passed should be JSON.
        It follows the same format as what is returned with the GET verb with at least one level in the path. The JSON should
        be an object, with the category strings at its first level, the configuration items in the second level, followed by the value.
-       For instance:
-       .. code-block::
+       For instance::
+
          POST http://192.168.178.232/v1/configs
          Content-Type: application/json
- 
+
          {
            "Drive A Settings": {
              "Drive": "Enabled",
@@ -233,19 +256,19 @@ Configuration
            },
            "Drive B Settings": {
              "Drive": "Disabled"
-           } 
-         }          
-        
+           }
+         }
+
    * - ``PUT /v1/configs:load_from_flash``
-     - 
+     -
      - With this command, the complete configuration is restored to what is currently written in non-volatile memory.
        In other words: the 'saved' values are loaded into the current configuration.
    * - ``PUT /v1/configs:save_to_flash``
-     - 
+     -
      - With this command, the complete configuration is written to non-volatile memory.
        In other words: the current configuration settings are 'saved' and will be loaded once the machine boots.
    * - ``PUT /v1/configs:reset_to_default``
-     - 
+     -
      - This command resets the current settings to the factory default. This does *not* clear or reset the values
        stored in non-volatile memory.
 
@@ -274,12 +297,15 @@ Machine
    * - ``PUT /v1/machine:poweroff``
      -
      - This U64-only command causes the machine to power off. Note that it is likely that you won't receive a valid response.
+   * - ``PUT /v1/machine:menu_button``
+     -
+     - This command does the same thing as pressing the Menu button on an 1541 Ultimate cartridge, or briefly pressing the Multi Button on the Ultimate 64. The system will either enter or exit the Ultimate menu system depending on it's current state.
    * - ``PUT /v1/machine:writemem``
      - | *address*
        | *data*
      - | With this command, data can be written to C64 memory. To be more exact: this command writes data through DMA, so the
          memory map that is currently selected is used. Writing to the I/O registers of the 6510 is not possible.
-       | Data bytes are written in consequetive memory locations. 
+       | Data bytes are written in consequetive memory locations.
          The *address* argument specifies the memory location in hexadecimal format. The *data* argument contains a string of bytes
          in hexadecimal format. The maxmimum number of bytes written with this method is 128.
        | Example: ``PUT /v1/machine:writemem?address=D020&data=0504``
@@ -302,9 +328,9 @@ Machine
        hexadecimal format. *This is currently an U64-only call.*
    * - ``PUT /v1/machine:debugreg``
      - *value*
-     - This command writes the value specified by the *value* argument (in hexadecimal) into the debug register ($D7FF), and 
+     - This command writes the value specified by the *value* argument (in hexadecimal) into the debug register ($D7FF), and
        then reads the debug register ($D7FF) and returns it in the "value" field of the JSON response. *This is currently an U64-only call.*
-    
+
 Floppy Drives
 ~~~~~~~~~~~~~
 
@@ -316,10 +342,10 @@ Floppy Drives
      - Parameters
      - Action
    * - ``GET /v1/drives``
-     - 
+     -
      - With this command, the information about all the (internal) drives on the IEC bus is returned. In addition to the presence,
-       it also shows the image files and paths of the mounted disks or referenced paths. An example follows:
-       .. code-block::
+       it also shows the image files and paths of the mounted disks or referenced paths. An example follows::
+
          {
             "drives":[
                {
@@ -358,7 +384,7 @@ Floppy Drives
                }
             ],
             "errors":[
-               
+
             ]
          }
    * - ``PUT /v1/drives/<drive>:mount``
@@ -383,20 +409,20 @@ Floppy Drives
        disk is write protected and in *unlinked* mode the disk is not write protected, but the changes are not written
        back to the disk image.
    * - ``PUT /v1/drives/<drive>:reset``
-     - 
+     -
      - Issuing this command causes the selected drive to be reset.
    * - ``PUT /v1/drives/<drive>:remove``
-     - 
-     - With this command the mounted disk can be removed from the drive. 
+     -
+     - With this command the mounted disk can be removed from the drive.
    * - ``PUT /v1/drives/<drive>:remove``
-     - 
+     -
      - Use this command to break the link between the drive and the mounted disk image file. Further writes will no longer
        be reflected in the image file.
    * - ``PUT /v1/drives/<drive>:on``
-     - 
+     -
      - This command turns on the selected drive. When the drive was already on it is reset.
    * - ``PUT /v1/drives/<drive>:off``
-     - 
+     -
      - This command turns the selected drive off. It will no longer be accessible on the serial bus.
    * - ``PUT /v1/drives/<drive>:load_rom``
      - *file*
@@ -404,7 +430,7 @@ Floppy Drives
        that is already present on the file system of the Ultimate. The size of the ROM file needs to be 16K or 32K,
        depending on the drive type. Loading the ROM is a temporary action, setting the drive type or rebooting the machine will load the default ROM.
    * - ``POST /v1/drives/<drive>:load_rom``
-     - 
+     -
      - With this command a new drive ROM can be loaded into the selected drive. The ROM file is passed as a binary file
        attachment to the POST request. The size of the ROM file needs to be 16K or 32K,
        depending on the drive type. Loading the ROM is a temporary action, setting the drive type or rebooting the machine will load the default ROM.
@@ -431,9 +457,9 @@ The U64 supports streaming video and audio over its LAN port. The following API 
        The IP number parameter is required for the U64 to know where to send the stream to. The default port number that the
        data stream is sent to is 11000 for the video stream, 11001 for the audio stream and 11002 for the debug stream. A
        custom port number can be added to the IP address, after a colon separator; e.g. *192.168.178.224:6789* .
-       Note that turning on the video stream will automatically turn off the debug stream. 
+       Note that turning on the video stream will automatically turn off the debug stream.
    * - ``PUT /v1/streams/<stream name>:stop``
-     - 
+     -
      - With this command a data stream can be turned off. Valid stream names are **video**, **audio** and **debug**.
 
 
