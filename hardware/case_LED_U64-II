@@ -1,0 +1,20 @@
+LED Header Ultimate64 Elite 2
+==========
+
+
+.. figure:: ../media/hardware/led_ue2.png
+   :alt: LED Header Ultimate64 Elite 2
+
+Pinout from the top
+------
+
+===  ============
+Pin  Description
+===  ============
+1    LED 1
+2    Ground
+3    LED 2
+4    LED 3
+===  ============
+
+The pin assignment is not static. Please check configuration menu.
