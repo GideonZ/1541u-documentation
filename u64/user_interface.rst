@@ -65,7 +65,7 @@ keyboard is slightly different:
 | CRSR up/down                      | Move the cursor (highlighted      |
 |                                   | line) up/down                     |
 +-----------------------------------+-----------------------------------+
-| + / -                             | Increase or decrease a setting,   |
+| `+` / `-`                         | Increase or decrease a setting,   |
 |                                   | cycling through the available     |
 |                                   | options.                          |
 +-----------------------------------+-----------------------------------+
