@@ -80,6 +80,7 @@ About
            "fpga_version": "11F",
            "core_version": "143",  # Only for Ultimate 64 devices
            "hostname": "Terakura",
+           "unique_id": "8D927F",  # Unless disabled under "Network Settings"
            "errors": []
          }
 
