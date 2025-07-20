@@ -191,7 +191,7 @@ keyboard is slightly different:
 Key               Function
 ===============   ========
 CRSR up/down      Move the cursor (highlighted line) up/down
-+ / -             Increase or decrease a setting, cycling through the available options.
+\+ / \-             Increase or decrease a setting, cycling through the available options.
 DEL               Go one level up
 Return / Space    For string fields: bring up a text entry box
                   For enumerated fields: bring up a context menu with the available options
