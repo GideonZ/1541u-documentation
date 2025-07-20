@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Ultimate Documentation'
-copyright = '2019, Gideon Zweijtzer'
+copyright = '2025, Gideon Zweijtzer'
 author = 'Gideon Zweijtzer'
 
 
