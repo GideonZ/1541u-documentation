@@ -99,12 +99,12 @@ saved file to a more recognizable name.
 Tip: turn off Ultimate Audio in the C64 and cartridge settings when using this feature.
 
 
-Which USB2LAN adapters are supported by the 1541Utlimate 2?
+Which USB2LAN adapters are supported by the 1541Ultimate 2?
 -----------------------------------------------------------
 Any USB2LAN adapter that uses an AX88772/-A/-B chip should work.
 
 
-Can I control the Utlimate using a USB keyboard?
+Can I control the Ultimate using a USB keyboard?
 ------------------------------------------------
 Yes you can!
 
@@ -286,3 +286,4 @@ interest for C128D users.
 
 
 .. |left arrow| unicode:: U+2B05 U+FE0E .. LEFTWARDS BLACK ARROW
+
