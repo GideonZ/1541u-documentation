@@ -129,7 +129,7 @@ C128:1    1  REU-aware C128 cartridge; with UCI preferred
 
 EasyFlash
 =========
-EasyFlash cartridges have a Flash chip that can be written from the C64 side. Games that are released on EasyFlash cartridge use the Flash to save settings and high scores to. The EasyFlash system is conceptually very advanced; as it supplies the 'driver' software to write to the ROM as part of the ROM data. This driver is called "EasyFlash API", or short 'EAPI'. The Ultimate supports these writes to the ROM by patching the EAPI code area with its own driver. This way, all titles that use the EAPI to write data to the flash will use the Ultimate code to do so. This way, the Flash chip itself does not need to be emulated. More background information about the EAPI can be found here: `EasyFlash API <http://skoe.de/easyflash/files/devdocs/EasyFlash-ProgRef.pdf>`_.
+EasyFlash cartridges have a Flash chip that can be written from the C64 side. Games that are released on EasyFlash cartridge use the Flash to save settings and high scores as well. The EasyFlash system is conceptually very advanced; as it supplies the 'driver' software to write to the ROM as part of the ROM data. This driver is called "EasyFlash API", or short 'EAPI'. The Ultimate supports these writes to the ROM by patching the EAPI code area with its own driver. This way, all titles that use the EAPI to write data to the flash will use the Ultimate code to do so. This way, the Flash chip itself does not need to be emulated. More background information about the EAPI can be found here: `EasyFlash API <http://skoe.de/easyflash/files/devdocs/EasyFlash-ProgRef.pdf>`_.
 
 It is required to manually save the EasyFlash title back to your storage device after it has been modified. To do so, press F5 inside of a writable directory and select C64 Machine --> Save Cartridge. This command will create a new CRT file with all ROM data.
 
@@ -143,7 +143,7 @@ Also GMod2 cartridges have a chip to store data in; an M93C86 EEPROM chip. This 
 
 Compatibility with I/O features
 ===============================
-Unfortunately the Commodore 64 was never fully 'plug and play', as there was no configuraiton managment and dynamic allocation of memory and I/O resources like on modern PCs. This means that cartridges may be incompatible with some software, but also that enabling different features on the cartridge port may cause conflicts. In version 3.10 of the firmware, an attempt has been made to automatically 'fix' compatibility issues, by disabling features that conflict with the selected cartridge.
+Unfortunately the Commodore 64 was never fully 'plug and play', as there was no configuration managment and dynamic allocation of memory and I/O resources like on modern PCs. This means that cartridges may be incompatible with some software, but also that enabling different features on the cartridge port may cause conflicts. In version 3.10 of the firmware, an attempt has been made to automatically 'fix' compatibility issues, by disabling features that conflict with the selected cartridge.
 
 In order to find out what features were automatically disabled (or even enabled in a few cases), you can open up the System Info page with F4. An example is shown here:
 
