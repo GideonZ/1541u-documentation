@@ -143,7 +143,7 @@ Also GMod2 cartridges have a chip to store data in; an M93C86 EEPROM chip. This 
 
 Compatibility with I/O features
 ===============================
-Unfortunately the Commodore 64 was never fully 'plug and play', as there was no configuration managment and dynamic allocation of memory and I/O resources like on modern PCs. This means that cartridges may be incompatible with some software, but also that enabling different features on the cartridge port may cause conflicts. In version 3.10 of the firmware, an attempt has been made to automatically 'fix' compatibility issues, by disabling features that conflict with the selected cartridge.
+Unfortunately the Commodore 64 was never fully 'plug and play', as there was no configuration management and dynamic allocation of memory and I/O resources like on modern PCs. This means that cartridges may be incompatible with some software, but also that enabling different features on the cartridge port may cause conflicts. In version 3.10 of the firmware, an attempt has been made to automatically 'fix' compatibility issues, by disabling features that conflict with the selected cartridge.
 
 In order to find out what features were automatically disabled (or even enabled in a few cases), you can open up the System Info page with F4. An example is shown here:
 
