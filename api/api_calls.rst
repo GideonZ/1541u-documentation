@@ -113,19 +113,19 @@ Runners
      - This command requests the Ultimate to play the Amiga MOD file that is attached as a file to the request.
    * - ``PUT /v1/runners:load_prg``
      - *file*
-     - With this command a progam can be loaded into memory. The *file* argument points to an existing file in the file system of the Ultimate.
+     - With this command a program can be loaded into memory. The *file* argument points to an existing file in the file system of the Ultimate.
        The machine resets, and loads the designated program into memory using DMA. It does not automatically run the program.
    * - ``POST /v1/runners:load_prg``
      -
-     - With this command a progam can be loaded into memory. The machine resets, and loads the attached program into memory
+     - With this command a program can be loaded into memory. The machine resets, and loads the attached program into memory
        using DMA. It does not automatically run the program.
    * - ``PUT /v1/runners:run_prg``
      - *file*
-     - With this command a progam can be loaded into memory. The *file* argument points to an existing file in the file system of the Ultimate.
+     - With this command a program can be loaded into memory. The *file* argument points to an existing file in the file system of the Ultimate.
        The machine resets, and loads the designated program into memory using DMA. Then it automatically runs the program.
    * - ``POST /v1/runners:run_prg``
      -
-     - With this command a progam can be loaded into memory. The machine resets, and loads the attached program into memory
+     - With this command a program can be loaded into memory. The machine resets, and loads the attached program into memory
        using DMA. Then it automatically runs the program.
    * - ``PUT /v1/runners:run_crt``
      - *file*
