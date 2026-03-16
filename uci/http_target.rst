@@ -322,13 +322,13 @@ will be interpreted as a signed value, LSB first.
 
 
 Example: "width": 500 would be encoded as: ``$06 $23 $XX $05 “width” $F4
-$01``. This results in the object:
+$01``. This results in the object::
 
     {
         “width” : 500
     }
 
-In URL encoded form, the body would look like this:
+In URL encoded form, the body would look like this::
 
     width=500
 
@@ -344,14 +344,14 @@ the string itself follows, exactly the number of bytes indicated. Then
 the value of the Boolean follows, always 1 byte in length.
 
 Example: "visible": true would be encoded as: ``$06 $24 $XX $07 “visible”
-$01``. This results in the object, if preceded by the previous example:
+$01``. This results in the object, if preceded by the previous example::
 
     {
         “width” : 500,
         “visible” : true
     }
 
-In URL encoded form, the body would look like this:
+In URL encoded form, the body would look like this::
 
     width=500&visible=true
 
@@ -370,7 +370,7 @@ first.
 Example: ``"title": "Commodore Intl"`` would be encoded as:
 
 ``$06 $25 $XX $05 “title” $0E “Commodore Intl”``. This results in the
-object, if preceded by the previous examples:
+object, if preceded by the previous examples::
 
     {
         “width” : 500,
@@ -378,7 +378,7 @@ object, if preceded by the previous examples:
         “title” : “Commodore Intl”
     }
 
-In URL encoded form, the body would look like this:
+In URL encoded form, the body would look like this::
 
     width=500&visible=true&title=Commodore%20Intl
 
@@ -396,7 +396,7 @@ command does not take any value.
 Example:
 
 ``$06 $26 $XX $04 “user”`` results in the following object, if preceded by
-the previous examples:
+the previous examples::
 
     {
         “width” : 500,
@@ -408,7 +408,7 @@ the previous examples:
 After this command, the ‘current hierarchy level’ will be at the
 position of the black square.
 
-In URL encoded form, the body would look like this:
+In URL encoded form, the body would look like this::
 
     width=500&visible=true&title=Commodore%20Intl&user=%7B%7D
 
@@ -426,7 +426,7 @@ command does not take any value.
 Example:
 
 ``$06 $27 $XX $04 “cars”`` results in the following object, if preceded by
-the previous examples:
+the previous examples::
 
     {
         “width” : 500,
@@ -440,7 +440,7 @@ the previous examples:
 After this command, the ‘current hierarchy level’ will be at the
 position of the black square.
 
-In URL encoded form, the body would look like this:
+In URL encoded form, the body would look like this::
 
     width=500&visible=true&title=Commodore%20Intl&user=%7Bcars%3D%5B%5D%7D
 
@@ -459,7 +459,7 @@ generated when the pointer is already in the root of the hierarchy.
 Example:
 
 ``$06 $28 $XX`` results in the following object, if preceded by the previous
-examples:
+examples::
 
     {
         “width” : 500,
@@ -481,7 +481,7 @@ Command format: ``$06 $29 <HANDLE> <PATH>``
 
 Use the “Remove” command to delete one particular entry from the object.
 The path is a string that leads to the entry of interest. Let’s say the
-data object in memory looks like this:
+data object in memory looks like this::
 
     {
         “width” : 500,
@@ -526,7 +526,7 @@ value starts with a one-byte type identifier:
 | Array                             | $05                               |
 +-----------------------------------+-----------------------------------+
 
-Let’s say the object looks like this:
+Let’s say the object looks like this::
 
     {
         “width” : 500,
@@ -546,7 +546,7 @@ known value, the status will be set to ``404 ENTRY NOT FOUND``. In case the
 handle is invalid, the status will be set to ``400 BAD REQUEST``.
 
 Indexing arrays is possible by using the % prefix. In case the object
-looks like this, the path ``user/cars%2`` would return ``$03 “Toyota”``.
+looks like this, the path ``user/cars%2`` would return ``$03 “Toyota”``::
 
     {
         “width” : 500,
@@ -557,7 +557,7 @@ looks like this, the path ``user/cars%2`` would return ``$03 “Toyota”``.
         }
     }
 
-When the top level object is an array, the path can start with an index:
+When the top level object is an array, the path can start with an index::
 
     [
         { “user” : “1541u”, “name”: “Gideon” },
@@ -573,7 +573,7 @@ Command format: ``$06 $2B <HANDLE> <PATH>``
 
 Use the Move command to position the cursor somewhere in the data object
 hierarchy, in order to add (or set) values. The path is a string that
-leads to the entry of interest. Let’s say the object looks like this:
+leads to the entry of interest. Let’s say the object looks like this::
 
     {
         “width” : 500,

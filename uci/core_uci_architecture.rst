@@ -27,7 +27,7 @@ cartridge I/O range. In this manual, the programming API is described.
 Overview
 --------
 
-The transport layer of the Ultimate-II Command Interface makes use of a
+The transport layer of the Ultimate Command Interface makes use of a
 register interface which is accessible through the cartridge port of the
 C64. The registers are mapped into I/O space, at the address $DF1B up to
 $DF1F, masking the last five registers of the RAM Expansion Unit (REU).
