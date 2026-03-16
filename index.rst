@@ -13,6 +13,8 @@
   Tape Emulation <howto/tape>
   Modem Emulation Layer <howto/modem>
   Command Interface <command_interface>
+  Command Interface 2 <uci/index>
+  Command Interface 3 <uci>
   Virtual Printer <ultimate_printer>
   ReST API Reference <api/api_calls>
   Assembly64 Integration <howto/assembly>
