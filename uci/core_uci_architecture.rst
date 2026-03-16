@@ -69,17 +69,14 @@ Communication Protocol Basics
 
 The communication protocol is based on a state machine with four states:
 
-Idle
-
-Command Busy
-
-Data Last (last block)
-
-Data More (more data pending)
+- Idle
+- Command Busy
+- Data Last (last block)
+- Data More (more data pending)
 
 The transition through these states takes place in an interaction
 between the C64 user software and the software running on the
-Ultimate-II. The state that the communication protocol is in can be read
+Ultimate. The state that the communication protocol is in can be read
 from the Status register at $DF1C.
 
 Transfer command
@@ -123,7 +120,7 @@ The following diagram shows the state machine:
 
 .. figure:: _static/basic_protocol_state_machine.png
    :alt: Basic protocol state machine
-   :width: 85%
+   :width: 75%
    :align: center
 
    Basic Protocol State Machine
@@ -237,13 +234,10 @@ Ultimate while it was not in idle state.
 
 STATE: These two bits encode the protocol state:
 
-00: Idle
-
-01: Command Busy
-
-10: Data Last
-
-11: Data More
+- 00: Idle
+- 01: Command Busy
+- 10: Data Last
+- 11: Data More
 
 STAT_AV: When this bit is ‘1’, there is status data available from the
 status queue, accessible through the status data register ($DF1F).
@@ -257,14 +251,9 @@ Queues
 As previously described, there are three byte-queues that the Ultimate
 Command Interface uses:
 
-Command queue
-~~~~~~~~~~~~~
-
-Response Data queue
-~~~~~~~~~~~~~~~~~~~
-
-Status queue
-~~~~~~~~~~~~
+- Command queue
+- Response Data queue
+- Status queue
 
 The sizes of these queues are important to note, since they define the
 maximum transfer size per command. The command queue size is 896 bytes

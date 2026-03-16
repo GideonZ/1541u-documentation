@@ -8,13 +8,12 @@ Software IEC Target
 Introduction
 ------------
 
-The “UCI Control Target” provides a low-level interface to manage the
-hardware state of the Ultimate cartridge or Ultimate 64 machines and its
-emulated environment. This includes direct control over C64 execution
-(freeze/reboot), power management for emulated disk drives, and advanced
-utilities for REU and disk image handling.
+The “UCI SoftwareIEC Target” provides an optimized interface to the
+emulated disk drive that sits behind the SoftwareIEC interface. It
+bypasses the IEC protocol completely and therefore allows higher
+speed data transfers.
 
-The “UCI Control Target” is a target of the “Ultimate Command Interface”
+The “UCI SoftwareIEC Target” is a target of the “Ultimate Command Interface”
 (UCI), and is thus accessible from the cartridge port, through some I/O
 registers. The document “Ultimate Command Interface – Register API”
 describes how commands are sent over this interface.
@@ -30,6 +29,9 @@ byte of the command.
 
 The following paragraphs describe each of the commands of “Software IEC
 Target”.
+
+Command Summary
+---------------
 
 SOFTIEC_CMD_IDENTIFY (0x01)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -156,6 +158,7 @@ Otherwise, it pushes the provided <DATA> bytes into the drive's write
 buffer.
 
 💡 Implementation Insights
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Automatic Throttling: The prepare_data function in the CHKIN call
 initially fetches 32 bytes to minimize latency, but will scale up to 256

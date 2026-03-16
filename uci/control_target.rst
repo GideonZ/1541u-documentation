@@ -31,6 +31,9 @@ of the command.
 The following paragraphs describe each of the commands of “Control
 Target”.
 
+Command Summary
+---------------
+
 CTRL_CMD_IDENTIFY (0x01)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

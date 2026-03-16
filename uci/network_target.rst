@@ -30,6 +30,9 @@ of the command.
 The following paragraphs describe each of the commands of “Network
 target”.
 
+Command Summary
+---------------
+
 NET_CMD_IDENTIFY (0x01)
 ~~~~~~~~~~~~~~~~~~~~~~~
 

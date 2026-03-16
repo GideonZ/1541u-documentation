@@ -8,19 +8,18 @@ Ultimate DOS Target
 Introduction
 ------------
 
-The “Ultimate DOS” provides a way to access the file-system of the 1541
-Ultimate-II module programmatically.
+The “Ultimate DOS” provides a way to programmatically access the
+file-system of the Ultimate cartridge or Ultimate 64 main board.
 
-“Ultimate DOS” is a target of the “Ultimate-II command interface”, and
+“Ultimate DOS” is a target of the “Ultimate command interface”, and
 is thus accessible from the cartridge port, through some I/O registers.
-The document “Ultimate-II Command Interface – Register API” describes
+The document “Ultimate Command Interface – Register API” describes
 how commands are sent over this interface.
 
 This document describes the commands that can be sent to this target,
 and their expected behavior and response.
 
-In version 2.6 of the firmware of the 1541 Ultimate-II, the
-“Ultimate-DOS” target is accessible through target $01 and $02. This
+The “Ultimate-DOS” target is accessible through target $01 and $02. This
 shall be the first byte of the command. Note that these two targets are
 instances of the DOS. They have their own state. This enables to have
 two directories and two files open at a given time; one on each target.
@@ -28,6 +27,9 @@ In the examples in this chapter, target $01 is used.
 
 The following paragraphs describe each of the commands of
 “Ultimate-DOS”.
+
+Command Summary
+---------------
 
 DOS_CMD_IDENTIFY (0x01)
 ~~~~~~~~~~~~~~~~~~~~~~~
