@@ -37,10 +37,8 @@ to access the resource. This method is called the ‘verb’. Examples of
 the most common verbs are:
 
 - GET (Safe/Idempotent): Retrieves data without modifying it.
-- POST (Not Idempotent): Submits data to create a new, subordinate
-resource.
-- PUT (Idempotent): Replaces a resource completely or creates it if it
-doesn't exist.
+- POST (Not Idempotent): Submits data to create a new, subordinate resource.
+- PUT (Idempotent): Replaces a resource completely or creates it if it doesn't exist.
 - PATCH (Not Idempotent): Applies partial modifications to a resource.
 - DELETE (Idempotent): Removes a specific resource.
 
@@ -57,9 +55,8 @@ The format of the data body is not prescribed in the HTTP standard and
 can thus be of any format. However, what format is used is described in
 the header with the following key-value pair. In this case, it tells the
 receiving application that the data represents JSON formatted data
-fields.
+fields.::
 
-::
   Content-Type: application/json
 
 Responses are formatted in a very similar way; with a header and a data
