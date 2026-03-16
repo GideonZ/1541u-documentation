@@ -36,22 +36,18 @@ The header contains information about the request, like the destination
 to access the resource. This method is called the ‘verb’. Examples of
 the most common verbs are:
 
-GET (Safe/Idempotent): Retrieves data without modifying it.
-
-POST (Not Idempotent): Submits data to create a new, subordinate
+- GET (Safe/Idempotent): Retrieves data without modifying it.
+- POST (Not Idempotent): Submits data to create a new, subordinate
 resource.
-
-PUT (Idempotent): Replaces a resource completely or creates it if it
+- PUT (Idempotent): Replaces a resource completely or creates it if it
 doesn't exist.
-
-PATCH (Not Idempotent): Applies partial modifications to a resource.
-
-DELETE (Idempotent): Removes a specific resource.
+- PATCH (Not Idempotent): Applies partial modifications to a resource.
+- DELETE (Idempotent): Removes a specific resource.
 
 The header is basically a list of key-value pairs, separated by a colon,
-such as:
+such as::
 
-Transfer-Encoding: chunked
+  Transfer-Encoding: chunked
 
 The GET and DELETE requests usually do not make use of the data body,
 while PUT, POST and PATCH usually do to transfer the data; also named
@@ -63,7 +59,8 @@ the header with the following key-value pair. In this case, it tells the
 receiving application that the data represents JSON formatted data
 fields.
 
-Content-Type: application/json
+::
+  Content-Type: application/json
 
 Responses are formatted in a very similar way; with a header and a data
 body. The data body is obviously used for the GET requests, but it can
