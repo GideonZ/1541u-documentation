@@ -34,18 +34,18 @@ Command Summary
 DOS_CMD_IDENTIFY (0x01)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $01
+Command format: ``$01 $01``
 
 The “Identify” command sends back an identification string, such as
 “ULTIMATE-II DOS V1.0”. The user software can use this function to query
 which targets exist, or to obtain version information.
 
-The status channel will report “00,OK”, as this command cannot fail.
+The status channel will report ``00,OK`` as this command cannot fail.
 
 DOS_CMD_OPEN_FILE (0x02)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $02 [attrib] <filename>
+Command format: ``$01 $02 <attrib> <filename>``
 
 The “Open File” command takes two arguments: an attribute byte; directly
 followed by the filename to be opened. The attribute byte contains flags
@@ -75,26 +75,27 @@ $0E.)
 The filename does not need to be null-terminated, as the length of the
 command determines the length of the file name string.
 
-Example: $01 $02 $01 MYFILE
+Example: ``$01 $02 $01 MYFILE``
 
-The command will never return data. Status will either be “00,OK”, or a
+The command will never return data. Status will either be ``00,OK``, or a
 status message from the file system.
 
 DOS_CMD_CLOSE_FILE (0x03)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $03
+Command format: ``$01 $03``
 
 The “Close File” command closes the file that was last opened. It does
 not take any arguments, neither will this command return any data. The
 status channel will read:
 
-“00,OK” or “84,NO FILE TO CLOSE”
+- ``00,OK``
+- ``84,NO FILE TO CLOSE``
 
 DOS_CMD_READ_DATA (0x04)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $04 [len_lo] [len_hi]
+Command format: ``$01 $04 [len_lo] [len_hi]``
 
 The “Read Data” command will start a read transfer from the opened file.
 If there is no file open, the reply will be an empty data packet, and
@@ -113,7 +114,7 @@ channel. When everything is okay, the status channel will stay quiet.
 DOS_CMD_WRITE_DATA (0x05)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $05 [dummy] [dummy] [data …]
+Command format: ``$01 $05 [dummy] [dummy] [data …]``
 
 The “Write Data” command will write to the file that is currently open.
 If there is no file open, the status channel will read “85,NO FILE
@@ -129,7 +130,7 @@ command transfer size.
 DOS_CMD_FILE_SEEK (0x06)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $06 [posL] [posML] [posMH] [posH]
+Command format: ``$01 $06 [posL] [posML] [posMH] [posH]``
 
 The “File Seek” command places the pointer into the currently opened
 file at a user-defined position. The command takes one argument: a 32
@@ -142,49 +143,48 @@ file open, the status channel will read “85,NO FILE OPEN”.
 DOS_CMD_FILE_INFO (0x07)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $07
+Command format: ``$01 $07``
 
 The “File Info” command returns a data packet with information about the
 currently open file. In fact, this command executes a file stat command.
-The format of the data packet is as follows:
+The format of the data packet is as follows::
 
-DWORD size; /\* File size \*/
-
-WORD date; /\* Last modified date \*/
-
-WORD time; /\* Last modified time \*/
-
-char extension[3];
-
-BYTE attrib; /\* Attribute \*/
-
-char filename[ ];
+  uint32_t size; /\* File size \*/
+  uint16_t date; /\* Last modified date \*/
+  uint16_t time; /\* Last modified time \*/
+  char extension[3];
+  uint8_t attrib; /\* Attribute \*/
+  char filename[ ];
 
 The status response could either be:
 
-“00,OK”, “85,NO FILE OPEN”, or “88,NO INFORMATION AVAILABLE”
+- ``00,OK``
+- ``85,NO FILE OPEN``
+- ``88,NO INFORMATION AVAILABLE``
 
 DOS_CMD_FILE_STAT (0x08)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $08 <filename>
+Command format: ``$01 $08 <filename>``
 
-The “File Info” command returns a data packet with information about a file, specified by the ‘filename’ parameter. The format of the data packet is the same as for DOS_CMD_FILE_INFO (0x07).
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The “File Info” command returns a data packet with information about a file,
+specified by the ‘filename’ parameter. The format of the data packet is the
+same as for DOS_CMD_FILE_INFO (0x07).
 
 The status response could either be:
 
-“00,OK”, or “88,FILE NOT FOUND”
+- ``00,OK``
+- ``88,FILE NOT FOUND``
 
 DOS_CMD_DELETE_FILE (0x09)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $08 <filename>
+Command format: ``$01 $09 <filename>``
 
 The “Delete File” command deletes the specified file.
 
 This command does not return any data. The status channel will either
-read “00,OK” or it will contain the appropriate filesystem error
+read ``00,OK`` or it will contain the appropriate filesystem error
 message.
 
 This command has been introduced in version 1.1.
@@ -192,13 +192,13 @@ This command has been introduced in version 1.1.
 DOS_CMD_RENAME_FILE (0x0a)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $0a <filename> $00 <newname>
+Command format: ``$01 $0a <filename> $00 <newname>``
 
 The “Rename File” command renames the file specified by <filename> to
 <newname>.
 
 This command does not return any data. The status channel will either
-read “00,OK” or it will contain the appropriate filesystem error
+read ``00,OK`` or it will contain the appropriate filesystem error
 message.
 
 This command has been introduced in version 1.1.
@@ -206,13 +206,13 @@ This command has been introduced in version 1.1.
 DOS_CMD_COPY_FILE (0x0b)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $0b <source> $00 <destination>
+Command format: ``$01 $0b <source> $00 <destination>``
 
 The “Copy File” command copies the file specified by <source> to the
 file specified by <destination>.
 
 This command does not return any data. The status channel will either
-read “00,OK” or it will contain the appropriate filesystem error
+read ``00,OK`` or it will contain the appropriate filesystem error
 message.
 
 This command has been introduced in version 1.1.
@@ -220,7 +220,7 @@ This command has been introduced in version 1.1.
 DOS_CMD_CHANGE_DIR (0x11)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $11 <directory name>
+Command format: ``$01 $11 <directory name>``
 
 The ‘Change Directory” command is used to let the DOS enter a sub
 directory. When the DOS starts, the current directory will be the root
@@ -235,31 +235,36 @@ within.
 
 This command does never return any data. The status channel will tell
 whether the operation was successful. The two possible responses are:
-“00,OK”, or “83,NO SUCH DIRECTORY”.
+
+- ``00,OK``
+- ``83,NO SUCH DIRECTORY``.
 
 DOS_CMD_GET_PATH (0x12)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $12
+Command format: ``$01 $12``
 
 The “Get Path” command will return the current path in the file system,
 starting from the root. The path string is returned as a data packet.
-The status channel reports “00,OK”, as this command can never fail.
+The status channel reports ``00,OK``, as this command can never fail.
 
 DOS_CMD_OPEN_DIR (0x13)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $13
+Command format: ``$01 $13``
 
 The “Open Directory” command will attempt to start reading the current
 directory. The command will not return any data, but it will return
-status information: “00,OK”, “01,DIRECTORY EMPTY”, or, if there was an
-error: “86,CAN'T READ DIRECTORY”.
+status information:
+
+- ``00,OK``
+- ``01,DIRECTORY EMPTY``
+- ``86,CAN'T READ DIRECTORY``.
 
 DOS_CMD_READ_DIR (0x14)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $14
+Command format: ``$01 $14``
 
 The “Read Directory” command will return the contents of the directory
 to the data channel. Each entry of the directory is transmitted as a
@@ -293,7 +298,7 @@ directories, and is reused for other non-FAT directories.
 DOS_CMD_COPY_UI_PATH (0x15)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $15
+Command format: ``$01 $15``
 
 The “Copy User Interface Path” is issued to continue using the path that
 was already opened in the file browser. This enables the use of relative
@@ -304,18 +309,18 @@ command; thus it will return the current path which the file browser is
 at.
 
 This command has been deprecated since firmware version 3.0 onwards and
-will return “99,FUNCTION NOT IMPLEMENTED”.
+will return ``99,FUNCTION NOT IMPLEMENTED``.
 
 DOS_CMD_CREATE_DIR (0x16)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $16 <dirname>
+Command format: ``$01 $16 <dirname>``
 
 The “Create Dir” command creates the specified directory in the current
 path.
 
 This command does not return any data. The status channel will either
-read “00,OK” or it will contain the appropriate filesystem error
+read ``00,OK`` or it will contain the appropriate filesystem error
 message.
 
 This command has been introduced in version 1.1.
@@ -323,7 +328,7 @@ This command has been introduced in version 1.1.
 DOS_CMD_COPY_HOME_PATH (0x17)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $17
+Command format: ``$01 $17``
 
 The “Copy Home Path” command changes into the user defined home
 directory specified in the “Home Directory” setting under “User
@@ -339,9 +344,7 @@ This command has been introduced in version 1.1.
 DOS_CMD_LOAD_REU (0x21)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format:
-
-$01 $21 [addrL] [addrML] [addrMH] [addrH] [lenL] [lenML] [lenMH] [lenH]
+Command format: ``$01 $21 [addrL] [addrML] [addrMH] [addrH] [lenL] [lenML] [lenMH] [lenH]``
 
 The “Load REU” command can be used to read data from the currently
 opened file into the REU memory. The command takes two 32-bit
@@ -354,7 +357,7 @@ length are masked out, thus effectively these bytes are dummy bytes.
 
 Note: This function assumes a 16 MB REU configuration.
 
-The status message is either “00,OK”, “02,REQUEST TRUNCATED”, or a
+The status message is either ``00,OK``, ``02,REQUEST TRUNCATED``, or a
 message directly from the file system.
 
 The data that is returned is a more detailed string, indicating the
@@ -366,7 +369,7 @@ DOS_CMD_SAVE_REU (0x22)
 
 Command format:
 
-$01 $22 [addrL] [addrML] [addrMH] [addrH] [lenL] [lenML] [lenMH] [lenH]
+``$01 $22 [addrL] [addrML] [addrMH] [addrH] [lenL] [lenML] [lenMH] [lenH]``
 
 The “Save REU” command can be used to write data to the currently opened
 file from the REU memory. The command takes two 32-bit parameters, both
@@ -379,7 +382,7 @@ thus effectively these bytes are dummy bytes.
 
 Note: This function assumes a 16 MB REU configuration.
 
-The status message is either “00,OK”, “02,REQUEST TRUNCATED”, or a
+The status message is either ``00,OK``, ``02,REQUEST TRUNCATED``, or a
 message directly from the file system.
 
 The data that is returned is a more detailed string, indicating the
@@ -389,7 +392,7 @@ SAVED FROM REU $852000”.
 DOS_CMD_MOUNT_DISK (0x23)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $23 <id> <filename>
+Command format: ``$01 $23 <id> <filename>``
 
 The “Mount Disk” command mounts the disk image specified by the
 <filename> argument on the drive using the IEC-ID specified by the
@@ -397,12 +400,12 @@ single byte argument <id>.
 
 If there is no drive using the specified id, then the drive last mounted
 on will be used. If there is no such drive, the status channel reports
-“90,DRIVE NOT PRESENT”.
+``90,DRIVE NOT PRESENT``.
 
 If the file denoted by <filename> is not a disk image, the status
-channel reports “89,NOT A DISK IMAGE”.
+channel reports ``89,NOT A DISK IMAGE``.
 
-On successful mount the status channel reports “00,OK”. This command
+On successful mount the status channel reports ``00,OK``. This command
 never returns any data.
 
 This command has been introduced in version 1.1.
@@ -410,7 +413,7 @@ This command has been introduced in version 1.1.
 DOS_CMD_UMOUNT_DISK (0x24)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $24 <id>
+Command format: ``$01 $24 <id>``
 
 The “Umount Disk” command unmounts the disk currently mounted on the
 drive using the IEC-ID specified by the single byte argument <id>.
@@ -419,7 +422,7 @@ If there is no drive using the specified id, then the drive last mounted
 on will be used. If there is no such drive, the status channel reports
 “90,DRIVE NOT PRESENT”.
 
-On successful unmount the status channel reports “00,OK”. The command is
+On successful unmount the status channel reports ``00,OK``. The command is
 considered successful even if no disk was mounted beforehand. This
 command never returns any data.
 
@@ -428,7 +431,7 @@ This command has been introduced in version 1.1.
 DOS_CMD_SWAP_DISK (0x25)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $0x25 <id>
+Command format: ``$01 $0x25 <id>``
 
 The “Swap Disk” command is equivalent to the disk swap function executed
 by holding the menu button for more than one second, performed on the
@@ -436,47 +439,45 @@ drive using the IEC-ID specified by the single byte argument <id>.
 
 If there is no drive using the specified id, then the drive last mounted
 on will be used. If there is no such drive, the status channel reports
-“90,DRIVE NOT PRESENT”.
+``90,DRIVE NOT PRESENT``.
 
 This command never returns any data, and the status channel will read
-“00,OK” on success.
+``00,OK`` on success.
 
 This command has been introduced in version 1.1.
 
 DOS_CMD_GET_TIME (0x26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $0x26 [<id>]
+Command format: ``$01 $26 [fmt]``
 
 This command returns the current date and time and the status channel
-will read “00,OK” on success.
+will read ``00,OK`` on success.
 
-If no argument <id> is given or if the argument <id> is zero, the format
-is “yyyy/mm/dd hh:mm:ss”. If the argument <id> is one, the format is
-“www yyyy/mm/dd hh:mm:ss”, i. e. it contains the day of the week, too.
+If no argument [fmt] is given or if the argument [fmt] is zero, the format
+is ``yyyy/mm/dd hh:mm:ss``. If the argument [fmt] is one, the format is
+``www yyyy/mm/dd hh:mm:ss``, i. e. it contains the day of the week, too.
 
 This command has been introduced in version 1.2.
 
 DOS_CMD_SET_TIME (0x27)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $01 $0x27 <Y> <M> <D> <h> <m> <s>
+Command format: ``$01 $0x27 <Y> <M> <D> <h> <m> <s>``
 
 This command sets the current date and time and the status channel will
-read “00,OK” on success. The year has to be reduced by 1900 in order to
+read ``00,OK`` on success. The year has to be reduced by 1900 in order to
 fit in a single byte.
 
 This function may be enabled or disabled by the ultimate settings. In
-the latter case the status will read “98,FUNCTION PROHIBITED”.
+the latter case the status will read ``98,FUNCTION PROHIBITED``.
 
 This command has been introduced in version 1.2.
 
 DOS_CMD_ECHO (0xF0)
 ~~~~~~~~~~~~~~~~~~~
 
-Command format:
-
-$01 $F0
+Command format: ``$01 $F0``
 
 This command will simply echo the command back as a data packet. The
-status channel will return “00,OK”, as this command cannot fail.
+status channel will return ``00,OK``, as this command cannot fail.

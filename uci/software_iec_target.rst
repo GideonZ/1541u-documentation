@@ -36,38 +36,36 @@ Command Summary
 SOFTIEC_CMD_IDENTIFY (0x01)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $01
+Command format: ``$05 $01``
 
-Response: Returns the string: SOFTWARE IEC TARGET V1.0.
+Response: Returns the string: ``SOFTWARE IEC TARGET V1.0``.
 
-Status: 00,OK.
+Status: ``00,OK``.
 
 SOFTIEC_CMD_LOAD_SU (0x10)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $10 <SEC_ADDR> <VERIFY> <ADDR_LO> <ADDR_HI> <NAME>
+Command format: ``$05 $10 <SEC_ADDR> <VERIFY> <ADDR_LO> <ADDR_HI> <NAME>``
 
 Description: Prepares a file for loading. It opens the file and
 retrieves the 2-byte start address stored in the file.
 
-**Parameters:**
+Parameters:
 
-<SEC_ADDR>: Secondary address ($00 for load).
-
-<ADDR_LO/HI>: Override load address if SEC_ADDR is 0.
+- <SEC_ADDR>: Secondary address ($00 for load).
+- <ADDR_LO/HI>: Override load address if SEC_ADDR is 0.
 
 Response: Returns the 2-byte start address found in the file.
 
-**Status:**
+Status:
 
-00,OK
-
-01,FILE NOT FOUND.
+- ``00,OK``
+- ``01,FILE NOT FOUND``.
 
 SOFTIEC_CMD_LOAD_EX (0x11)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $11 <SEC_ADDR> <VERIFY>
+Command format: ``$05 $11 <SEC_ADDR> <VERIFY>``
 
 Description: Executes the actual data transfer from the file opened by
 LOAD_SU directly into C64 RAM using a DMA transfer.
@@ -77,27 +75,26 @@ against C64 memory instead of writing it.
 
 Response: None
 
-Status: The first byte is the status byte: $00 for success, $80 when a
+Status: The first byte is the status byte: ``$00`` for success, ``$80`` when a
 verify failure occurs. When loading, the second and third byte contain
 the end address of the load in little endian format.
 
 SOFTIEC_CMD_SAVE (0x12)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $12 <VERIFY> <SEC_ADDR> <START_LO/HI> <END_LO/HI>
-<NAME>
+Command format: ``$05 $12 <VERIFY> <SEC_ADDR> <START_LO/HI> <END_LO/HI> <NAME>``
 
 Description: Saves a block of C64 memory to a file.
 
 Logic: The Ultimate creates the file, writes the 2-byte start address,
 and then dumps the memory range before closing.
 
-Status: 00,OK or 02,SAVE ERROR.
+Status: ``00,OK`` or ``02,SAVE ERROR``.
 
 SOFTIEC_CMD_OPEN (0x13)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $13 <SEC_ADDR> $00 <NAME>
+Command format: ``$05 $13 <SEC_ADDR> $00 <NAME>``
 
 Description: The OPEN command opens a file in the virtual file system
 and attaches it to a channel indicated by the secondary address.
@@ -109,19 +106,19 @@ Status: None
 SOFTIEC_CMD_CLOSE (0x14)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $14 <SEC_ADDR>
+Command format: ``$05 $14 <SEC_ADDR>``
 
 Description: The CLOSE command closes the file that is associated with
 the channel indicated by the secondary address.
 
 Data Response: none
 
-Status: 00,OK
+Status: ``00,OK``
 
 SOFTIEC_CMD_CHKIN (0x15)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $15 <SEC_ADDR>
+Command format: ``$05 $15 <SEC_ADDR>``
 
 Description: Equates to the Kernal CHKIN call. It prepares the specified
 channel for reading data.
@@ -145,17 +142,14 @@ prepare the next chunk of data from the file.
 SOFTIEC_CMD_CHKOUT (0x16)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Command format: $05 $16 <SEC_ADDR> $00 <DATA...>
+Command format: ``$05 $16 <SEC_ADDR> $00 <DATA...>``
 
 Description: Equates to the Kernal CHKOUT call. It sends data to the
 specified channel.
 
-If SEC_ADDR is in the range of $F0-$FF, it performs an OPEN operation.
-
-If SEC_ADDR is in the range of $E0-$EF, it performs a CLOSE operation.
-
-Otherwise, it pushes the provided <DATA> bytes into the drive's write
-buffer.
+- If SEC_ADDR is in the range of $F0-$FF, it performs an OPEN operation.
+- If SEC_ADDR is in the range of $E0-$EF, it performs a CLOSE operation.
+- Otherwise, it pushes the provided <DATA> bytes into the drive's write buffer.
 
 💡 Implementation Insights
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
