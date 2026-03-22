@@ -44,7 +44,7 @@ CPU Speed
 | **Set CPU Speed.**
 | 
 | Default C64/U64 speed: **1MHz (1x)**
-| Maximum speed: **48MHz (48x)**
+| Maximum speed: **48MHz (48x)** for the U64, and **64 MHz (64x)** for the U64 Elite-II.
    
 
 Badline Timing
@@ -83,42 +83,43 @@ Turbo Control registers
 |             | * bit 0-3: CPU Speed (index)                                   |
 |             | * bit 7: Badline timing, 0 = Enabled, 1 = Disabled             |
 |             |                                                                |
-|             | CPU Speed (index)                                              |
-|             |                                                                |
-|             | * 0  = 1 MHz                                                   |
-|             | * 1  = 2 MHz                                                   |
-|             | * 2  = 3 MHz                                                   |
-|             | * 3  = 4 MHz                                                   |
-|             | * 4  = 5 MHz                                                   |
-|             | * 5  = 6 MHz                                                   |
-|             | * 6  = 8 MHz                                                   |
-|             | * 7  = 10 MHz                                                  |
-|             | * 8  = 12 MHz                                                  |
-|             | * 9  = 14 MHz                                                  |
-|             | * 10 = 16 MHz                                                  |
-|             | * 11 = 20 MHz                                                  |
-|             | * 12 = 24 MHz                                                  |
-|             | * 13 = 32 MHz                                                  |
-|             | * 14 = 40 MHz                                                  |
-|             | * 15 = 48 MHz                                                  |
-+-------------+----------------------------------------------------------------+
-| 53296/$D030 |	**Turbo Enable Bit**                                           |
+|             +-----------------------------+----------------------------------+
+|             | CPU Speed (index) - U64     | CPU Speed (index) - U64E2        |
+|             |                             |                                  |
+|             | * 0  = 1 MHz                | * 0  = 1 MHz                     |
+|             | * 1  = 2 MHz                | * 1  = 2 MHz                     |
+|             | * 2  = 3 MHz                | * 2  = 3 MHz                     |
+|             | * 3  = 4 MHz                | * 3  = 4 MHz                     |
+|             | * 4  = 5 MHz                | * 4  = 6 MHz                     |
+|             | * 5  = 6 MHz                | * 5  = 8 MHz                     |
+|             | * 6  = 8 MHz                | * 6  = 10 MHz                    |
+|             | * 7  = 10 MHz               | * 7  = 12 MHz                    |
+|             | * 8  = 12 MHz               | * 8  = 14 MHz                    |
+|             | * 9  = 14 MHz               | * 9  = 16 MHz                    |
+|             | * 10 = 16 MHz               | * 10 = 20 MHz                    |
+|             | * 11 = 20 MHz               | * 11 = 24 MHz                    |
+|             | * 12 = 24 MHz               | * 12 = 32 MHz                    |
+|             | * 13 = 32 MHz               | * 13 = 40 MHz                    |
+|             | * 14 = 40 MHz               | * 14 = 48 MHz                    |
+|             | * 15 = 48 MHz               | * 15 = 64 MHz                    |
++-------------+-----------------------------+----------------------------------+
+| 53296/$D030 | **Turbo Enable Bit**                                           |
 |             |                                                                |
 |             | This register is only available when the Turbo Mode selector   |
 |             | is set to 'Turbo Enable Bit'.                                  |
 |             | Otherwise it simply reads $FF.                                 |
 |             |                                                                |
-|             |	* bit 0 (Write):                                               |
+|             | * bit 0 (Write):                                               |
 |             |                                                                |
-|             |	  0 = 1 MHz + Badlines                                         |
+|             |   0 = 1 MHz + Badlines                                         |
 |             |                                                                |
-|             |	  1 = Use settings from menu                                   |
+|             |   1 = Use settings from menu                                   |
 |             |                                                                |
-|             |	* bit 0 (Read):                                                |
+|             | * bit 0 (Read):                                                |
 |             |                                                                |
-|             |	  0 = Turbo Off                                                |
+|             |   0 = Turbo Off                                                |
 |             |                                                                |
-|             |	  1 = Turbo On                                                 |
+|             |   1 = Turbo On                                                 |
 +-------------+----------------------------------------------------------------+
 | 53370/$D07A |	**SuperCPU compatible enable/disable registers**               |
 |             |                                                                |
