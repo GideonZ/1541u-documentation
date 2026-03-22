@@ -83,6 +83,16 @@ Turbo Control registers
 |             | * bit 0-3: CPU Speed (index)                                   |
 |             | * bit 7: Badline timing, 0 = Enabled, 1 = Disabled             |
 |             |                                                                |
+|             | Note that the CPU and memory subsystem run at 48 MHz (U64) or  |
+|             | 64 MHz (U64E2), and that this turbo setting determines how     |
+|             | many of the available time slots are assigned to the CPU. When |
+|             | the VIC is enabled, it will still steal cycles from these      |
+|             | available time slots. Note that the badline timing setting     |
+|             | does not have influence on the BA signal on the cartridge port.|
+|             | This means that when accesses to external devices are made,    |
+|             | you will still run into the badline limitations. This also     |
+|             | applies to having the SID sockets enabled and doing accesses   |
+|             | to the SID registers.                                          |
 |             +-----------------------------+----------------------------------+
 |             | CPU Speed (index) - U64     | CPU Speed (index) - U64E2        |
 |             |                             |                                  |
@@ -154,6 +164,6 @@ Turbo Control registers
 
 
 
-Applies to: Ultimate 64
+Applies to: Ultimate 64 and Ultimate 64 Elite-II
 
 \*) Setting are only available on the Ultimate 64, firmware >= 1.33*
