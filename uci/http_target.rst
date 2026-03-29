@@ -506,19 +506,20 @@ Use the Query command to read the value of an entry in the data body.
 The path is a string that leads to the entry of interest. The return
 value starts with a one-byte type identifier:
 
-+-----------------------------------+-----------------------------------+
-| **Type**                          | **Value**                         |
-+===================================+===================================+
-| Integer                           | $01                               |
-+-----------------------------------+-----------------------------------+
-| Boolean                           | $02                               |
-+-----------------------------------+-----------------------------------+
-| String                            | $03                               |
-+-----------------------------------+-----------------------------------+
-| Object                            | $04                               |
-+-----------------------------------+-----------------------------------+
-| Array                             | $05                               |
-+-----------------------------------+-----------------------------------+
++----------------+---------------+-------------------------------------+
+| **Type**       | **Encoding**  | **Value**                           |
++================+===============+=====================================+
+| Integer        | $01           | 4 bytes LSB first                   |
++----------------+---------------+-------------------------------------+
+| Boolean        | $02           | 1 byte (00 or 01)                   |
++----------------+---------------+-------------------------------------+
+| String         | $03           | <len> <string>                      |
++----------------+---------------+-------------------------------------+
+| Object         | $04           | <# of entries> [<key str> <value>]* |
++----------------+---------------+-------------------------------------+
+| Array          | $05           | <# of entries> [<value>]*           |
++----------------+---------------+-------------------------------------+
+
 
 Let’s say the object looks like this::
 
@@ -531,7 +532,7 @@ Let’s say the object looks like this::
         }
     }
 
-Example: ``$06 $2A $XX “user/name”`` will result in a data message ``$03
+Example: ``$06 $2A $XX “user/name”`` will result in a data message ``$03 $04
 “Peri”``, without the quotes.
 
 The status channel will read ``000 OK`` when the path is valid and the value
@@ -540,7 +541,7 @@ known value, the status will be set to ``404 ENTRY NOT FOUND``. In case the
 handle is invalid, the status will be set to ``400 BAD REQUEST``.
 
 Indexing arrays is possible by using the % prefix. In case the object
-looks like this, the path ``user/cars%2`` would return ``$03 “Toyota”``::
+looks like this, the path ``user/cars%2`` would return ``$03 $06 “Toyota”``::
 
     {
         “width” : 500,
@@ -558,7 +559,24 @@ When the top level object is an array, the path can start with an index::
         { “user” : “bvl1999”, “name”: “Bart” }
     ]
 
-In this case the path ``%1/name`` would return ``$03 “Bart”``.
+In this case the path ``%1/name`` would return ``$03 $04 “Bart”``.
+
+When the path points to an object or array, it will be encoded sequentually,
+nested where needed. Thus, in case of the previous example, the whole object
+would be encoded as: ``$04 $04 $05 width $01 $F4 $01 $00 $00 $07 visible $02 $01 $05 title $03 $09 Commodore $04 user $04 $01 $04 cars $05 $05 $03 $04 Opel $03 $07 Renault $03 $06 Toyota $03 $0A Mitsubishi $03 $08 Mercedes``:
+
+- (object) (4 entries)
+-     (key length 5) width (integer) (500)
+-     (key length 7) visible (bool) (true)
+-     (key length 5) title (string) (length 9) Commodore
+-     (key length 4) user (object) (1 entry)
+-         (key length 4) cars (array) (5 entries)
+-             (string) (length 4) Opel
+-             (string) (length 7) Renault
+-             (string) (length 6) Totota
+-             (string) (length 10) Mitsubishi
+-             (string) (length 8) Mercedes
+
 
 HTTP_CMD_BODY_MOVE (0x2B)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
