@@ -566,16 +566,16 @@ nested where needed. Thus, in case of the previous example, the whole object
 would be encoded as: ``$04 $04 $05 width $01 $F4 $01 $00 $00 $07 visible $02 $01 $05 title $03 $09 Commodore $04 user $04 $01 $04 cars $05 $05 $03 $04 Opel $03 $07 Renault $03 $06 Toyota $03 $0A Mitsubishi $03 $08 Mercedes``:
 
 - (object) (4 entries)
--     (key length 5) width (integer) (500)
--     (key length 7) visible (bool) (true)
--     (key length 5) title (string) (length 9) Commodore
--     (key length 4) user (object) (1 entry)
--         (key length 4) cars (array) (5 entries)
--             (string) (length 4) Opel
--             (string) (length 7) Renault
--             (string) (length 6) Totota
--             (string) (length 10) Mitsubishi
--             (string) (length 8) Mercedes
+    - (key length 5) width (integer) (500)
+    - (key length 7) visible (bool) (true)
+    - (key length 5) title (string) (length 9) Commodore
+    - (key length 4) user (object) (1 entry)
+        - (key length 4) cars (array) (5 entries)
+            - (string) (length 4) Opel
+            - (string) (length 7) Renault
+            - (string) (length 6) Totota
+            - (string) (length 10) Mitsubishi
+            - (string) (length 8) Mercedes
 
 
 HTTP_CMD_BODY_MOVE (0x2B)
