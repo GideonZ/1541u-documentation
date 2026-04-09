@@ -2,6 +2,7 @@
 Quick guide to the Ultimate-II+
 _______________________________
 
+For German, click :doc:`here <quick_guide_de>`.
 
 Thank you for purchasing the “Ultimate-II+” cartridge: The versatile
 storage solution for your Commodore 64 computer. Although the
