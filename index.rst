@@ -6,6 +6,7 @@
 
   Firmware <howto/firmware>
   Quick Guide to the Ultimate II+ <quick_guide>
+  Kurzanleitung zu Ultimate II+ (German) <quick_guide_de>
   Ultimate 64 <ultimate64>
   WiFi on the Ultimate 64 <howto/wifi>
   Multi Mode Disk Drive <howto/mm_drive>
