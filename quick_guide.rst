@@ -73,9 +73,8 @@ program on the C=64 and show the menu. Leaving the menu will resume the
 C=64 gracefully. The main two functions of the menu are: 1) file
 selection, 2) configuration of the 1541 Ultimate cartridge.
 
-The menu starts with showing the available network interfaces, and the
-storage devices that are attached to the cartridge. By default, it will
-only show the built-in Ethernet port. When USB-sticks are inserted, one
+The menu starts with showing storage devices that are internal or attached
+to the cartridge, followed by the available network interfaces. When USB-sticks are inserted, one
 or more items will appear in this list. This screen is the ‘root’ of the
 file system. Use the cursor keys to navigate through the file system and
 select your file (disk image) to mount. The highlighted line shows the
@@ -167,20 +166,20 @@ As mentioned above, you can enter the configuration menu by pressing
 ‘F2’ while you are in the menu structure. This will bring up a screen
 with the following items:
 
--  Clock Settings
-
 -  Audio Output Settings
-
--  Software IEC settings
-
--  C64 and cartridge settings
-
+-  Clock Settings
+-  Memory Configuration
+-  Cartridge and ROM Settings
 -  User Interface Settings
-
+-  C64 and cartridge settings
 -  Drive A Settings
-
 -  Drive B Settings
-
+-  Software IEC settings
+-  Tape Settings
+-  Printer Settings
+-  Modem Settings
+-  Ethernet Settings
+-  WiFi Settings (For U2+L only)
 -  Network Settings
 
 Use the UP/DOWN cursor keys to navigate and RIGHT to enter the desired
@@ -211,12 +210,15 @@ Some of you may be familiar with the RR-net solution that brings
 Ethernet to the C-64. Currently, the built-in Ethernet port does *not*
 provide RR-net compatibility. However:
 
-The Ethernet port is used natively by the firmware. There is some
+The Ethernet port (and the WiFi interface for the U2+L with WiFi module installed)
+is used natively by the firmware. There is some
 primitive support for file-transfer using FTP, and
 it is possible to connect to the Ultimate-II+ using a VT-100 terminal
 program on the Telnet port (port 23). This gives the possibility to
 control the machine remotely, and swap disks without actually
-interrupting the program running on the C-64.
+interrupting the program running on the C-64. In addition, the network
+can be used to connect to the cartridge with a web-browser, and
+send commands through the HTTP based :doc:`API <api/api_calls>`.
 
 Modem support
 =============
@@ -355,7 +357,7 @@ replacement option.
 
 
 Software IEC
-==============
+============
 The Software-IEC module is a serial bus service that can be enabled in
 the configuration menu. This module provides two additional devices on
 the Commodore serial bus; the IEC bus:
@@ -392,7 +394,8 @@ directory. Just like on modern systems, “..” is the parent directory and
 
 OPEN 15,10,15,"CD:/USB1/MYPROGRAMS":CLOSE 15
 
-At this point, the virtual drive is not JiffyDOS compliant.
+Note that since version 3.11, the SoftwareIEC also supports the JiffyDOS protocol.
+Command compatibility with CMD-HD and SD2IEC is planned for firmware 3.15.
 
 Ultimate Command Interface
 ==========================
@@ -404,14 +407,10 @@ serial bus. But it can also be used to load files from the file system
 into REU memory for example. The set of commands grows over time and
 will provide more and more powerful features.
 
-Documentation of the interface itself is available here:
+Documentation of the interface and the command targets is available here:
 
-https://github.com/GideonZ/1541ultimate/blob/master/doc/Command%20Interface%20V1.0.pdf
+:doc:`Command Interface Documentation <uci/index>`.
 
-Accessing the file system is done through the “DOS” target, which is
-documented here:
-
-https://github.com/GideonZ/1541ultimate/blob/master/doc/ultimate_dos-1.2.pdf
 
 Real Time Clock
 ===============
@@ -426,7 +425,7 @@ years.
 Social Media
 ============
 For quick answers to many questions regarding your device, you may be
-interested to join the the Facebook group “1541 Ultimate”.
+interested to join the the Facebook group “Ultimate 64”.
 
 Firmware Updates
 ================
@@ -472,5 +471,4 @@ Known issues
 Other issues are reported and maintained on GitHub:
 
 https://github.com/GideonZ/1541ultimate/issues
-
 
