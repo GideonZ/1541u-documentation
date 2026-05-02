@@ -492,8 +492,8 @@ entire object “user”, including all child objects.
 
 The status channel will read ``000 OK`` when the path is valid. When the
 handle is valid, but the path does not lead to a known value, the status
-will be set to ``404 ENTRY NOT FOUND``. In case the handle is invalid, the
-status will be set to ``400 BAD REQUEST``.
+will be set to ``400 BAD FORMAT``, with the reason stated behind it.
+In case the handle is invalid, the status will be set to ``400 BAD REQUEST``.
 
 The command does not return data.
 
@@ -537,8 +537,8 @@ Example: ``$06 $2A $XX “user/name”`` will result in a data message ``$03 $04
 
 The status channel will read ``000 OK`` when the path is valid and the value
 is returned. When the handle is valid, but the path does not lead to a
-known value, the status will be set to ``404 ENTRY NOT FOUND``. In case the
-handle is invalid, the status will be set to ``400 BAD REQUEST``.
+known value, the status will be set to ``400 BAD FORMAT``, with the reason stated behind it.
+In case the handle is invalid, the status will be set to ``400 BAD REQUEST``.
 
 Indexing arrays is possible by using the % prefix. In case the object
 looks like this, the path ``user/cars%2`` would return ``$03 $06 “Toyota”``::
@@ -600,10 +600,10 @@ Example: ``$06 $2B $XX “user”`` will make the cursor move into the object
 “user”, alongside the key “name”.
 
 The status channel will read ``000 OK`` when the path is valid and points to
-an object or to an array. When the handle is valid, but the path does
-not lead to an object or an array, the status will be set to ``404 ENTRY
-NOT FOUND``. In case the handle is invalid, the status will be set to ``400
-BAD REQUEST``.
+a valid element. When the handle is valid, but the path does
+not lead to a valid element, the status will be set to ``400 BAD FORMAT``,
+with the reason stated behind it. In case the handle is invalid, the status
+will be set to ``400 BAD REQUEST``.
 
 HTTP_CMD_BODY_ADD_BINARY (0x2C)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -623,7 +623,7 @@ Command format: ``$06 $31 <HEADER> <BODY>``
 
 This command performs the HTTP exchange on the network. It references
 the URL and header with the first byte, and the optional data body with
-the second byte. When no body is to be sent, the value ``$00`` can be used.
+the second byte. When no body is to be sent, the value ``$FF`` can be used.
 
 The status channel will represent the information given in the header of
 the response, including the response code. If no connection can be made,
@@ -640,7 +640,7 @@ Command format: ``$06 $32 <HEADER> <BODY>``
 
 This command performs the HTTP exchange on the network. It references
 the URL and header with the first byte, and the optional data body with
-the second byte. When no body is to be sent, the value ``$00`` can be used.
+the second byte. When no body is to be sent, the value ``$FF`` can be used.
 
 The status channel will contain the entire response header, limited to
 256 bytes. If no connection can be made, the status channel reads ``503
