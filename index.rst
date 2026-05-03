@@ -9,6 +9,7 @@
   Kurzanleitung zu Ultimate II+ (German) <quick_guide_de>
   Ultimate 64 <ultimate64>
   WiFi on the Ultimate 64 <howto/wifi>
+  FTP Client <howto/ftp_client>
   Multi Mode Disk Drive <howto/mm_drive>
   Cartridge Emulation <howto/cartridges>
   Tape Emulation <howto/tape>
