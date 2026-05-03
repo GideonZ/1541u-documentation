@@ -301,6 +301,73 @@ This command is used to free the body data resource.
 This command will never fail; not even if the resource was already free.
 It always responds with 000 OK.
 
+HTTP_CMD_BODY_ADD (0x2D)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Command format: ``$06 $2D <HANDLE> <ITEMS...>``
+
+The “Body Add” command is the preferred structured way to add JSON data
+to a body object. It uses the same type identifiers and value encoding as
+the data returned by ``HTTP_CMD_BODY_QUERY``. This makes adding and
+querying JSON data orthogonal; a nested object or array that can be read
+back can also be added in one command, as long as it fits in the UCI
+command buffer.
+
+When the current hierarchy level points to an object, the command payload
+contains one or more key-value entries::
+
+    <KEYLEN> <KEY> <VALUE>
+
+When the current hierarchy level points to an array, the command payload
+contains one or more values without keys::
+
+    <VALUE>
+
+The value encoding is:
+
++----------------+------------------------------------------------------+
+| **Type**       | **Encoding**                                         |
++================+======================================================+
+| Integer        | ``$01`` followed by 4 bytes LSB first                |
++----------------+------------------------------------------------------+
+| Boolean        | ``$02`` followed by 1 byte (``$00`` or non-zero)     |
++----------------+------------------------------------------------------+
+| String         | ``$03`` followed by ``<LEN> <STRING>``               |
++----------------+------------------------------------------------------+
+| Object         | ``$04`` followed by ``<# entries> [<KEY> <VALUE>]*`` |
++----------------+------------------------------------------------------+
+| Array          | ``$05`` followed by ``<# entries> [<VALUE>]*``       |
++----------------+------------------------------------------------------+
+
+Within an object, each ``<KEY>`` is encoded as ``<KEYLEN> <KEY>``.
+
+Example: adding ``"width": 500``, ``"visible": true`` and a nested
+``"user"`` object in one command could be encoded as::
+
+    $06 $2D $XX
+        $05 "width"   $01 $F4 $01 $00 $00
+        $07 "visible" $02 $01
+        $04 "user"    $04 $01 $04 "name" $03 $04 "Peri"
+
+This results in the object::
+
+    {
+        "width" : 500,
+        "visible" : true,
+        "user" : {
+            "name" : "Peri"
+        }
+    }
+
+This command does not move the current hierarchy pointer. To continue
+adding inside a newly added object or array, use ``HTTP_CMD_BODY_MOVE`` to
+move to it, or use the single-value object/array add commands described
+below.
+
+The following ``HTTP_CMD_BODY_ADD_INT`` through
+``HTTP_CMD_BODY_ADD_ARRAY`` commands are retained as simple single-value
+convenience commands.
+
 HTTP_CMD_BODY_ADD_INT (0x23)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
