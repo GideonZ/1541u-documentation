@@ -142,6 +142,24 @@ query which targets exist, or to obtain version information.
 
 The status channel will report ``000 OK``, as this command cannot fail.
 
+HTTP_CMD_FREE_ALL (0x10)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Command format: ``$06 $10``
+
+The "Free All" command releases every header and body resource in a single
+operation. It is equivalent to calling ``HTTP_CMD_HEADER_FREE`` and
+``HTTP_CMD_BODY_FREE`` for every valid handle index.
+
+Header and body resources are not automatically released when the Commodore 64
+is reset, only when the cartridge is power-cycled. Programs that allocate
+handles on startup should therefore call this command first to ensure a clean
+state, rather than looping through all 16 header and 16 body handles
+individually.
+
+This command will never fail; not even if all slots are already free.
+It always responds with ``000 OK``.
+
 HTTP_CMD_HEADER_CREATE (0x11)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -683,6 +701,31 @@ returns ``400 BAD REQUEST``. Multiple additions of binary data can be done
 when the size of the data exceeds what can be sent in one command. The
 maximum command size to the UCI is 896 bytes.
 
+HTTP_CMD_BODY_CLEAR (0x2E)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Command format: ``$06 $2E <HANDLE>``
+
+The "Body Clear" command resets the content of a body slot without freeing
+or re-allocating the slot itself. The body handle remains valid and can be
+reused immediately for a subsequent HTTP request.
+
+The effect depends on the body type:
+
+- **Binary**: all accumulated binary data is discarded. The slot starts
+  accepting new binary data from the beginning.
+- **JSON Object** / **URL Encoded**: the data hierarchy is reset to an empty
+  root object, equivalent to the state immediately after
+  ``HTTP_CMD_BODY_CREATE``.
+- **JSON Array**: the data hierarchy is reset to an empty root array.
+
+This command is particularly useful for binary bodies, which have no other
+way to reset their content without freeing and re-allocating the handle.
+
+When the handle is valid and the slot is allocated, the command responds
+with ``000 OK``. When the handle is invalid or points to an unallocated
+slot, the status will be ``400 BAD REQUEST``.
+
 HTTP_CMD_DO_EXCHANGE_OBJ (0x31)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -692,11 +735,25 @@ This command performs the HTTP exchange on the network. It references
 the URL and header with the first byte, and the optional data body with
 the second byte. When no body is to be sent, the value ``$FF`` can be used.
 
+When a body is provided, the firmware automatically adds ``Content-Type``
+and ``Content-Length`` headers to the outgoing request if they are not
+already present in the header slot. The ``Content-Type`` is derived from
+the body type:
+
+- Binary body: ``application/octet-stream``
+- JSON Object / JSON Array: ``application/json``
+- URL Encoded: ``application/x-www-form-urlencoded``
+
+The ``Content-Length`` is computed from the rendered body size. If the
+user has already set either header explicitly via ``HTTP_CMD_HEADER_ADD``,
+the explicitly set value takes precedence and no auto-injection is
+performed for that field.
+
 The status channel will represent the information given in the header of
 the response, including the response code. If no connection can be made,
 the status channel reads ``503 SERVICE UNAVAILABLE``.
 
-When the exchange succeeds, it creates to new objects; a header object
+When the exchange succeeds, it creates two new objects; a header object
 and a body object. The handles of these objects are returned in the data
 channel (2 bytes).
 
@@ -708,6 +765,13 @@ Command format: ``$06 $32 <HEADER> <BODY>``
 This command performs the HTTP exchange on the network. It references
 the URL and header with the first byte, and the optional data body with
 the second byte. When no body is to be sent, the value ``$FF`` can be used.
+
+When a body is provided, the firmware automatically adds ``Content-Type``
+and ``Content-Length`` headers to the outgoing request if they are not
+already present in the header slot, using the same rules as
+``HTTP_CMD_DO_EXCHANGE_OBJ`` described above. This removes the need for
+the user program to perform integer-to-ASCII conversion for the
+``Content-Length`` field.
 
 The status channel will contain the entire response header, limited to
 256 bytes. If no connection can be made, the status channel reads ``503
