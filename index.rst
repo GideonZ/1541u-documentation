@@ -14,10 +14,11 @@
   Cartridge Emulation <howto/cartridges>
   Tape Emulation <howto/tape>
   Modem Emulation Layer <howto/modem>
+  Machine Code Monitor <howto/machine_code_monitor>
   Command Interface <uci/index>
   Virtual Printer <ultimate_printer>
   ReST API Reference <api/api_calls>
+  OpenAPI Specification <api/openapi>
   Assembly64 Integration <howto/assembly>
   Interview By Retro Magazine <interview>
   FAQ by Grrrolf <faq>
-  
