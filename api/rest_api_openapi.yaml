@@ -21,6 +21,7 @@ components:
       type: apiKey
       in: header
       name: X-Password
+      description: Required only when a network password is configured on the Ultimate device.
   schemas:
     ErrorResponse:
       type: object
@@ -383,6 +384,7 @@ components:
         - type: object
 
 security:
+  - {}
   - NetworkPassword: []
 
 paths:

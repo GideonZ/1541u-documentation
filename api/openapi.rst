@@ -18,6 +18,3 @@ YAML-based OpenAPI documentation is useful because it is both documentation and 
 - API explorers and documentation tools can render it as an interactive reference.
 - The exact path, method, parameter, request body, response body, header, and error shapes are kept in one structured file.
 - Changes to the REST API can be reviewed as precise schema diffs, which makes omissions and incompatible changes easier to spot than in prose alone.
-
-.. literalinclude:: rest_api_openapi.yaml
-   :language: yaml
