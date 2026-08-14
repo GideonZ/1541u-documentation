@@ -16,6 +16,7 @@
   Modem Emulation Layer <howto/modem>
   Command Interface <uci/index>
   Virtual Printer <ultimate_printer>
+  Finding an Ultimate on the Network <howto/discovery>
   ReST API Reference <api/api_calls>
   Assembly64 Integration <howto/assembly>
   Interview By Retro Magazine <interview>
