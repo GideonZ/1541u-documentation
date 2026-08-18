@@ -4,8 +4,6 @@ REST API Calls
 Starting from Ultimate firmware 3.11, the application supports API calls by means of the HTTP protocol. This simplifies the integration of remote control
 functionality in external applications, as it follows a well defined standard.
 
-For generated clients and tooling, see the machine-readable :doc:`OpenAPI specification <openapi>`.
-
 The format of the URL is as follows:
 
 ``/v1/<route>/<path>:<command>?<arguments>``
@@ -51,7 +49,6 @@ password then a HTTP status code of ``403 Forbidden`` will be returned and no
 further action taken. Supplying the header when no *"Network Password"* has
 been set is allowed (the header will be ignored).
 
-
 Routes
 ------
 
@@ -85,7 +82,6 @@ About
            "unique_id": "8D927F",  # Unless disabled under "Network Settings"
            "errors": []
          }
-
 
 Runners
 ~~~~~~~
@@ -657,7 +653,6 @@ The U64 supports streaming video and audio over its LAN port. The following API 
    * - ``PUT /v1/streams/<stream name>:stop``
      -
      - With this command a data stream can be turned off. Valid stream names are **video**, **audio** and **debug**.
-
 
 File Manipulation
 ~~~~~~~~~~~~~~~~~
