@@ -311,9 +311,9 @@ Machine
        | *data*
      - | With this command, data can be written to C64 memory. To be more exact: this command writes data through DMA, so the
          memory map that is currently selected is used. Writing to the I/O registers of the 6510 is not possible.
-       | Data bytes are written in consequetive memory locations.
+       | Data bytes are written in consecutive memory locations.
          The *address* argument specifies the memory location in hexadecimal format. The *data* argument contains a string of bytes
-         in hexadecimal format. The maxmimum number of bytes written with this method is 128.
+         in hexadecimal format. The maximum number of bytes written with this method is 128.
        | Example: ``PUT /v1/machine:writemem?address=D020&data=0504``
        | This results in 05 being written to $D020 and 04 being written to $D021. In other words: the border will be green and the
          main screen will turn purple.

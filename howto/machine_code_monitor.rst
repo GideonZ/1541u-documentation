@@ -165,7 +165,7 @@ Example:
 .. image:: ../media/monitor/binary_view.png
    :alt: Monitor Binary view at $DC00
 
-Cycling the ``W`` width mode to ``3S`` makes each row span the full 24 bits of a sprite line, so 21 consecutive rows display a whole C64 sprite as a bitmap. Here a sprite stored at ``$2000``:
+Cycling the ``W`` width mode to ``3S`` makes each row span the full 24 bits of a sprite line, so 21 consecutive rows display a whole C64 sprite as a bitmap. Here a sprite stored at ``$2400``:
 
 .. image:: ../media/monitor/binary_sprite.png
    :alt: Binary view in 3S sprite mode showing a 24 by 21 sprite bitmap
