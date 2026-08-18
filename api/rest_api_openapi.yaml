@@ -328,6 +328,10 @@ components:
     InputRequest:
       type: object
       additionalProperties: false
+      description: |
+        Two independent limits apply: at most 64 events, and at most 4096
+        bytes of request body. A body over 4096 bytes is refused with HTTP
+        400 and the message "JSON body is too large."
       required:
         - events
       properties:
@@ -1026,7 +1030,7 @@ paths:
           schema:
             type: integer
             minimum: 1
-            maximum: 4096
+            maximum: 65536
       responses:
         "200":
           description: Memory data

@@ -327,7 +327,8 @@ Machine
        | *[length]*
      - This command performs a DMA read action on the cartridge bus and returns the result as a binary attachment.
        The *address* argument specifies the memory location in hexadecimal format. The optional
-       argument *length* specifies the number of bytes being read. When not specified, 256 bytes are returned.
+       argument *length* specifies the number of bytes being read, from 1 to 65536. When not specified, 256 bytes are
+       returned. The read may not pass ``$FFFF``.
    * - ``GET /v1/machine:debugreg``
      -
      - This command reads the debug register ($D7FF) and returns it in the "value" field of the JSON response. The value is in
@@ -401,7 +402,7 @@ The input endpoint injects keyboard and joystick input on Ultimate 64-class hard
 On products that do not provide the required Ultimate 64 input hardware, these calls return HTTP status code ``501`` with
 an error message. Password handling is the same as other REST API calls.
 
-The request body may be up to 4096 bytes. The successful response format is::
+The successful response format is::
 
    {
      "keyboard": {
@@ -420,7 +421,12 @@ The request body may be up to 4096 bytes. The successful response format is::
      "errors": []
    }
 
-``POST /v1/machine:input`` expects a top-level object with an ``events`` array. The array must contain 1 to 64 events.
+``POST /v1/machine:input`` expects a top-level object with an ``events`` array. Two limits apply to every request and
+neither one implies the other: the array must contain 1 to 64 events, and the request body must not exceed 4096 bytes.
+A batch of 64 events with short input names stays inside both limits, while 64 events with longer input names exceeds
+the body limit. A request body over 4096 bytes is refused with ``400 Bad Request`` and the message ``JSON body is too
+large.``, so a client that batches input must count events and measure the serialised body.
+
 The complete batch is validated before any event is applied; if validation fails, the endpoint returns ``400 Bad
 Request`` and leaves the current input state unchanged.
 

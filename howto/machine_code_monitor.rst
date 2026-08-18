@@ -27,7 +27,27 @@ Open the built-in help with ``F3`` or ``?``. It lists every key binding:
 To close the monitor:
 
 -  Press ``C=+O`` again.
--  Press ``RUN/STOP`` when no edit operation or popup is active.
+-  Press ``RUN/STOP``, ``ESC``, or the C64's top-left ``←`` key when no edit operation or popup is active.
+
+``RUN/STOP``, ``ESC`` and ``←`` are one Back action. Each press closes one active layer, such as the help, a number
+expression, a popup, a command prompt or edit mode, and closes the monitor only once nothing is left. Where ``←`` is
+data, in ASCII and Screen editing and in the ASCII and Screen rows of the Number popup, use ``RUN/STOP`` or ``ESC``
+instead.
+
+Two shortcuts act on the machine rather than on the view, and both work from a memory view and from edit mode:
+
++----------+---------------------------------------------------------------------------------------------------+
+| Key      | Action                                                                                            |
++==========+===================================================================================================+
+| ``C=+R`` | Reset the C64. This is the same action as the task menu's ``Reset C64``, so the on-device menu    |
+|          | closes with the machine's screen where the interface is drawn there.                              |
++----------+---------------------------------------------------------------------------------------------------+
+| ``C=+I`` | Swap the interface between the freeze menu and the HDMI overlay, and close the menu. The setting  |
+|          | takes effect the next time the menu opens.                                                        |
++----------+---------------------------------------------------------------------------------------------------+
+
+Neither has a confirmation. A backend that cannot reach a reset reports ``RESET UNAVAILABLE`` and leaves the machine,
+the view and edit mode unchanged.
 
 Screen Layout
 -------------
@@ -92,12 +112,44 @@ Assembly View
 
 Assembly view shows decoded 6510 instructions, their instruction bytes, and the memory source used for each row.
 
+The source tag occupies three characters inside the brackets, so the column stays aligned across bank boundaries: ``[RAM]``, ``[BAS]``, ``[CHR]``, ``[I/O]``, ``[KRN]``, and ``[CPU]`` for the memory currently visible to the CPU on an Ultimate-II+.
+
 Example:
 
 .. image:: ../media/monitor/assembly_view.png
    :alt: Monitor Assembly view at $E011
 
 Assembly view is also a full inline assembler: in edit mode it offers opcode completion as you type. See :ref:`machine-monitor-inline-assembler`.
+
+Data Regions
+^^^^^^^^^^^^
+
+``$D000-$DFFF`` is shown as ``DATA`` rows of two bytes each when either I/O or Character ROM is banked in. I/O reads
+live registers, so decoding it would change the instruction length, and with it the address of every row below, on
+each redraw. Character ROM is stable, but it holds character bitmaps that never were code. With RAM banked in, the
+same addresses are disassembled normally: the rule follows the banked source, not the address range. On an
+Ultimate-II+, ``$D000-$DFFF`` is always disassembled, because that backend reports one source for the whole CPU view.
+
+.. image:: ../media/monitor/asm_data_rows.png
+   :alt: Monitor Assembly view showing $D000 as DATA rows of two bytes
+
+The rows are grouped from the start of the region, so where a ``DATA`` row begins does not depend on how the view
+arrived there. ``$D000-$DFFF`` is 4096 bytes and divides into 2048 rows of two; a region whose length is odd ends
+with a row of one byte.
+
+A ``DATA`` row is edited in Assembly view like any other row. ``E`` enters edit mode and the cursor sits on the first
+byte. Each displayed byte is its own edit position, two hex digits complete one, and ``LEFT``/``RIGHT`` step from
+byte to byte and on into the row above or below. There is no opcode picker on a ``DATA`` row, because there is no
+mnemonic to pick, and a letter key does nothing there. ``[I/O]`` is writable; ``[CHR]`` is ROM and refuses the write
+as it does everywhere else. Editing the same bytes in Memory view with ``M`` works as before.
+
+``DEL`` clears a ``DATA`` row's bytes to ``$00``. On a decoded instruction it still writes ``NOP``, which is what
+keeps the code around it runnable; ``NOP`` means nothing in a region that is not code.
+
+The two-byte row is how the bytes are shown, not what a range is made of. A range anchored with ``R`` on a ``DATA``
+byte covers the bytes between its ends: anchoring on ``$D001``, moving right to ``$D002`` and pressing ``R`` copies
+those two bytes and nothing else. A range that starts on a decoded instruction still takes that instruction whole, so
+a range may cross between code and data without either end losing bytes.
 
 Binary View
 ~~~~~~~~~~~
@@ -276,6 +328,10 @@ Value   Meaning
 
 Cartridges can further affect the CPU-visible memory map through the expansion-port ``GAME`` and ``EXROM`` lines.
 
+An Ultimate-II+ has no monitor-selectable CPU bank, so its footer reports the VIC bank alone::
+
+   CPU VIEW  VIC0 $0000
+
 Editing
 -------
 
@@ -304,14 +360,14 @@ In edit mode, ``Space`` remains view-specific data entry and does not page.
 
 ``DEL`` is logical delete, not raw backspace:
 
-============ ===================================================
+============ =====================================================================================
 View         ``DEL`` behavior
-============ ===================================================
+============ =====================================================================================
 Memory       Writes ``$00`` and advances
 ASCII/Screen Writes a space
 Binary       Clears the selected bit
-Assembly     Replaces the current instruction with ``NOP`` bytes
-============ ===================================================
+Assembly     Replaces the current instruction with ``NOP`` bytes; clears a ``DATA`` row to ``$00``
+============ =====================================================================================
 
 In Assembly view, if an inline edit is already active, ``DEL`` first cancels the current line edit state.
 
@@ -412,12 +468,34 @@ The monitor includes direct bulk memory commands:
 +=======+==========+=============================================+=======================================================================+
 | ``F`` | Fill     | ``start-end,value``                         | Fill an inclusive range with one byte                                 |
 +-------+----------+---------------------------------------------+-----------------------------------------------------------------------+
-| ``T`` | Transfer | ``start-end,dest``                          | Copy a range to a destination                                         |
+| ``T`` | Transfer | ``start-end,dest[,code-start-code-end]``    | Copy a range to a destination, optionally relocating operands         |
 +-------+----------+---------------------------------------------+-----------------------------------------------------------------------+
 | ``C`` | Compare  | ``start-end,dest``                          | Compare a range against another location and list differing addresses |
 +-------+----------+---------------------------------------------+-----------------------------------------------------------------------+
 | ``H`` | Hunt     | ``start-end,bytes`` or ``start-end,"text"`` | Search for a byte sequence or quoted ASCII string                     |
 +-------+----------+---------------------------------------------+-----------------------------------------------------------------------+
+
+``Fill``, ``Transfer``, ``Compare``, ``Hunt`` and ``Save`` all treat ``start-end`` as inclusive of both ends,
+including the full ``0000-FFFF`` range.
+
+``Transfer`` takes an optional fourth field naming the range to scan for pointers into the block being copied::
+
+   T C000-C0FF,C100,C000-C07F
+
+Absolute, absolute-indexed and indirect operands pointing inside the copied source range are then adjusted to the
+corresponding destination address. Relative branches, zero-page operands, references outside the copied range and
+incomplete instructions are left unchanged. Without the fourth field, ``Transfer`` copies the bytes and changes
+nothing.
+
+The scan range is independent of the range being copied. It may be shorter than the copy, longer than it, or
+somewhere else entirely, which is what lets a pointer that is not itself moving be brought with the block::
+
+   T C000-C005,C010,C000-C008
+
+Here the first two instructions are copied to ``$C010`` while the scan covers a third instruction that stays where it
+is. An instruction wholly inside the copy is rewritten in the copy, because that is the version being relocated. An
+instruction wholly outside it is rewritten where it stands. An instruction whose three bytes straddle the end of the
+copy is left alone, since writing its operand would put one byte in the copy and the other in the original.
 
 ``Hunt`` prompts for a range followed by a byte sequence or quoted text:
 
@@ -431,6 +509,9 @@ Matches are listed in a result picker:
 
 -  ``Return``: jump to the selected match.
 -  ``RUN/STOP``: close the picker.
+
+A command prompt accepts only characters that can occur in the command being entered; other keys are ignored. Parsing
+and validation still happen on ``Return``.
 
 File I/O
 --------
