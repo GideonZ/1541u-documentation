@@ -49,7 +49,6 @@ password then a HTTP status code of ``403 Forbidden`` will be returned and no
 further action taken. Supplying the header when no *"Network Password"* has
 been set is allowed (the header will be ignored).
 
-
 Routes
 ------
 
@@ -83,7 +82,6 @@ About
            "unique_id": "8D927F",  # Unless disabled under "Network Settings"
            "errors": []
          }
-
 
 Runners
 ~~~~~~~
@@ -300,15 +298,18 @@ Machine
      - This U64-only command causes the machine to power off. Note that it is likely that you won't receive a valid response.
    * - ``PUT /v1/machine:menu_button``
      -
-     - This command does the same thing as pressing the Menu button on an 1541 Ultimate cartridge, or briefly pressing the Multi Button on the Ultimate 64. The system will either enter or exit the Ultimate menu system depending on it's current state.
+     - This command does the same thing as pressing the Menu button on a 1541 Ultimate cartridge, or briefly pressing the Multi Button on the Ultimate 64. The system toggles the Ultimate menu: if the menu is closed, it opens; if the menu is open, it closes.
+   * - ``GET /v1/machine:menu_screen``
+     -
+     - Returns the currently active firmware menu screen as a binary 40x25 character matrix followed by a 40x25 colour-attribute matrix. Use this together with ``/v1/machine:input`` to drive and inspect the menu over REST without using the video stream. If no readable menu screen is active, the endpoint returns ``404 Not Found`` with the normal JSON ``errors`` array.
    * - ``PUT /v1/machine:writemem``
      - | *address*
        | *data*
      - | With this command, data can be written to C64 memory. To be more exact: this command writes data through DMA, so the
          memory map that is currently selected is used. Writing to the I/O registers of the 6510 is not possible.
-       | Data bytes are written in consequetive memory locations.
+       | Data bytes are written in consecutive memory locations.
          The *address* argument specifies the memory location in hexadecimal format. The *data* argument contains a string of bytes
-         in hexadecimal format. The maxmimum number of bytes written with this method is 128.
+         in hexadecimal format. The maximum number of bytes written with this method is 128.
        | Example: ``PUT /v1/machine:writemem?address=D020&data=0504``
        | This results in 05 being written to $D020 and 04 being written to $D021. In other words: the border will be green and the
          main screen will turn purple.
@@ -322,7 +323,8 @@ Machine
        | *[length]*
      - This command performs a DMA read action on the cartridge bus and returns the result as a binary attachment.
        The *address* argument specifies the memory location in hexadecimal format. The optional
-       argument *length* specifies the number of bytes being read. When not specified, 256 bytes are returned.
+       argument *length* specifies the number of bytes being read, from 1 to 65536. When not specified, 256 bytes are
+       returned. The read may not pass ``$FFFF``.
    * - ``GET /v1/machine:debugreg``
      -
      - This command reads the debug register ($D7FF) and returns it in the "value" field of the JSON response. The value is in
@@ -331,6 +333,195 @@ Machine
      - *value*
      - This command writes the value specified by the *value* argument (in hexadecimal) into the debug register ($D7FF), and
        then reads the debug register ($D7FF) and returns it in the "value" field of the JSON response. *This is currently an U64-only call.*
+
+Menu Screen Response
+^^^^^^^^^^^^^^^^^^^^
+
+``GET /v1/machine:menu_screen`` returns ``Content-Type: application/octet-stream`` and
+``Content-Disposition: attachment`` on success, with a ``Content-Length`` of ``2000``. The body is always exactly
+2000 bytes:
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Byte range
+     - Size
+     - Content
+   * - ``0..999``
+     - 1000 bytes
+     - 40x25 character matrix
+   * - ``1000..1999``
+     - 1000 bytes
+     - 40x25 colour-attribute matrix
+
+Both matrices are row-major. For a cell at *row* 0..24 and *column* 0..39, the offset within each matrix is::
+
+   offset = row * 40 + column
+
+Each colour-attribute byte stores both colours:
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Bits
+     - Meaning
+   * - ``0..3``
+     - Foreground colour
+   * - ``4..7``
+     - Background colour
+
+The character matrix contains the firmware UI character bytes. Printable text is stored as normal printable character
+values. Firmware box-drawing and UI glyphs use low character values, and reverse-video cells are marked by bit 7 of the
+character byte.
+
+Input (U64 only)
+^^^^^^^^^^^^^^^^
+
+The input endpoint injects keyboard and joystick input on Ultimate 64-class hardware.
+
+.. list-table::
+   :widths: 25 10 65
+   :header-rows: 1
+
+   * - URL
+     - Parameters
+     - Action
+   * - ``GET /v1/machine:input``
+     -
+     - Returns the currently active REST-injected keyboard and joystick inputs.
+   * - ``POST /v1/machine:input``
+     -
+     - Applies a JSON batch of keyboard, joystick, and release-all events, then returns the resulting input state. The request body must use ``Content-Type: application/json``.
+
+On products that do not provide the required Ultimate 64 input hardware, these calls return HTTP status code ``501`` with
+an error message. Password handling is the same as other REST API calls.
+
+The successful response format is::
+
+   {
+     "keyboard": {
+       "inputs": ["left_shift", "a"]
+     },
+     "joysticks": [
+       {
+         "port": 1,
+         "inputs": []
+       },
+       {
+         "port": 2,
+         "inputs": ["up", "fire"]
+       }
+     ],
+     "errors": []
+   }
+
+``POST /v1/machine:input`` expects a top-level object with an ``events`` array. Two limits apply to every request and
+neither one implies the other: the array must contain 1 to 64 events, and the request body must not exceed 4096 bytes.
+A batch of 64 events with short input names stays inside both limits, while 64 events with longer input names exceeds
+the body limit. A request body over 4096 bytes is refused with ``400 Bad Request`` and the message ``JSON body is too
+large.``, so a client that batches input must count events and measure the serialised body.
+
+The complete batch is validated before any event is applied; if validation fails, the endpoint returns ``400 Bad
+Request`` and leaves the current input state unchanged.
+
+Keyboard events
+"""""""""""""""
+
+Keyboard events have this format::
+
+   {
+     "kind": "keyboard",
+     "inputs": ["left_shift", "a"],
+     "transition": "tap"
+   }
+
+``transition`` must be one of:
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Transition
+     - Meaning
+   * - ``press``
+     - Hold the listed inputs until they are released or all REST inputs are cleared.
+   * - ``release``
+     - Release the listed inputs.
+   * - ``tap``
+     - Press and release the listed inputs automatically.
+
+Valid keyboard input names are:
+
+``inst_del``, ``return``, ``cursor_left_right``, ``f7``, ``f1``, ``f3``, ``f5``, ``cursor_up_down``,
+digits ``0`` through ``9``, letters ``a`` through ``z``, ``left_shift``, ``right_shift``, ``plus``, ``minus``, ``period``, ``colon``, ``at``,
+``comma``, ``pound``, ``star``, ``semicolon``, ``clr_home``, ``equals``, ``arrow_up``, ``slash``, ``arrow_left``,
+``ctrl``, ``space``, ``commodore``, ``run_stop``, and ``restore``.
+
+In the ranges above, each digit and each letter is a separate input name.
+
+The ``inputs`` array must contain 1 to 8 unique keyboard input names. ``restore`` is special: it must appear alone and
+can only be used with ``"transition": "tap"``.
+
+When the firmware menu is active, keyboard events are translated to menu keystrokes. This allows a client to open the
+menu with ``PUT /v1/machine:menu_button``, navigate or type with ``POST /v1/machine:input``, and read the result with
+``GET /v1/machine:menu_screen``.
+
+Joystick events
+"""""""""""""""
+
+Joystick events have this format::
+
+   {
+     "kind": "joystick",
+     "port": 2,
+     "inputs": ["up", "fire"],
+     "transition": "press"
+   }
+
+``port`` must be ``1`` or ``2``. Valid joystick input names are ``up``, ``down``, ``left``, ``right``, ``fire``,
+``fire2``, and ``fire3``. The ``inputs`` array must contain 1 to 7 unique joystick input names. The same ``press``,
+``release``, and ``tap`` transitions are supported.
+
+Release-all events
+""""""""""""""""""
+
+A release-all event clears every REST-injected keyboard and joystick input::
+
+   {
+     "kind": "release_all"
+   }
+
+It may not contain ``inputs``, ``port``, or ``transition``. A successful machine reset or reboot also clears the
+REST-injected keyboard and joystick state.
+
+Example input batch
+"""""""""""""""""""
+
+This example holds joystick port 2 up and fire, types ``A`` on the keyboard, and then releases all REST input state::
+
+   POST /v1/machine:input
+   Content-Type: application/json
+
+   {
+     "events": [
+       {
+         "kind": "joystick",
+         "port": 2,
+         "inputs": ["up", "fire"],
+         "transition": "press"
+       },
+       {
+         "kind": "keyboard",
+         "inputs": ["left_shift", "a"],
+         "transition": "tap"
+       },
+       {
+         "kind": "release_all"
+       }
+     ]
+   }
 
 Floppy Drives
 ~~~~~~~~~~~~~
@@ -463,7 +654,6 @@ The U64 supports streaming video and audio over its LAN port. The following API 
      -
      - With this command a data stream can be turned off. Valid stream names are **video**, **audio** and **debug**.
 
-
 File Manipulation
 ~~~~~~~~~~~~~~~~~
 
@@ -502,4 +692,3 @@ This section lists the API commands for file manipulation. This is the current s
        to be created. The number of tracks is a required argument to this function. Each track will have 256 sectors. The maximum number of
        tracks is 255, which makes the maximum DNP size almost 16 Megabytes. The optional *diskname* argument overrides the name
        to be used in the header of the disk. When not given, it is taken from the name of the file that is being created.
-
