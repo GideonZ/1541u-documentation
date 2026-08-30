@@ -240,6 +240,8 @@ ATDTAFTERLIFE.DYNU.COM:6400
 Incoming connections are also supported. This enables you to run a simple
 server on your C64, or maybe even a BBS!
 
+Ethernet port is also used by Ultimate-specific BBS and IRC clients: `Ulimate Lib <https://github.com/xlar54/ultimateii-dos-lib>`_ is a full TCP/IP stack implementation written by **Scott Hutter**, which comes along with two sample applications: `Ulimate Chat <https://csdb.dk/release/?id=181558>`_ and `Ulimate Term <https://csdb.dk/release/?id=181558>`_, this one co-developed with **Francesco Sblendorio**.
+
 USB support
 ===========
 The Ultimate-II+ supports most USB sticks and Flash card readers out of
