@@ -78,7 +78,7 @@ About
            "firmware_version": "3.15",
            "git_commit_hash": "5ee21b65",
            "fpga_version": "11F",
-           "core_version": "143",  # Only for Ultimate 64 devices
+           "core_version": "1.49",  # Only for Ultimate 64 devices
            "hostname": "Terakura",
            "unique_id": "8D927F",  # Unless disabled under "Network Settings"
            "ethernet_mac": "02:15:41:C8:90:85",  # Unless the interface has not started yet
