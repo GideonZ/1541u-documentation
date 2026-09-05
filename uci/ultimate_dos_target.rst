@@ -208,8 +208,14 @@ DOS_CMD_COPY_FILE (0x0b)
 
 Command format: ``$01 $0b <source> $00 <destination>``
 
-The “Copy File” command copies the file specified by <source> to the
-file specified by <destination>.
+The “Copy File” command copies the file specified by <source> into the
+directory specified by <destination>. The copy keeps the name of the
+source file: this command cannot rename while copying; use
+``DOS_CMD_RENAME_FILE`` for that. Both <source> and <destination> are
+resolved relative to the current directory of the target.
+
+An existing file of the same name in the destination directory is not
+overwritten. The status channel reports ``FILE EXISTS`` in that case.
 
 This command does not return any data. The status channel will either
 read ``00,OK`` or it will contain the appropriate filesystem error
