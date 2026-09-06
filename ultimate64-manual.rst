@@ -501,6 +501,12 @@ setting regarding this port.
    possibility to control the machine remotely, and swap disks without
    actually interrupting the program running on the C-64.
 
+   Ethernet port is also used by Ultimate-specific BBS and IRC clients:
+   `Ulimate Lib <https://github.com/xlar54/ultimateii-dos-lib>`_ is a full
+   TCP/IP stack implementation written by **Scott Hutter**, which comes along
+   with two sample applications: `Ulimate Chat <https://csdb.dk/release/?id=181558>`_ 
+   and `Ulimate Term <https://csdb.dk/release/?id=181558>`_, this one co-developed
+   with **Francesco Sblendorio**.
 
 
 USB support
