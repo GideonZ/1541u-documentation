@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Ultimate Documentation'
-copyright = '2025, Gideon Zweijtzer'
+copyright = '2026, Gideon Zweijtzer'
 author = 'Gideon Zweijtzer'
 
 
@@ -29,6 +29,7 @@ author = 'Gideon Zweijtzer'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
+    'myst_parser',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
