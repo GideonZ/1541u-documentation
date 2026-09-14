@@ -75,13 +75,28 @@ About
 
          {
            "product": "Ultimate 64",
-           "firmware_version": "3.12",
+           "firmware_version": "3.15",
+           "git_commit_hash": "5ee21b65",
            "fpga_version": "11F",
-           "core_version": "143",  # Only for Ultimate 64 devices
+           "core_version": "1.49",  # Only for Ultimate 64 devices
            "hostname": "Terakura",
            "unique_id": "8D927F",  # Unless disabled under "Network Settings"
+           "ethernet_mac": "02:15:41:C8:90:85",  # Unless the interface has not started yet
+           "wifi_mac": "24:0A:C4:1A:2B:3C",  # Only with a Wi-Fi module, once it has started
            "errors": []
          }
+
+       ``git_commit_hash``, ``ethernet_mac`` and ``wifi_mac`` are present from firmware 3.15 onwards. Older
+       firmware answers this call without them.
+
+       ``git_commit_hash`` is the abbreviated hash of the commit the firmware was built from, the same one the
+       System Information screen shows. It tells two builds apart that carry the same version number.
+
+       ``ethernet_mac`` and ``wifi_mac`` are the hardware addresses of the wired and the wireless interface,
+       upper case and colon separated. Each is left out when the device has no such interface, and while an
+       interface has not started and its address is therefore not known yet. Only the first interface of each
+       kind is reported. ``wifi_mac`` is the address a Wake-on-Wi-Fi magic packet is sent to, since such a
+       packet carries a MAC address rather than an IP address; the wired interface does not wake the device.
 
 Runners
 ~~~~~~~
