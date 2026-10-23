@@ -140,6 +140,72 @@ Closes the specified socket and frees the associated internal resources.
 
 Status: ``00,OK``.
 
+NET_CMD_OPEN_UDP_LOCAL (0x0A)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Command format: ``$03 $0A <REMOTE_PORT_LSB> <REMOTE_PORT_MSB> <LOCAL_PORT_LSB> <LOCAL_PORT_MSB> <HOSTNAME/IP_STRING>``
+
+Opens a UDP socket like OPEN_UDP, but from a local port of your choice.
+
+Parameters: Both ports are 16-bit values (Little-Endian). A local port of
+0 means any free port. The remote port must not be 0. The host is a hostname or a dotted IPv4 address of 1 to 253
+characters, optionally followed by one ``$00``; nothing may follow the
+``$00``. The command cannot be sent with the no-reply flag set, because a
+program that does not see the reply cannot close the socket, and the port
+would stay in use.
+
+The host name is resolved before the local port is bound, so a host that
+cannot be resolved leaves the port free.
+
+Response: Three bytes: the Socket Handle, followed by the local port
+that was bound (Little-Endian). A local port of 0 yields a port in the
+range 49152 to 65535.
+
+Status: ``00,OK``, or one of:
+
+- ``81,INVALID PARAMS`` for a malformed command
+- ``82,PARAMETER(S) OUT OF RANGE`` if the remote port is 0
+- ``84,UNRESOLVED HOST`` if DNS lookup fails
+- ``85,ERROR OPENING SOCKET`` if no socket is available
+- ``89,PORT IN USE`` if the local port is already in use
+- ``86,INTERNAL ERROR`` if the bound port cannot be read back
+- ``11,ERROR ON CONNECT: <errno>``
+
+Status 89 means something else in other targets. The numbering of status
+codes is per target.
+
+The socket is filtered to the remote host and port, like a socket from
+OPEN_UDP: it only receives datagrams that come from that address and
+port. It is read, written and closed with the same commands as any other
+socket.
+
+The one exception is a remote host of ``0.0.0.0``. The socket then accepts
+datagrams from any sender whose source port equals the remote port; datagrams
+from other source ports are dropped. Use such a socket only to receive. A
+WRITE on it goes out as a link-layer broadcast to ``0.0.0.0``. To send, use a
+socket opened to the subnet broadcast address or to the peer. This describes
+how the firmware behaves today.
+
+Sending to the subnet broadcast address needs no socket option, because
+lwIP's broadcast filters (``IP_SOF_BROADCAST`` and
+``IP_SOF_BROADCAST_RECV``) are off, which is lwIP's default. A broadcast
+is received like any other datagram: it passes the filter above, so a
+socket opened to the subnet broadcast address does not receive it, and a
+socket opened to ``0.0.0.0`` with the sender's port does.
+
+The port is in use if another UDP socket holds it, whether opened by your
+program or by the Ultimate itself, for example the ident service on UDP
+port 64 while it is enabled, or the DHCP client on UDP port 68 while the
+Ultimate uses DHCP. TCP sockets do not use UDP
+ports, so they never conflict. The port stays in use until the socket is
+closed, and it can be opened again as soon as CLOSE_SOCKET returns. A C64
+reset closes the socket and frees the port.
+
+To find out whether the firmware has this command, send it with a remote
+port of 0 and a host of at least one character. Firmware that has it answers
+``82,PARAMETER(S) OUT OF RANGE`` and opens nothing; firmware that does not
+answers ``21,UNKNOWN COMMAND``.
+
 NET_CMD_READ_SOCKET (0x10)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
