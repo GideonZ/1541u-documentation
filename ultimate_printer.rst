@@ -72,6 +72,12 @@ the Ultimate-II:
 
 -  Then on item “\ **IEC Drive and Printer**\ ” select “\ **Enabled**\ ”
 
+While the printer is enabled, it keeps a queue of up to 512 KB of memory
+for the data sent by the C64 (about 256,000 bytes of print data). The
+queue is only taken when the Ultimate has at least 1 MB of memory left
+afterwards; if not, a smaller queue is used, down to 4 KB. The memory is
+given back when the printer is turned off.
+
 Printer configuration items
 ---------------------------
 
@@ -163,10 +169,12 @@ frequently supported commodore printers).
 Flushing the printer spool
 --------------------------
 
-The printer has a very small buffer (256 bytes) and some data may still
-be in the buffer waiting to be printed when your print job is finished.
-The printer doesn’t know that your job is finished and waits for more
-data to print until the end of the page.
+The printer puts the data from the C64 in a queue and draws the page in
+the background, so the C64 does not wait for it, unless the queue is
+full: then the C64 waits until there is room again, and no data is lost.
+Some data may still be in the queue or on the current page when your
+print job is finished. The printer doesn’t know that your job is
+finished and waits for more data to print until the end of the page.
 
 You need to tell the printer that you want all the buffered data to be
 printed and to eject the current page. This works as the *Form Feed*
@@ -177,12 +185,17 @@ mode, this will make the current page to be written to a file. Next
 print job will start on a blank page. In RAW and ASCII mode this will
 write the buffered data to the file.
 
+A progress dialog is shown while the page is made. If the page takes
+longer than 20 seconds, the dialog closes and a message tells you that
+the page is still printing. The page is saved when it is done.
+
 Resetting the printer
 ---------------------
 
 You may need to reset printer to go back to an initial state. Go to F5
-Menu and select “\ **Reset IEC and Printer**\ ”. Current data in printer
-buffer is lost. Current page that was being printed is also lost.
+Menu and select “\ **Reset IEC and Printer**\ ”. Data sent by the C64
+that has not been printed yet is lost. Current page that was being
+printed is also lost.
 
 Performances
 ------------
@@ -192,9 +205,10 @@ approximatively 15 seconds on the Ultimate-II (28 seconds using NLQ
 mode). You may think it’s slow but this is much faster than a real
 MPS-1230 printer (1 min in DRAFT mode, 4 min in NLQ mode) !
 
-The Ultimate-II middle button becomes unresponsive while composing a
-page. The green LED on the right of the cartridge is lit when printer is
-working. Be patient and look at the activity LED to stop blinking.
+The page is composed in the background, so the Ultimate-II middle
+button still works while a page is being composed. The green LED on the
+right of the cartridge is lit when printer is working. Look at the
+activity LED to see when it stops blinking.
 
 RAW and ASCII modes are nearly immediate. There is no process time to
 wait.
